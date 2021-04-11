@@ -7,3 +7,6 @@ vagrant/a4keypair.pem
 .idea/
 *.iml
 *.DS_Store
+
+token.txt
+genius_token.txt
