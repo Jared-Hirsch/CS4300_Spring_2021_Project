@@ -1,0 +1,1067 @@
+uri,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,duration_ms,time_signature,name,artist
+spotify:track:07nf7RIGkqgvQijSIubNsj,0.699,0.803,10,-10.615,0,0.509,0.146,0.0,0.534,0.661,76.24,181280,4,Werkin' Girls - Live From Spotify Austin (Curated by Jim Eno),Angel Haze
+spotify:track:4OXplYTzwAoyR0rFvUsDyR,0.509,0.952,2,-5.829,0,0.362,0.0973,0.471,0.364,0.0358,117.0,465187,4,Genesis - Live / AAA,Justice
+spotify:track:3wMtW7OyslemHe5Ft5sNyA,0.717,0.65,6,-8.303,0,0.337,0.0768,0.0,0.944,0.592,94.979,248517,4,Thrift Shop - Live From Spotify NYC feat. Wanz,"Macklemore & Ryan Lewis,Wanz"
+spotify:track:11jpCy4SWbv1RH4UupAS7H,0.62,0.442,11,-8.232,0,0.627,0.738,0.0,0.204,0.527,139.393,302880,4,R.I.P. - Live from Spotify NYC,Rita Ora
+spotify:track:7silU7h7etN24Pvohta9jB,0.568,0.543,3,-7.998,1,0.6,0.338,0.0,0.193,0.547,118.835,354417,4,Jimmy Collins' Wake - Live From Spotify NYC,Dropkick Murphys
+spotify:track:3YyUzKsTKFMPJkEvlEh8vW,0.305,0.997,6,-2.93,1,0.464,0.0916,0.001,0.94,0.0612,85.024,317493,4,"Bulls on Parade - Live at the Grand Olympic Auditorium, Los Angeles, CA - September 2000",Rage Against The Machine
+spotify:track:2qcs0NO8girzx18Po1YwsK,0.308,0.895,1,-6.686,1,0.526,0.0177,0.0,0.38,0.507,79.874,133533,4,Ambitionz Az A Ridah - Live,"2Pac,Outlawz"
+spotify:track:3wba431TDDOE9MR2Lzcmmu,0.478,0.767,7,-8.069,0,0.342,0.38,0.106,0.671,0.48,139.758,413467,4,"Fingertips Pts. 1 & 2 - Live At The Regal Theater, Chicago/1962",Stevie Wonder
+spotify:track:072Gxt8I5hKwQngdSt0AsT,0.856,0.466,9,-8.023,1,0.349,0.277,0.0,0.0826,0.277,93.995,224758,4,Versace (feat. Lola Monroe),"Theblkhands,Lola Monroe"
+spotify:track:6B8LQbhkH6Sx5DNsXB3yS9,0.277,0.899,0,-5.186,1,0.423,0.128,7.49e-05,0.922,0.372,79.94,287467,4,Thank You (feat. Liqz & Messy Marv),"Berner,The Jacka,Messy Marv,Liqz"
+spotify:track:4UyvPuzZgoU3NP2mCURWId,0.592,0.859,7,-7.071,0,0.394,0.0931,0.0,0.878,0.605,140.058,242213,4,On Dope (feat. Lucky Luciano),"Berner,Lucky Luciano"
+spotify:track:3l97wvR7VJyvNRxNpUTwwx,0.489,0.904,1,-3.599,1,0.381,0.0325,0.0,0.908,0.551,82.977,337400,4,Rubber Band Stacks,"Berner,Young Noble Of The Outlawz,Cozmo,Yukmouth"
+spotify:track:6BFWWGnEEn4tAqTYwvMuCu,0.703,0.425,11,-13.662,1,0.931,0.974,0.00802,0.843,0.635,105.068,3514828,3,His Girl Friday,The Lux Radio Theatre
+spotify:track:0ABOnUPoyrGNyR9bjTXPm2,0.572,0.257,1,-19.042,1,0.905,0.525,0.0,0.08,0.374,85.108,3173520,4,The Age of Innocence,Nbc Theater
+spotify:track:5lmlEU8j2dG8qeZUcSrAEe,0.62,0.305,0,-16.252,1,0.931,0.842,3.12e-05,0.0824,0.247,96.9,3271507,3,The Light That Failed,The NBC University Theater Group
+spotify:track:2YXyxAZY2gqW8RZUNWwJuS,0.656,0.474,10,-15.256,0,0.926,0.882,4.24e-06,0.652,0.341,136.282,3702831,3,The Scarlet Pimpernel,The Lux Radio Theatre
+spotify:track:6hAGtfXR4PFqRT7lcTqeyj,0.692,0.38,0,-13.203,1,0.953,0.94,0.0,0.118,0.478,82.41,3419254,4,A Connecticut Yankee in King Arthur's Court,Nbc Theater
+spotify:track:6WsdTMOXoohWLnQ3JQcVNw,0.587,0.333,11,-13.551,1,0.905,0.733,0.000165,0.733,0.499,58.368,3539383,4,The Count of Monte Cristo,The Lux Radio Theatre
+spotify:track:2A5jjjwduGW8pRE6Q6Gh0n,0.56,0.205,0,-18.804,1,0.921,0.877,4.45e-06,0.102,0.343,80.806,3077173,4,Babylon Revisited,Nbc Theater
+spotify:track:7inFAhJZVyF9lGeb3eGS26,0.683,0.487,1,-15.186,0,0.952,0.978,0.00045,0.922,0.444,71.498,3469636,3,The Rage of Manhattan,The Lux Radio Theatre
+spotify:track:3Dnq6v8gqOybIH3Ffvftaz,0.552,0.407,0,-12.581,1,0.936,0.875,3.45e-06,0.653,0.575,79.308,3584705,4,The Girl from Tenth Avenue,The Lux Radio Theatre
+spotify:track:3ocPhjfTqVKNUeHbYH7csI,0.652,0.248,7,-19.027,1,0.879,0.975,1.38e-05,0.219,0.527,97.259,640787,3,The Cask of Amontillado,Nbc Theater
+spotify:track:3axi9MIhkRbiE8PiwLhYiZ,0.669,0.155,8,-20.982,1,0.931,0.578,0.0,0.124,0.504,81.611,3588600,4,Great Expectations,NBC Univeristy Theater
+spotify:track:7854GEuUh9AHwqk3XNtb4K,0.598,0.442,5,-19.232,1,0.944,0.98,0.00264,0.428,0.458,83.512,2448307,4,Oliver Twist,General Mills Radio Adventure Theater
+spotify:track:5w7U5wiHgKY8qvMUyKOcRw,0.649,0.164,8,-21.975,1,0.756,0.799,0.0,0.128,0.513,121.778,3453494,3,David Copperfield,"Richard Burton,Theater Guild On The Air starring Boris Karloff"
+spotify:track:0Fe4AP72bz606jPm8kBPdg,0.674,0.132,6,-21.689,1,0.934,0.967,0.0,0.15,0.493,70.397,3677053,3,The Pickwick Papers,Mercury Theater starring Orson Welles
+spotify:track:3Ioqwk0YywGH5gfCK0HiWZ,0.525,0.348,6,-20.464,1,0.934,0.987,0.0818,0.757,0.47,71.012,3329734,4,A Tale Of Two Cities,Lux Radio Theater starring Orson Welles
+spotify:track:2Ku3jZCUfdrt1Dd4U9TPC6,0.532,0.184,11,-19.009,0,0.937,0.946,0.00667,0.0998,0.281,67.065,3190960,3,The Portrait of a Lady,Nbc Theater
+spotify:track:3NFXYmrOoYm5Vh2KsdqylC,0.674,0.267,11,-17.051,1,0.929,0.829,0.0202,0.635,0.486,69.476,3510622,4,The Life of Emile Zola,The Lux Radio Theatre
+spotify:track:0jrUTt0jxGOHuqjAgDUkQr,0.697,0.367,0,-13.636,1,0.934,0.946,0.0318,0.492,0.578,131.435,3492807,3,A Doll's House,The Lux Radio Theatre
+spotify:track:1ZDONh7kJSPX7jqPFmOORp,0.476,0.523,9,-13.268,1,0.939,0.988,0.406,0.165,0.324,73.422,3541055,3,A Farewell to Arms,The Lux Radio Theatre
+spotify:track:4nWPPcSlOq6lVee2LOldEA,0.523,0.397,8,-14.912,1,0.91,0.985,6.59e-05,0.7,0.304,80.933,3370005,3,Snow White,The Lux Radio Theatre
+spotify:track:4B3Sp8MADakqEqFkNgH2Fz,0.601,0.306,6,-12.296,1,0.941,0.947,0.0,0.806,0.532,67.981,159613,3,BONUS TRACK: Cecil B. DeMille talks with the stars,The Lux Radio Theatre
+spotify:track:6bXeaJEHYGJCUUlTrGRsUT,0.531,0.49,11,-9.556,1,0.72,0.879,0.0,0.309,0.416,81.312,416840,3,"The Phantom Of The Opera Radio Broadcast - Act 1, Part 1",The Lux Radio Theatre
+spotify:track:1IC26rOhVegVuFE9NS8DJF,0.684,0.447,10,-10.869,0,0.847,0.86,0.0,0.23,0.359,129.384,402373,3,"The Phantom Of The Opera Radio Broadcast - Act 1, Part 2",The Lux Radio Theatre
+spotify:track:01V0tvEojWWjwucXz7vlPi,0.713,0.25,5,-12.096,1,0.923,0.947,0.0,0.524,0.35,114.482,419293,5,"The Phantom Of The Opera Radio Broadcast - Act 1, Part 3",The Lux Radio Theatre
+spotify:track:6mdG655JpksQPqbzeRr9bY,0.643,0.328,8,-10.51,0,0.922,0.853,0.0,0.171,0.498,86.592,399600,4,"The Phantom Of The Opera Radio Broadcast - Act 2, Part 2",The Lux Radio Theatre
+spotify:track:3BFKfSaJNGZ4as3QOQ5Kcm,0.488,0.547,5,-9.249,1,0.494,0.967,0.000108,0.115,0.402,127.775,388147,3,"The Phantom Of The Opera Radio Broadcast - Act 2, Part 3",The Lux Radio Theatre
+spotify:track:5DcaWokupakFJNswa0AXNb,0.611,0.407,11,-11.594,1,0.938,0.908,0.0,0.156,0.532,63.847,308587,3,"The Phantom Of The Opera Radio Broadcast - Act 3, Part 1",The Lux Radio Theatre
+spotify:track:6k4tjXdwVCu10LWUYPTI4l,0.602,0.346,6,-12.153,1,0.906,0.899,0.0,0.93,0.58,79.22,315947,4,"The Phantom Of The Opera Radio Broadcast - Act 3, Part 2",The Lux Radio Theatre
+spotify:track:1hvDqEicCytaKVoxyuw8XH,0.77,0.569,10,-9.808,1,0.401,0.604,0.0,0.13,0.782,108.892,161098,4,Kommunikation,WillMan
+spotify:track:7G8J2s4DDLLsdPF7QO9FBI,0.562,0.484,7,-9.039,1,0.368,0.00228,0.0,0.104,0.358,175.464,208902,4,Poppigt nog,Allyawan
+spotify:track:1sAPHDjzEslM7YL6tFgRds,0.874,0.384,4,-11.987,1,0.419,0.24,0.0,0.102,0.925,140.014,176614,4,Leva,Issify
+spotify:track:5inDa3sWj8zqJBOdj7Bjqc,0.758,0.594,5,-9.63,0,0.426,0.218,5.32e-06,0.0798,0.869,91.864,181000,4,"Hey Stupid, I Love You",JP Saxe
+spotify:track:5u1n1kITHCxxp8twBcZxWy,0.673,0.704,6,-8.056,1,0.36,0.196,0.0,0.0898,0.372,86.919,212093,4,Holy (feat. Chance The Rapper),"Justin Bieber,Chance the Rapper"
+spotify:track:6oWWx1qrQWkWcABWF4DF7N,0.466,0.702,10,-5.022,0,0.365,0.12,0.0,0.0819,0.554,79.197,184733,4,We Need You (feat. V. Rose),"Propaganda,DJ Mal-Ski,V. Rose"
+spotify:track:3M1iIXPHJUmiO5aTtdvZmA,0.623,0.709,10,-5.635,0,0.353,0.00687,0.0,0.899,0.367,94.205,223225,4,We All In (feat. Lecrae),"Propaganda,DJ Mal-Ski,Lecrae"
+spotify:track:0sMr52Vbn6WMkYLupCmO2h,0.709,0.777,1,-5.263,0,0.354,0.441,0.0,0.109,0.559,132.873,159317,4,Deep End,Lecrae
+spotify:track:2EsBWVT9tLE7K0BKVdFZbX,0.643,0.662,4,-8.118,1,0.352,0.555,2.07e-06,0.0937,0.116,140.162,237593,4,No Ways Tired,"Jackie Hill Perry,Joseph Solomon"
+spotify:track:5VNAGw5WRyXqERmzYoKSpW,0.526,0.84,1,-6.283,1,0.486,0.326,0.0,0.702,0.687,160.418,243252,4,1988 REMAKE 2_Nottz_42North.wav,Andy Mineo
+spotify:track:0VCuE9mdmEZqnpKugQgFcs,0.727,0.724,5,-4.097,0,0.371,0.0412,0.0,0.707,0.785,94.999,214028,4,We Are The Culture,"Propaganda,DJ Mal-Ski"
+spotify:track:1keMi9lLQJBOPH4Fx15oeR,0.866,0.467,8,-7.03,0,0.43,0.196,0.0,0.129,0.669,75.033,169841,4,Not Normal,"Wes Harris,Rapzilla,Ilish"
+spotify:track:4XhUObUqIGEl0ktONaZ9Oo,0.663,0.7,7,-6.632,0,0.336,0.31,0.0,0.107,0.235,140.229,195428,4,Ghost,Austin Lanier
+spotify:track:1cQkvIQ4VTRY6XKvVo8qPq,0.636,0.729,8,-7.207,0,0.345,0.268,0.0,0.115,0.658,91.531,232385,4,Fall on Me,"Guvna B,Wretch 32"
+spotify:track:1T7T6IwX2Evr0vjiWi8z58,0.517,0.991,11,-3.786,0,0.401,0.00133,8.26e-06,0.271,0.222,135.125,179887,4,Ready or Not,Konata Small
+spotify:track:55fJoN084SU1za8BMMlSk1,0.881,0.465,8,-11.064,0,0.337,0.0791,0.0,0.0992,0.121,129.993,195692,4,Yo Se,"Emilio Rojas,Andy Mineo"
+spotify:track:7ieuOXPm3x7w0PHVgWHlfm,0.48,0.785,1,-4.913,1,0.392,0.0476,0.0,0.201,0.39,74.66,240953,4,my year,Aaron Cole
+spotify:track:1R4kuiADwioE3Qlh80nmaO,0.673,0.678,2,-7.413,0,0.339,0.854,0.0,0.0837,0.712,78.463,302061,4,Safe Place,Guvna B
+spotify:track:7AhpjsGznfYqql1w3YDWYE,0.569,0.708,11,-6.578,0,0.4,0.19,0.0,0.15,0.537,142.355,192254,4,mad!,Aaron Cole
+spotify:track:3s3oiCHAHLWmKZUYk1ozJG,0.573,0.994,4,-0.407,0,0.342,0.0281,0.00543,0.367,0.416,114.563,198067,4,Get on Top,Red Hot Chili Peppers
+spotify:track:68j5DYmCikBzcp60Sv6xWO,0.485,0.492,5,-6.462,0,0.331,0.425,0.0,0.105,0.876,78.001,243787,4,All I Need (with Mahalia & Ty Dolla $ign),"Jacob Collier,Mahalia,Ty Dolla $ign"
+spotify:track:1PrVLmXkJjh2vEhmBEKLeM,0.626,0.597,6,-9.943,0,0.33,0.614,1.53e-05,0.122,0.578,80.985,221099,4,Dragonball Durag - Remix,"Thundercat,Smino,Guapdad 4000"
+spotify:track:7KyVAn4ID0fa8DMfujrMGY,0.755,0.443,1,-9.261,0,0.354,0.686,0.000209,0.108,0.832,98.142,198793,4,Wildcard,Jason Dering
+spotify:track:2Gjt4rUHBUH0rMKpBg0hF4,0.747,0.725,2,-2.564,0,0.363,0.551,0.0,0.0626,0.904,129.96,125558,4,Disco Arranhado - Funk Remix,"Malu,DJ Lucas Beat"
+spotify:track:0WmSoWksyfhCME62WhkP2U,0.509,0.528,7,-5.18,0,0.438,0.695,0.0,0.125,0.52,173.999,235862,3,Romance de Cinema,Domingues
+spotify:track:4E7BWWaFUfafkyU8JOniFx,0.593,0.755,1,-4.835,1,0.412,0.547,0.0,0.128,0.723,104.261,214655,3,Perseus,Wet Bed Gang
+spotify:track:3x3vUHznzPNEbXTJBUkhZb,0.952,0.583,11,-7.781,0,0.337,0.17,0.0,0.101,0.689,121.025,152000,4,Tinoni,T-Rex
+spotify:track:4CpxUCpVJag59w4bm2aCag,0.72,0.375,10,-16.663,1,0.937,0.762,0.0,0.159,0.358,135.91,107613,5,Introduction,Henry Raymond Jr.
+spotify:track:3OTHyvIThCt2XsdZtNDbKx,0.595,0.0708,9,-16.503,0,0.934,0.236,7.09e-06,0.0957,0.32,171.543,445587,3,Lesson 1 - Basics,Henry Raymond Jr.
+spotify:track:3ZtOUxzSKcKEtey4vgCtwn,0.684,0.0778,10,-15.932,1,0.93,0.455,0.0,0.193,0.333,114.412,363053,3,Lesson 2 - Basic Phrases,Henry Raymond Jr.
+spotify:track:6ZtcZT77FXL0be1YaJzIjb,0.672,0.186,8,-15.153,0,0.925,0.208,0.0,0.0751,0.167,134.562,373507,1,Lesson 3 - Transportation Nouns,Henry Raymond Jr.
+spotify:track:1Gljrgxc95g1yaMJXqn0vm,0.607,0.173,8,-15.807,0,0.937,0.273,0.0,0.12,0.18,167.872,774907,4,Lesson 4 - Transportation Phrases,Henry Raymond Jr.
+spotify:track:5gx77z70adtaaPlRD6PWm7,0.605,0.13,6,-16.208,1,0.936,0.224,1.34e-06,0.118,0.244,167.286,499840,3,Lesson 5 - Money,Henry Raymond Jr.
+spotify:track:48i2EJUqN8QcohbN8iAwat,0.6,0.0966,4,-17.334,0,0.931,0.495,0.0,0.126,0.267,174.664,866693,3,Lesson 6 - Hotel,Henry Raymond Jr.
+spotify:track:6J9Xs4TAHS3FboxotAx3km,0.683,0.0835,10,-16.376,0,0.903,0.322,0.0,0.0936,0.387,128.822,393307,1,Lesson 7 - Important Words,Henry Raymond Jr.
+spotify:track:0ca1Hx1qaoFb4b25NUX8yK,0.668,0.0956,6,-16.469,1,0.926,0.215,0.0,0.144,0.279,136.361,431107,1,Lesson 8 - Directions,Henry Raymond Jr.
+spotify:track:2njSXkUWs97DGTzWyfNksz,0.675,0.036,10,-17.507,0,0.918,0.0218,0.00502,0.0771,0.341,126.622,123667,3,Lesson 9 - Numbers,Henry Raymond Jr.
+spotify:track:1KLZf2cDIl9lvXPiODdICO,0.681,0.0862,11,-17.999,1,0.924,0.119,4.42e-05,0.115,0.226,129.26,125813,1,Lesson 10 - More Numbers,Henry Raymond Jr.
+spotify:track:3gKCpXi5alRNJVvaf4f3qy,0.601,0.0498,9,-16.303,1,0.932,0.0369,7.55e-06,0.1,0.488,164.884,231253,5,Lesson 11 - Big Numbers,Henry Raymond Jr.
+spotify:track:5iGeTB0tXBuaYPJsb0ffJt,0.686,0.048,11,-16.443,1,0.917,0.145,0.0,0.096,0.444,110.922,333533,3,Lesson 12 - Very Big Numbers,Henry Raymond Jr.
+spotify:track:07J7xf7a3czKGnjI1SGtql,0.668,0.095,6,-16.562,1,0.92,0.489,0.0,0.103,0.348,138.574,673387,4,Lesson 13 - Measure Words,Henry Raymond Jr.
+spotify:track:1itO9bXY2sEhLKbxZacGKR,0.69,0.0589,6,-16.482,1,0.91,0.286,0.0,0.101,0.375,113.152,563933,3,Lesson 14 - At the Restaurant,Henry Raymond Jr.
+spotify:track:5GnSv4iTvID1VcyEhzt1vR,0.614,0.15,1,-15.976,1,0.939,0.245,0.0,0.106,0.194,164.457,618307,4,Lesson 15 - Shopping,Henry Raymond Jr.
+spotify:track:00avPN48S9KNoUGlEZcRC7,0.69,0.0711,1,-16.601,1,0.913,0.177,8.13e-06,0.0544,0.228,126.511,295373,1,Lesson 16 - Time: General,Henry Raymond Jr.
+spotify:track:3iod3cBsp2YFk0b4YWvg58,0.68,0.0625,11,-16.63,1,0.924,0.322,0.0,0.0699,0.37,133.208,437947,4,Lesson 17 - Time of Day,Henry Raymond Jr.
+spotify:track:63ZejONsiOsYGAijmKANQt,0.674,0.0984,6,-16.066,1,0.925,0.303,0.0,0.11,0.292,135.492,397987,1,Lesson 18 - Questions,Henry Raymond Jr.
+spotify:track:3PaIfuJsPtbPPfqh8D09q9,0.603,0.138,8,-16.187,0,0.935,0.332,1.89e-06,0.085,0.166,172.159,396187,5,Lesson 19 - Shops,Henry Raymond Jr.
+spotify:track:3ZmyBaJ3LoQWjrmbL1G0vu,0.605,0.0602,11,-16.19,1,0.936,0.194,3.67e-06,0.109,0.305,165.024,579573,4,Lesson 20 - Nouns,Henry Raymond Jr.
+spotify:track:7lmAkP7MI22a0gBGPH6Ypk,0.682,0.0894,9,-16.463,0,0.923,0.212,1.94e-05,0.12,0.24,128.118,597227,3,Lesson 21 - Adjectives & Adverbs,Henry Raymond Jr.
+spotify:track:3FdbZK2zcChfEG7wp8lLz0,0.668,0.102,11,-16.276,1,0.929,0.0387,3.48e-05,0.141,0.343,135.616,627653,1,Lesson 22 - Verbs,Henry Raymond Jr.
+spotify:track:6g5H0iXg57AD9Hp07q6P8M,0.603,0.0918,7,-16.936,1,0.921,0.311,0.0,0.263,0.362,170.338,645307,5,Lesson 23 - Prepositions,Henry Raymond Jr.
+spotify:track:7ieZlmcfDaDCWVF77Nk9yG,0.608,0.0836,7,-17.008,1,0.919,0.437,0.0,0.177,0.378,167.781,129787,4,Lesson 24 - Prepositional Pronouns,Henry Raymond Jr.
+spotify:track:4ByS0XXQg5GJDrukNFNwMZ,0.671,0.0749,8,-16.638,0,0.901,0.312,2.55e-05,0.126,0.396,139.476,239573,5,Lesson 25 - Possessive Adjectives,Henry Raymond Jr.
+spotify:track:4Q6eB4JpVSaBu5v2k9UJOV,0.6,0.055,9,-16.54,1,0.923,0.0842,6.81e-05,0.0801,0.38,170.095,161467,3,Lesson 26 - Conjunctions and Similar Words,Henry Raymond Jr.
+spotify:track:06lDQ5Dk80NzxLk56VYhft,0.697,0.0978,10,-16.022,0,0.892,0.361,0.0,0.1,0.323,122.505,1189987,3,Lesson 27 - Sentences & Phrases: General,Henry Raymond Jr.
+spotify:track:4NiJjX0cYueWUSNU5NvSDT,0.605,0.0994,8,-15.349,0,0.942,0.637,0.0,0.113,0.359,169.396,309227,3,Lesson 28 - Sentences & Phrases: Negative,Henry Raymond Jr.
+spotify:track:5OcsQixUWcxT03THnFMpTo,0.707,0.406,8,-16.385,0,0.936,0.718,0.0,0.214,0.347,137.687,112133,5,Introduction,Henry Raymond Jr.
+spotify:track:4RGCom2UQTu4rtAKoJpKCU,0.67,0.362,5,-17.608,0,0.878,0.64,0.0,0.099,0.11,134.707,412360,4,Lesson 29 - Forming Questions,Henry Raymond Jr.
+spotify:track:2wjzrcxOc6reXUbO7J1OXK,0.675,0.119,0,-18.953,1,0.922,0.463,0.0,0.104,0.192,115.049,1097413,3,Lesson 30 - Sentences & Phrases: General,Henry Raymond Jr.
+spotify:track:4vRMLaLKrxcbqMAGaFiVjY,0.596,0.403,8,-18.294,1,0.924,0.678,0.0,0.0962,0.133,169.211,575067,3,Lesson 31 - Sentences & Phrases: Transportation,Henry Raymond Jr.
+spotify:track:2imlJE7vsC5cz77j8N5TuO,0.647,0.152,3,-17.843,0,0.926,0.461,0.0,0.0889,0.14,141.449,493333,3,Lesson 32 - Sentences & Phrases: Money,Henry Raymond Jr.
+spotify:track:3CHRoZvhbUgiyI7mtRIDFn,0.609,0.368,8,-17.127,1,0.912,0.575,0.0,0.101,0.133,161.327,522520,3,Lesson 33 - Sentences & Phrases: Hotel,Henry Raymond Jr.
+spotify:track:1yTG5RwvKYa8S4sU1obLjd,0.642,0.165,3,-17.783,0,0.942,0.46,0.0,0.096,0.236,142.581,477147,5,Lesson 34 - Sentences & Phrases: Getting Around,Henry Raymond Jr.
+spotify:track:1sc5Uf59gBLkOQjiLBWw2u,0.601,0.319,1,-18.825,0,0.925,0.707,0.0,0.104,0.0901,168.719,438973,3,Lesson 35 - Sentences & Phrases: Directions,Henry Raymond Jr.
+spotify:track:1b5GFpYOwKaIP1TmbtVJg0,0.652,0.156,5,-18.58,0,0.939,0.46,0.0,0.0964,0.232,137.798,500720,4,Lesson 36 - Sentences & Phrases: Conversation,Henry Raymond Jr.
+spotify:track:2Nq4eLTkGFfdQNOO7mjEo1,0.663,0.409,1,-18.821,1,0.886,0.69,0.0,0.115,0.0651,132.775,480400,3,Lesson 37 - Sentences & Phrases: Internet,Henry Raymond Jr.
+spotify:track:6KXsi6dcFXOWERFML08zcG,0.68,0.196,1,-18.891,1,0.912,0.522,0.0,0.11,0.186,113.957,730213,3,"Lesson 38 - Translating the Present Tense of the Verb ""To Be"" into Chinese",Henry Raymond Jr.
+spotify:track:3DHZvkhKRo0Cw2SAUi1uPv,0.689,0.428,5,-18.981,0,0.857,0.739,0.0,0.189,0.107,109.475,421707,3,"Lesson 39 - Translating the Present Tense of the Verb ""To Have"" into Chinese",Henry Raymond Jr.
+spotify:track:5oRNF4VfqzcABhRO4eVTBc,0.666,0.27,6,-19.415,1,0.919,0.504,0.0,0.1,0.0959,134.864,388213,3,Lesson 40 - Speaking & Talking,Henry Raymond Jr.
+spotify:track:554MJly4tR2hNvkIB5mhgf,0.659,0.498,5,-17.045,0,0.855,0.593,0.0,0.104,0.109,139.121,431787,3,Lesson 41 - Practice With Some Verbs,Henry Raymond Jr.
+spotify:track:0tISRUjpsQaf697nXGfBhJ,0.734,0.331,9,-17.721,1,0.876,0.652,0.0,0.107,0.215,113.979,474627,4,"Lesson 42 - The Aspect Maker. ""Zai"": in the Process of Doing Something",Henry Raymond Jr.
+spotify:track:3HMi3swINRZbKuPvpTjBDi,0.743,0.422,1,-18.546,1,0.887,0.785,0.0,0.105,0.123,114.236,412693,3,Lesson 43 - Living Somewhere,Henry Raymond Jr.
+spotify:track:4tOPXXKNCMH0t6JBfGMC6K,0.667,0.311,8,-17.27,0,0.914,0.585,0.0,0.102,0.113,137.347,487587,3,Lesson 44 - Doing Something in the Near Future,Henry Raymond Jr.
+spotify:track:5c2w0SnU1t8AfxZJfwcHq9,0.659,0.414,1,-18.369,1,0.924,0.675,0.0,0.107,0.114,138.094,483427,3,Lesson 45 - Speaking With the Infinitive of a Verb,Henry Raymond Jr.
+spotify:track:64KPB7pJzH946W5z7HFkmq,0.678,0.173,3,-17.057,0,0.926,0.756,0.0,0.107,0.15,113.169,1049213,5,"Lesson 46 - The Aspect Marker, ""Le"": Speaking About the Past",Henry Raymond Jr.
+spotify:track:2pM97edcpewiQTaqCZWSjX,0.665,0.348,5,-18.765,0,0.911,0.638,0.0,0.0813,0.1,138.772,853360,5,Lesson 47 - New Verbs,Henry Raymond Jr.
+spotify:track:7EGHuMKWERUdOl82vf2C2e,0.685,0.262,9,-17.737,1,0.901,0.693,0.0,0.111,0.162,112.707,593387,4,Lesson 48 - More New Verbs,Henry Raymond Jr.
+spotify:track:2RhL3TN0JrfKr7kzoxXHC9,0.6,0.424,1,-17.328,1,0.908,0.623,0.0,0.102,0.0911,172.223,484720,5,Lesson 49 - The Telephone,Henry Raymond Jr.
+spotify:track:0YiEd22n8rIWA98kGAcrXr,0.684,0.243,5,-16.175,0,0.899,0.652,0.0,0.117,0.288,115.751,1351027,3,Lesson 50 - Practice With the Past Tense,Henry Raymond Jr.
+spotify:track:3p5K46JT7VP8eoUA8pz7Dr,0.707,0.406,8,-16.385,0,0.936,0.718,0.0,0.214,0.347,137.687,112133,5,Introduction,Henry Raymond Jr.
+spotify:track:2V5Vpvi3bDqVuI3dYPL2Hs,0.686,0.398,1,-17.874,1,0.884,0.659,0.0,0.117,0.126,114.627,1223827,5,Lesson 51 - More Practice With the Past Tense,Henry Raymond Jr.
+spotify:track:1qLuP3P2hXiP7Kgd78PPPY,0.688,0.332,6,-14.556,1,0.914,0.534,0.0,0.116,0.206,115.75,513133,5,"Lesson 52 - The Verb ""To Be"": Past & Present Tense, Translated into Chinese",Henry Raymond Jr.
+spotify:track:2JHhwYdDniiegbetAXjdHu,0.673,0.424,0,-17.037,0,0.864,0.697,0.0,0.0809,0.0872,135.268,248747,4,"Lesson 53 - The Verb ""To Have"": Past Tense",Henry Raymond Jr.
+spotify:track:5FF6cRjHvB85MzTACKyDU1,0.691,0.292,6,-16.422,1,0.904,0.638,0.0,0.103,0.231,116.062,598107,3,Lesson 54 - Speaking About the Past With Some Common Verbs,Henry Raymond Jr.
+spotify:track:5Jkj9b43am6VWq7YhJXoCw,0.684,0.504,0,-18.05,0,0.849,0.702,0.0,0.0958,0.11,112.165,991600,5,"Lesson 55 - Using the ""Shi"" and ""Shi... De"" Constructions for Emphasis and Past Tense",Henry Raymond Jr.
+spotify:track:1uHc7mIy1J3DLKCrKESkBW,0.64,0.28,3,-16.988,0,0.933,0.679,0.0,0.109,0.196,97.869,493133,5,"Lesson 56 - Adding to Verbs Using the Participle ""De"" or the Negative ""Bu""",Henry Raymond Jr.
+spotify:track:74JrCWx3Jwzg8eaJ6XOtL5,0.638,0.263,4,-17.364,1,0.938,0.916,0.0,0.101,0.161,142.359,768373,4,"Lesson 57 - The Verb Suffix ""Guo"": Speaking About the Past",Henry Raymond Jr.
+spotify:track:5wZASEAIU7bo5mKlDGvaoG,0.592,0.299,6,-14.571,0,0.937,0.772,0.0,0.0992,0.164,86.333,364813,4,"Lesson 58 - The Verb Suffix ""Zhe"": Speaking About Ongoing Action",Henry Raymond Jr.
+spotify:track:62OFncWjP97j9TbXnHiaPq,0.636,0.308,4,-17.651,1,0.925,0.828,0.0,0.113,0.158,143.039,1277227,4,Lesson 59 - Some Important Concepts,Henry Raymond Jr.
+spotify:track:5KuaIcARRDqQv3LrYWf9WI,0.635,0.219,4,-15.218,1,0.938,0.833,0.0,0.127,0.188,143.534,1021987,5,Lesson 60 - More Important Concepts,Henry Raymond Jr.
+spotify:track:47AQ7aQwgszSPHypEaf2EU,0.667,0.279,8,-17.011,0,0.93,0.869,0.0,0.114,0.134,112.998,1494213,5,Lesson 61 - Some Useful Sentences in the Present Tense,Henry Raymond Jr.
+spotify:track:1fXZEnUhjOn8pOavBp3TPq,0.644,0.225,4,-14.59,1,0.914,0.81,0.0,0.0958,0.38,139.323,358000,5,Lesson 62 - Using Direct Object Pronouns in Sentences,Henry Raymond Jr.
+spotify:track:4YNO0yxmvdrTo732kiyomy,0.638,0.324,8,-15.892,0,0.921,0.867,0.0,0.105,0.175,142.504,253587,3,Lesson 63 - Using Indirect Object Pronouns in Sentences,Henry Raymond Jr.
+spotify:track:4GvrrJcTbqKwp5M9gyMG33,0.583,0.196,4,-14.615,1,0.943,0.839,0.0,0.107,0.22,83.623,319467,4,Lesson 64 - More Indirect Object Pronouns,Henry Raymond Jr.
+spotify:track:5pQWKJwlbf6I05DxOcSgcb,0.661,0.0912,8,-19.181,0,0.901,0.316,0.0,0.0893,0.256,134.679,458773,4,Lesson 65 - Pronouns in Negative Sentences,Henry Raymond Jr.
+spotify:track:3JN8gdMmbZfN5ERXUsnUra,0.573,0.193,4,-15.593,1,0.916,0.759,0.0,0.104,0.192,79.659,758827,1,Lesson 66 - The Car,Henry Raymond Jr.
+spotify:track:3q1IAyo9OkgmDOuz8TQYWm,0.533,0.0281,10,-28.036,1,0.356,0.845,5e-05,0.0863,0.254,118.346,2382520,3,"Adjectives, Adverbs, Conjunctions, Prepositions 1","Penton Overseas, Inc."
+spotify:track:7LAejZJm81dvOXPbYP6KL5,0.575,0.0352,10,-27.001,1,0.369,0.852,1.11e-05,0.179,0.232,126.693,2385534,4,Expressions 1,"Penton Overseas, Inc."
+spotify:track:6DBiTdgUFsJlKrC9eSezb8,0.594,0.0339,5,-28.466,1,0.596,0.832,1.95e-05,0.106,0.294,119.029,613693,3,Verbs 1,"Penton Overseas, Inc."
+spotify:track:7625KFWAsmDciABTSCkGEQ,0.514,0.0275,9,-28.487,1,0.552,0.811,3.83e-05,0.0821,0.29,117.702,498320,3,Verbs 2,"Penton Overseas, Inc."
+spotify:track:6KDM3wZpDSpLnTHJOjh2ld,0.488,0.0548,2,-29.805,0,0.44,0.906,0.000203,0.172,0.301,88.109,863720,4,Verbs 3,"Penton Overseas, Inc."
+spotify:track:29ZKOGNRZ2Z6cyNHwTLrb5,0.439,0.0222,10,-26.232,1,0.434,0.788,3e-05,0.0718,0.44,169.429,234133,4,Verbs 4,"Penton Overseas, Inc."
+spotify:track:7uTHNZhundWTGrfQjnJ4Fg,0.651,0.163,4,-16.288,0,0.783,0.863,0.001,0.128,0.327,119.15,732987,3,Nouns 1,"Penton Overseas, Inc."
+spotify:track:40wt99j2fwboxZoT4ndls7,0.476,0.152,3,-15.611,1,0.853,0.85,8.12e-05,0.332,0.317,189.504,699600,5,Nouns 2,"Penton Overseas, Inc."
+spotify:track:4JjK5Fe6N6NcqJpr90pvTM,0.616,0.144,9,-15.409,1,0.609,0.863,3.3e-05,0.13,0.219,112.29,665360,4,Nouns 3,"Penton Overseas, Inc."
+spotify:track:59Jog6G8JAiqw9GF4hkJTj,0.526,0.0926,10,-15.383,1,0.552,0.893,8.87e-05,0.201,0.254,109.453,615213,4,Nouns 4,"Penton Overseas, Inc."
+spotify:track:7LiEwJE8XHXbijLmGHIerB,0.641,0.146,9,-15.072,0,0.514,0.776,0.000742,0.217,0.414,109.825,624307,1,"Adjectives, Adverbs, Conjunctions, Prepositions 1","Penton Overseas, Inc."
+spotify:track:5g367gK6hF8ig058nc9Klb,0.624,0.187,0,-14.877,1,0.863,0.785,2.65e-06,0.138,0.453,121.924,666653,1,"Adjectives, Adverbs, Conjunctions, Prepositions 2","Penton Overseas, Inc."
+spotify:track:1On3vyYFoosB17dHPL6dZv,0.631,0.238,2,-14.739,1,0.921,0.808,5.2e-05,0.0537,0.35,131.469,652067,3,"Adjectives, Adverbs, Conjunctions, Prepositions 3","Penton Overseas, Inc."
+spotify:track:0AagAXcJcCXF6K271r9uoY,0.53,0.139,3,-15.013,1,0.695,0.751,0.000274,0.127,0.469,104.553,660053,3,"Adjectives, Adverbs, Conjunctions, Prepositions 4","Penton Overseas, Inc."
+spotify:track:52gOSXyRzBJb6693vQ2E9F,0.629,0.3,0,-13.601,1,0.928,0.787,0.0,0.107,0.413,103.791,579533,1,Expressions 1,"Penton Overseas, Inc."
+spotify:track:1b0eHQcNYCRceh54O3cdz3,0.464,0.139,10,-14.446,1,0.518,0.848,3.07e-06,0.0818,0.216,114.593,602387,4,Expressions 2,"Penton Overseas, Inc."
+spotify:track:6B42fVV2ZreuPchK5uoXDD,0.657,0.252,4,-15.112,0,0.812,0.719,1.01e-05,0.229,0.421,118.998,620120,3,Expressions 3,"Penton Overseas, Inc."
+spotify:track:6zSKUg3B3zQUmel9HQTSTI,0.569,0.25,10,-15.004,1,0.853,0.811,1.5e-06,0.265,0.485,121.59,755480,4,Expressions 4,"Penton Overseas, Inc."
+spotify:track:12QYTWY4TdYzFykHLUuflZ,0.583,0.2,3,-14.5,1,0.9,0.823,2.25e-06,0.123,0.399,141.78,674080,3,Verbs 1,"Penton Overseas, Inc."
+spotify:track:5pZYUt3ZNdsHSIArrRt2w7,0.64,0.234,10,-14.497,1,0.871,0.711,6.15e-05,0.0825,0.526,112.296,642093,4,Verbs 2,"Penton Overseas, Inc."
+spotify:track:0sEDGhhDjdoxzER32Kbht1,0.604,0.243,9,-14.664,1,0.921,0.671,5.41e-05,0.0853,0.545,139.965,679240,4,Verbs 3,"Penton Overseas, Inc."
+spotify:track:28qa9TDuksdvDmeyitmHZ9,0.514,0.19,10,-14.214,1,0.895,0.717,8.54e-05,0.33,0.578,155.582,626747,3,Verbs 4,"Penton Overseas, Inc."
+spotify:track:2wzdniZBO00GZquTBRQe2N,0.448,0.0596,3,-17.055,1,0.677,0.886,0.000738,0.132,0.399,188.348,711653,1,Nouns 1,"Penton Overseas, Inc."
+spotify:track:2yJcN4BK45nCvyHZdc2RgN,0.542,0.0527,0,-16.943,0,0.823,0.861,1.86e-05,0.113,0.352,190.929,742213,4,Nouns 2,"Penton Overseas, Inc."
+spotify:track:6aWyHhfBhXtU2mse6VXpek,0.634,0.0856,11,-17.983,1,0.643,0.89,0.000365,0.2,0.316,119.011,634000,4,Nouns 3,"Penton Overseas, Inc."
+spotify:track:07hppLYNW3iQC0pJMDT3Pc,0.487,0.0379,3,-17.337,1,0.347,0.9,5.61e-05,0.134,0.359,114.531,709333,1,Nouns 4,"Penton Overseas, Inc."
+spotify:track:75jjmxfE3SRQftr8YGj6EZ,0.55,0.136,7,-18.683,0,0.521,0.905,0.00398,0.254,0.371,83.255,708587,5,"Adectives, Adverbs 1","Penton Overseas, Inc."
+spotify:track:3FZd2A1pXCDQ3IG6SjYsNF,0.686,0.132,2,-16.627,1,0.661,0.716,3.46e-05,0.216,0.558,114.251,728747,1,"Adectives, Adverbs 2","Penton Overseas, Inc."
+spotify:track:2zZ437IKBU8SCyfXa2Tgrm,0.582,0.0402,7,-16.954,0,0.405,0.931,0.000225,0.113,0.164,116.94,638600,4,"Adectives, Adverbs 3","Penton Overseas, Inc."
+spotify:track:6PTA76XE3QWmVO9vDkHsoh,0.482,0.0791,2,-16.826,1,0.712,0.872,0.00023,0.0887,0.337,191.934,684787,3,"Adectives, Adverbs 4","Penton Overseas, Inc."
+spotify:track:3FFuQ5eoLNQU3IgbZP6F13,0.41,0.601,7,-10.714,1,0.504,0.127,0.0,0.112,0.516,173.273,369293,4,To Zion,"Ms. Lauryn Hill,Carlos Santana"
+spotify:track:1yoMvmasuxZfqHEipJhRbp,0.783,0.727,6,-3.454,0,0.389,0.185,2.46e-05,0.0626,0.558,180.067,199112,4,Hawái,Maluma
+spotify:track:4PEfJZpVjdclfzZ9XO8uDw,0.714,0.671,5,-5.119,1,0.362,0.289,0.0,0.325,0.641,169.732,229827,4,Hasta Abajo,"Kevin Roldan,Bryant Myers,Lyanno"
+spotify:track:2dNhNlpZAtV4lwAFW45LIv,0.83,0.517,6,-6.416,0,0.333,0.399,8.95e-05,0.0916,0.616,171.959,182496,4,Am,"Nio Garcia,Flow La Movie"
+spotify:track:6W1VshCNGEnBsm8JqeYAQ8,0.51,0.743,5,-6.433,0,0.366,0.0469,0.000218,0.0807,0.673,94.031,168027,4,Rom & Kush,"STOR,Linda Pira"
+spotify:track:0AtMTwBF9dmAd2kjgKXpSu,0.548,0.67,4,-5.275,0,0.404,0.176,0.0,0.0863,0.297,108.048,197947,4,Rainfall (feat. Tiana Major9),"Stormzy,Tiana Major9"
+spotify:track:6Oq4fiDzKaFMU89dTvM24u,0.678,0.516,1,-4.601,1,0.444,0.0523,0.0,0.13,0.11,133.939,245920,4,Audacity (feat. Headie One),"Stormzy,Headie One"
+spotify:track:5DXKtoZLm31msT7tNGNHLG,0.682,0.653,8,-6.062,1,0.339,0.13,0.00116,0.129,0.428,188.115,196267,4,Vossi Bop,Stormzy
+spotify:track:2LPUvD5DDOO4UYGkWgjI2C,0.468,0.823,4,-3.973,1,0.466,0.81,0.0,0.598,0.941,74.457,179564,4,Shut Up,Stormzy
+spotify:track:4zrQ9UIhPD6lL6VBISJ5aE,0.651,0.677,2,-5.14,1,0.543,0.517,1.56e-06,0.167,0.42,147.848,146067,4,Big Michael,Stormzy
+spotify:track:0nLfmQWIqjZkCQNhfP0EHv,0.337,0.724,1,-6.139,1,0.338,0.301,0.0,0.0859,0.518,59.143,249347,4,Do Better,Stormzy
+spotify:track:3uMB82o0qa7erhiZBW9KQC,0.515,0.902,6,-4.729,0,0.383,0.0313,0.0,0.093,0.628,174.589,238419,5,Big For Your Boots,Stormzy
+spotify:track:2bH4EXqG4bm7EsKRSKC29R,0.575,0.629,5,-7.461,1,0.376,0.124,0.0,0.378,0.21,83.035,337800,4,Rachael's Little Brother,Stormzy
+spotify:track:78gWgWOO4xjYbTbYimvBLQ,0.734,0.725,1,-8.965,1,0.395,0.403,0.0,0.133,0.786,139.967,193714,4,Know Me From,Stormzy
+spotify:track:5iVGN1Th2DqyWVNIBM8Vwk,0.637,0.509,9,-7.985,0,0.38,0.574,0.0,0.154,0.461,94.202,187933,4,Lessons,Stormzy
+spotify:track:4Aqk447OISHIGHP7YJaSF4,0.654,0.819,6,-6.216,1,0.371,0.22,0.0,0.158,0.921,88.029,169681,5,One Take Freestyle,Stormzy
+spotify:track:745Dazbwplj1SDZ8SPKHV5,0.629,0.662,7,-12.353,0,0.68,0.43,0.0,0.141,0.535,137.718,224234,4,Scary,Stormzy
+spotify:track:78chq26Bmte8cDBp2FCF74,0.561,0.588,8,-7.628,1,0.413,0.375,0.0,0.084,0.664,83.204,195419,5,And Dat (Ft. Stormzy),"Bonkaz,Stormzy"
+spotify:track:0A5WqVkhofB9nBPjEBB82N,0.567,0.563,11,-9.708,1,0.399,0.0911,0.0,0.112,0.518,173.235,194000,5,WickedSkengMan 4,Stormzy
+spotify:track:0DlxjLdl9yjCIzww4vfZ6z,0.789,0.684,9,-7.158,1,0.361,0.0172,0.0,0.0434,0.507,139.842,209143,4,Standard,Stormzy
+spotify:track:74VYXs1E4G8IN8upYqG4Ek,0.578,0.669,2,-4.856,0,0.356,0.462,0.0,0.116,0.105,86.287,304710,5,Lay Me Bare,Stormzy
+spotify:track:73aLFMrJu7YX7IMaNlo8Ln,0.558,0.456,1,-9.904,1,0.531,0.699,0.0,0.482,0.701,119.986,217664,4,100 Bags,Stormzy
+spotify:track:36I3sETuZvd4dhQzBVIcnw,0.74,0.819,1,-4.831,1,0.383,0.15,0.0,0.33,0.713,139.677,236747,4,Been the Man,"Tinie Tempah,Jme,Stormzy,Ms Banks"
+spotify:track:0D4j0g4nGdt70HLilKqOQw,0.46,0.815,11,-9.244,0,0.385,0.369,0.0,0.0942,0.798,139.27,226286,4,Not That Deep,Stormzy
+spotify:track:1zdqHTmos0T3D3ixONJHkg,0.599,0.84,9,-9.463,1,0.416,0.211,0.0,0.559,0.887,87.389,200113,5,Hear Dis,"Chip,Stormzy"
+spotify:track:4bFRhKpksptSW2eTclNH11,0.629,0.777,11,-6.324,0,0.386,0.247,0.0,0.227,0.836,139.742,240857,4,Not That Deep - Section Remix,"Stormzy,Deepee,Swift,Sleeks,Inch,Littlez,Reeko,K9"
+spotify:track:1psq2ewHQI1AhquLsoi6nB,0.597,0.823,11,-4.301,0,0.372,0.0867,0.0,0.266,0.747,140.77,224857,4,Keepin' It Real,"P Money,Stormzy"
+spotify:track:6pDGQCID6RvB4tFVrCi5U5,0.596,0.799,2,-5.452,1,0.342,0.053,0.000967,0.68,0.324,99.646,231069,4,Look Like,"Charlie Sloth,JMC,Jadakiss,Stormzy"
+spotify:track:07i9T9SDDHXuDuqs1wVAHb,0.63,0.952,7,-4.714,1,0.374,0.0429,0.0,0.697,0.557,146.13,205218,4,Weight (feat. Epiphany Mattel),"Latrice Royale,Epiphany Mattel"
+spotify:track:2h4YEu6Et5SNmmseSicGTF,0.904,0.516,7,-8.259,1,0.355,0.146,0.0,0.122,0.587,119.974,109315,4,"Fat, Fem & Asian (From ""RuPaul's Drag Race 8"")",Lucian Piane
+spotify:track:5RwiaQntvPhiErOoGlUH7V,0.728,0.474,7,-7.607,1,0.498,0.602,0.0,0.693,0.706,81.364,20347,3,Not RuPaul's Best Friend Race!,"Lucian Piane,Lashauwn,Jiggly"
+spotify:track:7t87vcupUHamRBHfIOh1Rm,0.0639,0.0231,8,-16.24,1,0.7,8.64e-05,0.0,0.307,0.0224,77.881,173349,4,Oceanic Samples,Hi Freq Samples
+spotify:track:6pNWsPS93NXjzgjRyCB4fY,0.715,0.651,9,-5.316,1,0.392,0.0481,0.0,0.179,0.487,105.187,203496,4,Whine & Kotch - Radio,"J Capri,Charly Black"
+spotify:track:3Cu3lT6wryOucvmzCCvRl3,0.833,0.61,5,-6.255,1,0.365,0.0614,0.0,0.0996,0.739,90.076,156082,4,So Mi Like It - Raw,Spice
+spotify:track:4wlh7ahjpX6SMXnDHFv7cf,0.57,0.89,1,-2.228,1,0.37,0.0909,0.0,0.337,0.627,134.097,87381,5,Up Wid Di Money,Twins Of Twins
+spotify:track:5ZI5mphraeOlo8aV8gyR8W,0.757,0.811,1,-5.788,1,0.424,0.113,0.0,0.112,0.664,88.074,108315,4,Tun Up (Raw),"Cham,O"
+spotify:track:6x1kHESfQCre33cyrcsl04,0.633,0.585,2,-11.863,1,0.395,0.317,0.0,0.113,0.934,104.039,185640,4,Nuh Licky Licky,Kiprich
+spotify:track:4XwZl1uHX2HPb8in1eu6hb,0.568,0.759,2,-6.007,0,0.44,0.0657,0.0,0.153,0.789,180.517,176640,4,So Mi Like It - Remix,"Busta Rhymes,The Conglomerate"
+spotify:track:2bvFZtQc3JbD5ZSA6cwvjq,0.843,0.737,7,-7.397,1,0.357,0.142,3.31e-05,0.08,0.659,100.063,210000,4,Gal a Bubble - Raw,Konshens
+spotify:track:4bdBKl86l7e9UfdvTfoMER,0.524,0.83,7,-5.454,1,0.344,0.0128,0.0,0.403,0.659,116.871,174783,5,Gwan Good (Yes),Bramma
+spotify:track:7hezVPTsmm6yW3algVMmVr,0.609,0.723,1,-3.972,0,0.333,0.174,0.0,0.229,0.78,129.585,225637,5,Wine,"Cham,O"
+spotify:track:2jhWBExVr3FC0OClVj34zm,0.591,0.929,7,-4.837,1,0.395,0.177,0.0,0.367,0.564,177.559,193880,4,Anything Goes,"Major Lazer,Turbulence"
+spotify:track:41WD7y6TewtqDgJglJJEmB,0.686,0.509,1,-6.189,1,0.45,0.119,0.0,0.099,0.96,104.097,147487,4,Make Me Feel - Raw,Kalado
+spotify:track:2p2n9MH5yVTsiqKj88o61E,0.484,0.613,5,-5.5,1,0.39,0.0693,0.0,0.0794,0.747,190.001,194676,4,We Bring The Party,T.O.K
+spotify:track:0K22864F8jwAymy5JsopR9,0.634,0.811,0,-4.661,0,0.337,0.399,0.0,0.303,0.794,99.644,156709,4,Touch Yah,T.O.K
+spotify:track:0IqAVLRSSNDybTiD4NXMWo,0.721,0.678,6,-2.688,0,0.5,0.0259,0.0,0.348,0.62,122.355,201091,5,Tessanne Tell Dem,Twin Of Twins
+spotify:track:3CVb6hkMrlF7eHhXi5B3PZ,0.889,0.705,11,-8.683,0,0.392,0.389,1.04e-05,0.0692,0.815,141.069,183830,4,Body,"Russ Millions,Tion Wayne"
+spotify:track:1YrDXC5z5rbJnbzCQOjOgQ,0.657,0.462,0,-12.965,0,0.345,0.389,0.125,0.0745,0.557,122.102,282907,4,I'll Take Care Of U,"Gil Scott-Heron,Jamie xx"
+spotify:track:2D1hlMwWWXpkc3CZJ5U351,0.7,0.758,10,-3.012,0,0.342,0.0444,1.3e-05,0.0401,0.889,78.693,249467,4,P.I.M.P.,50 Cent
+spotify:track:2Mpj1Ul5OFPyyP4wB62Rvi,0.514,0.911,1,-2.027,0,0.41,0.0559,0.0,0.775,0.619,161.109,254027,4,Survivor,Destiny's Child
+spotify:track:0ETaxoSdL6Cj5Ms32BX4jj,0.823,0.298,2,-17.023,1,0.417,0.682,1e-06,0.269,0.686,124.919,181120,4,Day O,Raffi
+spotify:track:7a2my3gqm4pGJBpAHv3oeD,0.822,0.224,5,-24.805,1,0.947,0.525,0.000196,0.15,0.515,82.051,75773,4,Brush Your Teeth,Raffi
+spotify:track:7Ck3QNR067q4Hhae6vPLaN,0.697,0.103,5,-16.702,1,0.405,0.869,0.0,0.251,0.654,130.317,71760,3,Workin' On The Railroad,Raffi
+spotify:track:4m3z1QKpXIBIvJFVhCyhtl,0.397,0.625,4,-9.842,1,0.488,0.693,0.00582,0.694,0.424,203.136,248587,3,I'm In The Mood - Live,John Lee Hooker
+spotify:track:3RasiWohReHWYM1FJ9d1ZD,0.644,0.661,1,-4.877,0,0.451,0.369,0.0,0.0733,0.355,180.05,199882,4,Amor en Coma,"Manuel Turizo,Maluma"
+spotify:track:2nDWvZb0htYG0NrHS2Otr0,0.878,0.579,0,-7.292,1,0.369,0.112,0.0,0.204,0.51,149.893,159973,4,Lil Freak (feat. DreamDoll),"CJ,DreamDoll"
+spotify:track:22hoscwut5PWqmBa5eTk77,0.678,0.552,11,-7.915,0,0.374,0.528,0.0,0.135,0.603,83.951,124834,4,Money On The Table (ft. Benny The Butcher),"Belly,Benny The Butcher"
+spotify:track:4kdMfObhCkNZ47gsl63uXP,0.813,0.553,11,-6.274,1,0.433,0.261,0.0,0.176,0.683,130.905,281219,4,BURBERRY,"Myke Towers,Ñengo Flow"
+spotify:track:3wL6HzWOL9s5V2joGaZzZ6,0.552,0.765,1,-8.21,1,0.334,0.234,0.0,0.275,0.77,155.093,187386,4,Blood Roses (feat. Jae Skeese),"Conway the Machine,Jae Skeese"
+spotify:track:2dFp0fdBqHlEnlpZktUK7E,0.668,0.435,1,-9.839,1,0.479,0.257,0.0,0.123,0.609,174.142,157000,4,Might Not Like It,KenTheMan
+spotify:track:37n7Feuicqcab5YxxcsoUo,0.798,0.557,0,-3.159,1,0.388,0.0331,0.0,0.124,0.418,145.03,185379,4,Walk Down (feat. Pooh Shiesty),"BigKayBeezy,Pooh Shiesty"
+spotify:track:1IY1Ge6tFl0m9pr2Yg0OFe,0.627,0.393,6,-9.528,0,0.346,0.373,0.0,0.08,0.369,113.944,138947,4,LAVENDER,Dounia
+spotify:track:3gXyomtyDJnE7o6UdxDrq7,0.876,0.516,4,-9.78,0,0.483,0.205,0.0,0.117,0.631,143.931,133341,4,Belaire,Yung Mal
+spotify:track:7t1lBIr3WIEtqQEOdZFMUf,0.495,0.351,3,-14.669,0,0.34,0.485,0.0,0.0967,0.271,134.369,301960,4,Look What You've Done,Drake
+spotify:track:1ZmFu9kYqb0xduu4UGy7ss,0.509,0.498,7,-10.563,1,0.424,0.959,2.21e-05,0.0825,0.188,74.103,112093,3,A Hard Day's Night,Peter Sellers
+spotify:track:6jUfrV93ZxSX2HMrhtxiDj,0.643,0.382,4,-10.013,1,0.519,0.486,0.0,0.343,0.783,159.806,112459,4,The Hole in the Ground,Bernard Cribbins
+spotify:track:0GBMO4Mz5wiu3PuJ3eJOEp,0.571,0.39,5,-17.415,1,0.943,0.738,0.0,0.64,0.497,71.682,329333,1,A Transport of Delight,Flanders & Swann
+spotify:track:21nFIDqoD1L7ELsprVSzOR,0.929,0.339,1,-10.881,1,0.371,0.0373,1.96e-05,0.187,0.273,98.986,203200,4,Rack City,Tyga
+spotify:track:6Tx7BNqiakRXgAXngmnhCL,0.675,0.417,1,-9.751,0,0.511,0.0339,0.0,0.0886,0.169,193.094,233573,4,Who Do You Love?,"YG,Drake"
+spotify:track:34sjpLJnGPzcCV3QyMlaC2,0.432,0.329,0,-14.05,1,0.375,0.738,0.0243,0.369,0.272,76.211,979371,1,Knknighgh 3,"Nate Wooley,Dre Hocevar,Brandon Lopez,Chris Pitsiokos"
+spotify:track:6MCm5U1tyfkaQvcGkbw3ov,0.722,0.535,6,-9.352,1,0.502,0.513,0.0,0.277,0.898,103.467,76000,4,Olly Alexander from Years & Years on Pride,Various Artists
+spotify:track:0pi6mPEX2JZT9zO1tg7ESW,0.653,0.559,8,-9.67,1,0.349,0.509,0.0,0.0371,0.872,100.122,55000,3,Olly Alexander from Years & Years on Inspiration,Various Artists
+spotify:track:27E66TGQUVXWxtUOltZUnY,0.71,0.569,8,-10.109,1,0.412,0.464,0.0,0.0722,0.838,101.348,117500,3,Olly Alexander from Years & Years on his Playlist,Various Artists
+spotify:track:52IvQU087y8nKvluApHVkl,0.739,0.641,1,-9.193,1,0.386,0.308,0.0,0.128,0.82,101.603,90000,5,Olly Alexander from Years & Years on Coming Out,Various Artists
+spotify:track:2dBtn2402Q1DNacykSDAqg,0.858,0.534,4,-8.861,0,0.385,0.0174,3.33e-06,0.109,0.422,85.992,161837,4,Shine,Lundon Avery
+spotify:track:0dDABmuWQaeWL9VPhqUaXs,0.464,0.68,7,-9.297,0,0.483,0.342,0.0,0.325,0.522,172.771,234632,4,Money Mitch,True God
+spotify:track:2wHIFzU5J179Z58YypdekF,0.936,0.251,1,-15.98,1,0.494,0.287,0.0,0.122,0.671,140.935,164075,4,MY STORY,Mike Dimes
+spotify:track:1RNs1nBpJJ2hhfytPWAefx,0.898,0.316,3,-11.783,0,0.539,0.144,0.0,0.1,0.611,142.057,135210,4,Lets GO,Shaudie Man
+spotify:track:5YXxq21jkbIuBh3sU3Dy2C,0.841,0.417,2,-7.394,1,0.39,0.327,0.0,0.0956,0.341,140.134,185143,4,Jheez,OYABUN
+spotify:track:1NX28KHv3ttcwHWBxQeOnA,0.818,0.567,6,-8.731,0,0.387,0.0279,4.08e-06,0.107,0.197,158.094,152769,4,Z06,Summrs
+spotify:track:42VhikH5ynEj2BeYK1iEtk,0.92,0.443,7,-12.871,1,0.374,0.785,0.0,0.618,0.721,92.946,222302,4,Accept It,Mac J
+spotify:track:6n7kNM52F7c8rBXtr52UJQ,0.642,0.751,1,-4.465,1,0.333,0.0248,0.0,0.325,0.334,144.314,150288,4,No Hook,Big Jade
+spotify:track:4QjXUBs61syjYsJRCMfjzG,0.58,0.515,1,-10.547,0,0.496,0.113,0.0,0.572,0.747,86.595,198000,5,Devils,TVA Major
+spotify:track:7jkc30bqbBecQ6Xdna4BLe,0.74,0.614,2,-5.835,1,0.531,0.084,0.0,0.443,0.5,120.589,174629,4,On Dat,"Dirty Tay,Noodah05"
+spotify:track:4zCzDMxz0Tuq80n5vCNIpR,0.672,0.702,2,-8.623,1,0.426,0.00761,0.0,0.109,0.204,78.566,146752,4,Halo,Myazwe
+spotify:track:6eFGqaMtjBiYmNesC5SXDq,0.534,0.452,8,-12.461,0,0.388,0.0187,0.0,0.177,0.508,120.934,142862,4,Something To Prove,Brandon ThaKidd
+spotify:track:6fTzuyzIS7reVcjVRfavE5,0.859,0.471,10,-10.711,1,0.5,0.338,1.1e-06,0.145,0.471,130.072,194560,4,Drake,"Foggieraw,Kelow LaTesha"
+spotify:track:1U0pbxsCfQdy7f4XQ1cdYB,0.649,0.531,9,-6.308,1,0.383,0.0164,0.000701,0.095,0.691,179.853,274099,4,The Ballad,"YellowStraps,Louis VI,Rudi Creswick"
+spotify:track:1waIBeOh2e35PFT2C4QzW6,0.706,0.566,1,-10.428,0,0.457,0.325,0.0,0.137,0.644,82.692,209640,4,Faded in the Moment (feat. Cam O'bi),"Domo Genesis,Cam O'bi"
+spotify:track:35WILYc51d6LYgBKyT9m7c,0.643,0.681,1,-6.841,1,0.379,0.0559,0.0,0.131,0.439,172.179,185531,4,I Can't Call It,"Marz Lovejoy,Like of Pac Div,Jason Madison"
+spotify:track:5Mm2CJzNRiICC5MWRWQnBo,0.473,0.936,1,-2.441,0,0.408,0.0335,1.35e-05,0.607,0.545,173.53,175699,4,"hand crushed by a mallet (Remix) [feat. Fall Out Boy, Craig Owens, Nicole Dollanganger]","100 gecs,Fall Out Boy,Craig Owens,Nicole Dollanganger"
+spotify:track:5jdMwB3oIRYwPtjXHxgDoE,0.57,0.873,8,-5.696,0,0.399,0.0101,0.00197,0.0565,0.0969,75.03,268852,4,Shine (Konus & INF1N1TE Remix),"INF1N1TE,Konus,NetNobody"
+spotify:track:7cyeGclH71MayOuQ7qtLFl,0.86,0.507,0,-5.776,0,0.369,0.0408,6.15e-06,0.14,0.15,85.005,225920,4,BIG,Young M.A
+spotify:track:4leUoL3VyA2MbdVYRs8xXB,0.453,0.816,8,-8.021,1,0.442,0.42,0.0,0.112,0.21,199.524,179525,4,Intro,Tia Carys
+spotify:track:7yQID5EdSrmlh6ulh0Gzq4,0.713,0.708,1,-7.265,1,0.427,0.0839,0.0,0.0936,0.7,143.909,228595,4,Koi,Le1f
+spotify:track:2b4SSorCTQ2VzmllaeWuuT,0.824,0.396,2,-9.663,1,0.332,0.0323,0.00289,0.108,0.252,118.053,227707,4,YOU'RE THE ONE,"KAYTRANADA,Syd"
+spotify:track:05oQCqMlB0VyTcFqo9TZSx,0.831,0.577,1,-4.185,0,0.504,0.473,1.39e-06,0.152,0.407,157.969,190161,4,Same Set,Young M.A
+spotify:track:69jqKUauM2XyKBQ6eOZzB6,0.651,0.876,8,-7.033,1,0.357,0.135,0.0,0.224,0.736,76.166,189531,4,Werkin' Girls,Angel Haze
+spotify:track:1nINIHobpPWexRP8ABH8bT,0.487,0.736,11,-7.149,1,0.354,0.465,0.0,0.0791,0.447,81.994,184794,4,Нету интереса,10AGE
+spotify:track:62vpWI1CHwFy7tMIcSStl8,0.692,0.521,10,-8.465,0,0.33,0.301,0.0,0.0565,0.463,100.45,292987,4,No Role Modelz,J. Cole
+spotify:track:1IY75FIyPiGewmfc2AbPGa,0.389,0.835,4,-6.354,0,0.397,0.0233,0.000106,0.151,0.606,175.757,195990,4,Left With Someone Else,Gabriella Cilmi
+spotify:track:1pOMXPPXZRivj6S0lqaAKZ,0.759,0.404,8,-17.335,1,0.954,0.775,0.0,0.478,0.691,64.962,18600,3,Primary Colour,The Unthanks
+spotify:track:0GScvv1ovoSwnUm7XpK3NB,0.717,0.272,11,-14.995,1,0.927,0.989,0.000393,0.107,0.327,87.655,69413,4,Spring Strains,William Carlos Williams
+spotify:track:5j9Ognmht8CehNCzJQDtJm,0.718,0.182,11,-19.53,0,0.928,0.395,0.0,0.105,0.774,123.063,40240,3,Alfred Lord Tennyson - Spring,Richard Mitchley
+spotify:track:434IhnTxEkmfTUxwK2qvVe,0.661,0.0696,11,-26.862,1,0.921,0.985,0.0,0.117,0.689,93.781,106995,4,Spring SOng,Ogden Nash
+spotify:track:6jiKMcqnYD1r9xleUKLaJR,0.803,0.172,0,-19.862,1,0.947,0.536,0.0,0.169,0.744,89.409,52942,4,To Spring - William Blake,Richard Mitchley
+spotify:track:2zMX5gQQG26pa0LAQ9o7NF,0.625,0.0825,9,-23.228,1,0.964,0.499,0.0,0.203,0.485,168.64,44292,5,A Light Exists In Spring By Emily Dickinson,Emily Dickinson
+spotify:track:2z7m6GNfshuV2pxYVqvlHM,0.714,0.0581,11,-25.082,0,0.932,0.753,0.0,0.34,0.918,114.012,17357,3,A Little Madness In The Spring By Emily Dickinson,Emily Dickinson
+spotify:track:1jHz87H0HbljSCl4xlrEWI,0.814,0.0351,10,-26.061,0,0.875,0.895,0.0,0.185,0.309,49.687,57000,4,Spring is Like a Perhaps Hand,E.E. Cummings
+spotify:track:4dFuNfidsT3QonKxJ0buAg,0.712,0.0285,3,-29.919,1,0.529,0.758,0.0,0.409,0.148,99.128,117000,3,Sweet spring is your,E.E. Cummings
+spotify:track:0ok6Vdet9WM6SIF0uV1QbL,0.786,0.0575,1,-24.759,1,0.734,0.669,0.0,0.407,0.569,96.864,62747,3,John Clare: On a Lane in Spring,John Glen
+spotify:track:5oXpwu86xq0Xr6S3HGifNg,0.586,0.0228,2,-26.536,0,0.541,0.989,0.00207,0.123,0.291,230.781,52000,3,Spring & Fall,Margaret Rawlings
+spotify:track:5DVOLVHzdjh6jIeYJ0ioG9,0.616,0.224,11,-20.93,0,0.962,0.393,0.0,0.123,0.546,74.171,131773,3,Ode on the Spring - Thomas Gray,Richard Mitchley
+spotify:track:5fnOejfGEGGpWAr5PIiFty,0.686,0.105,11,-26.588,0,0.891,0.979,0.244,0.117,0.408,89.07,60720,3,Spring,Philip Larkin
+spotify:track:4k1IpEhRgvY3sH5TyeyWbN,0.756,0.0676,10,-19.944,1,0.912,0.887,0.0,0.13,0.374,78.28,59107,4,Spring Pools,Lesley Frost
+spotify:track:1t8XuqJuFvP2O3TXEewPU9,0.75,0.0721,11,-18.974,1,0.76,0.809,0.0,0.115,0.537,78.888,97187,4,A Prayer in Spring,Lesley Frost
+spotify:track:1WZPrJthzTVL7gAjbq396I,0.666,0.119,6,-22.122,0,0.955,0.602,0.0,0.313,0.508,79.326,37941,4,Before You Though of Spring By Emily Dickinson,Emily Dickinson
+spotify:track:1ouITgdTyzF8OpTiv6c8J8,0.718,0.126,11,-22.439,0,0.938,0.823,0.0,0.314,0.459,122.422,25449,4,A Pang Is More Conspicuous In Spring By Emily Dickinson,Emily Dickinson
+spotify:track:337rybPv9xps1PIOfZXYiW,0.751,0.0339,2,-22.493,1,0.862,0.663,0.0,0.23,0.471,123.136,53801,4,I Have A Bird In Spring By Emily Dickinson,Emily Dickinson
+spotify:track:39OtrZ5f5Wjzl0MboOncgP,0.743,0.0703,11,-18.996,0,0.844,0.467,0.0,0.122,0.729,85.872,18669,4,The Year's at the Spring - Robert Browning,Richard Mitchley
+spotify:track:7lP1zAuvrdP4OiDTeAfpeO,0.69,0.122,11,-23.898,0,0.943,0.666,0.0,0.538,0.575,138.619,62733,3,Spring Morning,David Moore
+spotify:track:0y6H7kfoLNVOom9usdw1uX,0.663,0.178,2,-22.342,1,0.955,0.348,0.0,0.235,0.663,82.792,150837,3,"Walt Whitman - These, I, Singing in Spring",Richard Mitchley
+spotify:track:5xjMNfGx4RcOdBXQfdUjEq,0.801,0.145,2,-19.191,1,0.914,0.617,0.0,0.0933,0.564,106.048,23917,4,In The Green And Gallant Spring,Richard Mitchley
+spotify:track:77vW4CHrV8XnDpkSDOw5bh,0.61,0.0251,2,-23.897,1,0.858,0.413,0.0,0.123,0.803,182.544,23754,5,Slow Spring - Katharine Tynan,Ghizela Rowe
+spotify:track:5o54hEktNMR3aDfGVHP0VX,0.671,0.0731,11,-21.476,0,0.91,0.718,0.0,0.25,0.528,85.277,49226,3,Monadnock In Early Spring,Ghizela Rowe
+spotify:track:7gBbBAP099f64bl1fC8ovv,0.7,0.0601,11,-23.531,0,0.828,0.589,0.0,0.205,0.438,134.103,49876,3,Katherine Mansfield - Very Early Spring,Ghizela Rowe
+spotify:track:1VO5JucQXYAlsuYVbn7Idd,0.746,0.219,1,-23.023,0,0.939,0.249,0.0,0.271,0.712,65.661,52454,4,Spring's Bedfellow - William Morris,Richard Mitchley
+spotify:track:54H5XvLZPLpr8DAxOydolp,0.764,0.0361,2,-22.468,1,0.745,0.65,0.0,0.237,0.422,81.244,55310,3,Emily Dickinson - I Have a Bird in Spring,Ghizela Rowe
+spotify:track:4mbfABvG9XhsasubJoiw7N,0.734,0.268,5,-14.141,1,0.954,0.687,0.0,0.0954,0.441,91.59,57893,4,Another Spring,"Emma Topping,Christina Rossetti"
+spotify:track:4G2oalsJbLDrIq1DjgIncs,0.745,0.104,7,-35.719,0,0.558,0.684,0.0,0.421,0.278,113.139,69000,1,Spring,"Unknown,Princess Grace of Monaco,Richard Pasco,John Carroll"
+spotify:track:3LEI3rXbXtxYp1iLOt1Is7,0.729,0.165,9,-20.773,1,0.942,0.35,0.0,0.103,0.523,81.62,80527,4,A Spring Poem From Bion By Eugene Field,Richard Mitchley
+spotify:track:7zZUB3zucFzCMHVAsX7d0Z,0.622,0.109,11,-23.578,0,0.957,0.736,0.0,0.151,0.579,77.494,109784,3,Extract Of Spring Day,Ghizela Rowe
+spotify:track:2iXQ1olTIJYyil9jAY4imZ,0.587,0.646,5,-14.491,1,0.95,0.625,0.0,0.204,0.114,139.923,53507,1,Spring Time,Chemeca Gant
+spotify:track:5ALrdGtSUOKxWUBrFzlKPy,0.711,0.343,3,-16.457,1,0.477,0.644,0.0,0.158,0.941,102.303,33430,3,Shura - Dad - #PressPlayForPride,Various Artists
+spotify:track:3mkQF4gxmnym4KoJejDW0o,0.693,0.301,3,-14.488,1,0.408,0.406,0.0,0.0814,0.913,98.216,23217,4,Shura - Gossip - #PressPlayForPride,Various Artists
+spotify:track:5ZbQHFSCiTMmxSxxSOWkf5,0.8,0.349,5,-15.887,0,0.388,0.396,0.0,0.0721,0.923,102.143,26766,5,Shura - Crush - #PressPlayForPride,Various Artists
+spotify:track:5ZksFgQe1yRsLxZRyqlIym,0.707,0.369,3,-15.874,0,0.36,0.654,0.0,0.0689,0.765,104.408,65505,4,Shura - Be Yourself - #PressPlayForPride,Various Artists
+spotify:track:7cRTzS9N5Mn25ZZkzmp6Uy,0.715,0.543,10,-8.807,1,0.335,0.0349,0.0,0.0432,0.926,76.55,172813,4,One Love,Bob Marley & The Wailers
+spotify:track:3VSqwaaVdUI2XN5qZqxoMc,0.707,0.467,3,-7.579,0,0.365,0.623,0.0,0.154,0.439,88.142,175952,4,Scorpio's Letter,"Taste of Pluto,Navy"
+spotify:track:4ueCKMfynKI8B2SzoPJaTr,0.7,0.725,0,-5.975,1,0.378,0.0827,0.0,0.0256,0.81,170.075,159706,4,100 Pound a Kali,"Green Lion Crew,Cut Stone,Kali Blaxx"
+spotify:track:6gkepFIH72ZdSIAjtvS7ZV,0.714,0.683,0,-8.651,1,0.516,0.457,0.0,0.12,0.467,159.893,163853,4,A Vibe (feat. Wiz Khalifa),"Protoje,Wiz Khalifa"
+spotify:track:5KQuQptKeiPuCVRHAEfBHW,0.856,0.651,7,-7.832,1,0.364,0.119,8.67e-05,0.136,0.599,81.708,161970,4,Turtlez,"Big Toe,Bonez MC"
+spotify:track:4hSJUp6k7QeHLxU32MrLIU,0.807,0.535,11,-6.519,0,0.349,0.191,0.0,0.125,0.925,156.013,125720,4,Ohne Dich,"KASIMIR1441,badmómzjay,WILDBWOYS"
+spotify:track:20IGCreXC8TeuEo3RoQZwh,0.829,0.525,0,-8.17,0,0.351,0.2,0.0,0.0691,0.332,132.04,123802,4,badmómz.,badmómzjay
+spotify:track:6V1lWr7s8CO5VkxXe4hBtg,0.901,0.536,2,-9.075,0,0.467,0.0312,0.0,0.0932,0.252,132.035,197240,4,PEPPERMINT,Luciano
+spotify:track:38ymFU7u5XorxpySYJT0FA,0.727,0.664,7,-7.26,1,0.352,0.22,0.0,0.127,0.558,90.32,193717,4,Verpennt,"187 Strassenbande,Bonez MC,LX,Sa4"
+spotify:track:5HQwoi47vjLNqaOc329VNM,0.893,0.433,11,-5.88,0,0.396,0.33,0.0,0.395,0.675,86.01,256667,4,"I Wanna Be Down (feat. Queen Latifah, Yoyo & McLyte) - Remix","Brandy,MC Lyte,Yo-Yo,Queen Latifah"
+spotify:track:4xwMnrJdxvwoASWyzNQoLP,0.545,0.904,6,-5.201,1,0.34,0.00298,0.00117,0.0679,0.674,139.871,278227,4,3 Wheel-ups (feat. Wiley & Giggs),"Kano,Wiley,Giggs"
+spotify:track:0Nwq52Aiow9vNx8eBFyoKV,0.679,0.885,11,-3.95,0,0.385,0.0906,0.0,0.17,0.732,140.425,188560,4,Evolve or Be Extinct,Wiley
+spotify:track:3YRY5W6LylZNFMcFBfjWy3,0.516,0.857,1,-4.435,1,0.377,0.205,0.0,0.497,0.735,140.121,192453,4,Speakerbox,Wiley
+spotify:track:6PG5TNJRYxhxf4zapzYM5g,0.584,0.797,10,-3.046,0,0.433,0.147,0.0,0.248,0.915,75.511,182886,4,Wickedest MC Alive,Wiley
+spotify:track:0ZKFSIkchY26BiIybn5mTn,0.67,0.763,9,-4.742,0,0.344,0.0689,0.0,0.0798,0.673,140.123,193800,4,Gangsters,Wiley
+spotify:track:0Wfabge2M5GOoVYOMwDe1t,0.774,0.794,1,-3.984,0,0.33,0.272,0.0,0.187,0.853,149.871,195600,4,Where Are You Now? (feat. Wiley),"Lady Leshurr,Wiley"
+spotify:track:5iKIgnGrF7ppfakcW3fFjV,0.862,0.753,6,-8.109,0,0.369,0.0559,0.0,0.0761,0.73,139.02,183240,4,Crash Bandicoot,Wiley
+spotify:track:2NMIPvfgUgIqMvCwpyHqEN,0.629,0.899,10,-3.171,0,0.407,0.0885,0.0,0.0895,0.862,89.688,206521,5,Handle Ya Business,Wiley
+spotify:track:5VGKYDyFvTrSK9Xv4IQIed,0.684,0.711,7,-9.795,1,0.381,0.273,0.0,0.151,0.812,139.694,161733,4,He's Too Much,Wiley
+spotify:track:5NsH4obL4xdYTmqKHtgXqf,0.783,0.856,7,-7.804,1,0.442,0.175,0.0,0.135,0.834,140.978,208640,4,It's Wiley,Wiley
+spotify:track:0nwcFkvS97Ex6BGLUBBCS6,0.799,0.872,10,-6.73,1,0.332,0.147,0.0,0.252,0.916,139.973,205714,4,Step 2001,"Wiley,Zomby"
+spotify:track:0D9LGPwzXCFkJ9sdmMRIWv,0.602,0.686,0,-5.876,1,0.377,0.24,0.0,0.237,0.769,139.061,138267,4,50/50,Wiley
+spotify:track:5bNpFncCi9sZRYtwUXeF9t,0.526,0.843,8,-5.358,1,0.435,0.708,0.0,0.309,0.853,134.175,158400,4,Stormy Weather,Wiley
+spotify:track:1efFKa8kCzYtKwrINT5oeX,0.521,0.936,4,-4.409,1,0.377,0.217,0.0,0.189,0.873,177.35,193074,5,Send Me The Riddim,Wiley
+spotify:track:18mqg9528DXPlNUHcHiTLH,0.587,0.803,10,-6.564,0,0.396,0.191,0.0,0.171,0.363,140.36,304405,4,Scene,"Chip,Jammer,D Double E,Jme,Miraa May,Wiley"
+spotify:track:6foAjYKVNKWnZMDmrt2LE7,0.425,0.95,11,-4.612,1,0.378,0.277,3.74e-06,0.233,0.465,204.063,216779,4,Chocolate - Spotify Sessions Curated by Jim Eno,The 1975
+spotify:track:73Pkn30bE2G358KFRZGpJb,0.518,0.417,10,-10.012,1,0.487,0.726,0.0,0.285,0.446,89.431,272853,4,Contact High - Live from Spotify NYC,Allen Stone
+spotify:track:71MbnGezW2U8RgaHnkjWDX,0.648,0.492,3,-7.87,1,0.48,0.703,0.0,0.577,0.673,118.437,333213,4,Roc The Life - Live from Spotify NYC,Rita Ora
+spotify:track:1VTcpvgyFKG9fY48kUJd6O,0.541,0.523,0,-9.936,0,0.671,0.651,0.0,0.363,0.671,91.744,274773,4,Sleep - Live from Spotify NYC,Allen Stone
+spotify:track:7EijHxeMQoGQ2SXhXZhE3A,0.66,0.471,4,-7.732,1,0.632,0.547,0.0,0.273,0.4,123.419,268738,4,Heart Attack - Live From Spotify NYC,The Asteroids Galaxy Tour
+spotify:track:1u3FMEh3u14smbxY1XZc4S,0.55,0.196,11,-16.253,1,0.355,0.766,0.0,0.191,0.492,162.481,221010,4,Lego House - Spotify Sessions,Ed Sheeran
+spotify:track:0jKfPdKlcy2hKTBqmpDAjV,0.746,0.654,9,-6.898,0,0.39,0.233,0.0,0.242,0.535,83.073,243692,4,Broke For A Minute,"Poldoore,Barney Artist"
+spotify:track:5x48S3L3kieU5g7LhW5TPM,0.932,0.454,7,-12.822,1,0.331,0.0372,0.000169,0.0337,0.53,112.782,229067,4,Totally Together,Galliano
+spotify:track:7Kj5uJBPXsOYO03e61IUAF,0.545,0.706,4,-12.662,1,0.448,0.987,0.0186,0.426,0.973,119.471,125921,4,Sally Goodin - Live,"Sleepy Hollow Hog Stompers,Jerry Garcia"
+spotify:track:38rXFAj14xVTGFY1GskEIo,0.723,0.412,8,-10.412,1,0.775,0.586,0.0,0.16,0.768,78.76,67135,3,Kelly Clarkson on Annie Lennox,Various Artists
+spotify:track:45OXBb9DgEkZHSRyd0XGse,0.747,0.35,5,-9.378,0,0.848,0.696,0.0,0.0979,0.75,141.871,25625,3,Joseph on Aurora,Various Artists
+spotify:track:37uc1GStPFvhalbnBOhBCJ,0.704,0.394,9,-8.567,0,0.859,0.89,0.0,0.249,0.845,132.684,19482,5,Zendaya on Loving Yourself,Various Artists
+spotify:track:5WvG6GTCksIPzWquoTHNyz,0.733,0.476,1,-8.568,1,0.925,0.879,0.0,0.353,0.742,65.626,47375,3,Zendaya on Cyber Bullying,Various Artists
+spotify:track:7DSafv1wQ6vORbAK9LnhFg,0.608,0.399,11,-8.282,1,0.943,0.9,0.0,0.112,0.749,199.425,44500,1,Zendaya on Beyoncé,Various Artists
+spotify:track:1kh0SEf7DVvd0Jq0AiHl8y,0.642,0.434,5,-9.388,1,0.779,0.764,0.0,0.336,0.971,162.818,16125,4,Echosmith on WHM,Various Artists
+spotify:track:5bPkD3EB1WuYcNC8DPiTEP,0.739,0.449,10,-9.804,0,0.845,0.791,0.0,0.198,0.797,113.389,26000,1,Echosmith on Joni Mitchell,Various Artists
+spotify:track:3Qqg51NwzRMMynsuCq1trR,0.723,0.313,9,-10.864,0,0.929,0.765,0.0,0.336,0.905,92.545,21625,4,Sabrina Carpenter on Adele,Various Artists
+spotify:track:1fmic8v3pGriX5yfIqPg7H,0.675,0.635,10,-6.741,0,0.872,0.81,0.0,0.36,0.851,86.416,23641,4,Halsey on Patti Smith,Various Artists
+spotify:track:1Z8RtwUJG0NBNr12iifzNo,0.731,0.399,6,-11.072,1,0.94,0.851,0.0,0.2,0.607,124.361,45375,5,Lera Lynn on Sister Rosetta Tharpe,Various Artists
+spotify:track:78qByw5XQNo6cONxSRY5rV,0.799,0.385,7,-8.052,0,0.9,0.747,0.0,0.358,0.671,136.796,40882,5,Cam on Emmylou Harris,Various Artists
+spotify:track:0tENc0xiAvsiczovH6le1h,0.781,0.502,0,-7.62,1,0.947,0.379,0.0,0.332,0.522,112.035,32500,3,Dawn Landes on Skeeter Davis,Various Artists
+spotify:track:0ALfCuVEY14cslWusFiRtB,0.69,0.471,3,-10.583,0,0.946,0.507,0.0,0.271,0.742,54.558,16750,4,Girls Rock Mission I,Various Artists
+spotify:track:2ERgaHGKzKYCXYx1qLN394,0.715,0.364,6,-11.504,1,0.937,0.448,0.0,0.108,0.67,105.543,49570,5,WILSN on Aretha Franklin,Various Artists
+spotify:track:7Hyeo2sASjn4daGByCcxLX,0.677,0.407,7,-10.387,0,0.906,0.482,0.0,0.108,0.707,98.288,33881,4,Kelly Clarkson on Aretha Franklin,Various Artists
+spotify:track:1fqu5vQIRLwcaxX8k5VY6r,0.707,0.392,1,-7.324,1,0.846,0.491,0.0,0.359,0.739,80.379,41625,4,Sara Hartman on Nina Simone,Various Artists
+spotify:track:4mC56d4QxYosEPUEo5mFJT,0.756,0.311,1,-13.316,1,0.926,0.189,0.0,0.273,0.806,80.911,65250,4,Amy Grant on Carole King,Various Artists
+spotify:track:408HttK1iGDx2NMS4AAXKQ,0.729,0.263,10,-13.447,0,0.936,0.555,0.0,0.277,0.45,66.137,45500,3,Powers on Grace Jones,Various Artists
+spotify:track:4Ho2Ttbs3MVZiZpzfTge1l,0.717,0.395,8,-6.882,1,0.797,0.48,0.0,0.333,0.796,125.999,78500,5,Connie Constance on Billie Holiday,Various Artists
+spotify:track:5vVRJ7YpG8uELQHQw2sVgZ,0.631,0.384,5,-7.253,1,0.909,0.526,0.0,0.356,0.67,143.991,51484,3,Kari Faux on Erykah Badu,Various Artists
+spotify:track:52wkEBdEFM7YUGLMWRaABQ,0.712,0.368,10,-10.122,0,0.883,0.725,0.0,0.0859,0.722,129.732,52187,4,Emily Kinney on Mariah Carey,Various Artists
+spotify:track:7jdgl643sGyOSVJvBRphv6,0.785,0.484,1,-7.873,1,0.719,0.765,0.0,0.299,0.851,59.286,37172,3,Nikki Yanofsky on Ella Fitzgerald,Various Artists
+spotify:track:7jI4RB8Sq4rHjf4Yo3vGli,0.717,0.41,4,-8.927,1,0.86,0.922,0.0,0.22,0.967,113.415,17554,4,Betty Who on her Mother,Various Artists
+spotify:track:4H7wJ8lV5XqaLyxHRpNy4b,0.745,0.642,7,-5.948,0,0.61,0.854,0.0,0.483,0.702,76.684,52323,4,Sara Evans on Patsy Cline,Various Artists
+spotify:track:048a2PS5RCm137BnP2XZP2,0.754,0.327,0,-9.424,0,0.816,0.567,0.0,0.0931,0.729,131.565,45166,3,Kelly Clarkson on Bonnie Raitt,Various Artists
+spotify:track:5DxtKeGna8NIG4rjAtWD1c,0.709,0.49,9,-8.196,1,0.833,0.956,0.0,0.199,0.362,76.948,78942,4,Striking Matches on Bonnie Raitt,Various Artists
+spotify:track:3gSP3wVC034l0m3cY8EHHl,0.714,0.439,3,-11.095,1,0.951,0.943,0.0,0.25,0.666,81.814,60056,3,Ashley Monroe on Dolly Parton,Various Artists
+spotify:track:4LPf2jCG9Z3valiLbVdtdE,0.791,0.629,4,-9.591,1,0.796,0.254,0.0,0.172,0.858,82.566,38262,4,Alo Lee on TĀLĀ & Banks,Various Artists
+spotify:track:6YYk1bbAFuMpAY4QpiKOtk,0.796,0.381,10,-9.378,0,0.919,0.578,0.0,0.169,0.773,71.48,27250,3,BB Diamond on Janet Jackson,Various Artists
+spotify:track:4dYNEfDoa6mX4TSIRAYOUQ,0.636,0.436,9,-6.922,0,0.58,0.749,0.0,0.271,0.766,168.272,47203,3,Larkin Poe on Heart,Various Artists
+spotify:track:6wutcmiLmgqBJma2MkKUIs,0.765,0.486,3,-10.49,1,0.94,0.539,0.0,0.264,0.479,86.421,18625,5,Girls Rock on Speedy Ortiz,Various Artists
+spotify:track:2yIMotUDLRh5U0P3vxn5VE,0.824,0.425,10,-6.061,0,0.551,0.537,0.0,0.104,0.87,55.688,19250,3,Leslie Grace on Selena Quintanilla,Various Artists
+spotify:track:4cMbScuOqBRRMR35PdPlvX,0.778,0.336,11,-8.637,0,0.842,0.831,0.0,0.267,0.475,73.281,29244,4,Natalia Jimenez on Gloria Estefan,Various Artists
+spotify:track:2jVQ0L9LUJVr20VXb73yDA,0.646,0.346,2,-7.962,1,0.804,0.751,0.0,0.333,0.654,88.888,49375,4,Natalia Jimenez - What I've Learned,Various Artists
+spotify:track:4zqaXTz1TqrlRGxjF45Na5,0.706,0.246,8,-8.679,0,0.744,0.498,0.0,0.192,0.908,87.057,29500,3,Paty Cantú - What I've Learned,Various Artists
+spotify:track:3nPOaVsc12ZCGkHPUFCvms,0.699,0.306,6,-10.767,1,0.952,0.619,0.0,0.31,0.866,47.936,22000,4,Paty Cantú on Shakira,Various Artists
+spotify:track:5me5yFJlnKZr2spcxSbCTW,0.447,0.544,0,-6.509,1,0.378,0.466,0.133,0.547,0.625,139.925,125643,4,PISTOLWHIP,spill tab
+spotify:track:53tv6ZbyeAwfAUwFaxYbfO,0.841,0.672,1,-5.557,0,0.371,0.0122,0.0,0.321,0.599,157.026,146845,4,Hellcats & Trackhawks,"Only The Family,Lil Durk"
+spotify:track:6toQdWWc4noiOk3Eo5mVDS,0.853,0.426,1,-6.812,1,0.374,0.0765,0.0,0.104,0.201,160.051,200424,4,Beat Box 3 (feat. DaBaby),"SpotemGottem,DaBaby"
+spotify:track:7zdbph3L2fiexGdn7Hcd3j,0.658,0.669,11,-5.01,0,0.34,0.35,0.0,0.0787,0.558,169.715,187765,3,38 Sides (feat. YoungBoy Never Broke Again),"NoCap,YoungBoy Never Broke Again"
+spotify:track:1A8990rtwHQ417l3yADe5t,0.753,0.659,8,-9.671,1,0.416,0.659,0.0,0.098,0.459,146.022,116256,4,GNF (OKOKOK),Polo G
+spotify:track:1YL2Gvo36BnxY8mGzjLWHd,0.878,0.524,4,-8.312,1,0.363,0.124,0.0,0.118,0.806,149.145,181211,4,Ugly (feat. Gucci Mane),"Pooh Shiesty,Gucci Mane"
+spotify:track:2tKkPDbXCDZzhpJgY338dt,0.787,0.654,11,-5.142,0,0.336,0.00897,0.0,0.309,0.487,144.906,192052,4,Should've Ducked (feat. Pooh Shiesty),"Lil Durk,Pooh Shiesty"
+spotify:track:4AEbBClHu7ZUqbo1iaC44Y,0.828,0.663,10,-6.158,0,0.357,0.172,0.0,0.206,0.691,78.477,165121,4,Up The Sco (feat. Lil Durk),"Icewear Vezzo,Lil Durk"
+spotify:track:2bo0HCDcZj8BYjoht9zYgk,0.909,0.617,1,-7.736,1,0.401,0.044,0.0,0.233,0.301,136.924,136939,4,Time Today,Moneybagg Yo
+spotify:track:7iMSOLaGijc7I6RcF6igti,0.797,0.605,2,-7.9,0,0.377,0.144,0.0,0.35,0.518,139.963,185402,4,Box of Churches (feat. 21 Savage),"Pooh Shiesty,21 Savage"
+spotify:track:2qrcvpJgVaRPeMyXSmCn2s,0.827,0.513,1,-8.109,0,0.335,0.0131,0.0,0.0823,0.249,133.005,202588,4,Clappers (feat. 42 Dugg),"Slimelife Shawty,42 Dugg"
+spotify:track:4vwfGk1D9kkPocFBzby1DA,0.688,0.677,1,-7.269,1,0.384,0.418,0.0,0.16,0.762,143.062,169615,4,Legendary,"Klass Murda,Pooh Shiesty"
+spotify:track:0xqIHhl2lJ7Y406KksUCUN,0.452,0.868,4,-4.246,0,0.418,0.129,0.0,0.118,0.566,185.909,303674,4,Politics (feat. G Herbo & DaBoii),"YBN Nahmir,DaBoii,G Herbo"
+spotify:track:0Gu03Pbo5JWcmOvnjvwmGo,0.624,0.584,6,-7.941,0,0.347,0.0755,3.55e-06,0.122,0.295,104.348,174676,3,Free Foo,Foogiano
+spotify:track:4DNhuBSBRZ1DQn0PbBiBpF,0.843,0.535,6,-8.922,1,0.507,0.403,0.0,0.101,0.409,73.063,121853,4,61st to 64th,Lil Zay Osama
+spotify:track:617jfrefuywyFVV2E5Skec,0.787,0.53,6,-6.015,0,0.339,0.00545,0.0,0.078,0.39,82.113,257063,4,Zero Tolerance,"Pacman da Gunman,Nipsey Hussle,Mozzy"
+spotify:track:1al3yMZMcrZobC6F3Itly3,0.755,0.556,6,-9.535,0,0.332,0.0481,0.0,0.297,0.504,140.028,185053,4,Minute Phone,Action Pack
+spotify:track:3HHjoIaRHX0QiFZB2I1BS1,0.65,0.742,1,-5.504,0,0.398,0.052,0.0,0.414,0.411,170.064,169996,4,No Brakes,Slimelife Shawty
+spotify:track:3fjIh8qgAbwPjri1mFpHxO,0.614,0.762,1,-7.142,0,0.345,0.0528,0.0,0.116,0.376,144.997,120066,4,Hits Inna Daytime (feat. BIG30),"DCG Shun,DCG Bsavv,BIG30"
+spotify:track:5WZKlDPxVvD6QoGVqASJyy,0.833,0.766,7,-4.309,1,0.406,0.0796,3.82e-06,0.158,0.63,144.916,211834,4,Off the Yak,Young M.A
+spotify:track:3y3lDeOb2c3FYCniav00EY,0.703,0.555,8,-8.199,1,0.382,0.0382,0.0,0.246,0.702,177.205,178949,4,8 Figures (feat. Meek Mill),"DaBaby,Meek Mill"
+spotify:track:0clgpNtf5iemK5gUYcBT1E,0.763,0.866,1,-4.799,1,0.332,0.0821,0.0,0.226,0.647,149.962,169639,4,Really Like That,G Herbo
+spotify:track:6SNYJG1rOe01x83XtaXXNi,0.863,0.61,1,-4.972,1,0.349,0.0655,0.0,0.151,0.584,140.062,200013,4,Period (feat. DaBaby),"Boosie Badazz,DaBaby"
+spotify:track:4qajoR64y5MU1NmAyt6rEm,0.843,0.44,9,-10.399,0,0.345,0.0696,0.0,0.106,0.707,139.946,116571,4,Where Were You,Calboy
+spotify:track:6LLzr3r1gpl6aYnqlwdg0R,0.703,0.675,8,-4.973,0,0.361,0.0792,0.0,0.143,0.579,162.033,178899,4,Big Steppa,"NLE Choppa,TG Kommas"
+spotify:track:3iB0GEK5aK6bhUgWdbZdNE,0.574,0.464,1,-10.523,1,0.528,0.016,0.0,0.0783,0.437,88.688,162847,4,My Ambitionz,Mozzy
+spotify:track:36xO92aV5Po93nqxVEJuOY,0.836,0.512,11,-12.002,1,0.372,0.613,1.28e-05,0.0574,0.765,144.007,226250,4,Warm Ups (feat. Leeky G Bando),"Rah Swish,Leeky G Bando"
+spotify:track:5MvPdnTDm0GTaaFUGJRujF,0.865,0.811,11,-4.694,0,0.412,0.00654,0.0,0.103,0.365,143.975,113014,4,Blixky Gang Freestyle Pt. 2,22Gz
+spotify:track:2zBbuueMlel8FVfLJn3hNS,0.871,0.47,5,-9.095,0,0.416,0.139,0.0,0.103,0.487,81.469,200245,4,Offense,OMB Peezy
+spotify:track:02L5PMxdlR9xwqT6uQuRMx,0.667,0.45,7,-6.341,0,0.425,0.16,1.06e-06,0.255,0.513,149.923,224235,4,Money Gang (feat. Pooh Shiesty),"Big $tunt,Pooh Shiesty"
+spotify:track:72kf03BwJJD44PmGbpedSR,0.785,0.564,2,-8.218,1,0.346,0.107,0.0,0.174,0.539,74.951,149656,4,Pistol Tottin (feat. Foogiano),"Memo600,Only The Family,Foogiano"
+spotify:track:6snYsavG9vq3C7RGN98dst,0.626,0.615,1,-6.142,1,0.346,0.265,0.0,0.0812,0.611,52.145,166841,3,Gang Signs (feat. ScHoolboy Q),"Freddie Gibbs,ScHoolboy Q"
+spotify:track:72GT4vlxNfMTeFt9hgTHW7,0.755,0.628,8,-6.136,1,0.384,0.478,0.0,0.0907,0.53,149.804,124232,4,Bandemic,Bizzy Banks
+spotify:track:07VOlyshShGMYBPgjTIZoz,0.885,0.741,10,-7.967,1,0.381,0.357,0.0,0.342,0.603,139.144,110375,4,"""BOP""",CJ
+spotify:track:3r56zMIKGtWWAr9F1hQz98,0.464,0.698,0,-5.944,1,0.407,0.239,0.0,0.136,0.624,152.555,161376,4,I Gotcha,YFN Lucci
+spotify:track:7uzseg5ubkERYPPMBKR24q,0.802,0.414,1,-8.522,0,0.524,0.396,0.0,0.11,0.644,140.004,174857,4,DFA,Qrunitup
+spotify:track:2k2TSG2paek2RKnxamv1YS,0.874,0.515,10,-6.973,1,0.845,0.00645,0.0,0.106,0.497,156.931,162575,4,Is You Fuckin?,Yella Beezy
+spotify:track:1kyG3F7hgVNnU3MqKfDGvM,0.631,0.806,9,-5.951,0,0.383,0.011,0.0,0.695,0.479,119.69,152020,5,Life I Live,Yungeen Ace
+spotify:track:08JsD3xllB0f41wAFXqDpO,0.755,0.811,8,-5.462,0,0.379,0.0834,0.0,0.387,0.824,159.965,126750,4,Big Steppa (feat. Sada Baby),"Fredo Bang,Sada Baby"
+spotify:track:13kurkVPWg9eJQ5QL6LR5f,0.393,0.93,6,-5.321,1,0.524,0.0523,0.000131,0.0935,0.487,81.728,190007,4,Loose Change - Live from Spotify NYC,Royal Blood
+spotify:track:5hKXO3AquHMBqOzWrUh05c,0.478,0.956,0,-4.672,1,0.913,0.742,0.0,0.914,0.303,129.238,490400,5,Are You Lonely?,Al Madrigal
+spotify:track:6BE7LslZLKghWcE7KCdN6o,0.492,0.781,10,-14.531,0,0.929,0.847,0.0,0.824,0.22,80.891,110733,3,Are You Guys Drug Dealers?,Bill Hicks
+spotify:track:76BsWx5CizTqxtEgWA7qPZ,0.523,0.857,11,-7.489,1,0.907,0.838,0.0,0.481,0.647,84.418,77867,3,You Thinkin' What I'm Thinkin'?,Beards Of Comedy
+spotify:track:5B31KBrpz0F2SxANyDJhnV,0.728,0.713,4,-6.425,1,0.942,0.847,0.0,0.703,0.795,92.896,57013,4,Are White People Psyched All The Time?,Aziz Ansari
+spotify:track:3DRXhIg1LLF9E8XhwmahzW,0.614,0.596,11,-10.784,1,0.931,0.957,1.92e-06,0.386,0.455,140.699,273780,3,A Question For The Ladies,Bill Hicks
+spotify:track:2WCNV7XBKv5P58Y7tprWF0,0.503,0.848,1,-8.634,1,0.922,0.838,0.0,0.777,0.385,140.266,159093,4,A Question Of The Heart,Big Jay Oakerson
+spotify:track:461IkbcnmtpXb2gOYPRbo2,0.522,0.683,2,-7.496,1,0.932,0.852,0.0,0.613,0.648,76.378,119513,4,Answer My Question,Andy Ritchie
+spotify:track:2adHZTlefXdwA9nYV3yuaL,0.419,0.903,10,-11.255,1,0.937,0.85,0.0,0.884,0.542,64.612,173640,3,Question Time,Billy Connolly
+spotify:track:0lMESPU3xf4nOpcICnfBAm,0.461,0.723,1,-8.516,1,0.944,0.844,0.0,0.927,0.466,172.027,146067,3,Yes Or No Question,Christian Finnegan
+spotify:track:5qaqA5YdyTtqO387FgJkS8,0.686,0.666,9,-9.368,1,0.943,0.781,0.0,0.719,0.359,127.466,290347,4,Why Not a Shark Tank?,Christian Finnegan
+spotify:track:3MCip4OW2lgBxYDtzhZFnN,0.487,0.557,4,-18.696,1,0.939,0.905,0.0,0.953,0.336,107.475,571200,5,Are You Happy With Your Wash?,Eddie Izzard
+spotify:track:6CuCa9WhcyrqdYz8DaFSjC,0.46,0.641,1,-12.611,1,0.938,0.825,3.22e-06,0.917,0.318,74.626,458133,4,"Cocktain Show, Vegas-American Photography, a Scientific Question, What I Believe, a Show Biz Moment",Steve Martin
+spotify:track:1jUvLLc08qa7u4V65wsuj7,0.431,0.897,5,-6.904,0,0.898,0.716,0.0,0.861,0.468,84.948,482371,4,Clinton-Bush / Why Do They Hate Us? / Florida / Al-Qaeda Fighters at the Bed & Breakfast / Heroin Task Force / Marine in the Basement,Marc Maron
+spotify:track:6PQpo9nJ0U8t71ppCTLRw2,0.48,0.853,5,-13.263,0,0.918,0.737,0.0,0.944,0.307,84.412,267053,4,What Is It You Can't Face?,Caroline Rhea
+spotify:track:6tkuQ2i8sODagSbb4tGR76,0.544,0.885,1,-9.219,1,0.946,0.776,0.0,0.977,0.333,102.894,293907,4,Q&A - Live (1998 Broadhurst Theatre),Jerry Seinfeld
+spotify:track:2DfTlNasfXdQkxwDHEv5CY,0.636,0.935,11,-2.79,0,0.885,0.751,0.0,0.779,0.476,79.467,163373,4,"Q&A - 3 Questions, 2 Girls, 1 Cup",Joe Rogan
+spotify:track:0rIDtmE1YaPQHmSeJtdSyi,0.627,0.843,11,-3.052,1,0.612,0.786,0.0,0.712,0.847,92.869,100253,4,Q&A - Monkeys On Mushrooms,Joe Rogan
+spotify:track:40fjnZjSWkw5dBSjUvMZPb,0.483,0.954,1,-6.139,1,0.942,0.79,0.0,0.834,0.195,85.207,387107,4,Q&A: Advice for the Audience,Eugene Mirman
+spotify:track:30I4xIABs2mAQHznGlB9fz,0.381,0.985,11,-6.809,1,0.814,0.898,0.00432,0.861,0.0606,87.248,52442,3,"Opening ""Why Is This A Track?""",T.J. Miller
+spotify:track:195feLuw6nZ1RP3OIS4nMy,0.417,0.989,4,-2.343,1,0.736,0.682,0.0,0.956,0.351,83.319,202067,1,Creepy Guy @ Work,Dane Cook
+spotify:track:1mo66yHKJustLsSIwzEv36,0.49,0.934,2,-6.168,0,0.875,0.755,0.0,0.959,0.387,113.345,359240,5,Alarm Clock,Gary Gulman
+spotify:track:6RHrQuUrdu0qGym6dzG0Q2,0.655,0.689,8,-5.568,0,0.863,0.779,0.0,0.694,0.724,105.116,44533,1,"Home Or Office, You Decide",Andrew Dice Clay
+spotify:track:0NTv0rd71ormOyAcuWeRQ7,0.591,0.688,1,-10.282,1,0.913,0.847,0.0,0.951,0.549,111.929,348347,4,Office People (And A Perfectly Good Font Joke),Christian Finnegan
+spotify:track:4XZRMjOdjoD5y5GXAeftdX,0.524,0.709,11,-8.904,0,0.952,0.788,0.0,0.892,0.597,80.519,487293,4,I Miss Working In An Office,Maria Bamford
+spotify:track:2C5JXQNCy1ksh6vNlApMdF,0.526,0.835,6,-7.865,1,0.947,0.774,0.0,0.947,0.478,81.59,192600,4,Self Employed,Maria Bamford
+spotify:track:7gU79E9ArAfwQBHA6rrTYo,0.582,0.824,1,-9.88,1,0.948,0.72,0.0,0.664,0.504,98.756,112133,3,The Saddest Place In The World,Maria Bamford
+spotify:track:0dmLAb1fohcwX8nuKJtQaG,0.578,0.796,6,-8.145,1,0.933,0.818,0.0,0.763,0.47,122.62,218707,3,Giant Corporation,Maria Bamford
+spotify:track:0qml1rSZsEWMqbBUahu35N,0.664,0.597,10,-8.226,1,0.86,0.786,0.0,0.667,0.801,84.955,54813,4,Lady Boss,Maria Bamford
+spotify:track:4TQXNRkgnZLWBJEgz1nsyx,0.556,0.828,7,-8.572,0,0.933,0.696,0.0,0.952,0.589,105.141,130107,3,Sexual Harassment,Maria Bamford
+spotify:track:44FVyoT3aFxxprrCCgNQbi,0.435,0.915,4,-11.335,1,0.926,0.789,0.0,0.554,0.635,74.523,46627,4,Busy People,Todd Barry
+spotify:track:6tIfLRqGeg2MuXLuSICmg6,0.331,0.965,9,-4.979,1,0.899,0.722,0.0,0.4,0.289,65.445,250587,3,Telemarketers,Pete Holmes
+spotify:track:3uKPCLmE0H5GpkJ4bHOdyI,0.501,0.801,1,-15.434,1,0.944,0.862,7.82e-06,0.826,0.25,129.026,175427,3,High at Work,Doug Benson
+spotify:track:0sISXK8xH9wL1XswnX0p6R,0.538,0.63,1,-14.884,1,0.956,0.823,0.0,0.954,0.293,89.391,214867,3,Non-Smoking Rooms,Doug Benson
+spotify:track:7Ke3278Eb1oKmnZmZSvAAS,0.476,0.319,1,-24.492,1,0.921,0.853,0.0,0.881,0.263,65.764,134560,4,Alarm Clock,Kyle Dunnigan
+spotify:track:5vkfvDlCLnSsrjJHf2qUfO,0.559,0.459,1,-20.421,1,0.942,0.783,0.0,0.881,0.644,110.298,146493,3,Drugs For A Brave New Cubicle,Doug Stanhope
+spotify:track:1yJ0cjmLGjbwQxoWT0PUZJ,0.41,0.668,5,-15.533,0,0.867,0.884,0.0,0.951,0.189,84.605,651107,4,I Love My Job,Bill Hicks
+spotify:track:4K0X8DXuBegqyt1Iio1tgZ,0.549,0.709,10,-15.496,0,0.939,0.874,0.0,0.776,0.299,68.554,75067,3,Working,Bill Hicks
+spotify:track:5DpbheVEDEbBa65NGjWHxM,0.535,0.461,2,-14.17,1,0.958,0.907,0.0,0.596,0.488,73.705,248600,5,Office Hot & Donuts Gigolo,Andy Hendrickson
+spotify:track:4gCcaBxOyKsZo03dC6agWR,0.616,0.416,5,-15.025,1,0.923,0.832,0.0,0.904,0.609,122.665,125893,4,Crappy Jobs & Bingo,Dana Gould
+spotify:track:12vGYvXEuJgOwS7xdKJnB1,0.487,0.921,6,-11.817,1,0.912,0.855,0.0,0.775,0.156,103.216,310547,4,Communication Skills,Adam Ferrara
+spotify:track:45dYo4BWpi7Nzw6AMjRbMt,0.55,0.57,1,-12.698,1,0.787,0.874,0.0,0.895,0.632,113.867,134267,3,Jobs,Andy Hendrickson
+spotify:track:4c5CRcfsOMqWdlvoOfEfqs,0.562,0.855,1,-10.651,1,0.877,0.861,0.000371,0.888,0.287,132.244,274240,3,Odd Jobs,Anthony Jeselnik
+spotify:track:7fcUADcmxGU1ziCrvDE5vM,0.45,0.184,10,-24.171,0,0.878,0.872,0.0,0.749,0.652,74.764,245030,3,Stripping & Other Jobs,Ben Moore
+spotify:track:0mRS7tovbCKPWuqUsmsWXx,0.692,0.849,2,-5.157,1,0.939,0.892,0.0,0.72,0.362,137.306,167688,3,Comedy is a weird job - Live,Hannibal Buress
+spotify:track:0P4vWgNqiTBKXBLf4ncYTY,0.631,0.512,3,-9.725,0,0.926,0.88,0.0,0.723,0.499,105.736,182509,3,"Waiting Tables, Restaurant Lingo",Pete Holmes
+spotify:track:6Q9RYhS0vPQcVuZRuERASC,0.549,0.521,6,-13.758,1,0.891,0.812,0.0,0.763,0.435,130.423,39131,5,Worst Boss Ever,Andi Smith
+spotify:track:7moCdtQSYiVX8sRZ91tB8x,0.616,0.818,6,-5.606,1,0.381,0.0862,0.068,0.259,0.546,104.974,236000,4,About You,Otto Knows
+spotify:track:1xK7enJZVdv37fnnxoZlPq,0.362,0.921,1,-3.815,0,0.486,0.123,0.0,0.19,0.529,172.191,180840,3,With You,"Kaskade,Meghan Trainor"
+spotify:track:0pgeVJrdNok4KhbiM58ayZ,0.516,0.755,0,-8.868,0,0.351,0.0258,0.0,0.329,0.633,99.764,187907,4,All Gold Everything,Trinidad James
+spotify:track:2Vba5MBCdGqcE57GSiOstv,0.482,0.877,8,-3.714,0,0.374,0.0526,0.0,0.366,0.635,205.037,255773,4,Around My Way (Freedom Ain't Free),Lupe Fiasco
+spotify:track:6gf1xlPETW9CwjsdnUzW3g,0.92,0.472,1,-7.941,1,0.333,0.166,0.0,0.068,0.308,97.463,219833,4,HeadBand (feat. 2 Chainz),"B.o.B,2 Chainz"
+spotify:track:6yHyEcHG9EIcFHuNr2fogN,0.836,0.791,8,-9.054,1,0.331,0.398,0.476,0.136,0.884,135.288,132640,4,My Boyfriend's Back,The Angels
+spotify:track:6WhzFzROw3aq3rPWjgYlxr,0.6,0.412,8,-9.343,1,0.344,0.615,0.0025,0.134,0.408,113.049,225882,5,Gold,Kiiara
+spotify:track:6ZSO7kPn8IMJFymyticbJO,0.6,0.412,8,-9.343,1,0.344,0.615,0.0025,0.134,0.408,113.049,225882,5,Gold,Kiiara
+spotify:track:1Z4UKak2eNteHFZkwiYPNz,0.843,0.244,9,-12.34,0,0.457,0.289,0.0,0.19,0.519,159.836,217613,4,One Time,Marian Hill
+spotify:track:2Fxmhks0bxGSBdJ92vM42m,0.701,0.425,7,-10.965,1,0.375,0.328,0.13,0.1,0.562,135.128,194088,4,bad guy,Billie Eilish
+spotify:track:2l8nEO0vsTRCRnGqQty6qx,0.931,0.387,1,-9.127,1,0.412,0.088,0.0,0.136,0.376,125.978,179405,4,FEFE,"6ix9ine,Nicki Minaj,Murda Beatz"
+spotify:track:6HZILIRieu8S0iqY8kIKhj,0.638,0.523,1,-6.664,1,0.357,0.00454,0.0,0.0842,0.422,139.913,185947,4,DNA.,Kendrick Lamar
+spotify:track:0VgkVdmE4gld66l8iyGjgx,0.833,0.434,2,-8.795,1,0.431,0.0102,0.0219,0.165,0.281,150.062,204600,4,Mask Off,Future
+spotify:track:0inNBCNb9YqYZcSsWBmxqG,0.84,0.317,5,-15.574,0,0.937,0.629,0.0,0.224,0.327,32.846,20707,4,Intro - Spotify Sessions,MS MR
+spotify:track:5V5RYRx2fRoDqrHMkHRt8E,0.531,0.788,0,-8.039,1,0.431,0.245,0.00031,0.469,0.257,149.954,247307,4,Fantasy - Spotify Sessions,MS MR
+spotify:track:7Hh0hlRxX7UZgvNED4YZ9v,0.597,0.54,6,-12.843,0,0.965,0.46,0.0,0.311,0.194,148.283,17212,3,Intro - Live from Spotify NYC,Sheryl Crow
+spotify:track:5QfBuE8VSeZHRnQta8BsqO,0.611,0.432,8,-22.338,1,0.908,0.608,0.0,0.393,0.353,107.128,112564,4,Intro - Live From Spotify NYC,Macklemore & Ryan Lewis
+spotify:track:4AKZcuoEzm4vhWpKiwo8zU,0.677,0.3,10,-22.034,0,0.929,0.585,0.0,0.334,0.74,112.97,101892,3,Interview - Live From Spotify NYC,Macklemore & Ryan Lewis
+spotify:track:5KBO03qk5Llz6JwSBkov5v,0.592,0.387,9,-17.975,1,0.922,0.711,0.0,0.839,0.544,147.669,38659,3,Intro - Spotify Sessions,Portugal. The Man
+spotify:track:13c3QOWmNVMJaRgXbF71zQ,0.6,0.47,0,-9.674,0,0.335,0.205,0.0,0.406,0.416,80.502,287990,4,Sea of Air - Spotify Sessions,Portugal. The Man
+spotify:track:471elLnnkrxHuB7BW4NM5b,0.573,0.665,7,-8.538,0,0.368,0.356,0.0,0.282,0.46,128.395,318924,4,Evil Friends - Spotify Sessions,Portugal. The Man
+spotify:track:21Ryl4tvdtcllcynWJMIGH,0.714,0.252,4,-15.864,1,0.912,0.741,0.0,0.137,0.737,92.777,30373,4,Intro - Live At Spotify House,Jamie N Commons
+spotify:track:5aUTcT3ESPPEXtRXHDkXBh,0.708,0.231,5,-16.704,1,0.926,0.71,0.0,0.31,0.415,100.89,164098,3,Intro - Spotify Sessions,Grouplove
+spotify:track:4DEpGfnc0Py9TcECYFUVJV,0.502,0.643,4,-11.206,1,0.355,0.334,0.0,0.812,0.224,139.153,211213,4,Next In Line - Live From Spotify NYC,WALK THE MOON
+spotify:track:0mF1SOuJNwn2dorzLZefKP,0.705,0.232,8,-15.041,1,0.952,0.42,0.0,0.305,0.33,82.851,132627,5,The Thrill (Intro) - Spotify Sessions,Miguel
+spotify:track:6utLQB4ok29AkaKJR3q6tb,0.679,0.261,11,-14.56,1,0.937,0.468,0.0,0.552,0.296,79.33,211413,3,Candles in the Sun (Intro) - Spotify Sessions,Miguel
+spotify:track:6ktzQz9NoVKTtcKCm0grJe,0.672,0.189,8,-17.578,1,0.945,0.167,0.0,0.129,0.523,138.864,45760,5,Adorn (Intro) - Spotify Sessions,Miguel
+spotify:track:2uqRWnJcKKTclXgNTf75IF,0.585,0.0845,5,-24.754,1,0.852,0.8,0.0,0.349,0.355,86.968,1114884,4,The Necklace by Guy de Maupassant,Emma Hignett
+spotify:track:3AoLoamKawLJniYHkncKDM,0.655,0.233,10,-15.828,0,0.92,0.863,1.67e-05,0.0981,0.4,81.728,3386480,4,The Red and the Black,Nbc Theater
+spotify:track:5AepatdtiMzpghbJL6waSA,0.678,0.258,11,-13.522,0,0.955,0.955,4.19e-06,0.12,0.56,84.641,2448189,4,Around the World in 80 Days - Jules Verne Part 1 of 2,DBS Audiobooks
+spotify:track:4uDKQwFRCREbo5NxbxdMik,0.589,0.406,5,-16.82,0,0.854,0.944,6.97e-06,0.146,0.241,125.188,1492107,4,"Dialogue Highlights, Pt. 1","Richard Burton,Peter O'Toole"
+spotify:track:1JdWvyDGgodIlZg88NrL7w,0.512,0.366,5,-18.185,0,0.753,0.916,0.0,0.0843,0.214,78.646,1476520,4,"Dialogue Highlights, Pt. 2","Richard Burton,Peter O'Toole"
+spotify:track:33Slrviorul8e9xtBtAUTf,0.626,0.348,1,-13.824,1,0.96,0.938,0.0,0.0917,0.431,81.695,3395147,4,The Doctor in Spite of Himself,NBC University Theater
+spotify:track:22X2xK5djxVhhjYAmT14bC,0.687,0.345,2,-21.997,1,0.895,0.141,0.0,0.121,0.384,104.003,2687988,4,The Horla - Guy De Maupassant,Ian Holm
+spotify:track:1go3ahvAMoI3Dq76CKhToi,0.579,0.198,0,-23.288,1,0.946,0.988,0.497,0.105,0.19,63.783,1626093,4,Le Grand Breteche By Honore de Balzac,Laurence Olivier
+spotify:track:52W2PGjRveUFIHKW5GTwx2,0.699,0.155,7,-23.224,0,0.943,0.791,0.0,0.143,0.391,107.398,1289907,4,"Madame Bovary: Chapter 1, Three Madame Bovarys",Jenny Agutter
+spotify:track:1TXfpUcP4vrc1CK4tNftUM,0.67,0.161,7,-23.733,0,0.956,0.73,0.0,0.116,0.468,88.287,950267,4,"Madame Bovary: Chapter 2, Love At First Sight",Jenny Agutter
+spotify:track:6dSSo1r706Pf7GS56dwTHz,0.715,0.172,7,-22.135,0,0.927,0.735,0.0,0.162,0.377,119.229,1188427,3,"Madame Bovary: Chapter 3, New Attraction",Jenny Agutter
+spotify:track:6JsGDQak5vAd6KTdaJVRYk,0.713,0.137,7,-22.54,0,0.932,0.672,0.0,0.143,0.323,122.53,925867,3,"Madame Bovary: Chapter 4, A Seduction",Jenny Agutter
+spotify:track:2LGmvMSLRtfPbRvvCW4CJF,0.71,0.167,7,-20.628,0,0.936,0.705,0.0,0.101,0.346,126.527,1281933,4,"Madame Bovary: Chapter 5, Wild Dreams",Jenny Agutter
+spotify:track:4faRS4vzwGjXYgjI4tFoPG,0.626,0.176,7,-22.325,0,0.952,0.719,0.0,0.0506,0.345,170.232,876400,3,"Madame Bovary: Chapter 6, Deep Despair",Jenny Agutter
+spotify:track:5u3dQPR3T227ea7NmFHQue,0.704,0.141,0,-22.333,0,0.939,0.697,0.0,0.377,0.312,130.192,1009107,3,"Madame Bovary: Chapter 7, Ectasy And Anguish",Jenny Agutter
+spotify:track:55qX4A49Hogi5OEjCnBazw,0.71,0.137,5,-21.363,0,0.923,0.708,0.0,0.0981,0.294,114.574,1138467,5,"Madame Bovary: Chapter 8, Two Deaths",Jenny Agutter
+spotify:track:7yhMRJ4UAMQqBoueawDEVV,0.622,0.233,7,-21.344,0,0.95,0.678,0.0,0.357,0.469,82.092,1118507,3,"The Hunchback Of Notre Dame: Chapter 1, The Fool's Pope",Andrew Sachs
+spotify:track:7by9cm7c3J0NzGQ5BNHTcr,0.713,0.192,9,-23.116,0,0.925,0.554,0.0,0.345,0.47,120.741,1020160,3,"The Hunchback Of Notre Dame: Chapter 2, An Outcast",Andrew Sachs
+spotify:track:4gCmuAYwpDPkTov5LKIQzU,0.697,0.182,9,-24.06,0,0.931,0.579,0.0,0.0967,0.463,128.293,1102173,4,"The Hunchback Of Notre Dame: Chapter 3, Punishment",Andrew Sachs
+spotify:track:591lmbSuBBGKj7HwpPrDMG,0.594,0.191,9,-24.066,0,0.957,0.547,0.0,0.537,0.485,70.164,1109000,4,"The Hunchback Of Notre Dame: Chapter 4, Extreme Emotions",Andrew Sachs
+spotify:track:7xTfn9EX3bTZSsjFskAljU,0.635,0.17,9,-24.845,0,0.954,0.461,0.0,0.399,0.396,75.608,1294733,4,"The Hunchback Of Notre Dame: Chapter 5, The Eleventh Hour",Andrew Sachs
+spotify:track:5YKDm8TvsJh2JCHRb50kYc,0.644,0.0933,9,-25.817,0,0.931,0.609,0.0,0.193,0.298,83.013,860400,3,"The Hunchback Of Notre Dame: Chapter 6, Sanctuary",Andrew Sachs
+spotify:track:6NtvFR6X5hckVhqsfX5WOA,0.66,0.169,9,-24.496,0,0.938,0.599,0.0,0.159,0.423,55.592,1236200,4,"The Hunchback Of Notre Dame: Chapter 7, Chivalry",Andrew Sachs
+spotify:track:6SjzIQGGPHF3ak9x0VirV5,0.678,0.151,9,-26.856,0,0.895,0.567,0.0,0.0835,0.416,108.678,851467,5,"The Hunchback Of Notre Dame: Chapter 8, Last Embrace",Andrew Sachs
+spotify:track:7dZuv2yZYl4d0s6j195woE,0.62,0.361,8,-19.262,1,0.944,0.894,0.0,0.335,0.266,79.718,1110733,4,"Les Miserables: Chapter 1, The Outcast",Michael Jayston
+spotify:track:7k0cnFFwdExZfmKSXKZZ79,0.62,0.372,11,-19.63,0,0.953,0.851,0.0,0.362,0.267,174.174,1062960,3,"Les Miserables: Chapter 2, Crossed Destinies",Michael Jayston
+spotify:track:7rDkoRxn9o2cUgCR3IFxxR,0.709,0.365,8,-20.241,1,0.916,0.848,0.0,0.772,0.227,123.904,1488867,5,"Les Miserables: Chapter 3, Revelation",Michael Jayston
+spotify:track:5JLNyxcMVm2OR3gepoyeg5,0.67,0.373,0,-21.541,1,0.929,0.81,0.0,0.349,0.213,99.588,693200,3,"Les Miserables: Chapter 4, A Mayor Disgraced",Michael Jayston
+spotify:track:4E0Djf6hBK4iIxjv1TCevC,0.669,0.331,8,-22.576,1,0.93,0.87,0.0,0.131,0.228,97.219,1336827,4,"Les Miserables: Chapter 5, A New Start",Michael Jayston
+spotify:track:2MppkuHNUULZ5RXRKAeQvC,0.627,0.331,8,-23.336,1,0.938,0.891,0.0,0.515,0.256,166.531,846533,1,"Les Miserables: Chapter 6, At The Barricades",Michael Jayston
+spotify:track:3KyNk4SPljvyIBP3QjMZmf,0.685,0.321,0,-23.47,0,0.91,0.893,1.41e-06,0.0851,0.224,103.23,855067,4,"Les Miserables: Chapter 7, Escape",Michael Jayston
+spotify:track:1J1KVZjeJHGKJ5vU8w3o0n,0.617,0.264,0,-24.328,0,0.935,0.862,0.0,0.17,0.231,170.005,1302333,3,"Les Miserables: Chapter 8, Reconciliation",Michael Jayston
+spotify:track:5k6AEj8w2CCeECwNj49b3n,0.703,0.319,3,-18.36,1,0.733,0.927,1.05e-05,0.105,0.825,98.514,40691,4,Play It Forward Campaign Intro,Eagles Of Death Metal
+spotify:track:6vP20WsY3tI70wv4cSBnk0,0.692,0.86,7,-5.534,1,0.369,0.112,0.0,0.335,0.697,77.488,256840,4,Crunk Muzik,"The Diplomats,Jim Jones"
+spotify:track:152lZdxL1OR0ZMW6KquMif,0.736,0.449,1,-11.462,0,0.425,0.33,0.000162,0.0898,0.326,80.126,219080,4,Location,Khalid
+spotify:track:04nOwWktrlIrqalCY3QH0L,0.713,0.678,4,-5.384,1,0.337,0.0481,0.000145,0.139,0.576,142.241,219907,4,Free Radicals,The Flaming Lips
+spotify:track:33uKyhQ4EsYvjeQZmgnHvX,0.647,0.853,11,-5.176,0,0.334,0.0188,0.000338,0.365,0.301,128.108,159375,4,All of My Love,"Wahlstedt,Backs"
+spotify:track:2dkCED8COm91KyrDgvslOq,0.648,0.596,0,-6.862,0,0.41,0.154,0.0,0.332,0.465,134.982,115880,4,FAIRY TALES (feat. BJ The Chicago Kid),"CHIKA,BJ The Chicago Kid"
+spotify:track:0evKTZ9MpgVcCd5TBvmeD6,0.683,0.669,1,-5.276,0,0.365,0.312,0.0,0.213,0.538,91.045,205809,4,On One,"Joyce Wrice,Freddie Gibbs"
+spotify:track:4tGGaI4N2KDjmAwXxF1e7P,0.52,0.719,0,-4.866,1,0.383,0.31,0.0,0.0882,0.663,173.19,192824,4,Lie To Me,"Queen Naija,Lil Durk"
+spotify:track:2C6QUOsR7PfEm3EpXOLvjv,0.519,0.439,0,-8.799,1,0.347,0.601,0.0,0.105,0.357,126.843,248442,4,NO ONE’S IN THE ROOM,Jessie Reyez
+spotify:track:5dEriSdjnplqRHdrguyHmU,0.76,0.61,1,-11.242,1,0.892,0.926,0.000134,0.123,0.458,119.103,121067,3,Untitled - Talking About Sherlock Holmes And Spiritualism,Sir Arthur Conan Doyle
+spotify:track:1Y7KvlgDWYSVA9LuAXEhF0,0.637,0.18,7,-22.615,1,0.938,0.981,6.72e-05,0.34,0.397,79.28,350920,4,A Scandel in Bohemia Chapter 1,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:51PiKLm6KSA4IvHL81tjUc,0.615,0.195,5,-21.706,0,0.925,0.974,0.0,0.357,0.53,69.955,303040,4,A Scandel in Bohemia Chapter 2,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3UTxl1B1LJuNsm9HOWz3UX,0.695,0.139,5,-23.661,0,0.886,0.984,0.0,0.196,0.565,88.637,216133,3,A Scandel in Bohemia Chapter 3,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:5nBtZE8RwoVI1pM45elSF8,0.528,0.265,7,-22.327,1,0.938,0.987,3.58e-05,0.386,0.569,171.321,380333,4,A Scandel in Bohemia Chapter 4,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:2XUuc5zMCFjuTt4h3Ci08G,0.536,0.124,5,-23.229,1,0.906,0.968,0.0,0.174,0.0773,76.566,367560,4,A Scandel in Bohemia Chapter 5,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:0lFJxKAEaXSzRErN9Fmsej,0.697,0.147,5,-19.827,0,0.949,0.774,0.0,0.141,0.307,102.489,4057967,4,The Red-Headed League,Sir Arthur Conan Doyle
+spotify:track:43HQdpgClfjSRJ28NOAGpQ,0.695,0.15,8,-19.45,1,0.959,0.738,0.0,0.134,0.207,83.947,3233333,4,A Case of Identity,Sir Arthur Conan Doyle
+spotify:track:3SdJip8cc37TwysCN9WC6R,0.661,0.126,0,-20.777,1,0.955,0.702,0.0,0.183,0.274,93.009,4373004,4,The Boscombe Valley Mystery,Sir Arthur Conan Doyle
+spotify:track:1phGR5vQPnDZXIzikyqd96,0.657,0.125,5,-19.776,1,0.957,0.608,0.0,0.144,0.281,74.453,3283750,3,The Five Orange Pips,Sir Arthur Conan Doyle
+spotify:track:0HBrGPG4TXcTRSIeDDEGRW,0.633,0.0961,11,-20.374,0,0.952,0.623,0.0,0.0975,0.222,81.361,4298999,4,The Man with the Twisted Lip,Sir Arthur Conan Doyle
+spotify:track:73Sci75kuIkVahliDZyqrH,0.69,0.0976,5,-19.883,0,0.95,0.602,0.0,0.119,0.199,80.674,3776132,4,The Adventure of the Blue Carbuncle,Sir Arthur Conan Doyle
+spotify:track:0H1ZwL3aYhe8JHrZC0zrcI,0.632,0.0744,11,-20.734,0,0.952,0.705,0.0,0.0905,0.18,82.268,4508318,4,The Adventure of the Speckled Band,Sir Arthur Conan Doyle
+spotify:track:31SZ6HN0nk9PjwOUC8dcp3,0.685,0.104,2,-19.43,1,0.953,0.516,0.0,0.177,0.332,83.675,3588442,4,The Adventure of the Engineer's Thumb,Sir Arthur Conan Doyle
+spotify:track:0MZEP6lWEotDRzUxiBd8rr,0.69,0.0858,2,-18.608,1,0.927,0.54,0.0,0.0758,0.245,100.559,3908729,3,The Adventure of the Noble Bachelor,Sir Arthur Conan Doyle
+spotify:track:5Dy7TrNunm12mDOijmmCrg,0.684,0.0694,11,-21.224,0,0.951,0.637,0.0,0.0998,0.241,82.189,4437892,4,The Adventure of the Beryl Coronet,Sir Arthur Conan Doyle
+spotify:track:4GqA2aJKpyEzIoUSNeQZYE,0.665,0.0822,11,-18.465,0,0.943,0.694,0.0,0.114,0.217,87.28,4462995,4,The Adventure of the Copper Beeches,Sir Arthur Conan Doyle
+spotify:track:3dglIAO0ps2xolEI97SvOv,0.651,0.297,0,-21.081,1,0.91,0.965,7.05e-06,0.535,0.326,114.032,405547,3,Silverblaze Chapter 1,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:35MOMqimrEeeVMo4jM8tnG,0.635,0.244,0,-19.547,1,0.94,0.963,0.0,0.263,0.528,85.598,350400,4,Silverblaze Chapter 2,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3sKR4kTdgbZUuBxQpSzpvu,0.664,0.22,0,-20.955,1,0.947,0.965,0.0,0.225,0.459,87.107,385920,4,Silverblaze Chapter 3,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:0p4z2dzYmo9eDJawNgofEF,0.595,0.319,5,-19.202,1,0.947,0.958,4.4e-06,0.198,0.234,83.995,346160,4,Silverblaze Chapter 4,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3pFtOsi0EKHxzk9fStEod8,0.68,0.217,1,-16.701,1,0.94,0.432,0.0,0.386,0.575,88.292,2757191,4,The Adventure of the Yellow Face,Bart Wolffe
+spotify:track:6zCqkvj0e3JXoQqN6rBIgn,0.67,0.223,10,-17.287,1,0.939,0.321,0.0,0.0438,0.574,87.093,2778201,3,The Adventure of the Stockbroker's Clerk,Bart Wolffe
+spotify:track:33MT8kZxtFTz56FX0xdMy1,0.62,0.178,0,-19.772,1,0.946,0.334,0.0,0.0446,0.551,74.183,3107826,4,The Adventure of the Gloria Scott,Bart Wolffe
+spotify:track:45w9qx9Z7yVivLb1vWYeLo,0.672,0.244,2,-19.821,1,0.94,0.353,0.0,0.0435,0.43,78.861,3109409,4,The Adventure of the Musgrave Ritual,Bart Wolffe
+spotify:track:75Piup639z54nCY6XhAPoM,0.618,0.293,2,-17.306,1,0.952,0.377,0.0,0.0436,0.533,66.032,2730678,4,The Adventure of the Reigate Puzzle,Bart Wolffe
+spotify:track:32aj6mvKzvQwTrjyCwWPdX,0.701,0.208,2,-21.361,1,0.938,0.412,0.0,0.0429,0.458,81.162,2805000,3,The Adventure of the Crooked Man,Bart Wolffe
+spotify:track:69B2W5ullavmvKBobVS5xT,0.692,0.202,2,-21.415,1,0.937,0.454,0.0,0.0441,0.497,82.904,2922409,4,The Adventure of the Resident Patient,Bart Wolffe
+spotify:track:7cu0qb2psgntbF5Vi9EzNb,0.62,0.179,1,-20.619,1,0.946,0.352,0.0,0.0435,0.503,78.06,2902387,4,The Adventure of the Greek Interpreter,Bart Wolffe
+spotify:track:4Qdz0JPKNMBAmRKafvSXxg,0.608,0.142,0,-22.864,1,0.893,0.979,3.12e-06,0.25,0.221,103.421,314133,5,The Final Problem Chapter 1,"Orson Welles,Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3IydGfe6zjiHLugt8iKhw8,0.571,0.186,7,-23.849,0,0.942,0.98,0.0,0.13,0.52,79.079,273253,4,The Final Problem Chapter 2,"Orson Welles,Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:2crFvkw4JamkQhNYTajlRF,0.577,0.168,0,-24.3,1,0.936,0.977,1.37e-06,0.128,0.378,81.153,338133,4,The Final Problem Chapter 3,"Orson Welles,Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:6KCwYM1Q4CME1xsmXG0A2D,0.557,0.238,11,-22.668,0,0.934,0.984,1.93e-06,0.268,0.508,89.043,258187,4,The Final Problem Chapter 4,"Orson Welles,Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:46n6tZnNJYnwdfXkJLW46b,0.496,0.205,2,-22.896,1,0.812,0.974,1.18e-05,0.134,0.367,171.897,327587,1,The Final Problem Chapter 5,"Orson Welles,Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:51r1BWYTATlKbzF0dQhiWw,0.514,0.0882,0,-21.677,1,0.419,0.98,5.65e-05,0.275,0.144,85.954,201600,3,The Final Problem Chapter 6,"Orson Welles,Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:4MlxfYFPafysBeQR8Lzmvt,0.616,0.151,0,-27.544,1,0.954,0.745,0.0,0.0753,0.413,169.018,1417267,3,"The Hound Of The Baskervilles: Chapter 1, Superstition or Murder",Peter Egan
+spotify:track:5IMS8li9H1eIqBvtXv4Ggx,0.619,0.13,11,-28.319,0,0.953,0.732,0.0,0.0882,0.355,168.551,727400,3,"The Hound Of The Baskervilles: Chapter 2, The Riddle Of The Boot",Peter Egan
+spotify:track:7tUsSzpF4sB0OhgUvITlBl,0.7,0.11,11,-29.084,0,0.905,0.663,0.0,0.105,0.364,122.731,938373,3,"The Hound Of The Baskervilles: Chapter 3, Departure For Devon",Peter Egan
+spotify:track:2ZPrQM5Cz5MJdMHwAU2ubo,0.664,0.117,5,-29.603,0,0.937,0.657,0.0,0.142,0.36,136.631,1189600,3,"The Hound Of The Baskervilles: Chapter 4, Strange Encounters",Peter Egan
+spotify:track:1yHzblTGK8RU7FjQEQmWNW,0.612,0.113,8,-28.483,1,0.952,0.665,0.0,0.366,0.328,168.974,883760,5,"The Hound Of The Baskervilles: Chapter 5, A Kindness Repaid",Peter Egan
+spotify:track:5hzIDKpXJH62kKGeSI675z,0.62,0.15,1,-26.27,1,0.951,0.589,0.0,0.0964,0.348,81.728,1269867,3,"The Hound Of The Baskervilles: Chapter 6, The Man On The Tor",Peter Egan
+spotify:track:5Z9X8l0LdeYpBjA7aq6CzI,0.639,0.158,1,-27.051,1,0.952,0.616,0.0,0.103,0.309,90.782,724200,3,"The Hound Of The Baskervilles: Chapter 7, Holmes Lays A Trap",Peter Egan
+spotify:track:5bloGzZk55y0OgN57Z9xp5,0.617,0.164,7,-27.145,1,0.953,0.572,0.0,0.0998,0.37,79.374,905640,4,"The Hound Of The Baskervilles: Chapter 8, The Demon Hound",Peter Egan
+spotify:track:75qy7qBqgxQ3pUMM4Hnc8J,0.637,0.197,1,-26.319,1,0.955,0.731,0.0,0.151,0.406,88.793,348200,3,"The Hound Of The Baskervilles: Chapter 9, Reminiscences",Peter Egan
+spotify:track:5S0kIbm25xdZhv4j2eZI8T,0.59,0.316,11,-23.987,1,0.938,0.99,0.00134,0.105,0.226,99.069,1742733,1,The Empty House,"Sir John Gielgud,Sir Ralph Richardson"
+spotify:track:3CAiTHiOhCwqmi3wxmgWjQ,0.667,0.271,9,-22.328,1,0.931,0.975,0.0,0.385,0.445,108.535,362267,5,The Norwood Builder Chapter 1,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3xBr6Fd3gYhoxK0I4yJfgo,0.691,0.233,2,-24.479,1,0.917,0.97,0.0,0.376,0.647,128.084,236440,3,The Norwood Builder Chapter 2,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3tT9CRypqdHmFfUzOBTIes,0.572,0.214,2,-24.685,1,0.949,0.971,0.0,0.707,0.291,89.549,269440,3,The Norwood Builder Chapter 3,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:0MOVKzsoLKqQTh3DnFumGd,0.635,0.205,9,-24.753,1,0.95,0.974,0.0,0.382,0.495,73.318,388533,4,The Norwood Builder Chapter 4,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:2E7Xje9YS7Bn57AqiIJ6md,0.588,0.212,4,-24.209,1,0.929,0.976,0.0,0.297,0.172,86.993,377813,3,The Norwood Builder Chapter 5,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:6LeAVAm0gOGcpeTY3pQ7eA,0.668,0.0983,9,-24.291,0,0.904,0.984,6.11e-05,0.386,0.418,71.702,231827,3,The Solitary Bicyclist Chapter 1,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:6TN4OzYp3rTOCkSDe6l5oD,0.707,0.103,2,-25.264,1,0.863,0.976,1.59e-06,0.365,0.489,128.912,278933,1,The Solitary Bicyclist Chapter 2,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:4Vt1wMQpBR19sgc5AQ5jKr,0.687,0.0899,2,-25.867,1,0.85,0.977,5.56e-06,0.196,0.348,117.352,348840,3,The Solitary Bicyclist Chapter 3,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:0HerDzDwdE3k21mlBHscix,0.679,0.0751,2,-28.097,1,0.691,0.98,5.93e-06,0.213,0.491,117.892,309640,1,The Solitary Bicyclist Chapter 4,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:5hTJLeXvbK5vBTCamiWcIR,0.678,0.165,5,-23.368,1,0.901,0.974,0.0,0.322,0.367,114.643,496267,4,The Solitary Bicyclist Chapter 5,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:5SDFC79on49VRJdvk3yAYW,0.593,0.105,4,-25.544,0,0.929,0.977,0.0,0.512,0.504,87.713,408400,4,Six Napoleons Chapter 1,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:12H4fipVIVrBKeuSrd1KWL,0.673,0.118,4,-25.817,0,0.904,0.968,0.0,0.259,0.569,101.126,419333,3,Six Napoleons Chapter 2,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3YLgdiqEGn0xEKS4KfhoAm,0.572,0.125,4,-24.923,0,0.948,0.972,0.0,0.284,0.327,76.4,407813,4,Six Napoleons Chapter 3,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3gumdSGUhX4e8lD999QorK,0.623,0.0699,7,-27.145,1,0.757,0.981,0.0,0.141,0.272,133.934,426720,4,Six Napoleons Chapter 4,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:0lrkQHCU4MDgd04jM1Wx8t,0.584,0.217,0,-25.292,1,0.943,0.876,0.0,0.437,0.427,83.586,315080,4,The Mystery of the Second Stain Chapter 1,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:19YEk4OVQZn3GfoxbpNrU6,0.736,0.216,2,-25.65,1,0.952,0.845,0.0,0.283,0.443,52.303,362747,4,The Mystery of the Second Stain Chapter 2,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:3Y1AOUo8JoJtfB4RMxrYbx,0.683,0.22,7,-26.706,1,0.936,0.904,0.0,0.425,0.49,99.552,309427,3,The Mystery of the Second Stain Chapter 3,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:7m175UgBe6HpdVVkq60OgL,0.6,0.249,2,-25.521,1,0.954,0.857,0.0,0.345,0.394,57.054,296893,4,The Mystery of the Second Stain Chapter 4,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:0oO8UBkzPDMH876hAOb0tw,0.606,0.213,2,-25.442,1,0.94,0.886,0.0,0.209,0.302,90.624,348893,4,The Mystery of the Second Stain Chapter 5,"Sir Ralph Richardson,Sir John Gielgud"
+spotify:track:7vSJidVd3QIs3bByfA4QIT,0.516,0.211,6,-25.216,1,0.945,0.993,0.0471,0.245,0.391,74.458,1574347,3,The Dying Detective,"Sir John Gielgud,Sir Ralph Richardson"
+spotify:track:0LvnEXj9aC8EMI2tXRU5Of,0.621,0.315,9,-17.151,0,0.924,0.991,0.00967,0.883,0.591,91.638,1703838,3,The Problem of Thor Bridge,Forgotten Films
+spotify:track:4woZ09KbR5DgePxV6xNBa7,0.684,0.295,11,-17.955,1,0.931,0.907,0.0,0.164,0.495,101.45,1778147,4,Sherlock Holmes: The Case Of The Unwelcome Ambassador,Vintage Radio Shows
+spotify:track:5X7T8RsBQ8FlZcfm3oDr12,0.582,0.233,11,-22.065,1,0.769,0.929,6.21e-05,0.106,0.327,111.514,1617398,4,Sherlock Holmes in The Case of Lady Beryl,Sherlock Holmes
+spotify:track:6KVxaK5OUJxdDRTonHcBSa,0.568,0.389,0,-18.853,1,0.947,0.982,5.74e-05,0.1,0.42,83.857,1604807,3,Sherlock Holmes in The Case of the Belligerent Ghost,Sherlock Holmes
+spotify:track:55ZPj1pejDlwuzmmPe9PNk,0.543,0.251,11,-20.712,1,0.449,0.767,1.05e-06,0.487,0.353,128.506,1625287,3,Sherlock Holmes in The Case of the Cunningham Heritage,Sherlock Holmes
+spotify:track:3lphHqGXSdRbAG9fcOssiB,0.6,0.235,7,-24.135,1,0.838,0.969,4.04e-05,0.349,0.311,128.15,1597466,3,Sherlock Holmes in The Case of the Pennsylvania Gun,Sherlock Holmes
+spotify:track:5ANwujr2jj5HfMeVGhlSCC,0.635,0.399,9,-20.354,0,0.93,0.962,0.000137,0.198,0.314,131.731,1563612,3,Sherlock Holmes in The Case of the Shy Ballerina,Sherlock Holmes
+spotify:track:1Xw50iICogfAMKFKUSQeO2,0.514,0.334,7,-20.969,1,0.908,0.957,5.14e-05,0.323,0.212,85.586,1625496,4,Sherlock Holmes in The Case of the Texas Cowgirl,Sherlock Holmes
+spotify:track:4vDfodaNtZ0ZS9wJ3iJiFi,0.528,0.304,7,-24.702,1,0.924,0.962,2.79e-05,0.44,0.256,87.037,1585607,4,Sherlock Holmes in The Mother Hubbard Case,Sherlock Holmes
+spotify:track:6SIFuwIE2FBCDEKZOMpMbD,0.554,0.302,7,-22.644,1,0.921,0.953,0.000619,0.31,0.444,83.948,1599425,3,Sherlock Holmes in The Unlucky Gambler,Sherlock Holmes
+spotify:track:0e0JeWiVaafCoA7jSFHI1Q,0.601,0.496,11,-14.811,1,0.956,0.949,0.0,0.147,0.523,72.437,1759688,4,Bruce Partington Plans,Forgotten Films
+spotify:track:1J8ALyVuthEwTjwSkVmYjD,0.485,0.818,11,-11.273,0,0.905,0.947,3.06e-05,0.266,0.557,73.569,1389820,3,The Adventure of the Missing Blood Stains,Forgotten Films
+spotify:track:7MbHLOPbht6PAwX3lB4U3M,0.611,0.194,11,-15.984,1,0.927,0.927,0.0,0.879,0.465,62.43,1767211,3,The Book of Tobit,Forgotten Films
+spotify:track:06WdL3fMIh9wjDwcKU7tZG,0.614,0.217,11,-16.108,1,0.93,0.989,0.00083,0.823,0.368,66.958,1553947,4,The Viennese Strangler,Forgotten Films
+spotify:track:7E2P3NRepGkDS2GmtOv1dk,0.716,0.236,11,-18.397,1,0.894,0.993,0.00286,0.713,0.386,129.664,1569568,5,The Notorious Canary Trainer,Forgotten Films
+spotify:track:7tra4wi6V3MFcKYtsckqIq,0.659,0.283,11,-14.967,1,0.937,0.977,2.26e-05,0.766,0.391,92.354,1546215,3,The Unfortunate Tobacconist,Forgotten Films
+spotify:track:7b9IZQsbLlOMzmVYyKtIqt,0.674,0.31,8,-14.54,0,0.885,0.96,2.74e-06,0.783,0.49,132.637,1774813,3,The Purloined Ruby,Forgotten Films
+spotify:track:3mIADqUPJa9r8EDw8vEKUO,0.696,0.38,9,-13.847,0,0.929,0.989,6.18e-05,0.75,0.559,136.054,1687224,3,In Flanders Field,Forgotten Films
+spotify:track:5rasaZYGOCMNVzMsYmP6fI,0.71,0.298,9,-14.362,0,0.921,0.975,6.9e-06,0.811,0.373,130.441,1521973,3,Paradol Chamber,Forgotten Films
+spotify:track:5Ozd9BcB16VlJprlWXLiV0,0.704,0.349,11,-13.191,1,0.934,0.967,0.0,0.884,0.488,133.576,1665229,3,Limping Ghost,Forgotten Films
+spotify:track:2QzT5N9gNXl8A3Bc3oKne2,0.658,0.213,11,-17.118,1,0.923,0.984,0.000821,0.826,0.429,93.238,1698744,4,The Case of the Out of Date Murder,Forgotten Films
+spotify:track:0ggTVQFqusmHISHmXaiKsH,0.581,0.308,2,-16.346,0,0.932,0.99,0.0838,0.849,0.505,59.787,1717578,4,Eyes of Mr Leyton,Forgotten Films
+spotify:track:30GZU0BqPnWGxdTm1YlRqS,0.636,0.282,0,-14.473,1,0.942,0.978,0.00117,0.858,0.343,86.114,1714679,4,Mystery of the Vanishing White Elephant,Forgotten Films
+spotify:track:4SyGU2GwcK6axeWe7YRebl,0.629,0.22,6,-17.772,1,0.936,0.979,0.00999,0.716,0.529,84.397,1707025,4,Murder in the Moonlight,Forgotten Films
+spotify:track:2Mis6fP6cntMUOsEwkScnk,0.644,0.307,11,-12.493,1,0.924,0.921,0.0,0.946,0.512,89.604,1748429,4,The Gunpowder Plot - The Fifth of November,Forgotten Films
+spotify:track:4hqxJc97mcR8qUVMkjZkEd,0.604,0.36,11,-16.122,1,0.91,0.989,0.0201,0.9,0.591,82.649,1719381,3,The Case of the Double Zero,Forgotten Films
+spotify:track:1NGP6KK6nzEqAASmgOx5Gk,0.613,0.277,11,-14.276,1,0.946,0.955,1.85e-05,0.713,0.462,68.018,1713346,4,The Case of the Accidental Murderess,Forgotten Films
+spotify:track:6SzQvasnOfJbiF2UscDtq3,0.617,0.299,11,-16.224,1,0.926,0.991,0.0826,0.168,0.558,82.598,1687955,4,Murder in the Casbah,Forgotten Films
+spotify:track:3mmpDmnFVRQbbFLwB46KYS,0.656,0.312,11,-14.186,1,0.942,0.977,0.000155,0.309,0.52,93.535,1723012,3,The Second Generation,Forgotten Films
+spotify:track:0lhzKO6Dlb21EKoIL3BN2q,0.705,0.446,1,-13.279,1,0.646,0.986,0.000293,0.783,0.479,131.081,1858013,4,The Strange Case of the Iron Box,Forgotten Films
+spotify:track:7D6ZmQDYReCKcRgwypSZ3d,0.701,0.401,6,-12.037,1,0.915,0.784,0.0,0.917,0.509,133.87,1713346,3,The Strange Case of the Murderer in Wax,Forgotten Films
+spotify:track:2U53RibcUDCpjJQpGyQawq,0.609,0.0836,11,-18.365,1,0.796,0.899,0.0,0.413,0.308,60.356,1736622,4,Murder Beyond Mountains,Forgotten Films
+spotify:track:1d9BNZd4PIpwmaiDWcZfqa,0.616,0.316,11,-16.125,1,0.939,0.99,0.00189,0.441,0.548,75.137,1696628,3,The Telltale Pigeon Feathers,Forgotten Films
+spotify:track:3jiFqkTvmAHMKvF8Cg1CbR,0.609,0.162,0,-16.666,1,0.891,0.974,0.000911,0.292,0.325,56.426,1724684,4,The Strange Case of the Demon Barber,Forgotten Films
+spotify:track:6nebUmkUoc7fITIKPjS47K,0.284,0.789,1,-7.927,1,0.473,0.000328,0.00109,0.562,0.597,169.2,168736,4,We Did It!!!,grandson
+spotify:track:0NQXFFwRJ9H75wcXHxoryn,0.766,0.385,9,-14.029,1,0.392,0.249,0.0,0.119,0.375,100.022,179344,4,Look At Me,Kalan.FrFr
+spotify:track:26jblnixKDcidyOQV2UYi4,0.684,0.67,5,-5.919,0,0.405,0.226,0.0,0.12,0.298,90.122,187000,4,Miseducation (feat. Lil Wayne),"Calboy,Lil Wayne"
+spotify:track:33BHRpEEYI3ZEAKRUH3PHa,0.683,0.669,1,-5.276,0,0.365,0.312,0.0,0.266,0.538,91.05,203159,4,On One (feat. Freddie Gibbs),"Joyce Wrice,Freddie Gibbs"
+spotify:track:2qm9mgnZbLX1l7mbxmgzLt,0.364,0.866,2,-6.017,1,0.454,0.0396,0.0726,0.113,0.0797,134.586,314453,4,John L,black midi
+spotify:track:5byWPNSh2hi0ULmDxBgLyV,0.774,0.412,1,-8.619,1,0.378,0.026,0.0,0.088,0.38,139.943,116760,4,BIG PURR (Prrdd) (feat. Pooh Shiesty),"Coi Leray,Pooh Shiesty"
+spotify:track:2KTCXvWUbqfiinbFe7PJKP,0.775,0.847,8,-4.602,0,0.351,0.143,0.0,0.107,0.806,104.817,224740,4,Las Nenas (feat. La Duraca),"Natti Natasha,Cazzu,Farina,La Duraca"
+spotify:track:7pTHZ8hFundodWSpePr6po,0.181,0.963,11,-9.544,0,0.371,0.0011,0.00043,0.183,0.0377,144.842,290227,4,The Man Whose Head Expanded - Live,The Fall
+spotify:track:5Xtee2SymFmObWhXFQrs9p,0.383,0.829,11,-7.253,0,0.354,0.0454,0.00674,0.71,0.463,143.791,187733,4,Shake Off,The Fall
+spotify:track:5BFdHIJgiOC2CQuTqHjoRp,0.638,0.565,1,-16.575,1,0.657,0.941,0.0,0.0937,0.658,128.345,305187,5,Dissolute Singer,Mark E. Smith
+spotify:track:0lDUzCYvE8hXIQ5VrC01BK,0.329,0.987,2,-5.535,1,0.387,0.289,0.012,0.107,0.358,122.725,144000,3,Cabin Fever (Garage Recording),Reignwolf
+spotify:track:3apo1b70qELYcphJj5B3sk,0.476,0.861,10,-7.358,0,0.5,0.0169,0.000287,0.237,0.0861,95.231,209029,4,Over & Over,Reignwolf
+spotify:track:7n6UfrMJyFwyiM7CjgZEzX,0.582,0.158,8,-16.762,1,0.891,0.986,0.0367,0.232,0.358,72.899,1672213,3,Sydney Carton,Laurence Olivier
+spotify:track:1TOBh1bZHDK6c1BXL70sG2,0.678,0.342,0,-13.493,1,0.892,0.989,6.81e-05,0.155,0.541,106.648,1674773,3,Mr. Micawber's Difficulties,Laurence Olivier
+spotify:track:6nTJAo5xmQevd59FFKj9rD,0.696,0.325,7,-24.265,0,0.93,0.729,0.0,0.0783,0.328,79.537,1216933,4,The Nickleby Family,"martin jarvis,Charles Dickens"
+spotify:track:45upcrJlto8hgNixW7QUor,0.686,0.279,2,-24.887,1,0.839,0.764,0.0,0.307,0.363,101.033,955067,3,Dotheboys Hall,"martin jarvis,Charles Dickens"
+spotify:track:4R1PxCbF63bFGrCB8XonB5,0.721,0.299,2,-24.526,1,0.752,0.738,0.0,0.0461,0.364,122.745,1235000,4,Dishonourable Intentions,"martin jarvis,Charles Dickens"
+spotify:track:7rxdqPEzXaechEQMphFU7Q,0.615,0.321,2,-24.132,1,0.919,0.768,0.0,0.0963,0.394,57.384,946400,4,On the Stage,"martin jarvis,Charles Dickens"
+spotify:track:3T3WvmJwTwWDk232agamlu,0.672,0.551,2,-14.072,1,0.926,0.907,0.0,0.41,0.581,88.783,1507834,3,Just Desserts,"martin jarvis,Charles Dickens"
+spotify:track:3zZlTSUiltsTlgXJhzXAWh,0.676,0.473,2,-14.704,1,0.946,0.895,0.0,0.257,0.554,98.168,599655,4,Shadows from the Past,"martin jarvis,Charles Dickens"
+spotify:track:5EY8Tbeu1tzypdLY3LHNHR,0.622,0.497,2,-13.104,1,0.939,0.951,0.0,0.277,0.601,72.74,1145731,3,Foul Conspiracy,"martin jarvis,Charles Dickens"
+spotify:track:4MQLjxNAJTCQXvwywxaTNG,0.692,0.453,2,-14.689,1,0.937,0.914,0.0,0.129,0.435,103.734,1016059,3,Skulduggery Revealed,"martin jarvis,Charles Dickens"
+spotify:track:3QdcjcRoweY3PXor9t7KIb,0.681,0.34,9,-20.264,0,0.917,0.971,0.00169,0.0669,0.271,101.181,1544034,3,The Queer Client,Weird Circle
+spotify:track:1X0P2ImiC4N0CL6POuCNd7,0.697,0.227,10,-24.048,0,0.94,0.978,0.00037,0.0735,0.445,106.009,1441402,4,The Trial for Murder,Weird Circle
+spotify:track:144bBmo94T7BeFwEQPwmff,0.699,0.266,7,-23.975,0,0.921,0.78,0.0,0.357,0.323,80.309,950227,4,"Oliver Twist: Chapter 1, Birth Of An Orphan - Charles Dickens",martin jarvis
+spotify:track:68on1m37vjfOZtGICVtOHQ,0.716,0.226,9,-26.617,0,0.701,0.738,0.0,0.159,0.359,113.579,760707,5,"Oliver Twist: Chapter 2, Street Employment",martin jarvis
+spotify:track:2WKbVoGhBMe5pISNSDvIyk,0.62,0.22,9,-26.078,0,0.936,0.759,0.0,0.363,0.304,78.431,469960,4,"Oliver Twist: Chapter 3, Test Of Character",martin jarvis
+spotify:track:0XPm81hKM3YNh9n7divpKE,0.719,0.253,9,-25.044,0,0.806,0.76,0.0,0.162,0.326,120.824,1127000,3,"Oliver Twist: Chapter 4, House Robbery",martin jarvis
+spotify:track:2YGeri0J3JAfl3JLHoKlh4,0.706,0.154,0,-28.132,1,0.813,0.745,0.0,0.0782,0.34,130.964,935107,5,"Oliver Twist: Chapter 5, Devilish Plot",martin jarvis
+spotify:track:5mcr8sG4oedIILDzDgugpX,0.683,0.174,9,-27.336,0,0.911,0.716,0.0,0.0958,0.402,100.507,1026800,3,"Oliver Twist: Chapter 6, Honour Amongst Thieves",martin jarvis
+spotify:track:0j9lqhDQGTuoUoijwwCh2G,0.632,0.17,9,-26.725,0,0.943,0.767,0.0,0.289,0.41,84.37,1110000,4,"Oliver Twist: Chapter 7, A Savage Deed",martin jarvis
+spotify:track:4VLAC8ahFYrBdeUCBtIMEA,0.695,0.144,0,-24.693,1,0.926,0.769,0.0,0.37,0.444,96.941,766627,4,"Oliver Twist: Chapter 8, On The Run",martin jarvis
+spotify:track:6JBlsu28ubU2EC0Z6YRlYZ,0.694,0.155,0,-27.838,1,0.906,0.734,0.0,0.143,0.396,136.239,1264240,3,"Oliver Twist: Chapter 9, Just Desserts",martin jarvis
+spotify:track:02afQ1zb9jkwlgmKJNmlma,0.707,0.294,7,-15.166,1,0.902,0.689,0.0,0.0901,0.439,128.693,1950000,3,The Signalman,John Sessions
+spotify:track:4bjYz8F8mkZ7YFaVSKZsBv,0.712,0.289,7,-14.957,1,0.889,0.617,0.0,0.304,0.437,126.248,1613000,3,The Story Of The Goblins Who Stole A Sexton,John Sessions
+spotify:track:0kVouIsK0e8WUHkiwq9wY9,0.653,0.329,7,-13.948,1,0.956,0.802,0.0,0.0715,0.355,67.554,1809000,4,To Be Read At Dusk,John Sessions
+spotify:track:3C6znTanidpR63WT53I9Z4,0.713,0.245,7,-15.178,1,0.835,0.593,0.0,0.0901,0.417,121.3,1186000,4,A Confession Found In A Prison In The Time Of Charles II,John Sessions
+spotify:track:1PA6dhgqo2H4uDtcBd7alT,0.672,0.276,11,-14.749,0,0.681,0.737,0.0,0.188,0.426,116.868,422500,3,The Lawyer And The Ghost,John Sessions
+spotify:track:7gztR8gsOHbRrO3DkSHoFC,0.638,0.352,0,-19.342,1,0.902,0.994,0.142,0.552,0.439,115.792,1815960,3,The Mystery Of Edwin Drood - Part 2,Suspense Theater
+spotify:track:3Nt7Us0bTCxS67PHEM0jCM,0.643,0.267,10,-21.346,0,0.933,0.976,1.1e-05,0.858,0.354,113.33,1526347,3,The Cricket On The Hearth,Radio Show
+spotify:track:1vCzlXbP0dk3rOsMxMxoJh,0.492,0.305,9,-20.923,0,0.877,0.994,0.3,0.248,0.497,64.749,1810400,4,The Mystery Of Edwin Drood - Part 1,Suspense Theater
+spotify:track:0SjIQzbFc3NajH5jIazPe4,0.617,0.348,7,-19.101,1,0.948,0.696,0.0,0.0968,0.339,75.446,945440,3,"Great Expectations: Chapter 1, A Fateful Meeting",martin jarvis
+spotify:track:3nTX2DB1ICG6RcZ96FpYzd,0.62,0.271,7,-21.974,0,0.952,0.735,0.0,0.336,0.33,175.923,1211400,3,"Great Expectations: Chapter 2, Satis House",martin jarvis
+spotify:track:4DmQaiQPfIube0CR0wM2Q9,0.62,0.315,2,-21.002,1,0.949,0.711,0.0,0.118,0.346,74.406,986693,4,"Great Expectations: Chapter 3, Shame",martin jarvis
+spotify:track:220sudYmJG2VoG7XyVispZ,0.72,0.305,2,-22.707,1,0.896,0.676,0.0,0.163,0.322,115.231,1179640,5,"Great Expectations: Chapter 4, Revelations",martin jarvis
+spotify:track:6apP1NvhNJXbolMy2HfiEp,0.622,0.297,2,-24.101,1,0.947,0.748,0.0,0.0746,0.367,78.1,601333,3,"Great Expectations: Chapter 5, Estella",martin jarvis
+spotify:track:4O0PloNQfZQbw7ggddIomm,0.703,0.262,2,-24.152,1,0.919,0.733,0.0,0.113,0.343,131.111,1596173,4,"Great Expectations: Chapter 6, Illusions Shattered",martin jarvis
+spotify:track:36t5UVqkIlGEpBMpJkcXYy,0.67,0.296,2,-22.45,1,0.939,0.753,0.0,0.128,0.361,88.557,1183000,4,"Great Expectations: Chapter 7, Recapture",martin jarvis
+spotify:track:2E4aADYilVmiOQ6pzqWbom,0.62,0.205,7,-25.446,0,0.938,0.7,0.0,0.2,0.271,80.61,919800,3,"Great Expectations: Chapter 8, Deaths And Marriages",martin jarvis
+spotify:track:3DuEeMpE7c8XI66RotIEGG,0.491,0.112,6,-24.734,1,0.791,0.987,0.272,0.102,0.491,67.422,3484560,3,A Chrismtas Carol,Campbell Playhouse
+spotify:track:5DDeH0y8H4VEnOczkNDCJv,0.599,0.0948,1,-29.887,1,0.654,0.795,0.0,0.35,0.244,85.405,940000,4,Mr Bob Sawyer Gives A Bachelor Party - An Episode From Pickwick Papers,Emlyn Williams
+spotify:track:7MxLgxQJGX6uLfvDXwxKQL,0.589,0.167,4,-26.107,0,0.911,0.989,0.0192,0.206,0.73,84.221,1008227,4,Mr. Pickwick's Christmas,Weird Circle
+spotify:track:6n1CAbUCEelVAPA5Wu6x9j,0.631,0.377,0,-12.647,0,0.904,0.916,0.0,0.145,0.647,85.1,1204240,4,The Case of Bardell vs. Pickwick,Laurence Olivier
+spotify:track:5aSKSofP8CgqslIg7rBqJy,0.693,0.311,9,-16.415,0,0.937,0.891,0.0,0.252,0.498,103.181,1184933,4,"A Tale Of Two Cities: Chapter 1, Recalled To Life",martin jarvis
+spotify:track:4NqSTksBHWXOlAnlLon0Af,0.664,0.235,0,-21.712,1,0.954,0.842,3.8e-06,0.207,0.364,95.952,950933,4,"A Tale Of Two Cities: Chapter 2, A Tearful Reunion",martin jarvis
+spotify:track:1PVGdtLl6V8fWuaPpWEf8q,0.718,0.353,0,-17.172,1,0.935,0.85,0.0,0.141,0.479,104.948,1375133,4,"A Tale Of Two Cities: Chapter 3, At The Old Bailey",martin jarvis
+spotify:track:2vTL1fBsLHNWuizWzUq7HA,0.606,0.226,9,-21.885,0,0.961,0.818,3.48e-06,0.0822,0.371,73.828,804920,4,"A Tale Of Two Cities: Chapter 4, Rivals In Love",martin jarvis
+spotify:track:63Od9mSV9nKaQgsUNWPi19,0.694,0.261,9,-19.38,0,0.944,0.857,0.0,0.259,0.448,104.941,1256960,4,"A Tale Of Two Cities: Chapter 5, Poisoned News",martin jarvis
+spotify:track:1dFk0lpimLrvVFZFmj2aXB,0.632,0.32,9,-17.433,0,0.957,0.882,0.0,0.196,0.495,82.857,923707,3,"A Tale Of Two Cities: Chapter 6, A Rash Decision",martin jarvis
+spotify:track:6xSizLxyhxIUdYfZ2Ew5TT,0.691,0.3,9,-17.622,0,0.947,0.857,0.0,0.162,0.493,102.806,821960,3,"A Tale Of Two Cities: Chapter 7, City Of Terror",martin jarvis
+spotify:track:3GmgnheOXcVWtpp5xkHhn8,0.647,0.277,9,-17.685,0,0.952,0.849,2.14e-06,0.119,0.421,88.474,1319600,4,"A Tale Of Two Cities: Chapter 8, Carton's Finest Hour",martin jarvis
+spotify:track:2X44D4MzOQHtTT0vJEvlOj,0.617,0.24,0,-24.41,1,0.951,0.66,0.0,0.232,0.385,75.232,832427,4,"David Copperfield: Chapter 1, Happy Days",martin jarvis
+spotify:track:2BDRXxf11aXQfBXIT7bbbh,0.629,0.235,1,-23.171,1,0.948,0.662,0.0,0.124,0.406,82.854,1341773,4,"David Copperfield: Chapter 2, Fall From Grace",martin jarvis
+spotify:track:3LqQBznLmH7H7ulyMBzvBo,0.63,0.273,0,-22.626,1,0.943,0.687,0.0,0.148,0.514,81.542,853133,3,"David Copperfield: Chapter 3, Affliction",martin jarvis
+spotify:track:2ESotTMqdvo8w7PeqgUH9d,0.701,0.294,11,-23.368,0,0.946,0.644,0.0,0.14,0.471,79.033,1229200,3,"David Copperfield: Chapter 4, Flight",martin jarvis
+spotify:track:4ZNPmfkjghKcesgSqClZ8P,0.626,0.228,11,-23.925,0,0.956,0.714,0.0,0.167,0.521,173.828,1051307,3,"David Copperfield: Chapter 5, A New Profession",martin jarvis
+spotify:track:6qvFw8dRMQmXgWqqfaiVpS,0.717,0.218,11,-23.228,0,0.931,0.733,0.0,0.107,0.52,126.338,988293,5,"David Copperfield: Chapter 6, Infatuation",martin jarvis
+spotify:track:2VLdUYlNqSZNlhjZlSJ53Y,0.631,0.176,8,-23.701,1,0.947,0.589,0.0,0.165,0.432,168.676,1128467,3,"David Copperfield: Chapter 7, Heep Unmasked",martin jarvis
+spotify:track:4J4L8VK62JgbzmNyw2MHy3,0.704,0.11,0,-26.837,1,0.897,0.571,2.92e-06,0.111,0.314,126.75,870067,4,"David Copperfield: Chapter 8, Fulfilment",martin jarvis
+spotify:track:12W9b0wzr15qImFC9rGUrl,0.589,0.0951,5,-31.919,0,0.824,0.679,0.0,0.178,0.319,81.293,972000,3,Moving In Society - Scenes From Our Mutual Friend,Emlyn Williams
+spotify:track:5wseRK0aKbHdWonyLioMFl,0.537,0.039,8,-35.773,1,0.652,0.772,0.0,0.33,0.18,61.291,935293,3,Paul - Scenes From Dombey & Son,Emlyn Williams
+spotify:track:06GMNUdV5usErFoFMU1C8Q,0.524,0.0432,7,-27.683,1,0.628,0.633,0.0,0.0961,0.157,75.781,1223227,3,Mr. Chops,Emlyn Williams
+spotify:track:0jsANwwkkHyyeNyuTFq2XO,0.524,0.816,1,-5.872,1,0.37,0.383,0.0,0.349,0.789,200.031,285707,4,Heartbreaker (feat. Jay-Z),"Mariah Carey,JAY-Z"
+spotify:track:4LGMSdeKOUoy5Wf75Je0Hl,0.792,0.694,8,-8.496,0,0.33,0.0619,2.32e-05,0.25,0.804,177.094,309773,4,Can I Get A...,"JAY-Z,Amil,Ja Rule"
+spotify:track:3qrUiGsAC0ZXKP6uOtikOY,0.607,0.827,5,-5.728,0,0.403,0.0906,0.0,0.315,0.91,174.294,220133,4,Mambo No. 5 (A Little Bit of...),Lou Bega
+spotify:track:0iyOqSZBf1AqlmxOFB1Ka7,0.352,0.797,0,-9.682,0,0.497,0.00516,0.0,0.0995,0.762,165.986,216987,5,Like A G6,"Far East Movement,The Cataracs,DEV"
+spotify:track:1vaUxfrERQIQfJ1wBTmeRE,0.944,0.477,6,-7.331,0,0.33,0.00311,6.81e-05,0.109,0.737,127.965,227933,4,I'm In Miami Bitch,LMFAO
+spotify:track:3bMNprrp2JDKZsGbiXpsJl,0.624,0.723,1,-6.782,1,0.378,0.172,0.0,0.483,0.757,84.789,216933,4,My Chick Bad,"Ludacris,Nicki Minaj"
+spotify:track:78c3IFOZdqCvelTH65zA0g,0.439,0.675,1,-7.062,1,0.354,0.145,0.0,0.44,0.945,91.415,182720,4,Sexy Can I,"Ray J,Yung Berg"
+spotify:track:4MRT0dDbhqFKl67WzhUbSw,0.573,0.495,8,-7.245,0,0.592,0.405,0.0,0.0969,0.255,179.196,312027,3,Only,"Nicki Minaj,Drake,Lil Wayne,Chris Brown"
+spotify:track:7iL6o9tox1zgHpKUfh9vuC,0.899,0.713,6,-2.752,0,0.366,0.255,0.0,0.0708,0.777,90.051,193467,4,In Da Club,50 Cent
+spotify:track:7LMbVWgxwhTEOm44Zmp8Ty,0.678,0.63,11,-4.712,0,0.367,0.0576,0.0,0.113,0.758,71.596,217032,4,Black And White,"Nasty C,Ari Lennox"
+spotify:track:1Yd7meWF4xNR13vys5IpUh,0.793,0.699,6,-9.849,1,0.37,0.0199,0.000183,0.108,0.897,98.957,242347,4,What Do You Say (Move It Baby) [Feat. PJ],"Common,PJ"
+spotify:track:2qz1vGLzlQf0Xc2dlfhOEA,0.485,0.629,6,-6.253,0,0.348,0.0728,1.2e-05,0.0951,0.448,163.528,257973,1,EmOGs,"Salaam Remi,Mumu Fresh"
+spotify:track:0y1qIO8AyBiYgxczudb6nN,0.646,0.693,5,-6.118,0,0.342,0.186,1.05e-06,0.19,0.293,91.028,192135,4,Queeen Dem,"Harleighblu,Bluestaeb,Janne Robinson"
+spotify:track:4CPszpSnlbgnQLIQYyzIR2,0.703,0.705,1,-6.676,0,0.34,0.135,1.97e-06,0.0611,0.601,138.227,287322,4,I Can't Breathe,H.E.R.
+spotify:track:1fS9b1pYsGcK89Vivf9QUh,0.788,0.451,1,-10.675,0,0.503,0.145,4.74e-05,0.0543,0.419,90.84,185680,4,Where I Am,Ledisi
+spotify:track:3Zz4CuVqiR4bBZfjjA6GuH,0.745,0.323,11,-14.333,0,0.336,0.412,0.249,0.362,0.459,89.04,228512,4,The Champion (Homegrown Session),Illnoledge
+spotify:track:1lxs63LaZX1wHBr0qIt5oK,0.603,0.569,11,-7.472,0,0.346,0.11,0.000459,0.101,0.305,166.051,202107,4,SURF (feat. Masego),"Xavier Omär,Masego"
+spotify:track:72x1nUOZuZultulUXrgQgT,0.545,0.408,9,-15.103,0,0.347,0.546,0.229,0.0889,0.441,83.731,176880,4,Like That,"Douniah,High John"
+spotify:track:469uSkgXM3zccp9Oz9ykJo,0.749,0.584,8,-12.586,1,0.354,0.825,0.122,0.0985,0.316,117.35,417216,4,Weighted,Best Friends Club
+spotify:track:6fWFhvMUtw6hDZJRgXy1Fp,0.601,0.17,5,-28.575,1,0.881,0.711,0.0,0.341,0.28,73.744,159533,5,"King Richard Gives Way To Despair - From ""Richard III""",Richard Pasco
+spotify:track:13Di0zphMl770cb666FP7X,0.705,0.285,5,-20.199,1,0.815,0.778,3.05e-06,0.168,0.124,128.504,169059,3,Of Comfort No Man Speak,"David Tennant,Royal Shakespeare Company"
+spotify:track:3w5Ba2LMMH9eb6Vn29EZEw,0.714,0.224,3,-19.011,1,0.851,0.92,0.0,0.223,0.448,115.714,1404520,3,Act I,"Ian McKellen,William Squire,Trevor Nunn,Gary Watson"
+spotify:track:33znG4YmHlTw25lXcyF5qV,0.656,0.248,1,-17.396,1,0.938,0.897,0.0,0.337,0.372,85.56,1607760,4,Act II,"Ian McKellen,William Squire,Trevor Nunn,Gary Watson,William Shakespeare"
+spotify:track:487CXr7kdBHoGQVJF2zqhT,0.696,0.263,8,-16.985,1,0.905,0.898,0.0,0.267,0.365,106.306,2082747,4,Act III,"Ian McKellen,William Squire,Trevor Nunn,Gary Watson,William Shakespeare"
+spotify:track:3oYxUybXVV3NDYUOFy1PZs,0.672,0.21,1,-18.186,1,0.915,0.869,0.0,0.149,0.34,85.561,2912373,4,Act IV,"Ian McKellen,William Squire,Trevor Nunn,Gary Watson,William Shakespeare"
+spotify:track:6p5KZFg1XOcwEfIdXcS94v,0.641,0.181,1,-18.633,1,0.925,0.913,0.0,0.0751,0.269,82.777,1762400,4,Act V,"Ian McKellen,William Squire,Trevor Nunn,Gary Watson,William Shakespeare"
+spotify:track:5IYYtqhOedoeY8ScoYKdhB,0.687,0.462,5,-15.755,1,0.926,0.959,0.0,0.234,0.262,103.476,620893,5,"Richard II: Act I, Scene 1","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:3rsvhzHLbEzFvhh8QNFiKv,0.622,0.237,2,-19.282,1,0.925,0.988,0.000329,0.173,0.271,79.481,254707,4,"Richard II: Act I, Scene 2","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:7HMegEHM9oQI7JYliR1Vyz,0.709,0.314,10,-17.101,1,0.882,0.961,0.0,0.0934,0.214,111.142,976000,3,"Richard II: Act I, Scene 3","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:6xxEe0JlJTi5osetdgtodo,0.705,0.272,7,-21.311,0,0.805,0.978,4.33e-06,0.107,0.223,119.844,205720,4,"Richard II: Act I, Scene 4","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:1paah45AuQKh8xC1sU7l2K,0.628,0.328,5,-18.126,1,0.944,0.947,0.0,0.34,0.258,75.704,1014387,3,"Richard II: Act II, Scene 1","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:35WJK78JHsmPkQGJbFTXN1,0.62,0.386,5,-16.517,0,0.94,0.956,0.0,0.215,0.255,79.363,436627,4,"Richard II: Act II, Scene 2","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:2ibzR6Tb1LX9ThZBqS0916,0.699,0.318,5,-19.251,1,0.886,0.942,0.0,0.0637,0.212,108.106,438187,3,"Richard II: Act II, Scene 3","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:6ju2Rfq45xVIjk0zgJFfdr,0.71,0.388,8,-16.384,1,0.913,0.929,0.0,0.108,0.286,129.115,89173,1,"Richard II: Act II, Scene 4","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:6qz12jlFH6yE2GIW5keaMO,0.73,0.432,0,-15.53,1,0.925,0.894,0.0,0.134,0.361,59.482,140000,4,"Richard II: Act III, Scene 1","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:6nlzmXnqRMK8HRf3Lhx45A,0.586,0.17,8,-21.971,1,0.943,0.942,0.0,0.161,0.192,174.932,769293,4,"Richard II: Act III, Scene 2","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:4Xop70g44oioYu1nmiCuVS,0.62,0.166,8,-21.583,1,0.846,0.938,0.0,0.134,0.242,109.051,752000,3,"Richard II: Act III, Scene 3","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:3t1NEH2NQ7owk2eIRSQ1lv,0.632,0.314,2,-19.194,0,0.933,0.958,0.0,0.17,0.28,85.579,358160,4,"Richard II: Act III, Scene 4","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:1lC7SjgEY8YQ0aOTbtay0v,0.678,0.267,7,-18.37,0,0.921,0.964,0.0,0.186,0.183,139.372,1178947,4,"Richard II: Act IV, Scene 1","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:6g2TQT6xWLXHQ9sDW7m5xS,0.606,0.18,7,-18.69,0,0.909,0.976,0.0,0.302,0.144,95.54,375507,4,"Richard II: Act V, Scene 1","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:7asMhFTVWNpkcvLuKwzEmL,0.652,0.316,8,-16.741,1,0.945,0.923,0.0,0.13,0.211,80.379,372000,3,"Richard II: Act V, Scene 2","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:7z3FmFO8tdI9VViKpdREdB,0.638,0.315,7,-17.275,0,0.941,0.922,0.0,0.181,0.217,159.758,494560,3,"Richard II: Act V, Scene 3","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:1q9x53ueYYjUS5cHPog6zd,0.74,0.636,5,-19.701,1,0.908,0.832,0.0,0.157,0.293,86.878,33187,4,"Richard II: Act V, Scene 4","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:2haHUaxsOUe3jincega23z,0.596,0.222,5,-20.253,1,0.877,0.979,0.00317,0.141,0.163,100.808,472920,3,"Richard II: Act V, Scene 5","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:7Cx1AwlkE9y8gyP1QW0Txd,0.576,0.207,8,-17.842,1,0.903,0.941,0.0,0.101,0.209,94.69,203067,4,"Richard II: Act V, Scene 6","Sir John Gielgud,Michael Hordern,Leo McKern,Edward Hardwicke"
+spotify:track:2efHMb1ywsI1Kr4t3ywEKa,0.721,0.0525,5,-22.327,0,0.919,0.837,0.0,0.216,0.15,74.191,160037,4,Finds Brotherhood in Thee No Sharper Spur?,"Jane Lapotaire,Royal Shakespeare Company"
+spotify:track:0avk2Tvr3BiJUYZuUHcOvv,0.692,0.384,1,-22.856,1,0.846,0.879,0.0,0.228,0.24,104.788,144789,4,Methinks I Am a Prophet New Inspired,"Michael Pennington,Royal Shakespeare Company"
+spotify:track:2cVOvqWoB6OPGHOXsb27vz,0.713,0.181,11,-15.598,1,0.93,0.828,0.0,0.104,0.48,124.07,308800,4,"Gloucester: Ay, Edward Will Use Women Honourably","Jay Robinson,Martin Donegan"
+spotify:track:3JcYYILqlpsLZSWE2kZ2Yk,0.719,0.184,7,-17.019,1,0.868,0.743,0.0,0.308,0.419,120.711,392213,3,Richard: Now Is the Winter of Our Discontent,"Jay Robinson,Martin Donegan"
+spotify:track:5c29jjZJleMlCHWWHy5gbO,0.754,0.19,4,-19.906,0,0.922,0.859,0.0,0.115,0.506,51.068,225813,4,"Richard: I Do the Wrong, and First Begin to Brawl","Jay Robinson,Martin Donegan"
+spotify:track:6DXtgQEbSB15yI7kxrAlIQ,0.641,0.109,11,-18.971,1,0.926,0.733,0.0,0.248,0.465,83.818,248947,4,Richard: Will You Enforce Me to a World of Cares?,"Jay Robinson,Martin Donegan"
+spotify:track:2i1MIuSWGsuFNIZN9FwvnE,0.691,0.128,11,-20.888,1,0.901,0.798,0.0,0.203,0.426,103.911,309653,3,Richard: The Son of Clarence Have I Pent Up Close,"Jay Robinson,Martin Donegan"
+spotify:track:4ThRMOTkiuZqnIBzexfslK,0.633,0.15,11,-15.399,1,0.921,0.656,0.0,0.247,0.444,167.08,981773,4,Richard: Richmond Is On the Seas,"Jay Robinson,Martin Donegan"
+spotify:track:4Uwdf1YVcVJ4NbpKPb5A8X,0.696,0.214,2,-22.507,1,0.911,0.915,0.0,0.218,0.456,136.388,930395,3,Henry IV Part 1 - Part 1,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:7KE0rAqFSSzigFbQCu0ZY2,0.7,0.166,4,-23.519,0,0.857,0.958,0.0,0.095,0.486,133.443,1140564,5,Henry IV Part 1 - Part 2,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:1ffS8Fj2YcIr3lZPvoDrPe,0.61,0.222,7,-22.562,1,0.942,0.953,0.0,0.468,0.382,67.581,933164,4,Henry IV Part 1 - Part 3,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:30ZGGrv4CS8HTD0FV6bDpn,0.709,0.221,8,-22.786,1,0.91,0.899,0.0,0.323,0.506,109.944,1275995,5,Henry IV Part 1 - Part 4,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:4tHBkTbC1glHMimnsCP184,0.621,0.189,6,-22.261,0,0.941,0.929,0.0,0.283,0.42,79.696,1344552,4,Henry IV Part 1 - Part 5,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:3I4TG2zGg8XO6WHzzrxBLa,0.627,0.283,2,-19.378,1,0.95,0.897,0.0,0.251,0.293,82.274,1210874,1,Henry IV Part 1 - Part 6,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:3DhIfpmQmoSHdo3cTeLPlm,0.671,0.188,8,-22.397,1,0.908,0.922,0.0,0.139,0.386,97.033,1199740,4,Henry IV Part 1 - Part 7,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:3ek8ikibHYs0l1n1rRSa6n,0.695,0.251,7,-19.685,0,0.925,0.752,0.0,0.0827,0.259,107.061,988421,5,Henry IV Part 1 - Part 8,"Anthony Jacobs,Corin Redgrave,Paul Scofield,Marlowe Players"
+spotify:track:287csK48QxbbtTFbrMx1Ir,0.614,0.168,8,-23.951,1,0.93,0.767,0.0,0.383,0.471,80.403,1832227,4,Act I,"Sir Ian McKellen,Corin Redgrave,Derek Jacobi,William Shakespeare"
+spotify:track:5iFP2QHLL9r9J3auYMpsME,0.64,0.149,7,-24.28,1,0.928,0.743,0.0,0.641,0.484,79.198,2218480,4,Act II,"Sir Ian McKellen,Corin Redgrave,Derek Jacobi,William Shakespeare"
+spotify:track:49eULE6xFl40175sjyWiTw,0.587,0.192,8,-25.979,1,0.941,0.77,0.0,0.336,0.274,57.492,1364427,4,Act III,"Sir Ian McKellen,Corin Redgrave,Derek Jacobi,William Shakespeare"
+spotify:track:55MVtzFyWbQS5YM9kwxC7W,0.621,0.153,7,-25.183,0,0.903,0.711,0.0,0.143,0.375,90.862,2624280,3,Act IV,"Sir Ian McKellen,Corin Redgrave,Derek Jacobi,William Shakespeare"
+spotify:track:4Wbd1Bb7Ncaa96ktQdk2B2,0.595,0.125,4,-25.198,0,0.918,0.824,0.0,0.0919,0.37,86.929,1733533,4,Act V,"Sir Ian McKellen,Corin Redgrave,Derek Jacobi,William Shakespeare"
+spotify:track:2Hzu8Cvb7CP16oRQ5jzieL,0.63,0.165,7,-18.086,1,0.354,0.923,5.91e-06,0.481,0.547,114.067,353573,4,"Henry V - Act III, Scene I Henry's speech to his men before the attack on Harfleur",Laurence Olivier
+spotify:track:0ufit5L72wZ85drTQT87GY,0.656,0.0964,10,-27.542,0,0.335,0.93,0.0,0.092,0.479,85.51,175547,3,"Henry V - Prologue, Act IV Preceding the action on the battlefield at Agincourt",Laurence Olivier
+spotify:track:4qknggriNtqVaz6mVm400r,0.691,0.13,1,-19.114,1,0.42,0.918,1.31e-06,0.0838,0.272,119.058,277000,4,"Henry V - Act IV, Scene 3 King Henry's speech on the morning of battle",Laurence Olivier
+spotify:track:0C1Dlx7yT32rirRAtNhSTt,0.625,0.221,7,-19.416,1,0.93,0.783,0.0,0.424,0.388,82.239,874069,4,Act One - Scene 1,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:6OUBGPxElYWq6GF8dVVJ6h,0.621,0.209,7,-21.216,0,0.948,0.896,0.0,0.53,0.493,79.285,350923,3,Act One - Scene 2 & 3,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:5SigxPxgZN0cP4txRredOr,0.617,0.204,0,-21.793,1,0.935,0.821,0.0,0.585,0.331,77.067,656916,3,Act One - Scene 4,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:7064Kqwdwq5BNBNIQgxB7c,0.689,0.183,2,-22.755,1,0.892,0.75,0.0,0.0888,0.359,137.755,689122,5,Act Two - Scene 1,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:2Lgp0KRoQjqMKbyv3YU0ez,0.705,0.189,2,-21.491,1,0.883,0.737,0.0,0.431,0.377,132.007,815804,3,"Act Two - Scenes 2, 3 & 4","Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:3N4f9p1pdpK8MDQz3Uzc4S,0.676,0.103,7,-23.842,0,0.761,0.782,0.0,0.293,0.235,100.307,496559,3,Act Two - Scene 5,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:4ACj8co7TETlQPtC3O2Vth,0.702,0.238,2,-19.394,1,0.925,0.776,0.0,0.0627,0.248,134.58,426133,4,Act Two - Scene 6,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:2FM2gVaZ7lzsLjxA9hLLDa,0.708,0.162,2,-22.323,1,0.875,0.646,0.0,0.162,0.427,111.16,343342,5,Act Three - Scene 1,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:4Y9zIMbfvXs8bnit2qyVTI,0.688,0.159,0,-23.059,1,0.68,0.837,0.0,0.212,0.388,102.073,368779,3,Act Three - Scene 2 - Part 1,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:3DhNjMUAezCgKoUcKAHNTq,0.706,0.242,7,-21.63,0,0.929,0.684,0.0,0.259,0.303,88.761,311960,3,Act Three - Scene 2 - Part 2,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:6eid9BF20j7wcdIKXNeQd3,0.706,0.153,7,-21.561,1,0.868,0.839,0.0,0.18,0.401,132.494,808287,3,Act Three - Scene 3,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:4wStxHTx7v4reXOQhbOoLy,0.697,0.189,0,-20.836,1,0.836,0.809,0.0,0.339,0.393,104.4,473275,4,Act Four - Scene 1,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:7KDOsEg8tXnO1yTqtGW25o,0.626,0.223,2,-21.669,0,0.915,0.753,0.0,0.485,0.457,167.966,91371,3,Act Four - Scene 2,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:3JeNF5t4BZHWbYmf3EeRkl,0.716,0.202,2,-22.599,1,0.813,0.738,0.0,0.212,0.485,126.671,180013,3,Act Four - Scene 3,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:1xGsnge9t0PltEQVXDba8k,0.724,0.0563,0,-23.996,0,0.441,0.916,0.0,0.52,0.339,118.166,107009,5,Act Four - Scene 4,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:3K0O3DyGNNSnpRWLN6sAuC,0.715,0.194,7,-23.386,1,0.942,0.895,0.0,0.639,0.459,66.492,89449,4,Act Four - Scene 5,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:7k8JmUNMUfmSZJLusbdGxJ,0.616,0.128,5,-24.691,1,0.879,0.852,0.0,0.114,0.428,74.022,284828,3,Act Four - Scene 6,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:0QpMn0q6MFLx6ExK7KCcvt,0.624,0.162,5,-20.652,1,0.876,0.871,0.0,0.0805,0.286,80.507,324139,3,Act Four - Scene 7,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:26hhKKUJAYy3xYUlEISXRm,0.658,0.161,2,-21.957,0,0.748,0.792,0.0,0.105,0.595,87.692,118590,3,Act Four - Scene 8,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:3ULKj8R6C9LIjI2P7qnZpt,0.677,0.194,5,-21.208,0,0.905,0.784,0.0,0.881,0.596,81.227,98789,3,Act Four - Scene 9,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:7e1YgNFo0oK78yJziWRMbT,0.707,0.191,5,-20.595,1,0.862,0.86,0.0,0.242,0.342,107.968,416670,3,Act Five - Scene 1,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:2XxcOHqW47E3ysYGPzKr1Z,0.726,0.197,0,-23.575,1,0.814,0.784,0.0,0.0594,0.239,96.021,323164,4,Act Five - Scenes 2 & 3,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:6tPloF5945jmtV6EMm3lnB,0.714,0.15,0,-20.908,1,0.735,0.753,0.0,0.093,0.308,125.118,687769,3,Act Five - Scenes 4 & 5,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:0qfn7EUZQgFgqmTCTpIoMM,0.658,0.211,7,-22.655,1,0.923,0.618,0.0,0.125,0.305,93.972,352659,4,Act Five - Scene 6,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:1CtFFNI9XW2FCzHuFA6j6G,0.719,0.161,0,-21.333,1,0.72,0.784,0.0,0.0852,0.318,123.092,187193,5,Act Five - Scene 7,"Richard Marquand,Peter Orr,Patrick Garland,Patrick Wymark"
+spotify:track:067RIRbf2JW7QyfSjpmAQG,0.584,0.0384,1,-30.592,1,0.827,0.976,0.0,0.295,0.145,79.27,3270000,4,Henry VIII,"Dame Sybil Thorndike,Sir Lewis Casson,Ralph Truman"
+spotify:track:7Gplj78KjE0blLZus66PAd,0.611,0.0954,0,-23.219,0,0.945,0.794,0.0,0.538,0.273,62.607,976453,3,Act I,The Marlowe Society
+spotify:track:0NzxBkfez6f9eRu1UYSl8X,0.622,0.0799,1,-23.88,1,0.942,0.929,0.0,0.119,0.261,173.448,2047773,5,Act II,The Marlowe Society
+spotify:track:59vuUbUJtMZuTh9iUmPX2f,0.613,0.0718,10,-24.237,1,0.926,0.898,0.0,0.0927,0.272,75.967,2335867,3,Act III,The Marlowe Society
+spotify:track:6v8oJ72mgI06BodWqXmEw7,0.658,0.0867,0,-24.962,1,0.92,0.92,0.0,0.345,0.239,93.951,1895547,3,Act IV,The Marlowe Society
+spotify:track:4XkoUNMGlMGMAribl1Fqyh,0.632,0.0691,0,-26.153,1,0.919,0.884,0.0,0.131,0.202,86.795,1821320,4,Act V,The Marlowe Society
+spotify:track:6e1iXgk8GRU5Rv2PKd3trc,0.747,0.122,5,-31.145,0,0.926,0.652,1.23e-05,0.58,0.363,105.805,65907,3,The Way Through the Woods,"Rudyard Kipling,Ralph Fiennes"
+spotify:track:5D48MUZ2NyA327jd50EX5k,0.725,0.182,9,-21.432,1,0.949,0.745,0.0,0.524,0.406,116.853,113174,3,G K Chesterton - The Rolling English Road,Ghizela Rowe
+spotify:track:6FsMEEFTThISbVBOumMVeH,0.712,0.188,10,-23.658,0,0.945,0.563,0.0,0.374,0.557,101.85,286040,4,Three Sunsets,David Moore
+spotify:track:2qTOmVZBfkoN1tAmYgSj1D,0.727,0.0481,7,-21.4,1,0.628,0.972,0.0,0.167,0.507,90.162,39413,4,Pied Beauty,Margaret Rawlings
+spotify:track:3dPJ6TP96Np6UUpBrpuePj,0.617,0.119,2,-24.189,1,0.942,0.677,0.0,0.174,0.627,61.733,256046,4,The Message Of The March Wind By William Morris,Richard Mitchley
+spotify:track:2CYEbSYIaM41saztSHGTE2,0.622,0.121,6,-27.611,0,0.969,0.501,0.0,0.376,0.529,168.748,47478,3,Christina Rossetti - Sonnets Are Full of Love,Ghizela Rowe
+spotify:track:5saGnZ30MDibrSmMk9EE1M,0.624,0.215,2,-20.844,1,0.952,0.688,0.0,0.133,0.654,76.127,343446,4,March - An Ode by Algernon Charles Swinburne,Richard Mitchley
+spotify:track:3Z5lMsqIIivYqJvAvPr6Gc,0.716,0.225,8,-21.047,1,0.938,0.245,0.0,0.178,0.462,123.972,932613,3,Oscar Wilde - The Garden of Eros,Sean Barrett
+spotify:track:3vnkHHWsxIaedZZrmiFgsv,0.709,0.0809,2,-27.527,0,0.921,0.862,1.48e-05,0.124,0.486,110.573,56784,1,Longing,Matthew Arnold
+spotify:track:1GIF1tpkrnQkIftVbbkhF9,0.715,0.0713,10,-21.169,1,0.903,0.57,0.0,0.377,0.709,126.006,42272,5,A E Houseman - When I Was One and Twenty,Ghizela Rowe
+spotify:track:0FjNKxoZeul3bF9jmgM67Q,0.696,0.128,4,-27.886,0,0.711,0.677,0.0418,0.0912,0.316,125.534,58514,4,Elizabeth Barrett Browning - How Do I Love Thee,Stella Gonet
+spotify:track:03dF22dPlGAco8pAysUIYA,0.656,0.0576,1,-26.049,1,0.517,0.902,0.0,0.309,0.413,110.623,1288413,4,Fra Lippo Lippi,James Mason
+spotify:track:1Wv194bcFYhwOC1hxMKVWs,0.753,0.108,4,-21.948,1,0.942,0.5,0.0,0.174,0.184,103.252,52860,3,The Austerity of Poetry,"Matthew Arnold,Ghizela Rowe"
+spotify:track:0MpKDelIXFx5IOFFWAbVXy,0.684,0.0882,7,-24.087,0,0.953,0.758,0.0,0.313,0.256,86.982,2336803,3,Sonnets From The Portguese,Elizabeth Barrett Browning
+spotify:track:1tDpsjWOxXrJew5TiNrDQV,0.688,0.362,8,-20.666,1,0.941,0.497,0.0,0.126,0.423,141.878,275470,3,The Youth of Man,"Matthew Arnold,Richard Mitchley"
+spotify:track:5kweUuvbFVxuBdRUHycKxM,0.647,0.0867,10,-24.912,1,0.919,0.694,0.0,0.182,0.228,89.598,80782,4,Youth and Calm,"Matthew Arnold,Ghizela Rowe"
+spotify:track:4n0jnEkImWKzgcxHsIkoBl,0.719,0.405,9,-19.726,1,0.92,0.569,0.0,0.187,0.493,125.842,211209,4,The Future,"Matthew Arnold,Richard Mitchley"
+spotify:track:1TuQp3KW2YzMrIFgYofziF,0.689,0.125,10,-21.663,1,0.871,0.666,0.0,0.433,0.339,89.127,54747,1,Early Death and Fame,"Matthew Arnold,Ghizela Rowe"
+spotify:track:1U7MZWra0uVDrZsiH200D6,0.639,0.128,10,-22.532,1,0.95,0.767,0.0,0.441,0.311,86.425,55461,4,Immortality,"Matthew Arnold,Ghizela Rowe"
+spotify:track:4JLQGU8uBNCbRU1T1Z9IHq,0.72,0.0866,0,-21.735,0,0.923,0.69,0.0,0.378,0.231,122.616,113836,5,Mortality,"Matthew Arnold,Ghizela Rowe"
+spotify:track:3VY3XctdI3mzK4ejhqbL81,0.635,0.118,2,-23.678,1,0.958,0.661,0.0,0.134,0.176,160.946,100473,4,Growing Old,"Matthew Arnold,Ghizela Rowe"
+spotify:track:6gaGdi9Og3pe8po5iZGZxQ,0.66,0.313,2,-21.675,1,0.959,0.388,0.0,0.296,0.457,84.82,143118,1,Consolation,"Matthew Arnold,Richard Mitchley"
+spotify:track:04s3gcdgddytpw6XtZdKOJ,0.679,0.108,11,-20.513,0,0.952,0.644,0.0,0.147,0.275,97.894,168976,4,A Memory Picture,"Matthew Arnold,Ghizela Rowe"
+spotify:track:7qjeXmifdLrze3LigmJwY9,0.692,0.299,3,-24.208,1,0.913,0.546,0.0,0.52,0.469,102.348,282773,3,The Buried Life,"Matthew Arnold,Richard Mitchley"
+spotify:track:6GmfGnSQXJUd22YdiwUnxt,0.631,0.092,8,-22.982,1,0.959,0.811,0.0,0.231,0.298,81.701,97059,1,Human Life,"Matthew Arnold,Ghizela Rowe"
+spotify:track:4NNzF7OLWlqExqWoqNSzq4,0.618,0.184,9,-22.366,1,0.952,0.739,0.0,0.112,0.55,69.508,478981,3,"Rugby Chapel, November 1857","Matthew Arnold,Richard Mitchley"
+spotify:track:3s5bkofM5Wh26YZRuHgRnr,0.691,0.111,7,-20.67,0,0.883,0.717,0.0,0.305,0.406,102.966,50956,4,West London,"Matthew Arnold,Ghizela Rowe"
+spotify:track:6sgVeciYx7tYoZcTgtFCYb,0.797,0.127,5,-19.441,0,0.937,0.782,0.0,0.133,0.406,119.98,51037,1,East London,"Matthew Arnold,Ghizela Rowe"
+spotify:track:1yHAZjwK5Pi4fcqHfNpCvO,0.712,0.0775,2,-27.768,1,0.937,0.704,0.0,0.23,0.225,128.149,187501,3,Stanzas from the Grande Chartreuse,"Matthew Arnold,Gideon Wagner"
+spotify:track:2FiF3MAgxbbZ9L2gYCA5NV,0.694,0.0937,10,-21.286,1,0.94,0.766,0.0,0.124,0.422,104.057,50945,3,Continued,"Matthew Arnold,Ghizela Rowe"
+spotify:track:3L8MO2DoEe7YPCU4427h0f,0.716,0.116,0,-20.189,1,0.95,0.752,0.0,0.41,0.321,124.241,53777,5,The Divinity,"Matthew Arnold,Ghizela Rowe"
+spotify:track:79eYj6mdffiuIZOyNlkG0u,0.762,0.368,11,-22.46,0,0.891,0.546,0.000325,0.142,0.334,69.689,122671,4,Dover Beach,Matthew Arnold
+spotify:track:33keydjWcFJnZPPNT29i9y,0.784,0.0427,0,-22.266,0,0.933,0.637,0.0,0.0976,0.185,79.011,27218,3,Despondency,"Matthew Arnold,Ghizela Rowe"
+spotify:track:1ko1e1H3KdjvJP22uXve2v,0.752,0.125,11,-19.061,0,0.94,0.72,0.0,0.404,0.243,88.415,36374,4,Epilogue,"Matthew Arnold,Ghizela Rowe"
+spotify:track:3tPILDDuisQY7EJYPU267t,0.699,0.0863,2,-21.161,0,0.924,0.769,0.0,0.25,0.264,105.43,156677,5,A Wish,"Matthew Arnold,Ghizela Rowe"
+spotify:track:68ylzHjohX9smrZEvtZPYc,0.842,0.044,11,-23.59,0,0.922,0.33,0.0,0.329,0.319,112.227,49760,4,The Last Word,"Matthew Arnold,Ghizela Rowe"
+spotify:track:0qSfjZHZ7pNn1fzBR4S2eL,0.626,0.322,7,-20.962,0,0.951,0.514,0.0,0.159,0.461,77.818,362603,4,A Reply to a Pessimist,Richard Mitchley
+spotify:track:6RqNFRNlMr0w0bClWpQuCP,0.748,0.126,0,-20.88,1,0.932,0.661,0.0,0.141,0.314,116.209,118224,5,Though All the World,Ghizela Rowe
+spotify:track:2KaAyddx2srJwqkVuZd9If,0.693,0.311,4,-23.73,1,0.951,0.624,0.0,0.465,0.489,63.493,51943,4,Love's Unity,Richard Mitchley
+spotify:track:2AbphZg4Vqoy8iunMGOc81,0.683,0.246,1,-24.484,0,0.954,0.651,0.0,0.502,0.683,94.894,45952,5,Love's Harvest,Richard Mitchley
+spotify:track:179PPAcXfZBkWGkDMSzJSQ,0.768,0.133,8,-19.502,1,0.956,0.901,0.0,0.666,0.267,103.461,50355,3,Spiritual Love,Ghizela Rowe
+spotify:track:4VJ69aQJF8QbCWdu8CaEz4,0.687,0.322,8,-22.5,1,0.922,0.472,0.0,0.415,0.43,142.402,130566,5,A Rare Guest,Richard Mitchley
+spotify:track:6zCe1gquQqXMd57KGA194k,0.746,0.17,9,-16.958,1,0.939,0.861,0.0,0.567,0.37,73.455,108135,1,A Voice from the West,Ghizela Rowe
+spotify:track:25yneCoRaupUxm6eWegqoh,0.685,0.27,10,-22.678,1,0.913,0.584,0.0,0.106,0.54,143.004,94134,5,In Praise of England,Richard Mitchley
+spotify:track:5GUmIjg1NOrnG13E81vtq6,0.655,0.137,11,-18.547,1,0.944,0.821,0.0,0.353,0.266,89.57,180082,4,How Florence Rings Her Bells,Ghizela Rowe
+spotify:track:4Onm5bReMxnhdBkrKwINyx,0.692,0.161,9,-21.903,1,0.907,0.61,0.0,0.103,0.681,102.146,130426,5,A March Minstrel,Richard Mitchley
+spotify:track:2TqQRKUqFia7qM8ot6x3VS,0.714,0.199,11,-19.82,0,0.931,0.652,0.0,0.121,0.74,90.323,233273,4,An April Fool,Richard Mitchley
+spotify:track:5txUDXFuF7XlMva5li1Vwz,0.636,0.0827,6,-20.429,1,0.95,0.772,0.0,0.455,0.349,163.545,53824,3,Forgiveness,Ghizela Rowe
+spotify:track:35Mzc0RI2lFYxoTworMvox,0.721,0.117,2,-23.579,1,0.935,0.569,0.0,0.279,0.664,120.427,48147,3,An April Love,Richard Mitchley
+spotify:track:3Nc397jjiTPkzq2qJ2WzgB,0.703,0.0797,8,-24.189,1,0.902,0.512,0.0,0.0972,0.582,108.948,107369,3,Agetha,Tim Graham
+spotify:track:2UI01T8TzLxEmyU1f4PZyw,0.69,0.291,4,-23.594,1,0.943,0.639,0.0,0.152,0.55,79.065,117238,3,In Sutton Woods,Richard Mitchley
+spotify:track:1PgDzrqyBHks2QXIqQaDXq,0.729,0.152,1,-23.0,0,0.933,0.709,0.0,0.0953,0.659,113.266,114335,4,A Night in June,Richard Mitchley
+spotify:track:3KOq9A3ANzZXfnjQISLYkI,0.812,0.117,8,-21.518,1,0.951,0.846,0.0,0.404,0.338,44.486,51966,4,Resignation,Ghizela Rowe
+spotify:track:62z2Edh1sHrT9LhFZx4fyv,0.844,0.117,0,-23.349,0,0.815,0.513,0.0,0.165,0.938,54.498,31733,5,Give Me October's Meditative Haze,Richard Mitchley
+spotify:track:6YrauRJkt6oZl1QGZnmfbk,0.73,0.13,2,-22.457,1,0.95,0.62,0.0,0.138,0.696,82.684,63806,4,A November Note,Richard Mitchley
+spotify:track:2Mp3qC5UTqUsGXTYPBoXoX,0.644,0.0789,5,-20.435,0,0.936,0.877,0.0,0.565,0.305,86.113,58445,3,Sorrow's Importunity,Ghizela Rowe
+spotify:track:0LERVMnuU0uji9lX6cvozs,0.713,0.249,9,-19.744,1,0.934,0.69,0.0,0.13,0.666,111.004,159254,3,December Matins,Richard Mitchley
+spotify:track:5uhqgQHfwawFuilyRRkGOm,0.719,0.131,7,-19.626,0,0.939,0.844,0.0,0.25,0.296,113.954,232641,3,The Passing of the Century,Ghizela Rowe
+spotify:track:6UErAU82mNQzaKrLSXSZUH,0.755,0.322,10,-25.975,1,0.933,0.749,0.0,0.169,0.581,82.626,19632,5,Winter Violets,Richard Mitchley
+spotify:track:2cBfJF4jhlOcXwXP294Opi,0.685,0.302,10,-24.339,0,0.919,0.731,0.0,0.269,0.565,100.125,89258,4,My Winter Rose,Richard Mitchley
+spotify:track:2yFJ8VUHCX0JQsK0UowSr5,0.731,0.137,2,-21.122,1,0.951,0.727,0.0,0.492,0.198,94.567,70972,4,A Wild Rose,Ghizela Rowe
+spotify:track:30YB246oFbYSpN5gMw6IjW,0.723,0.308,10,-20.974,1,0.885,0.464,0.0,0.138,0.524,115.375,285141,5,A Captive Throstle,Richard Mitchley
+spotify:track:0PG6lAkvoM3xVVQEZ7uF4S,0.693,0.12,7,-18.09,0,0.931,0.83,0.0,0.242,0.358,100.974,125550,3,Free,Ghizela Rowe
+spotify:track:7gsxqRAhaK4TbG2ffiLTsc,0.726,0.278,8,-21.577,1,0.948,0.47,0.0,0.177,0.647,82.172,49528,1,A Farewell to Youth,Richard Mitchley
+spotify:track:2X5UIwEpm5vmOS2NU4PDVq,0.724,0.131,0,-20.448,1,0.948,0.855,0.0,0.317,0.376,113.633,51775,1,A Sleepless Night,Ghizela Rowe
+spotify:track:2l91dXYz76c52j9wlu2ucS,0.679,0.283,0,-20.773,1,0.948,0.495,0.0,0.348,0.558,66.603,110109,5,By the Fates,Richard Mitchley
+spotify:track:1B3ne0u52Jg2ObzO9wupSd,0.719,0.12,8,-19.478,1,0.947,0.94,0.0,0.22,0.373,117.557,50852,1,Gleaners of Fame,Ghizela Rowe
+spotify:track:0kK3MNJuV85WGQKG8jCFAf,0.767,0.218,0,-17.847,0,0.962,0.863,0.0,0.345,0.553,71.642,49345,3,Songs from Lucifer,Tim Graham
+spotify:track:3iCDn8GuJRtuWfGoi8Efa1,0.613,0.134,3,-21.385,1,0.96,0.77,0.0,0.283,0.192,76.022,307519,4,The Silent Muse,Ghizela Rowe
+spotify:track:0BDrWjnfl91b0HoUFzDuJD,0.629,0.28,9,-17.552,0,0.952,0.697,0.0,0.161,0.662,174.682,60528,4,Song,Richard Mitchley
+spotify:track:54MIuio2pk7yLwCMA1dmM7,0.757,0.058,7,-22.967,1,0.923,0.682,0.0,0.612,0.386,132.005,83511,5,"Aubrey Beardsley - The Three Musicians, The First Version",Ghizela Rowe
+spotify:track:6yauYHxyMBVguRFzHXsBUh,0.712,0.0892,0,-24.385,1,0.946,0.639,0.0,0.184,0.317,112.222,55124,4,"Aubrey Beardsley - The Three Musicians, The Published Version",Ghizela Rowe
+spotify:track:6CJ98BJAuZD9zQU5bJybK6,0.704,0.234,9,-19.061,1,0.953,0.564,0.0,0.0929,0.505,77.4,291116,3,A Curse For A Nation By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:4TGaeYAVduoZj3fDlQ7Bzw,0.661,0.0378,2,-22.97,1,0.916,0.789,0.0,0.159,0.307,93.437,246561,1,The House Of Clouds By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:6emrpYwcvVIwLaVk6BW2h9,0.685,0.203,3,-20.862,1,0.889,0.608,0.0,0.145,0.841,99.076,55333,3,William Scawen Blunt - The Idlers Calender - April - Trout Fishing,Richard Mitchley
+spotify:track:5nDutywxmQtufRdPeiUlki,0.752,0.171,2,-19.484,1,0.947,0.6,0.0,0.355,0.582,104.052,52616,5,Wilford Scawen Blunt - The Idlers Calender - June,Richard Mitchley
+spotify:track:1M13gcm20ZhKbHxeRvuzn9,0.632,0.29,2,-18.927,1,0.955,0.444,0.0,0.295,0.74,170.499,59188,3,Wilfred Scawen Blunt - The Idlers Calendar - December,Richard Mitchley
+spotify:track:1R5XBO2Nqu38f13l2FvBDd,0.722,0.193,2,-21.212,1,0.889,0.69,0.0,0.205,0.605,126.206,659322,4,The Runaway Slave At Pilgrim's Point By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:4DgPAViumlNmGOA3uockYw,0.675,0.0774,0,-21.244,0,0.951,0.793,0.0,0.139,0.355,146.99,53638,1,Comfort By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:5I6zfgQb8dcBY1HabRuMzN,0.742,0.144,0,-22.878,0,0.86,0.642,0.0,0.118,0.658,109.454,100913,4,Chorus Of Eden Spirits By Elizabeth Barrett Browning SPELL,Elizabeth Barrett Browning
+spotify:track:6zgorMEUO6cuJ1bnm907cS,0.715,0.0469,7,-19.935,0,0.83,0.817,0.0,0.141,0.473,122.205,109529,4,The Autumn By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:1VBwChIuFk6RhLkvlhOQJ0,0.721,0.275,9,-20.779,1,0.902,0.783,0.0,0.0904,0.707,115.893,106810,5,A Musicial Instrument By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:2MeuU5Ej8ydvK6pOqDdtVV,0.73,0.146,8,-24.276,1,0.967,0.721,0.0,0.297,0.262,86.839,74966,4,To My Father On His Birthday - Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:1XEBFB3YjDi79aD0Iy8oOW,0.72,0.112,8,-22.886,1,0.96,0.733,0.0,0.275,0.512,122.13,63164,3,Aurora Leigh (Excerpts) - Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:2ngybYR536AtG33tTBwPfV,0.712,0.0466,11,-26.737,0,0.886,0.754,4.28e-05,0.26,0.284,120.406,54174,3,A Thought For A Lonly Death Bed - Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:1DbeCKMqfCQX976CkqGiS5,0.713,0.152,2,-20.792,1,0.931,0.738,0.0,0.397,0.744,112.614,67451,4,The Ladies Yes By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:1mGpVIQjkqFrEM6xCY9aau,0.624,0.08,11,-21.806,0,0.935,0.781,0.0,0.455,0.33,78.727,148201,4,My Heart & I By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:4Tb8dL7VjQPfPc1wrqJxTm,0.718,0.226,9,-20.25,1,0.942,0.695,0.0,0.125,0.595,124.172,98140,3,A Man's Requirements By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:06Am1qshbnfWRpYilCbBD3,0.705,0.0944,3,-22.249,1,0.933,0.831,0.0,0.406,0.433,82.143,67069,4,Change Upon Change By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:2JFLfPIQFADLj6hUk8AOuC,0.666,0.205,11,-20.11,0,0.945,0.758,0.0,0.103,0.644,89.815,107611,4,A Woman's Shortcomings By Elizabeth Barrett Browning,Elizabeth Barrett Browning
+spotify:track:5XEAV5D4h9CS29YFKOkxYK,0.684,0.0882,7,-24.087,0,0.953,0.758,0.0,0.313,0.256,86.982,2336803,3,Sonnets From The Portguese,Elizabeth Barrett Browning
+spotify:track:2TcUaFW2u7SRVGFeXsUMlV,0.73,0.146,8,-24.276,1,0.967,0.721,0.0,0.297,0.262,86.839,74966,4,Elizabeth Barrett Browning - To My Father on His Birthday,Ghizela Rowe
+spotify:track:65JMJUm1FwWbjRejxckR5V,0.55,0.0436,1,-27.944,1,0.635,0.663,0.0,0.23,0.285,85.948,613067,3,The Bishop Orders His Tomb,James Mason
+spotify:track:2CUuFtUxAd95SE8GB6wS62,0.533,0.0216,1,-30.202,1,0.428,0.797,0.0,0.11,0.218,82.761,1048467,4,Andrea Del Sarto,James Mason
+spotify:track:7zXgxqQGkg0FMl1CHXs9dA,0.679,0.29,9,-22.21,1,0.939,0.494,0.0,0.304,0.356,89.532,185620,4,My Last Duchess - Robert Browning,Richard Mitchley
+spotify:track:3SvAagCW5MeMmylOqHf8kh,0.714,0.0624,11,-22.856,1,0.915,0.703,0.0,0.12,0.327,110.987,57568,3,Now - Robert Browning,Ghizela Rowe
+spotify:track:29Sh5bIaEs2LyW4hTECPBV,0.718,0.267,9,-25.982,1,0.818,0.516,0.0,0.275,0.401,115.861,112796,5,In 3 Days - Robert Browning,Richard Mitchley
+spotify:track:2lD3Djap997S1JuDJgL6t8,0.734,0.191,1,-25.337,0,0.937,0.573,0.0,0.12,0.724,87.236,54613,4,Life in a Bottle - Robert Browning,Richard Mitchley
+spotify:track:22Mme5vsZ688TMUieIHdx3,0.756,0.857,2,-4.185,1,0.336,0.0452,0.0,0.121,0.688,140.017,212640,4,Wild for the Night (feat. Skrillex & Birdy Nam Nam),"A$AP Rocky,Skrillex,Birdy Nam Nam,Lord Flacko"
+spotify:track:5CnQvqtyUsfEAP5ZmsrpeI,0.517,0.573,11,-8.147,0,0.342,0.303,1.19e-06,0.108,0.205,173.77,218907,3,Sweet Talk,Jessie Ware
+spotify:track:1DZfcSkibPHM9h8lPFT7LT,0.517,0.978,9,-4.053,1,0.381,0.00351,0.403,0.0848,0.38,220.169,247693,4,Blow the Roof,Flux Pavilion
+spotify:track:1WIfWj5skn5UUZTs4cEFBe,0.799,0.436,1,-9.975,0,0.379,0.283,0.000105,0.0968,0.311,80.028,217566,4,Location,Khalid
+spotify:track:6RX5iL93VZ5fKmyvNXvF1r,0.447,0.694,7,-4.637,0,0.382,0.0293,5.46e-06,0.167,0.509,175.868,227853,4,Irreplaceable,Beyoncé
+spotify:track:3I32fECHJN9BvjtvpaAEDg,0.87,0.591,8,-6.322,1,0.424,0.263,0.0,0.483,0.539,80.018,253707,4,This Is Why I'm Hot - Album Version (Edited),MiMS
+spotify:track:5blkgkItJK6s3ZhVxn6hqB,0.556,0.857,1,-5.764,1,0.338,0.126,0.0,0.104,0.429,118.966,233267,5,We Fly High,Jim Jones
+spotify:track:6nbRXoZJAWlHtnWcPAY9Or,0.802,0.689,0,-6.264,1,0.343,0.0227,0.0,0.415,0.838,144.096,269973,4,"Pop, Lock & Drop It (feat. Bow Wow & T-Pain) - Remix","Huey,Bow Wow,T-Pain"
+spotify:track:1x0gAzMSpHsS5e6NqKI9eV,0.411,0.873,5,-6.016,0,0.46,0.1,0.0,0.306,0.743,130.009,273133,5,You,"Lloyd,Lil Wayne"
+spotify:track:6nSEbFrbRFAiT5R3cWR3IL,0.704,0.881,11,-4.72,1,0.949,0.747,0.0,0.827,0.375,79.897,106120,3,Motley Crue Tour vs. Aziz Tour,Aziz Ansari
+spotify:track:4aZWedhPEcYkZXAemZEHBC,0.645,0.756,6,-5.425,1,0.925,0.813,0.0,0.688,0.422,114.118,232693,5,Jay-Z New Year's Story,Aziz Ansari
+spotify:track:1zqav5PRJlVCeZLZwemss5,0.572,0.814,10,-4.79,0,0.907,0.813,0.0,0.417,0.273,76.877,240507,4,R. Kelly Online Video Dictionary,Aziz Ansari
+spotify:track:2WohGlK71bEl1a7xDgf88s,0.704,0.466,0,-8.853,1,0.932,0.858,0.0,0.736,0.531,106.797,108320,3,Simple Man Cruise,Aziz Ansari
+spotify:track:2f8MjDEJbEdVd4u9HvG9T3,0.636,0.583,1,-7.808,1,0.95,0.835,0.0,0.755,0.389,97.5,214613,4,MTV's Next,Aziz Ansari
+spotify:track:4G8f7ZK9hg4ygOEJOW2GAw,0.63,0.432,5,-10.292,0,0.947,0.881,0.0,0.834,0.646,135.505,88560,3,Bonnaroo,Aziz Ansari
+spotify:track:1b1nWYKuJZEUthmNzCpseJ,0.646,0.397,8,-14.764,1,0.922,0.814,0.0,0.868,0.83,111.984,40907,3,Something Cool To Say To M.I.A.,Aziz Ansari
+spotify:track:1mCUYpR3ZtwaqvcdCjgLuT,0.598,0.496,5,-10.865,1,0.958,0.866,0.0,0.864,0.373,83.078,241373,4,A Night Out With Kanye West,Aziz Ansari
+spotify:track:70aSMOtrIMHL1CAdoyxFrZ,0.65,0.536,6,-8.428,0,0.954,0.845,0.0,0.825,0.476,70.642,131053,3,Kanye West vs. Darwish,Aziz Ansari
+spotify:track:4IXMdUloqh2U9uXD9KZjJn,0.645,0.629,8,-7.591,1,0.954,0.804,0.0,0.978,0.26,139.164,340053,3,R Kelly: The Pied Piper Of R&B,Aziz Ansari
+spotify:track:1uvU8CY55MVGC8NnzaZYj8,0.604,0.697,10,-8.168,0,0.923,0.767,0.0,0.768,0.51,86.67,162040,5,Alicia Keys,Maria Bamford
+spotify:track:1xfCL2cqMPGQQUOjOhDSEn,0.478,0.667,10,-14.716,0,0.929,0.89,1.23e-06,0.444,0.425,80.165,236893,5,"Selling CDs, Springsteen At Bar, Moore At Party, Gawker",Todd Barry
+spotify:track:6IgL22elfFJInTYcgefrv5,0.421,0.748,1,-15.769,1,0.946,0.528,0.000131,0.648,0.437,149.236,23560,4,Food Or Music?,Todd Barry
+spotify:track:7oJ7NO2sRdFCGFMnkvEKua,0.629,0.696,11,-14.022,1,0.941,0.842,1.74e-06,0.602,0.488,68.596,60253,5,MTV Diary,Todd Barry
+spotify:track:4a3PID2ilQ0wpBdhCMcs7s,0.595,0.495,8,-14.402,0,0.946,0.872,0.0,0.77,0.607,91.289,51720,4,Behind The Music,Todd Barry
+spotify:track:1j08mFmfgfCWHC6jyKgPXX,0.633,0.396,6,-15.973,1,0.9,0.886,0.0,0.59,0.69,58.559,30840,4,Grammy Awards,Todd Barry
+spotify:track:7BK7GRPbR8k30k1PsGd7nP,0.431,0.762,7,-12.657,1,0.937,0.903,0.0,0.707,0.628,74.746,53040,1,Band With Orchestra,Todd Barry
+spotify:track:0GN8JwhW2AOP9uWyO2xvWB,0.514,0.566,11,-12.691,1,0.942,0.795,0.0,0.72,0.643,84.933,43960,5,Boxed Sets,Todd Barry
+spotify:track:1GWRe38ZTW1CmJoCYS9EcY,0.565,0.556,9,-13.31,0,0.937,0.767,0.0,0.594,0.507,90.135,48973,5,Behind Stage,Todd Barry
+spotify:track:3TUMjP5HmxKBbkFLij3VPW,0.638,0.563,7,-13.479,0,0.956,0.819,2.51e-06,0.66,0.713,85.663,53320,3,Fugazi,Todd Barry
+spotify:track:2pEy1pGbLyeAyk5m7k0bcp,0.561,0.618,5,-17.503,1,0.885,0.674,0.0,0.501,0.493,128.66,47853,1,Bands Reuniting,Todd Barry
+spotify:track:4U2sdzCuiXQSSNZ9KDlFRx,0.594,0.727,7,-16.594,0,0.901,0.694,0.0,0.659,0.286,111.701,19440,5,In A Band?,Todd Barry
+spotify:track:0DssxoA4uTDa2JsBgfq0pg,0.495,0.298,10,-18.651,0,0.93,0.744,0.0,0.718,0.744,169.681,53000,4,Michael Jackson And Jose,Todd Barry
+spotify:track:4VjuHavv2loEUL61cXUy3R,0.583,0.464,1,-19.747,1,0.927,0.877,2.31e-06,0.621,0.45,65.895,126813,5,Sugar Ray,Todd Barry
+spotify:track:4So4XZqP26abFAvZIuYn5H,0.593,0.429,8,-23.109,1,0.85,0.668,0.0,0.168,0.301,118.24,37827,5,New Wilco Album,Todd Barry
+spotify:track:6BsqeOxv7N2u5l6fRN10Pr,0.569,0.614,2,-11.516,1,0.949,0.808,0.0,0.942,0.46,139.229,357000,4,Hip Hop Animosity,Mike Birbiglia
+spotify:track:7wTMnfTS5JutmUEOjiNlRt,0.48,0.983,2,-6.864,1,0.876,0.8,0.0,0.913,0.0942,78.929,224680,5,MTV,Lewis Black
+spotify:track:36FEd0PGXVRyZok3Vu8q1H,0.522,0.954,6,-7.496,1,0.929,0.768,0.0,0.736,0.16,135.404,239267,4,Justin And Janet,Lewis Black
+spotify:track:5M469KaLo1PNb4OrCfDVFl,0.481,0.984,10,-7.28,1,0.902,0.868,1.65e-06,0.701,0.044,81.02,269227,4,America Loses It's Mind,Lewis Black
+spotify:track:7AqbcU8rve7nn8eWDiRUos,0.521,0.964,5,-7.297,1,0.896,0.844,0.0,0.961,0.126,125.797,166187,5,Nipple Clamps,Lewis Black
+spotify:track:3Gg1GRIvP09nsMY82At99a,0.686,0.67,9,-8.679,1,0.951,0.863,0.0,0.703,0.5,87.857,236053,3,Scatting,Hannibal Buress
+spotify:track:2J2vUuomuC6EpMBBvsv5HO,0.62,0.803,4,-8.002,1,0.937,0.875,0.0,0.771,0.343,109.029,221693,4,MOE,Hannibal Buress
+spotify:track:70Kc5ULbaX1UV7k0k6Up2E,0.59,0.665,6,-8.59,1,0.951,0.871,0.0,0.739,0.502,82.812,216665,3,Lil Wayne/Gangsta Questions,Hannibal Buress
+spotify:track:5EmFRNZQ82D4C1EfKhuPvd,0.563,0.9,9,-8.012,1,0.927,0.936,2.8e-05,0.909,0.454,85.385,139240,4,Sarah McLachlan,Bill Burr
+spotify:track:7bGUUI7hnU2TTqPsi8iXLZ,0.635,0.529,6,-14.205,1,0.955,0.874,0.0,0.911,0.503,65.434,103253,3,Madonna - Bonus Track,Bill Burr
+spotify:track:16XYKLDXQNjluqeuTLrOnm,0.529,0.958,11,-5.365,1,0.619,0.828,0.0,0.898,0.645,130.179,177520,3,MTV Cribs,Bill Burr
+spotify:track:3eQ4v19m3TRJIVlif2nTDg,0.447,0.896,2,-9.127,0,0.927,0.889,7.58e-06,0.217,0.38,76.796,131907,3,Confused For Another Comic,Todd Barry
+spotify:track:12vYevf7cqf9wtE2FkzLvw,0.566,0.428,0,-15.972,0,0.95,0.918,0.0,0.808,0.754,58.793,41013,4,Movie In Neighborhood,Todd Barry
+spotify:track:2ACo9n6BN50SbjmUdWQ9lQ,0.619,0.499,10,-15.13,0,0.94,0.862,0.0,0.73,0.549,88.615,74760,1,Cosmo,Todd Barry
+spotify:track:2iROIxu7N330ziO2hSAVWM,0.524,0.878,3,-10.283,0,0.914,0.792,5.81e-06,0.882,0.0912,101.771,217053,3,Björk,Margaret Cho
+spotify:track:2WDYNFzXXGYTMiLAEIchpV,0.515,0.85,6,-10.799,1,0.922,0.744,0.0,0.678,0.122,65.422,399373,4,The Grammys,Margaret Cho
+spotify:track:1lC6BVuGdbO8ZQlyZNMzKc,0.659,0.565,6,-13.929,0,0.928,0.88,0.0,0.922,0.0994,118.004,208573,4,Mommy Don't Like,Margaret Cho
+spotify:track:71ULFwiNlW2mWgGXWl3WTD,0.656,0.919,4,-2.84,0,0.814,0.816,0.0,0.873,0.774,107.244,149453,4,Jim Morrison Cat (The Doors),Moshe Kasher
+spotify:track:2UiiAcZwhF2JVmn9BHVYF5,0.59,0.526,11,-10.254,1,0.94,0.91,0.0,0.726,0.413,61.675,289547,4,I Don't Hate Vampire Weekend,Greg Behrendt
+spotify:track:6RgNHoV79i9Q2DPv4y7v9Y,0.626,0.45,6,-12.302,1,0.94,0.876,0.0,0.657,0.567,127.507,124600,4,Punk Rock Shops,Greg Behrendt
+spotify:track:7JaSnThbqsuQOrmNrQXd0V,0.46,0.809,7,-11.173,1,0.946,0.271,0.0,0.597,0.462,85.562,152560,3,Adult Rock Show,Greg Behrendt
+spotify:track:21lSnDT1yNhgkoGpbNoW6X,0.369,0.823,6,-10.322,0,0.845,0.372,0.0,0.922,0.864,171.816,65360,5,Air Guitar,Greg Behrendt
+spotify:track:2E6ZwGkabuOHfP2znwQtKa,0.507,0.809,6,-10.285,1,0.89,0.185,0.0,0.441,0.666,105.698,172627,3,CD Repair Guy,Greg Behrendt
+spotify:track:58xID2UtBcC4qae8USE65u,0.744,0.885,11,-5.489,1,0.773,0.854,0.0,0.707,0.477,47.422,106049,4,Rappers + drugs = comedy - Live,Hannibal Buress
+spotify:track:3jF0Dh7i1OsdxwtvpUXmao,0.572,0.8,8,-12.002,1,0.914,0.822,0.0,0.651,0.407,92.591,269533,3,L Gaga,Andrew Norelli
+spotify:track:3xLCjnRWJo49vATMxSiBv5,0.581,0.844,6,-5.433,0,0.956,0.803,0.0,0.873,0.226,158.044,207947,3,50 Cent Grapefruit Story,Aziz Ansari
+spotify:track:7F45KEsDPDejcdo2Mkqv0T,0.425,0.633,8,-18.038,1,0.937,0.828,0.0,0.789,0.145,83.237,679960,3,Elton John,Jim Gaffigan
+spotify:track:5M31cT8bZFyJJAtSKnWWLV,0.599,0.502,6,-13.655,1,0.913,0.851,0.0,0.866,0.348,87.41,127520,4,Elvis,Bill Hicks
+spotify:track:7r0Y8I77LnxNTvGzWFFOb8,0.519,0.796,5,-10.862,1,0.841,0.976,0.0,0.931,0.59,85.285,126640,4,Little Richard,Eddie Murphy
+spotify:track:6dV7Fx9lPph5hqa4Vs3c6g,0.55,0.707,8,-11.936,0,0.921,0.677,0.0,0.691,0.467,109.914,176053,3,Michael Jackson Is The Artist Of The Millennium,Jim Norton
+spotify:track:3VXbNAMH4NbyciYBtUzZAK,0.473,0.858,2,-6.273,1,0.94,0.872,0.0,0.779,0.388,85.931,165013,3,Hip Hop,Natasha Leggero
+spotify:track:6O5ovrYjGBycT94JCBGPwy,0.53,0.574,9,-15.915,0,0.951,0.796,0.0,0.932,0.15,98.794,128440,3,Hip Hop Testimony,Jonathan Slocumb
+spotify:track:6gn5mlwvJZkt5bSCIAnwLM,0.478,0.368,1,-16.347,1,0.929,0.866,0.0,0.779,0.55,71.344,112893,3,Country Music,Sean Cullen
+spotify:track:7h3bN2ufjkSpjoXmHXqrwx,0.573,0.596,6,-17.966,1,0.725,0.765,5.2e-06,0.813,0.248,119.796,229800,4,Fighting / Background Music,Pablo Francisco
+spotify:track:4tAru66VGVLWYjg90UV4vJ,0.858,0.656,6,-4.96,0,0.358,0.114,0.0,0.141,0.969,59.972,219080,4,Culo,"Lil Jon,Pitbull"
+spotify:track:7sLpSWxQazJzDVG6YGzlVs,0.494,0.887,6,-4.297,0,0.398,0.00661,0.0,0.103,0.548,89.554,234627,4,99 Problems,JAY-Z
+spotify:track:2cYZpcIV39X48RnOFM7w2V,0.643,0.717,8,-4.876,0,0.506,0.184,0.0,0.152,0.46,90.893,223507,4,All Falls Down,"Kanye West,Syleena Johnson"
+spotify:track:6jL1SnyXcXiKOmw4M2RnmT,0.62,0.445,1,-17.154,0,0.382,0.00273,0.0145,0.333,0.587,202.134,248493,4,Around The Way Girl,LL Cool J
+spotify:track:66LCa77E7ux7S6oT0YfRBn,0.856,0.679,5,-6.411,0,0.351,0.0489,0.0,0.0895,0.85,85.535,268400,4,My Name Is,Eminem
+spotify:track:3mmbJnh1L94Zl8QZcUTq39,0.659,0.738,4,-4.077,0,0.362,0.00561,0.0,0.319,0.516,93.796,251907,4,U.N.I.T.Y.,Queen Latifah
+spotify:track:6glsMWIMIxQ4BedzLqGVi4,0.725,0.64,5,-7.905,0,0.332,0.0281,0.0,0.099,0.915,166.028,240027,3,"So Fresh, So Clean",Outkast
+spotify:track:1PS1QMdUqOal0ai3Gt7sDQ,0.629,0.696,1,-5.572,0,0.348,0.0195,0.0,0.0554,0.623,93.034,207627,4,Gold Digger,"Kanye West,Jamie Foxx"
+spotify:track:2SLZ2rX5773RS16mcqBxG7,0.677,0.52,4,-6.255,0,0.334,0.00277,0.0,0.0532,0.768,203.862,193093,4,Peaches & Cream,112
+spotify:track:0vzb8Ii9B2fP9c0POFGPOZ,0.509,0.952,2,-4.444,0,0.336,0.144,0.0,0.135,0.7,83.068,275373,4,"Girls, Girls, Girls",JAY-Z
+spotify:track:4RY96Asd9IefaL3X4LOLZ8,0.902,0.72,6,-2.776,0,0.347,0.26,0.0,0.0749,0.805,90.059,193467,4,In Da Club,50 Cent
+spotify:track:3koJjZ9jS8XlNjslusBH6A,0.727,0.722,2,-2.763,0,0.433,0.0411,0.0165,0.113,0.323,123.036,171707,4,Savoir Faire,"Damien N-Drix,Tony Romera"
+spotify:track:7oBrkms7tLYpZC8HCzy9dh,0.544,0.564,1,-11.782,1,0.478,0.126,0.0,0.162,0.46,126.502,133033,3,Gaspar Yanga Remix - Spotify Singles,"D Smoke,Snoop Dogg"
+spotify:track:4a00SVbdG6saNqRJlC4XKQ,0.573,0.333,10,-10.763,1,0.406,0.322,0.0,0.076,0.397,75.919,189725,4,Don't Matter - Recorded at Spotify Studios NYC,Lauv
+spotify:track:6H98N10OCmld8m5XyyulO3,0.693,0.549,6,-8.964,0,0.418,0.625,0.0,0.122,0.645,82.152,202482,4,Stan - Recorded at Spotify Studios NYC,Alec Benjamin
+spotify:track:3kF8rHausERpnFDf0gJ1Xk,0.805,0.425,6,-8.146,1,0.387,0.557,5.55e-06,0.0987,0.725,75.074,168507,4,Water - Recorded at Spotify Studios NYC,Earl St. Clair
+spotify:track:6PU5Un3q0zvHK0LB2nx6xT,0.557,0.593,0,-6.238,1,0.431,0.24,0.0,0.0538,0.449,105.924,207516,4,This Is Something,Body Meat
+spotify:track:1JdFSVTGl0gDJJVUTBvauR,0.497,0.742,6,-4.681,0,0.403,0.00749,0.0,0.134,0.529,86.817,96000,4,AIN'T GON STOP ME,"reggie,Monte Booker,Kenny Beats"
+spotify:track:1wsh0kiEkZLNTjvFryHAYA,0.61,0.955,11,-3.305,0,0.331,0.0699,0.0,0.328,0.439,154.999,206226,4,Times Gettin' Hard (JNXD Remix),"Coone,K19,JNXD"
+spotify:track:79OEIr4J4FHV0O3KrhaXRb,0.942,0.383,10,-8.099,1,0.565,0.00195,0.0,0.0922,0.38,100.021,177806,4,Splashin,Rich The Kid
+spotify:track:1ThmUihH9dF8EV08ku5AXN,0.935,0.552,10,-9.373,0,0.335,0.111,0.0,0.0952,0.615,99.993,145627,4,Faucet Failure,Ski Mask The Slump God
+spotify:track:6ymTp1jOINm0UURUZ2h603,0.733,0.441,8,-9.191,0,0.369,0.155,0.0,0.197,0.524,149.087,120034,4,Envy Me,Calboy
+spotify:track:7cW1wHpSLYgKWzoWlOCPFJ,0.672,0.565,1,-6.504,1,0.441,0.106,0.0,0.113,0.313,163.827,169826,4,Global,Lil Baby
+spotify:track:1CzokIcpHSwtNYQa2IsSOs,0.86,0.42,8,-9.263,1,0.428,0.157,0.0,0.0886,0.207,95.962,141024,4,Respect My Cryppin',Blueface
+spotify:track:6LisUkIP1m3se2oBPkmmHD,0.819,0.462,0,-9.638,0,0.485,0.814,1.62e-05,0.318,0.5,159.873,120000,4,GOSHA,$NOT
+spotify:track:3DOXk5K0B0AZYpdhtTzLMp,0.609,0.658,1,-5.859,1,0.337,0.0443,0.0,0.464,0.438,79.991,119955,4,Zero Degrees,Matt Ox
+spotify:track:2qpX5WY7A7uLLLQfFpvRDK,0.639,0.332,5,-11.482,1,0.378,0.64,0.0,0.0518,0.866,83.306,259227,4,DR. WHOEVER,Aminé
+spotify:track:0Fpen1PTuEnCmOJtUU9Iud,0.85,0.785,8,-4.963,0,0.345,0.0367,0.0,0.155,0.718,145.063,343099,4,New Patek,Lil Uzi Vert
+spotify:track:1qUdAB72nSWPZwDqH9KMYD,0.776,0.515,10,-7.415,0,0.411,0.137,0.0,0.321,0.448,162.488,153707,3,BULLETPROOF (feat. Jay 305),"YG,Jay 305"
+spotify:track:2NRRrr8ylDK38KD3Ffbw4K,0.665,0.389,1,-6.709,1,0.441,0.745,0.000982,0.326,0.521,89.962,210001,4,BTSTU - Edit,Jai Paul
+spotify:track:1qP8XZciSaBvIwD3bpbRiN,0.72,0.388,11,-21.313,0,0.59,0.864,0.378,0.232,0.338,81.061,152407,4,nimbus3000,Nalim
+spotify:track:78m3HLWmNqmhUgXLA9t0gu,0.506,0.811,6,-5.64,1,0.522,0.035,0.0,0.365,0.389,105.812,255861,5,Colorful Clothes,"Trae Tha Truth,Lil Wayne,Kardinal Official"
+spotify:track:1cwFyeL6ZMZeOEK8gAnkNe,0.809,0.635,2,-9.776,1,0.402,0.0626,0.0,0.0216,0.901,57.283,192673,4,Take My Pic (feat. Mekya),Iggy Azalea
+spotify:track:02aA8rxDfbpIBvDJjQNiWm,0.761,0.92,5,-5.773,1,0.413,0.0916,0.0,0.365,0.587,139.966,206907,4,The Kids (feat. Janelle Monáe),"B.o.B,Janelle Monáe"
+spotify:track:7CkNqgLg1bqHx3VDuYKajn,0.617,0.937,2,-4.497,1,0.363,0.0297,0.0,0.204,0.504,149.069,251262,4,In My City,"Killer Mike,T.I."
+spotify:track:42cVkpsKWPO7S7XsWN9zVl,0.69,0.638,1,-3.615,1,0.351,0.181,0.0,0.0885,0.181,85.196,290987,4,Ready Set Go (Remix),"Killer Mike,T.I.,Big Boi"
+spotify:track:0nd3gon1IZ6tu3P9nJYbq2,0.71,0.489,7,-6.81,0,0.895,0.408,0.0,0.315,0.646,53.506,67187,3,Dirt In Your P*ssy Ass B*tch (Intro),Iggy Azalea
+spotify:track:4S1GTwPVpkSy7CsJIDKPEz,0.516,0.56,6,-7.116,0,0.486,0.0322,0.0,0.15,0.696,98.94,207773,4,You Deserve Better,James Arthur
+spotify:track:44gRhRi2OhEf7moAUj6MD1,0.59,0.618,1,-5.756,1,0.334,0.0127,0.0,0.244,0.153,96.459,252729,3,The Bigger Picture,Lil Baby
+spotify:track:40ePdToK7cjdo8M7u8cfC2,0.409,0.913,1,-5.674,1,0.377,0.207,0.0,0.108,0.104,93.69,365333,4,Black America Again,"Common,Stevie Wonder"
+spotify:track:0c8qOUrQybYAOaQAAatoVK,0.695,0.0227,1,-23.087,1,0.797,0.837,2.24e-06,0.185,0.339,129.166,1908309,5,Swedish Lesson 1,Language Superstar
+spotify:track:1WB5NXWfxmhp3xL6dYWKZX,0.708,0.0997,11,-21.376,1,0.924,0.752,0.0,0.346,0.389,121.952,1824345,3,Swedish Lesson 2,Language Superstar
+spotify:track:0DgnPVBuoauSyOdlv3hlGO,0.613,0.0272,1,-21.396,1,0.618,0.488,0.0,0.115,0.353,168.217,1488492,3,Swedish Lesson 3,Language Superstar
+spotify:track:7HQ8kBRQCdhRtCBwu8a4a7,0.617,0.0378,1,-20.318,1,0.67,0.684,0.0,0.142,0.329,83.233,668177,4,Swedish Language Lesson 4,Complete Language Lessons
+spotify:track:4C5pVssfnzn8OmRp1Nx12g,0.608,0.0417,1,-19.468,1,0.704,0.546,2.97e-06,0.172,0.34,170.249,1671651,3,Swedish Lesson 5,Language Superstar
+spotify:track:4L3hMXAdi2NpMtvOilDoO4,0.697,0.0381,6,-19.722,1,0.863,0.752,1.99e-06,0.11,0.372,127.629,442108,4,Swedish Lesson 6,Language Superstar
+spotify:track:1jxhet5tNbtwqM0wR39rIX,0.59,0.031,10,-18.66,0,0.405,0.471,1.03e-06,0.155,0.48,167.455,1638586,1,Swedish Lesson 7,Language Superstar
+spotify:track:1122KhWYRsihe9H3iql3Y0,0.656,0.0899,1,-20.317,1,0.844,0.694,0.000169,0.169,0.359,97.852,886073,4,Swedish Language Lesson 8,Complete Language Lessons
+spotify:track:4vgjr7vmwWE7xcbgiHoyWC,0.692,0.0361,1,-20.582,1,0.812,0.703,8.65e-06,0.228,0.388,130.166,1737967,4,Swedish Lesson 9,Language Superstar
+spotify:track:7rgN5SmAseJ8GYWxicxBD4,0.653,0.023,6,-27.096,1,0.914,0.237,0.00106,0.103,0.395,138.184,749640,5,Nouns 1,"Penton Overseas, Inc"
+spotify:track:0JP5SS2HdfsW1mO7BOp8oi,0.667,0.0277,7,-27.711,1,0.876,0.301,0.000984,0.0864,0.509,111.598,510427,3,Nouns 2,"Penton Overseas, Inc"
+spotify:track:7AYgIVZjmtGF37dCimrmK0,0.663,0.0232,6,-26.095,1,0.821,0.243,0.000374,0.0914,0.541,132.435,802187,3,Nouns 3,"Penton Overseas, Inc"
+spotify:track:2B4aHP3OgqQckEJ617FtoP,0.594,0.0218,10,-25.901,1,0.787,0.252,3.58e-05,0.0646,0.563,165.597,691707,5,Nouns 4,"Penton Overseas, Inc"
+spotify:track:7oxVf1QDdF6VZYRCm3UhNW,0.588,0.0357,6,-23.241,1,0.867,0.112,0.006,0.0917,0.39,168.947,721533,5,"Adjectives, Adverbs, Prepositions, Conjunctions 1","Penton Overseas, Inc"
+spotify:track:4X0nyHsQkPDTjoLaaCMedr,0.668,0.0339,6,-23.277,1,0.908,0.273,1.94e-05,0.0999,0.347,112.3,701227,3,"Adjectives, Adverbs, Prepositions, Conjunctions 2","Penton Overseas, Inc"
+spotify:track:12XrkYHNle7eQXXF9DpuLx,0.673,0.039,11,-23.575,1,0.866,0.229,5.24e-05,0.0675,0.447,113.722,635027,3,"Adjectives, Adverbs, Prepositions, Conjunctions 3","Penton Overseas, Inc"
+spotify:track:4sT59o61rpYM9OUM9X64xQ,0.595,0.0482,6,-23.166,1,0.926,0.255,0.000163,0.13,0.336,87.596,570507,3,"Adjectives, Adverbs, Prepositions, Conjunctions 4","Penton Overseas, Inc"
+spotify:track:5uAe5x4R3MQhKBeEjhXoAp,0.675,0.0171,6,-24.739,1,0.854,0.543,0.00317,0.0911,0.299,119.768,631267,3,Expressions 1,"Penton Overseas, Inc"
+spotify:track:1SnBemZhxAzJCZWtAZ2bCW,0.651,0.0126,6,-24.789,1,0.812,0.673,0.015,0.108,0.313,136.786,651800,5,Expressions 2,"Penton Overseas, Inc"
+spotify:track:4O2Af7yIvnEDbnWmwU5l85,0.668,0.0176,6,-24.548,1,0.835,0.746,0.00076,0.242,0.293,111.37,696133,3,Expressions 3,"Penton Overseas, Inc"
+spotify:track:3pUUcoGjF0oho4Gya8l2qF,0.668,0.0194,6,-24.23,1,0.765,0.704,0.00242,0.0914,0.33,111.059,770320,4,Expressions 4,"Penton Overseas, Inc"
+spotify:track:3wF4wGne7j2Cz4T1ZVEnyi,0.678,0.0522,7,-21.969,1,0.872,0.104,0.0014,0.0527,0.273,112.59,618720,3,Verbs 1,"Penton Overseas, Inc"
+spotify:track:1GmhMtOLkTzOEldPttee5S,0.58,0.0147,7,-22.27,1,0.696,0.121,1.68e-05,0.335,0.336,176.368,705787,4,Verbs 2,"Penton Overseas, Inc"
+spotify:track:5pyJPDJ7ySJIu5bUV3gL3i,0.59,0.0156,7,-22.56,1,0.797,0.182,1.68e-05,0.111,0.35,168.447,755053,3,Verbs 3,"Penton Overseas, Inc"
+spotify:track:1SySw5rudTs6tWiKX1K3qZ,0.65,0.0207,7,-22.177,1,0.848,0.0861,9.98e-05,0.0931,0.347,138.447,685533,5,Verbs 4,"Penton Overseas, Inc"
+spotify:track:0hCB0YR03f6AmQaHbwWDe8,0.412,0.902,9,-11.6,1,0.405,0.0484,0.131,0.405,0.422,89.74,333893,4,Whole Lotta Love - 1990 Remaster,Led Zeppelin
+spotify:track:5aWVNrjqFHCATLIhS2na3t,0.846,0.832,1,-5.486,1,0.42,0.0886,0.2,0.0737,0.78,126.132,240533,4,Mothership Reconnection (feat.Parliament/Funkadelic) - (Daft Punk Remix),"Scott Grooves,Parliament,Funkadelic"
+spotify:track:3aCKAkMx3yfaj3AO5Gz47e,0.608,0.725,0,-4.367,1,0.342,0.00139,0.0546,0.0802,0.802,136.251,319880,4,Human After All,Daft Punk
+spotify:track:3NRql0A1Ef4RCvT473iqgD,0.584,0.684,10,-4.314,0,0.567,0.312,9.05e-05,0.112,0.72,210.164,213573,4,Hell N Back,Bakar
+spotify:track:1m3Lsbhkn6yL8apzsCiukd,0.802,0.183,8,-17.1,1,0.403,0.809,0.0,0.109,0.664,91.078,183338,4,Memories (Acoustic),Ben Woodward
+spotify:track:15QOQ6K93vx2azVqcSfSeK,0.533,0.598,1,-8.251,1,0.431,0.72,0.000196,0.428,0.546,71.628,201576,4,where it hurts,"slchld,CIKI"
+spotify:track:3V4LTMmu764I724y0ToD2d,0.392,0.954,1,-4.097,0,0.372,0.000408,0.00097,0.0653,0.224,76.05,215720,4,Flux,Bloc Party
+spotify:track:4PzL7AmZ3bWLdbwNqEd84a,0.745,0.14,4,-13.82,1,0.569,0.976,0.0,0.281,0.345,81.309,71973,3,Love Is Not All,Edna St. Vincent Millay
+spotify:track:2ALjYTnVOy0LINGcpm0LqA,0.681,0.324,8,-15.855,0,0.935,0.992,0.436,0.119,0.265,127.41,83952,1,Fatal Interview: Sonnet XI,Edna St. Vincent Millay
+spotify:track:125jkO66tt3hHwEKhlX62B,0.535,0.209,4,-17.927,1,0.921,0.994,0.428,0.106,0.551,73.169,71693,3,Fatal Interview: Sonnet XXXVIII,Edna St. Vincent Millay
+spotify:track:5RQvU4tEQvi2qMvPPRM1a4,0.625,0.241,9,-15.414,1,0.952,0.986,0.000395,0.141,0.38,85.833,78907,3,Fatal Interview: Sonnet LII,Edna St. Vincent Millay
+spotify:track:3uy974x5XveHiBHLCyks66,0.568,0.162,11,-17.854,1,0.935,0.993,0.115,0.293,0.491,75.914,72493,5,Elaine,Edna St. Vincent Millay
+spotify:track:0fvQ9gyjLg0EvqaUIE9EP0,0.685,0.0399,7,-21.653,0,0.64,0.948,0.000221,0.172,0.533,95.194,96200,4,Recuerdo,Edna St. Vincent Millay
+spotify:track:1cvJSkMn5OVPKtOpbemKCl,0.655,0.148,6,-21.961,1,0.84,0.821,0.0,0.231,0.654,64.83,84493,4,Edna St. Vincent Millay - Recuerdo,Edna St. Vincent Millay
+spotify:track:4RAXUNZeC54ZOKtp2TzdPI,0.725,0.128,0,-23.063,1,0.831,0.88,0.0,0.208,0.765,91.638,57320,3,Edna St. Vincent Millay - I Shall Forget You Presently My Dear,Edna St. Vincent Millay
+spotify:track:5qjZ339a7FBz5CgVlysXeI,0.718,0.151,4,-20.529,1,0.709,0.817,0.0,0.228,0.361,126.662,150440,4,Edna St. Vincent Millay - Childhood is the Kingdom Where Nobody Dies,Edna St. Vincent Millay
+spotify:track:4aHGA5C93k12F3GyQaUGOE,0.738,0.26,0,-13.462,1,0.922,0.952,0.0,0.237,0.42,107.839,223028,3,The Ballad of the Harp-Weaver by Edna St. Vincent Millay,Helen Hayes
+spotify:track:3y9z5hBIbSkWW5A7nbpghC,0.587,0.311,8,-20.505,1,0.551,0.676,0.0,0.101,0.891,69.338,62500,5,Adam Lambert on His Playlist,Various Artists
+spotify:track:05oJbmJsjisyNM4NWwS7re,0.556,0.834,7,-4.573,1,0.445,0.186,5.4e-06,0.529,0.33,129.194,206820,5,Boom,Le1f
+spotify:track:5lDq9taZLBt193gxJSoBIr,0.703,0.39,0,-13.631,0,0.945,0.668,0.0,0.216,0.484,104.257,20000,1,Adam Lambert Quoting Dr. Seuss,Various Artists
+spotify:track:6KUE0HSSudAp9AOycaF6SH,0.638,0.703,7,-7.874,1,0.444,0.0104,0.0,0.132,0.261,105.766,226321,4,Make It Right,BTS
+spotify:track:1tkg4EHVoqnhR6iFEXb60y,0.709,0.548,10,-8.493,1,0.353,0.65,1.59e-06,0.133,0.543,83.995,160000,4,What You Know Bout Love,Pop Smoke
+spotify:track:18A7ha5BitZjmdHTCwXFbU,0.581,0.585,1,-1.87,1,0.369,0.27,6.48e-05,0.179,0.63,67.443,209829,3,Cradles,Sub Urban
+spotify:track:5rZlwNFl01HqLWBQGryKSm,0.48,0.602,10,-6.335,0,0.368,0.487,0.0,0.0848,0.269,179.798,213333,4,Mood Swings (feat. Lil Tjay),"Pop Smoke,Lil Tjay"
+spotify:track:7JuHVG3qQKQKxC4doneXVW,0.759,0.538,8,-8.256,0,0.384,0.151,0.0,0.126,0.831,146.933,184490,4,Back In Blood (feat. Lil Durk),"Pooh Shiesty,Lil Durk"
+spotify:track:4Iedi94TIaB2GGb1nMB68v,0.856,0.564,6,-6.295,0,0.392,0.00327,0.0,0.134,0.483,77.972,135960,4,On Me,Lil Baby
+spotify:track:2Lr9sAuH6FJooeT0fY1yXB,0.938,0.355,1,-7.075,1,0.413,0.0258,0.0,0.118,0.511,134.096,154718,4,Rule #1 (feat. Lil Yachty),"DDG,OG Parker,Lil Yachty"
+spotify:track:4FRW5Nza1Ym91BGV4nFWXI,0.77,0.637,1,-5.53,1,0.345,0.103,0.0,0.171,0.431,94.966,383037,4,Lemon Pepper Freestyle (feat. Rick Ross),"Drake,Rick Ross"
+spotify:track:43BlKpJcSrC9AsJ3F1DKg9,0.877,0.677,5,-4.969,0,0.356,0.0439,0.0,0.0986,0.627,144.941,172185,4,Still Trappin' (with King Von),"Lil Durk,King Von"
+spotify:track:5A4WcRuy0FFEAC5pAK43oa,0.827,0.394,11,-10.073,1,0.559,0.253,0.0,0.12,0.715,157.0,192880,4,No More Parties - Remix,"Coi Leray,Lil Durk"
+spotify:track:2D6vfFZxQ5YzPPBODls1a9,0.619,0.573,1,-7.277,1,0.393,0.0352,0.0,0.228,0.376,175.187,166392,3,Hard For The Next (with Future),"Moneybagg Yo,Future"
+spotify:track:4as4XEOR03oGm1STUKl6pa,0.839,0.617,7,-4.692,1,0.331,0.241,0.0,0.3,0.821,143.894,194426,4,BBIBBI,IU
+spotify:track:4JUPEh2DVSXFGExu4Uxevz,0.79,0.701,9,-4.81,1,0.365,0.0317,8.06e-05,0.0311,0.91,159.972,177813,4,Ice Cream (with Selena Gomez),"BLACKPINK,Selena Gomez"
+spotify:track:2J4P46vCFm1rPkNkp9pZWX,0.79,0.729,9,-3.843,1,0.334,0.0342,9.31e-05,0.0411,0.904,159.989,175813,4,Ice Cream (with Selena Gomez),"BLACKPINK,Selena Gomez"
+spotify:track:4Oun2ylbjFKMPTiaSbbCih,0.935,0.454,1,-7.509,1,0.375,0.0194,0.0,0.0824,0.357,133.073,187541,4,WAP (feat. Megan Thee Stallion),"Cardi B,Megan Thee Stallion"
+spotify:track:7FIWs0pqAYbP91WWM0vlTQ,0.808,0.745,10,-5.26,0,0.342,0.145,0.0,0.292,0.829,165.995,210800,4,Godzilla (feat. Juice WRLD),"Eminem,Juice WRLD"
+spotify:track:5yY9lUy8nbvjM1Uyo1Uqoc,0.676,0.609,2,-5.831,0,0.481,0.0706,0.0,0.152,0.508,142.037,237735,4,Life Is Good (feat. Drake),"Future,Drake"
