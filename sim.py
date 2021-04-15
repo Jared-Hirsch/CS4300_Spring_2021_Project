@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 import pickle
 from collections import Counter, defaultdict
-import unidecode # pylint: disable=import-error
-from nltk.corpus import stopwords # pylint: disable=import-error
-import matplotlib.pyplot as plt # pylint: disable=import-error
-from nltk.tokenize import TreebankWordTokenizer # pylint: disable=import-error
-from lyricsgenius import Genius # pylint: disable=import-error
+import unidecode
+from nltk.corpus import stopwords
+import matplotlib.pyplot as plt
+from nltk.tokenize import TreebankWordTokenizer
+from lyricsgenius import Genius
 import re
 import time
 from sklearn.preprocessing import StandardScaler
@@ -27,6 +27,8 @@ stopwords = set(stopwords.words('english'))
 path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447/'
 vars_dict = pickle.load(open(path + 'sim_vars.pkl', 'rb'))
 
+
+#TODO: maybe also display words that overlap the most between songs (highest tf-idf scores?)
 
 def retrieve_lyrics(query_artist, query_name, genius):
     """
@@ -250,4 +252,4 @@ def main(query, lyrics_weight, n_results, is_uri = False):
     return query_af, output, sorted_lyric_sims
 
 
-print(main('Post Malone | Circles', .5, 2, False))
+print([x[1]['track_name'] for x in main('Post Malone | Circles', 0.7, 20, False)[1]])
