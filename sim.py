@@ -23,7 +23,7 @@ tokenizer = TreebankWordTokenizer()
 
 stopwords = set(stopwords.words('english'))
 
-path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/'
+path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447/'
 vars_dict = pickle.load(open(path + 'sim_vars.pkl', 'rb'))
 
 def strip_name(name):
@@ -37,7 +37,7 @@ def strip_name(name):
     """
     for s in ["-", "(", "feat."]:
         ix = name.find(s)
-        if s != -1:
+        if ix != -1:
             name = name[:ix].strip()
     return name
 
@@ -82,9 +82,9 @@ def retrieve_lyrics(query_artist, query_name, genius):
             cnt = Counter(tokens)
             return cnt
         else: #wrong song retrieved
-            print(f"{query_artist}: {query_name} not found on Genius.")            
+            return
     else: #lyrics not found
-        print(f"{query_artist}: {query_name} not found on Genius.")
+        return
 
 
 def lyrics_sim(query_lyrics_cnt, inv_idx, idf_dict, song_norms_dict):
@@ -134,13 +134,13 @@ def get_song_uri(query_artist, query_name, sp):
     """
     search_results = sp.search(f"{query_artist} {query_name}")['tracks']['items']
     if not search_results:
-        print("Song not found on Spotify.")
+        return
     else:
         for d in search_results: #check each match
             artists = ",".join([x['name'] for x in d['artists']])
             if match(query_artist, artists) and match(query_name, d['name']): #match found
                 return d['uri']
-    print("Song not found on Spotify")
+    return
 
 def get_audio_features(uri, sp):
     """
@@ -172,6 +172,7 @@ def af_sim(query_af, af_matrix, af_song_norms, ix_to_uri, scaler, indices = None
         af_song_norms: Numpy array of audio feature norms (1 x n_songs)
         ix_to_uri: dict of integer index to song URI
         scaler: fitted StandardScaler object
+        indices: list of ints; indices of subset of songs that could be considered
     @returns:
         dict of cosine similarity scores
     
@@ -183,6 +184,8 @@ def af_sim(query_af, af_matrix, af_song_norms, ix_to_uri, scaler, indices = None
 
     scores = af_matrix.dot(query_vec.squeeze())/(query_norm * af_song_norms) #vectorized cosine similarity computation
     if indices: # only computing for a subset of the dataset
+        #TODO: problem: scores has length = len(indices), but indices has values between [0, len(dataset)]
+        #need to convert indices to score indices
         scores_dict = {ix_to_uri[i]:scores[i] for i in indices}
     else: 
         scores_dict = {ix_to_uri[i]:scores[i] for i in range(len(scores))} 
@@ -210,11 +213,10 @@ def main(query, lyrics_weight, n_results, is_uri = False):
     genius = Genius('bVEbboB9VeToZE48RaiJwrnAGLz8VbrIdlqnVU70pzJXs_T4Yg6pdPpJrTQDK46p')
     genius.verbose = False
 
-    #TODO: update lyrics sim so that input is queried song's lyrics instead of artist and name 
 
     if not is_uri: #query is artist and name 
-        query_artist, query_name = [x.split().lower() for x in query.split("|")]
-        query_name = strip_name(query_name).lower()
+        query_artist, query_name = [x.strip().lower() for x in query.split("|")]
+        query_name = strip_name(query_name)
         query_uri = get_song_uri(query_artist, query_name, sp)
         if not query_uri: #song not found on Spotify
             print("Song not found on Spotify")
@@ -231,36 +233,48 @@ def main(query, lyrics_weight, n_results, is_uri = False):
         query_artist = query_af['artist'].split(",")[0].strip().lower()
         query_name = strip_name(query_af['name']).lower()
 
-    if lyrics_weight == 0:
+    if lyrics_weight == 0: #don't consider lyrics at all; compute audio feature similarity across all songs in dataset
         sorted_lyric_sims = np.zeros(n_results)
-        af_sim_scores = af_sim(query_af, vars_dict['af_matrix'], vars_dict['af_song_norms'], vars_dict['ix_to_uri'], vars_dict['scaler'])
+        af_sim_scores = af_sim(query_af, vars_dict['af_matrix'], vars_dict['af_song_norms'], vars_dict['ix_to_uri'], vars_dict['scaler']) 
     else:
-        lyric_sim_scores = lyrics_sim(query_artist, query_name, genius, vars_dict['inv_idx'], vars_dict['idf_dict'], vars_dict['song_norms_dict'])
-        uri_subset = lyric_sim_scores.keys()
-        subset_indices = [vars_dict['uri_to_ix'][uri] for uri in uri_subset]
-        subset_af_matrix = vars_dict['af_matrix'][subset_indices, :]
-        subset_af_song_norms = vars_dict['af_song_norms'][subset_indices]
-        af_sim_scores = af_sim(query_af, subset_af_matrix, subset_af_song_norms, vars_dict['ix_to_uri'], vars_dict['scaler'], subset_indices)
+        query_lyrics_cnt = retrieve_lyrics(query_artist, query_name, genius)
+        if not query_lyrics_cnt:
+            print("Song lyrics not found on Genius.")
+            return
+        lyric_sim_scores = lyrics_sim(query_lyrics_cnt, vars_dict['inv_idx'], vars_dict['idf_dict'], vars_dict['song_norms_dict'])
+        af_sim_scores = af_sim(query_af, vars_dict['af_matrix'], vars_dict['af_song_norms'], vars_dict['ix_to_uri'], vars_dict['scaler']) 
+
+        
+        
+        #TODO: only compute audio feature similarity on songs with nonzero lyrical similarity
+
+        # uri_subset = lyric_sim_scores.keys() #if consider lyrics, then only compute audio feature similarity for songs with nonzero lyric similarity
+        # subset_indices = [vars_dict['uri_to_ix'][uri] for uri in uri_subset]
+        # subset_af_matrix = vars_dict['af_matrix'][subset_indices, :]
+        # subset_af_song_norms = vars_dict['af_song_norms'][subset_indices]
+        # af_sim_scores = af_sim(query_af, subset_af_matrix, subset_af_song_norms, vars_dict['ix_to_uri'], vars_dict['scaler'], subset_indices)
     
-    if lyrics_weight == 0:
+    if lyrics_weight == 0: 
         averaged_scores = af_sim_scores
-    else:
+    else: #if considering lyrics, then take weighted average of audio feature and lyrical similarity scores
         af_weight = 1- lyrics_weight
-        averaged_scores = {k:(af_sim_scores[k] * af_weight) + (lyric_sim_scores[k] * lyrics_weight) for k in af_sim_scores}
+        averaged_scores = {k:(af_sim_scores[k] * af_weight) + (lyric_sim_scores[k] * lyrics_weight) for k in lyric_sim_scores}
     
 
-    ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0]))
+    ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0])) #sort songs in descending order of similarity scores
 
-    if ranked[0][0] == query_uri:
+    if ranked[0][0] == query_uri: #don't want to return queried song (occurs when queried song already present in dataset)
         ranked = ranked[1:n_results+1]
     else:
         ranked = ranked[:n_results]
     
-    output = [(x[1], vars_dict['uri_to_song'][x[0]]) for x in ranked]
-    if lyrics_weight != 0:
-        sorted_lyric_sims = [lyric_sim_scores[d['uri']] for _,d in output]
+    output = [(x[1], vars_dict['uri_to_song'][x[0]]) for x in ranked] #list of (score, song data) pairs
+    if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
+        sorted_lyric_sims = [lyric_sim_scores[d['track_id']] for _,d in output] #TODO: change track_id to uri
 
     end = time.time()
     print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
     return query_af, output, sorted_lyric_sims
 
+
+print(main('Post Malone | Circles', .5, 2, False))

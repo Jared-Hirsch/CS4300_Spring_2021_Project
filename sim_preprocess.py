@@ -127,6 +127,6 @@ def preprocess(dataset_path, df_name, lyrics_name, uri_colname = 'uri', artist_c
     
     return objs
 
-preprocess(r"C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/", 'sample5000_SAFApril2019.csv', 'sample5000_SAFApril2019_lyrics.pkl', 'track_id', 'artist_name', 'track_name')
+# preprocess(r"C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/", 'sample5000_SAFApril2019.csv', 'sample5000_SAFApril2019_lyrics.pkl', 'track_id', 'artist_name', 'track_name')
 
 
