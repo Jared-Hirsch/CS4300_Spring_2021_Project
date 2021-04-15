@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 import pickle
 from collections import Counter, defaultdict
-import unidecode
-from nltk.corpus import stopwords
-import matplotlib.pyplot as plt
-from nltk.tokenize import TreebankWordTokenizer
-from lyricsgenius import Genius
+import unidecode # pylint: disable=import-error
+from nltk.corpus import stopwords # pylint: disable=import-error
+import matplotlib.pyplot as plt # pylint: disable=import-error
+from nltk.tokenize import TreebankWordTokenizer # pylint: disable=import-error
+from lyricsgenius import Genius # pylint: disable=import-error
 import re
 import time
 from sklearn.preprocessing import StandardScaler
@@ -24,9 +24,8 @@ tokenizer = TreebankWordTokenizer()
 
 stopwords = set(stopwords.words('english'))
 
-path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447/'
-vars_dict = pickle.load(open(path + 'sim_vars.pkl', 'rb'))
-
+path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/'
+vars_dict = pickle.load(open(path + 'top1000_sim_vars.pkl', 'rb'))
 
 #TODO: maybe also display words that overlap the most between songs (highest tf-idf scores?)
 
@@ -236,14 +235,19 @@ def main(query, lyrics_weight, n_results, is_uri = False):
         averaged_scores = {k:(af_sim_scores[k] * af_weight) + (lyric_sim_scores[k] * lyrics_weight) for k in lyric_sim_scores}
     
 
+    #TODO: handle different versions of same song in output (ex: "I'll Never Love Again - Film Version", "I'll Never Love Again - Extended Version")
     ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0])) #sort songs in descending order of similarity scores
+    output = []
+    i = 0
+    while i < len(ranked) and i < n_results:
+        uri, score = ranked[i][0], ranked[i][1]
+        song_data = vars_dict['uri_to_song'][uri]
+        if uri != query_uri and not match(song_data['artist_name'], query_artist) and not match(song_data['track_name'], query_name): 
+            #don't want to return inputted/different versions of inputted song
+            output.append((score, song_data))
+        i += 1
 
-    if ranked[0][0] == query_uri: #don't want to return queried song (occurs when queried song already present in dataset)
-        ranked = ranked[1:n_results+1]
-    else:
-        ranked = ranked[:n_results]
-    
-    output = [(x[1], vars_dict['uri_to_song'][x[0]]) for x in ranked] #list of (score, song data) pairs
+
     if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
         sorted_lyric_sims = [lyric_sim_scores[d['track_id']] for _,d in output] #TODO: change track_id to uri
 
@@ -251,5 +255,15 @@ def main(query, lyrics_weight, n_results, is_uri = False):
     print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
     return query_af, output, sorted_lyric_sims
 
+if __name__ == "__main__":
+    query = 'The Chainsmokers | Closer'
+    lyrics_weight = 0.5
+    n_results = 10
+    is_uri = False
+    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, is_uri)[1]])
 
-print([x[1]['track_name'] for x in main('Post Malone | Circles', 0.7, 20, False)[1]])
+    query = 'spotify:track:0rKtyWc8bvkriBthvHKY8d'
+    lyrics_weight = 0.5
+    n_results = 10
+    is_uri = True
+    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, is_uri)[1]])

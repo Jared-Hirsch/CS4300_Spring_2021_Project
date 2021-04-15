@@ -45,7 +45,7 @@ def make_inv_idx(lyrics_dict, remove_stopwords):
                     
     return inv_idx, word_to_ix
 
-def compute_idf(inv_idx, n_docs, min_df=1, max_df_ratio=1):
+def compute_idf(inv_idx, n_docs, min_df=1, max_df_ratio=1.0):
     """
     @params: 
         inv_idx: dict; inverted index 
@@ -96,7 +96,7 @@ def get_af_matrix_data(df, uri_colname):
     af_song_norms = np.linalg.norm(af_matrix, axis = 1)
     return af_ix_to_uri, af_uri_to_ix, af_matrix, af_song_norms, scaler
 
-def preprocess(dataset_path, df_name, lyrics_name, uri_colname = 'uri', artist_colname = 'artist', name_colname = 'name', remove_stopwords = True, min_df = 1, max_df_ratio = 1, save = True):
+def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'uri', artist_colname = 'artist', name_colname = 'name', remove_stopwords = True, min_df = 1, max_df_ratio = 1.0, save = True):
     """
     @params: 
         dataset_path: String; directory in which dataset is stored 
@@ -113,7 +113,7 @@ def preprocess(dataset_path, df_name, lyrics_name, uri_colname = 'uri', artist_c
     uri_to_song = {row[uri_colname]:row.to_dict() for _, row in df.iterrows()}
 
     inv_idx, word_to_ix = make_inv_idx(lyrics_dict, remove_stopwords)
-    idf_dict = compute_idf(inv_idx, n_docs)
+    idf_dict = compute_idf(inv_idx, n_docs, min_df, max_df_ratio)
     song_norms_dict = compute_song_norms(inv_idx, idf_dict)
 
     ix_to_uri, uri_to_ix, af_matrix, af_song_norms, scaler = get_af_matrix_data(df, uri_colname)
@@ -122,11 +122,16 @@ def preprocess(dataset_path, df_name, lyrics_name, uri_colname = 'uri', artist_c
         [uri_to_song, inv_idx, word_to_ix, idf_dict, song_norms_dict, ix_to_uri, uri_to_ix, af_matrix, af_song_norms, scaler]))
     
     if save:
-        print("Saving variables...")
-        pickle.dump(objs, open(dataset_path + "sim_vars.pkl", 'wb'))
+        out_name = output_name + "sim_vars.pkl"
+        print("Saving variables to: ", out_name)
+        pickle.dump(objs, open(dataset_path + out_name, 'wb'))
     
     return objs
 
-# preprocess(r"C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/", 'sample5000_SAFApril2019.csv', 'sample5000_SAFApril2019_lyrics.pkl', 'track_id', 'artist_name', 'track_name')
+if __name__ == "__main__":
+    path = r"C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/"
+    df = "top1000.csv"
+    lyrics = "top1000_lyrics.pkl"
+    preprocess(path, df, lyrics, 'top1000_', 'track_id', 'artist_name', 'track_name', max_df_ratio = 0.5)
 
 
