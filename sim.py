@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 import pickle
 from collections import Counter, defaultdict
-import unidecode
-from nltk.corpus import stopwords
-import matplotlib.pyplot as plt
-from nltk.tokenize import TreebankWordTokenizer
-from lyricsgenius import Genius
+import unidecode # pylint: disable=import-error
+from nltk.corpus import stopwords # pylint: disable=import-error
+import matplotlib.pyplot as plt # pylint: disable=import-error
+from nltk.tokenize import TreebankWordTokenizer # pylint: disable=import-error
+from lyricsgenius import Genius # pylint: disable=import-error
 import re
 import time
 from sklearn.preprocessing import StandardScaler
@@ -16,6 +16,7 @@ import spotipy.util as util
 from sp_client import Spotify_Client
 from sim_preprocess import AF_COLS
 import string
+from utils import *
 
 punct = set(string.punctuation)
 punct.update({"''", "``", ""})
@@ -26,34 +27,6 @@ stopwords = set(stopwords.words('english'))
 path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447/'
 vars_dict = pickle.load(open(path + 'sim_vars.pkl', 'rb'))
 
-def strip_name(name):
-    """
-    @params:
-        name: String, track name
-    @returns:
-        String
-    
-    - removes extraneous characters in track name, as they may cause issues when querying Spotify/Genius APIs
-    """
-    for s in ["-", "(", "feat."]:
-        ix = name.find(s)
-        if ix != -1:
-            name = name[:ix].strip()
-    return name
-
-def match(a, b):
-    """
-    @params: 
-        a: String
-        b: String
-    @returns:
-        Boolean
-    
-    - basic fuzzy-matching function, used to check whether artists/track names match
-    """
-    a = unidecode.unidecode(a).lower() #converts special characters to ASCII representation
-    b = unidecode.unidecode(b).lower()
-    return (a in b) or (b in a)
 
 def retrieve_lyrics(query_artist, query_name, genius):
     """
