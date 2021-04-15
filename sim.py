@@ -184,8 +184,7 @@ def main(query, lyrics_weight, n_results, is_uri = False):
     """
     start = time.time()
     sp = Spotify_Client() #re-initialize both API clients each time function is run to avoid timeout errors
-    genius = Genius('bVEbboB9VeToZE48RaiJwrnAGLz8VbrIdlqnVU70pzJXs_T4Yg6pdPpJrTQDK46p')
-    genius.verbose = False
+    genius = Genius('bVEbboB9VeToZE48RaiJwrnAGLz8VbrIdlqnVU70pzJXs_T4Yg6pdPpJrTQDK46p', verbose = False, retries = 5)
 
 
     if not is_uri: #query is artist and name 
