@@ -17,6 +17,8 @@ from sp_client import Spotify_Client
 from sim_preprocess import AF_COLS
 import string
 from utils import *
+import os
+
 
 punct = set(string.punctuation)
 punct.update({"''", "``", ""})
@@ -27,6 +29,20 @@ stopwords = set(stopwords.words('english'))
 
 #TODO: maybe also display words that overlap the most between songs (highest tf-idf scores?)
 #TODO: allow users to specify weights for audio features
+
+
+def extract_annotations(song_id, genius):
+    ants = genius.song_annotations(song_id)
+    if len(ants) == 0:
+        return ""
+    
+    out = []
+    for line in ants:
+        for a in line[1]:
+            out.append(a[0])
+    return " ".join(out).lower()
+
+
 def retrieve_lyrics(query_artist, query_name, genius):
     """
     @params: 
@@ -40,23 +56,40 @@ def retrieve_lyrics(query_artist, query_name, genius):
     - queries Genius API for lyrics to specified song. If found, lyrics are tokenized and put into Counter;
     otherwise, None is returned
     """
-    while True: #queries sometimes throws random errors
-        try:
-            s = genius.search_song(query_name, query_artist, get_full_info = False)
-            break
-        except:
-            pass
-    if s: #lyrics found
-        if match(query_artist, s.artist): #check to see if correct song retrieved
-            song_lyrics = s.to_text().lower()
-            song_lyrics = re.sub(r'[\(\[].*?[\)\]]', '', song_lyrics) #remove identifiers like chorus, verse, etc
-            tokens = [t for t in tokenizer.tokenize(song_lyrics) if t not in punct] #don't want puncutation
+    artist_obj = genius.search_artist(query_artist, max_songs=0)
+    if artist_obj is None:
+        return
+    else:
+        song_name = strip_name(query_name)
+        song_obj = artist_obj.song(song_name)
+        if song_obj is None or not match(query_artist, song_obj.artist):
+            return
+        else:
+            lyrics = song_obj.to_text().lower()
+            lyrics += extract_annotations(song_obj.id, genius)
+            lyrics = re.sub(r'[\(\[].*?[\)\]]', '', lyrics)
+            lyrics = os.linesep.join([s for s in lyrics.splitlines() if s])
+            tokens = [t for t in tokenizer.tokenize(lyrics) if t not in punct]
             cnt = Counter(tokens)
             return cnt
-        else: #wrong song retrieved
-            return
-    else: #lyrics not found
-        return
+
+    # while True: #queries sometimes throws random errors
+    #     try:
+    #         s = genius.search_song(query_name, query_artist, get_full_info = False)
+    #         break
+    #     except:
+    #         pass
+    # if s: #lyrics found
+    #     if match(query_artist, s.artist): #check to see if correct song retrieved
+    #         song_lyrics = s.to_text().lower()
+    #         song_lyrics = re.sub(r'[\(\[].*?[\)\]]', '', song_lyrics) #remove identifiers like chorus, verse, etc
+    #         tokens = [t for t in tokenizer.tokenize(song_lyrics) if t not in punct] #don't want puncutation
+    #         cnt = Counter(tokens)
+    #         return cnt
+    #     else: #wrong song retrieved
+    #         return
+    # else: #lyrics not found
+    #     return
 
 
 def lyrics_sim(query_lyrics_cnt, inv_idx, idf_dict, song_norms_dict):
@@ -260,10 +293,10 @@ if __name__ == "__main__":
     lyrics_weight = 0.5
     n_results = 10
     is_uri = False
-    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, is_uri)[1]])
+    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, vars_dict, is_uri)[1]])
 
     query = 'spotify:track:0rKtyWc8bvkriBthvHKY8d'
     lyrics_weight = 0.5
     n_results = 10
     is_uri = True
-    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, is_uri)[1]])
+    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, vars_dict, is_uri)[1]])
