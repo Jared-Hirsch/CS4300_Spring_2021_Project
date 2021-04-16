@@ -28,7 +28,7 @@ path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447
 vars_dict = pickle.load(open(path + 'top1000_sim_vars.pkl', 'rb'))
 
 #TODO: maybe also display words that overlap the most between songs (highest tf-idf scores?)
-
+#TODO: allow users to specify weights for audio features
 def retrieve_lyrics(query_artist, query_name, genius):
     """
     @params: 
