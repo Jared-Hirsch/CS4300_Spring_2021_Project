@@ -32,7 +32,7 @@ def make_inv_idx(lyrics_dict, remove_stopwords):
     for uri, cnt in lyrics_dict.items():
         for word, val in cnt.items():
             if remove_stopwords:
-                if word not in stopwords and word.isalpha():
+                if word not in stopwords:
                     inv_idx[word].append((uri, val))
                     if word not in word_to_ix:
                         word_to_ix[word] = word_ix
@@ -45,7 +45,7 @@ def make_inv_idx(lyrics_dict, remove_stopwords):
                     
     return inv_idx, word_to_ix
 
-def compute_idf(inv_idx, n_docs, min_df=1, max_df_ratio=1.0):
+def compute_idf(inv_idx, n_docs, min_df_ratio = 0.0, max_df_ratio=1.0):
     """
     @params: 
         inv_idx: dict; inverted index 
@@ -60,7 +60,7 @@ def compute_idf(inv_idx, n_docs, min_df=1, max_df_ratio=1.0):
     idf_dict = dict()
     for word, posting in inv_idx.items():
         df = len(posting)
-        if (df >= min_df) and (df/n_docs <= max_df_ratio):
+        if (df/n_docs >= min_df_ratio) and (df/n_docs <= max_df_ratio):
             idf_dict[word] = np.log2(n_docs/(1+df))
     return idf_dict
 
@@ -96,7 +96,7 @@ def get_af_matrix_data(df, uri_colname):
     af_song_norms = np.linalg.norm(af_matrix, axis = 1)
     return af_ix_to_uri, af_uri_to_ix, af_matrix, af_song_norms, scaler
 
-def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'uri', artist_colname = 'artist', name_colname = 'name', remove_stopwords = True, min_df = 1, max_df_ratio = 1.0, save = True):
+def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'uri', artist_colname = 'artist', name_colname = 'name', remove_stopwords = True, min_df_ratio = 1, max_df_ratio = 1.0, save = True):
     """
     @params: 
         dataset_path: String; directory in which dataset is stored 
@@ -113,7 +113,7 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
     uri_to_song = {row[uri_colname]:row.to_dict() for _, row in df.iterrows()}
 
     inv_idx, word_to_ix = make_inv_idx(lyrics_dict, remove_stopwords)
-    idf_dict = compute_idf(inv_idx, n_docs, min_df, max_df_ratio)
+    idf_dict = compute_idf(inv_idx, n_docs, min_df_ratio, max_df_ratio)
     song_norms_dict = compute_song_norms(inv_idx, idf_dict)
 
     ix_to_uri, uri_to_ix, af_matrix, af_song_norms, scaler = get_af_matrix_data(df, uri_colname)
@@ -130,8 +130,8 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
 
 if __name__ == "__main__":
     path = r"C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/"
-    df = "top1000.csv"
-    lyrics = "top1000_lyrics.pkl"
-    preprocess(path, df, lyrics, 'top1000_', 'track_id', 'artist_name', 'track_name', max_df_ratio = 0.5)
+    df = "SpotifyAudioFeaturesApril2019.csv"
+    lyrics = "top_lyrics.pkl"
+    preprocess(path, df, lyrics, 'top_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
 
 
