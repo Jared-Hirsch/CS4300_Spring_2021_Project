@@ -19,6 +19,9 @@ def index():
 def search():
     query = request.args.get(constants.INPUT_QUERY)
 
+    if not query:
+        index()
+
     # Calculate results from the query
     results = processor.process_query(query)
 
