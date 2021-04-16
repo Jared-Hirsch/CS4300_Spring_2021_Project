@@ -24,8 +24,6 @@ tokenizer = TreebankWordTokenizer()
 
 stopwords = set(stopwords.words('english'))
 
-path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/'
-vars_dict = pickle.load(open(path + 'top_sim_vars.pkl', 'rb'))
 
 #TODO: maybe also display words that overlap the most between songs (highest tf-idf scores?)
 #TODO: allow users to specify weights for audio features
@@ -167,7 +165,7 @@ def af_sim(query_af, af_matrix, af_song_norms, ix_to_uri, scaler, indices = None
     return scores_dict #dict of uri : cosine sim
 
 
-def main(query, lyrics_weight, n_results, is_uri = False):
+def main(query, lyrics_weight, n_results, vars_dict, is_uri = False):
     """
     @params: 
         query: String; either a song's URI or its artist and name (should be in the form of "artist | name")
@@ -255,6 +253,9 @@ def main(query, lyrics_weight, n_results, is_uri = False):
     return query_af, output, sorted_lyric_sims
 
 if __name__ == "__main__":
+    path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/'
+    vars_dict = pickle.load(open(path + 'top_sim_vars.pkl', 'rb'))
+
     query = 'The Chainsmokers | Closer'
     lyrics_weight = 0.5
     n_results = 10
