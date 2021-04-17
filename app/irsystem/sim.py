@@ -14,9 +14,9 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 import spotipy.util as util
 from sp_client import Spotify_Client
-from sim_preprocess import AF_COLS
+from app.irsystem.sim_preprocess import AF_COLS
 import string
-from utils import *
+from app.irsystem.utils import *
 import os
 
 

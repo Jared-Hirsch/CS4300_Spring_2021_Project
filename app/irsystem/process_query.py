@@ -1,5 +1,6 @@
 import pickle
-import sim
+import app.irsystem.sim as sim
+
 
 class QueryProcessor:
     def __init__(self, vars_dict_path):
