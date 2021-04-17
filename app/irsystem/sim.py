@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from collections import Counter, defaultdict
 import unidecode # pylint: disable=import-error
-from nltk.corpus import stopwords # pylint: disable=import-error
+# from nltk.corpus import stopwords # pylint: disable=import-error
 import matplotlib.pyplot as plt # pylint: disable=import-error
 from nltk.tokenize import TreebankWordTokenizer # pylint: disable=import-error
 from lyricsgenius import Genius # pylint: disable=import-error
@@ -24,7 +24,10 @@ punct = set(string.punctuation)
 punct.update({"''", "``", ""})
 tokenizer = TreebankWordTokenizer()
 
-stopwords = set(stopwords.words('english'))
+# stopwords = set(stopwords.words('english'))
+def set_stopwords(path):
+    global stopwords
+    stopwords = pickle.load(open(path, 'rb'))
 
 
 #TODO: maybe also display words that overlap the most between songs (highest tf-idf scores?)
@@ -296,8 +299,9 @@ def print_results(output, indent = True):
         print("\n".join(out))
 
 if __name__ == "__main__":
-    path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/'
+    path = os.getcwd() + os.path.sep + '..' + os.path.sep + '..' + os.path.sep + 'sample_data' + os.path.sep
     vars_dict = pickle.load(open(path + 'top_annotations_sim_vars.pkl', 'rb'))
+    set_stopwords('stopwords.pkl')
 
     query = 'The Chainsmokers | Closer'
     lyrics_weight = 0

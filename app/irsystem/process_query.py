@@ -1,10 +1,11 @@
 import pickle
-import app.irsystem.sim as sim
-
+from app.irsystem import sim
+from app.irsystem.sim import set_stopwords
 
 class QueryProcessor:
-    def __init__(self, vars_dict_path):
+    def __init__(self, stopwords_path, vars_dict_path):
         self.vars_dict = pickle.load(open(vars_dict_path, 'rb'))
+        set_stopwords(stopwords_path)
 
     """
     Takes in the name of a song and returns the top 10 ranked results. 

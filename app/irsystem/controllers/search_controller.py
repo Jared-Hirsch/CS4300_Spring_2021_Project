@@ -2,9 +2,12 @@ from . import *
 import os
 import app.irsystem.constants as constants
 from app.irsystem.process_query import QueryProcessor
+from app.irsystem.sim_preprocess import set_stopwords
 
 vars_dict_path = os.getcwd() + os.path.sep + 'sample_data' + os.path.sep + 'top_annotations_sim_vars.pkl'
-processor = QueryProcessor(vars_dict_path)
+stopwords_path = os.getcwd() + os.path.sep + 'app' + os.path.sep + 'irsystem' + os.path.sep + 'stopwords.pkl'
+set_stopwords(stopwords_path)
+processor = QueryProcessor(stopwords_path, vars_dict_path)
 songs = map(lambda s: s['track_name'], processor.vars_dict['uri_to_song'].values())
 
 

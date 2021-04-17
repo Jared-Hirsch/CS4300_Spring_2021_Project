@@ -1,42 +1,114 @@
 <html>
+
 <head>
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/main.css">
+  <!-- <link rel="stylesheet" href="/static/main.css"> -->
 </head>
+
+<style>
+  .flex-wrapper {
+    display: flex;
+    min-height: 97vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .flex-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+  }
+
+  .form {
+    text-align: center;
+  }
+
+  .slider,
+  .title,
+  .query {
+    margin-bottom: 48;
+  }
+
+  footer {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    padding: 15px;
+    background-color: rgb(226, 226, 226);
+    color: #696969
+  }
+
+  .query {
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-style: hidden;
+    border-radius: 100px;
+  }
+
+  .flex-form label {
+    letter-spacing: 0.03em;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .slider {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .query:focus {
+    outline: none;
+  }
+
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .btn {
+    background-color: #4285F4;
+    color: #fff;
+    border: none;
+    padding: 10;
+    width: 150px;
+    margin: auto;
+  }
+</style>
+
 <body>
-<div class="topcorner">
-    <p>Project Name: {{ name }}</p>
-    <p>Student Names:</p>
-    {% for netid in netids %}
-    <p>{{ netid }}</p>
-    {% endfor %}
-</div>
-<form class="form-inline global-search">
-    <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-        C
-        <span style="color: #EA4335; ">S</span>
-        <span style="color: #FBBC05; ">4</span>
-        3
-        <span style="color: #34A853; ">0</span>
-        <span style="color: #EA4335; ">0</span>
-    </h1>
+  <div class="flex-wrapper">
 
-    <br><br>
+    <form action="results.html">
+      <div class="flex-form">
+        <h1 class="title"> simplay </h1>
+        <input type="text" class="query" id="query" name="query" placeholder="Song">
 
-    <div class="form-group">
-        <input id="input" type="text" name="input_query" class="form-control" placeholder="Your Input">
-    </div>
-    <button type="submit" class="btn btn-info"> Go! </button>
-</form>
-<form class="form-inline global-search">
-    {% if data %}
-    <h1>{{output_message}}</h1>
-    {% for d in data %}
-    <br>
-    <p>{{d}}</p>
-    {% endfor %}
-    {% endif %}
-</form>
+        <label for="lyr"> lyrical similarity </label>
+        <input type="range" min="1" max="100" value="50" class="slider" id="lyr">
+
+        <label for="aud"> audio similarity </label>
+        <input type="range" min="1" max="100" value="50" class="slider" id="aud">
+
+        <button type="submit" class="btn"> Create my Playlist </button>
+      </div>
+    </form>
+
+    <footer>
+      Creators: Chris, Jared, Ravina, Ronnie
+    </footer>
+  </div>
 </body>
 
 </html>
+
+<!-- <form class="form-inline global-search">
+      {% if data %}
+      <h1>{{output_message}}</h1>
+      {% for d in data %}
+      <br>
+      <p>{{d}}</p>
+      {% endfor %}
+      {% endif %}
+    </form> -->

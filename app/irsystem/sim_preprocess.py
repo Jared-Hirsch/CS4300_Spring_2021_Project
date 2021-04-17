@@ -4,11 +4,16 @@ import unidecode # pylint: disable=import-error
 from collections import Counter, defaultdict
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from nltk.corpus import stopwords # pylint: disable=import-error
+import os
+# from nltk.corpus import stopwords # pylint: disable=import-error
 
-stopwords = set(stopwords.words('english')) #can add additional words to ignore
+# stopwords = set(stopwords.words('english')) #can add additional words to ignore
+# stopwords = pickle.load(open('stopwords.pkl', 'rb'))
 
 
+def set_stopwords(path):
+    global stopwords
+    stopwords = pickle.load(open(path, 'rb'))
 
 AF_COLS = ['acousticness', 'danceability',
        'energy', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode',
@@ -129,9 +134,10 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
     return objs
 
 if __name__ == "__main__":
-    path = r"C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/"
+    path = os.getcwd() + os.path.sep + '..' + os.path.sep + '..' + os.path.sep + 'sample_data' + os.path.sep
     df = "SpotifyAudioFeaturesApril2019.csv"
     lyrics = "top_lyrics_annotations.pkl"
+    set_stopwords('stopwords.pkl')
     preprocess(path, df, lyrics, 'top_annotations_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
 
 
