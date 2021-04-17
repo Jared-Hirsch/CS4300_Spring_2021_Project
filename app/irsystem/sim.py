@@ -164,8 +164,8 @@ def get_audio_features(uri, sp):
     af = {k:data[k] for k in AF_COLS} #only get relevant fields
 
     track_info = sp.track(uri) #get artist and name of song
-    af['artist'] = ", ".join([x['name'] for x in track_info['artists']])
-    af['name'] = track_info['name']
+    af['artist_name'] = ", ".join([x['name'] for x in track_info['artists']])
+    af['track_name'] = track_info['name']
     af['uri'] = data['uri']
     return af
 
@@ -234,8 +234,8 @@ def main(query, lyrics_weight, n_results, vars_dict, is_uri = False):
         return
 
     if is_uri: #if uri passed in, then get song's artist and name
-        query_artist = query_af['artist'].split(",")[0].strip().lower()
-        query_name = strip_name(query_af['name']).lower()
+        query_artist = query_af['artist_name'].split(",")[0].strip().lower()
+        query_name = strip_name(query_af['track_name']).lower()
 
     if lyrics_weight == 0: #don't consider lyrics at all; compute audio feature similarity across all songs in dataset
         sorted_lyric_sims = np.zeros(n_results)
@@ -285,18 +285,32 @@ def main(query, lyrics_weight, n_results, vars_dict, is_uri = False):
     print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
     return query_af, output, sorted_lyric_sims
 
+def print_results(output, indent = True):
+    out = []
+    for score, data in output:
+        song_info = f"{data['artist_name']} | {data['track_name']}"
+        out.append(f"({round(score, 4)}) {song_info}")
+    if indent:
+        print("\t" + "\n\t".join(out))
+    else:
+        print("\n".join(out))
+
 if __name__ == "__main__":
     path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/'
     vars_dict = pickle.load(open(path + 'top_annotations_sim_vars.pkl', 'rb'))
 
     query = 'The Chainsmokers | Closer'
-    lyrics_weight = 0.5
+    lyrics_weight = 0
     n_results = 10
     is_uri = False
-    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, vars_dict, is_uri)[1]])
+    query_af, output, _ = main(query, lyrics_weight, n_results, vars_dict, is_uri)
+    print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    print_results(output)
 
     query = 'spotify:track:0rKtyWc8bvkriBthvHKY8d'
-    lyrics_weight = 0.5
+    lyrics_weight = 0
     n_results = 10
     is_uri = True
-    print([x[1]['track_name'] for x in main(query, lyrics_weight, n_results, vars_dict, is_uri)[1]])
+    query_af, output, _ = main(query, lyrics_weight, n_results, vars_dict, is_uri)
+    print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    print_results(output)
