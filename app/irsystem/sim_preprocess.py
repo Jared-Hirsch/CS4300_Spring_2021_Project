@@ -131,7 +131,7 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
 if __name__ == "__main__":
     path = r"C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/"
     df = "SpotifyAudioFeaturesApril2019.csv"
-    lyrics = "top_lyrics.pkl"
-    preprocess(path, df, lyrics, 'top_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
+    lyrics = "top_lyrics_annotations.pkl"
+    preprocess(path, df, lyrics, 'top_annotations_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
 
 

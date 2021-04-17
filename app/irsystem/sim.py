@@ -287,7 +287,7 @@ def main(query, lyrics_weight, n_results, vars_dict, is_uri = False):
 
 if __name__ == "__main__":
     path = r'C:\Users\chris\Documents\GitHub\cs4300sp2021-rad338-jsh328-rpp62-cmc447\sample_data/'
-    vars_dict = pickle.load(open(path + 'top_sim_vars.pkl', 'rb'))
+    vars_dict = pickle.load(open(path + 'top_annotations_sim_vars.pkl', 'rb'))
 
     query = 'The Chainsmokers | Closer'
     lyrics_weight = 0.5
