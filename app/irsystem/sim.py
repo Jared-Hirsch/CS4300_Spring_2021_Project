@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from collections import Counter, defaultdict
 import unidecode # pylint: disable=import-error
-from nltk.corpus import stopwords # pylint: disable=import-error
+# from nltk.corpus import stopwords # pylint: disable=import-error
 import matplotlib.pyplot as plt # pylint: disable=import-error
 from nltk.tokenize import TreebankWordTokenizer # pylint: disable=import-error
 from lyricsgenius import Genius # pylint: disable=import-error
@@ -24,7 +24,8 @@ punct = set(string.punctuation)
 punct.update({"''", "``", ""})
 tokenizer = TreebankWordTokenizer()
 
-stopwords = set(stopwords.words('english'))
+# stopwords = set(stopwords.words('english'))
+stopwords = pickle.load(open('stopwords.pkl', 'rb'))
 
 
 #TODO: maybe also display words that overlap the most between songs (highest tf-idf scores?)
