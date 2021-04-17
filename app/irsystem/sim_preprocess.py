@@ -4,9 +4,10 @@ import unidecode # pylint: disable=import-error
 from collections import Counter, defaultdict
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from nltk.corpus import stopwords # pylint: disable=import-error
+# from nltk.corpus import stopwords # pylint: disable=import-error
 
-stopwords = set(stopwords.words('english')) #can add additional words to ignore
+# stopwords = set(stopwords.words('english')) #can add additional words to ignore
+stopwords = pickle.load(open('stopwords.pkl', 'rb'))
 
 
 
