@@ -1,17 +1,15 @@
 import pickle
-from app.irsystem import sim
-from app.irsystem.sim import set_stopwords
+from app.irsystem.SimSongs import SimilarSongs
 
 class QueryProcessor:
-    def __init__(self, stopwords_path, vars_dict_path):
+    def __init__(self, stopwords_path, vars_dict_path, spotify_path, genius_path):
         self.vars_dict = pickle.load(open(vars_dict_path, 'rb'))
-        set_stopwords(stopwords_path)
+        self.stopwords = pickle.load(open(stopwords_path, 'rb'))
+        self.spotify_path = spotify_path
+        self.genius_path = genius_path
+        self.sim = SimilarSongs(self.stopwords, self.vars_dict, spotify_path, genius_path)
+    
 
-    """
-    Takes in the name of a song and returns the top 10 ranked results. 
-        query: String name of a song
-        Raises an error if the queried song does not exist in the IR
-    """
     def process_query(self, query, lyrics_weight, n_results, is_uri):
         """
         @returns:
@@ -19,4 +17,4 @@ class QueryProcessor:
             List of tuples [(ith song's averaged similarity score, ith song's audio features) ...]
             List of ints [ith song's lyric similarity, ...]
         """
-        return sim.main(query, lyrics_weight, n_results, self.vars_dict, is_uri)
+        return self.sim.main(query, lyrics_weight, n_results, is_uri)
