@@ -1,42 +1,148 @@
 <html>
+
 <head>
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/main.css">
+  <!-- <link rel="stylesheet" href="/static/main.css"> -->
 </head>
+
+<style>
+  .flex-container {
+    margin: 80 100 0 100;
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
+  }
+
+  footer {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    padding: 15px;
+    background-color: rgb(240, 240, 240);
+    color: #a0a0a0;
+  }
+
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32;
+    margin: 12 0 12 0;
+  }
+
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16;
+    font-weight: normal;
+    margin: 12 0 12 0;
+    color: #696969
+  }
+
+  table {
+    margin-top: 32px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 16 0 16 0;
+  }
+
+  .btn {
+    background-color: #0075FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12;
+    margin: auto;
+    width: fit-content;
+    font-size: 16;
+  }
+
+  .btn:hover {
+    background-color: #0053b3;
+    color: #fff;
+    transition-duration: 300ms;
+    cursor: pointer;
+  }
+
+  .btn:focus {
+    outline: none;
+  }
+
+  nav {
+    padding: 14 0 14 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav span {
+    margin: 0 110 0 110;
+  }
+
+  .logo a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18;
+    color: #4f4f4f;
+  }
+</style>
+
 <body>
-<div class="topcorner">
-    <p>Project Name: {{ name }}</p>
-    <p>Student Names:</p>
-    {% for netid in netids %}
-    <p>{{ netid }}</p>
-    {% endfor %}
-</div>
-<form class="form-inline global-search">
-    <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-        C
-        <span style="color: #EA4335; ">S</span>
-        <span style="color: #FBBC05; ">4</span>
-        3
-        <span style="color: #34A853; ">0</span>
-        <span style="color: #EA4335; ">0</span>
-    </h1>
 
-    <br><br>
+  <nav>
+    <span class="logo"><a href="/">simplay</a></span>
+    <span>
+      <a href="/">
+        <button class="btn"> New Search </button>
+      </a>
+    </span>
+  </nav>
 
-    <div class="form-group">
-        <input id="input" type="text" name="input_query" class="form-control" placeholder="Your Input">
+  <div class="flex-container">
+    <div>
+      <h3>Playlist similar to...</h3>
+      <h2>{{ results[0]['track_name'] }}</h2>
+      <h3>by {{ results[0]['artist_name'] }} </h3>
     </div>
-    <button type="submit" class="btn btn-info"> Go! </button>
-</form>
-<form class="form-inline global-search">
-    {% if data %}
-    <h1>{{output_message}}</h1>
-    {% for d in data %}
-    <br>
-    <p>{{d}}</p>
+
+    <table id="songs">
+      <tr>
+        <th>Song Title</th>
+        <th>Artist</th>
+        <th>Similarity Score</th>
+      </tr>
+
+      {% for res in results[1][:10] %}
+      <tr>
+        <td> {{ res[1]['track_name'] }} </td>
+        <td> {{ res[1]['artist_name'] }} </td>
+        <td> {{ res[0] }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <footer>
+    <span>Student Names:</span>
+    {% for netid in netids %}
+    <span>{{ netid }} </span>
     {% endfor %}
-    {% endif %}
-</form>
+  </footer>
+
 </body>
 
 </html>

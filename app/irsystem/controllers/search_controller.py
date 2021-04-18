@@ -24,6 +24,11 @@ def search():
         return index(["Query cannot be empty empty"])
 
     # Calculate results from the query
-    results = processor.process_query(query, 0.5, 0.5, False)
+    # results = processor.process_query(query, 0.5, 0.5, False)
+    results = {'track_name': 'Celebration', 'artist_name': 'Kanye West'}, \
+        [(5, {'track_name': 'Celebration', 'artist_name': 'Kanye West'}), \
+            (5, {'track_name': 'Late', 'artist_name': 'Kanye West'}), \
+                ((5, {'track_name': 'Addiction', 'artist_name': 'Kanye West'}))], \
+                    [0, 0, 0]
 
     return render_template(constants.RESULTS, name=constants.PROJECT_NAME, netids=constants.NETIDS, songs=songs, query=query, results=results)
