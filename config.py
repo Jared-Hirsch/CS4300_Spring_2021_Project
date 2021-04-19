@@ -1,6 +1,8 @@
 import os
-basedir = os.path.abspath(os.path.dirname(__file__))
+from dotenv import load_dotenv
 
+load_dotenv()
+basedir = os.path.abspath(os.path.dirname(__file__))
 # Different environments for the app to run in
 
 class Config(object):
@@ -9,6 +11,10 @@ class Config(object):
   CSRF_SESSION_KEY = "secret"
   SECRET_KEY = "not_this"
   SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+  SP_USERNAME = os.environ.get('SP_USERNAME')
+  SP_CLIENT_ID = os.environ.get('SP_CLIENT_ID')
+  SP_CLIENT_SECRET = os.environ.get('SP_CLIENT_SECRET')
+  GENUIS_TOKEN = os.environ.get('GENUIS_TOKEN')
 
 class ProductionConfig(Config):
   DEBUG = False

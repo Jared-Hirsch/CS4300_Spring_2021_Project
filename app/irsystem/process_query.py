@@ -2,12 +2,12 @@ import pickle
 from app.irsystem.SimSongs import SimilarSongs
 
 class QueryProcessor:
-    def __init__(self, stopwords_path, vars_dict_path, spotify_path, genius_path):
+    def __init__(self, stopwords_path, vars_dict_path, sp_path=None, gn_path=None, sp_username=None, sp_client_id=None, sp_client_secret=None, gn_token=None):
         self.vars_dict = pickle.load(open(vars_dict_path, 'rb'))
         self.stopwords = pickle.load(open(stopwords_path, 'rb'))
-        self.spotify_path = spotify_path
-        self.genius_path = genius_path
-        self.sim = SimilarSongs(self.stopwords, self.vars_dict, spotify_path, genius_path)
+        self.spotify_path = sp_path
+        self.genius_path = gn_path
+        self.sim = SimilarSongs(self.stopwords, self.vars_dict, sp_path, gn_path, sp_username, sp_client_id, sp_client_secret, gn_token)
     
 
     def process_query(self, query, lyrics_weight, n_results, is_uri):

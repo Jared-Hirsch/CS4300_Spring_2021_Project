@@ -27,12 +27,21 @@ AF_COLS = ['acousticness', 'danceability',
        'speechiness', 'tempo', 'time_signature', 'valence']
 
 class SimilarSongs:
-    def __init__(self, stopwords, vars_dict, sp_path, gn_path):
+    def __init__(self, stopwords, vars_dict, sp_path=None, gn_path=None, sp_username=None, sp_client_id=None, sp_client_secret=None, gn_token=None):
         self.stopwords = stopwords
         self.vars_dict = vars_dict
-        self.sp_path = sp_path
-        with open(gn_path, 'r') as f:
-            self.gn_token = f.readline().strip()
+        if sp_path is not None:
+            self.stopwords = stopwords
+            self.vars_dict = vars_dict
+            self.sp_path = sp_path
+            with open(gn_path, 'r') as f:
+                self.gn_token = f.readline().strip()
+        else:
+            self.sp_path = None
+            self.sp_username = sp_username
+            self.sp_client_id = sp_client_id
+            self.sp_client_secret = sp_client_secret
+            self.gn_token = gn_token
     
     def extract_annotations(self, song_id, genius):
         ants = genius.song_annotations(song_id)
@@ -199,8 +208,13 @@ class SimilarSongs:
         start = time.time()
 
         #re-initialize both API clients each time function is run to avoid timeout errors
-        sp = Spotify_Client(self.sp_path) 
+        if self.sp_path is None:
+            sp = Spotify_Client(self.sp_username, self.sp_client_id, self.sp_client_secret)
+        else:
+            sp = Spotify_Client(self.sp_path)
         genius = Genius(self.gn_token, verbose = False, retries = 5)
+
+
 
 
         if not is_uri: #query is artist and name 
