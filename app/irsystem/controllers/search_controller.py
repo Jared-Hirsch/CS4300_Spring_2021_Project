@@ -24,6 +24,9 @@ def search():
         return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing"])
 
     # Calculate results from the query
-    results = processor.process_query(query, int(lyr_sim)/100, 10, False)
+    try:
+        results = processor.process_query(query, int(lyr_sim)/100, 10, False)
+    except ValueError as err:
+        return index([str(err)])
 
     return render_template(constants.RESULTS, name=constants.PROJECT_NAME, netids=constants.NETIDS, songs=songs, query=query, results=results)

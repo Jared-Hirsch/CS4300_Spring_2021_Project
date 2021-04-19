@@ -222,15 +222,13 @@ class SimilarSongs:
             query_name = strip_name(query_name)
             query_uri = self.get_song_uri(query_artist, query_name, sp)
             if not query_uri: #song not found on Spotify
-                print("Song not found on Spotify")
-                return
+                raise ValueError("Invalid search: " + query)
         else: #query is uri
             query_uri = query
 
         query_af = self.get_audio_features(query_uri, sp) #get queried song's audio features
         if not query_af: #audio features missing
-            print("Song audio features not found on Spotify")
-            return
+            raise ValueError("Song audio features not found on Spotify for " + query)
 
         if is_uri: #if uri passed in, then get song's artist and name
             query_artist = query_af['artist_name'].split(",")[0].strip().lower()
@@ -241,8 +239,8 @@ class SimilarSongs:
         else:
             query_lyrics_cnt = self.retrieve_lyrics(query_artist, query_name, genius)
             if not query_lyrics_cnt:
-                print("Song lyrics not found on Genius.")
-                return
+                raise ValueError("Song lyrics not found on Genius for " + query)
+
             lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt, self.vars_dict['inv_idx'], self.vars_dict['idf_dict'], self.vars_dict['song_norms_dict'])
         af_sim_scores = self.af_sim(query_af, self.vars_dict['af_matrix'], self.vars_dict['af_song_norms'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
 
