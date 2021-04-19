@@ -264,13 +264,15 @@ class SimilarSongs:
         #TODO: handle different versions of same song in output (ex: "I'll Never Love Again - Film Version", "I'll Never Love Again - Extended Version")
         ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0])) #sort songs in descending order of similarity scores
         output = []
+        cnt = 0
         i = 0
-        while i < len(ranked) and i < n_results:
+        while i < len(ranked) and cnt < n_results:
             uri, score = ranked[i][0], ranked[i][1]
             song_data = self.vars_dict['uri_to_song'][uri]
             if uri != query_uri and not match(song_data['artist_name'], query_artist) and not match(song_data['track_name'], query_name): 
                 #don't want to return inputted/different versions of inputted song
                 output.append((score, song_data))
+                cnt += 1
             i += 1
 
 
