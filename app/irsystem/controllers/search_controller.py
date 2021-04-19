@@ -18,12 +18,12 @@ def index(errors=[]):
 @irsystem.route('/results', methods=['GET'])
 def search():
     query = request.args.get(constants.INPUT_QUERY)
+    lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY)
     print(query)
-    if query == "" or query is None:
-        return index(["Query cannot be empty empty"])
+    if query == "" or query is None or lyr_sim is None:
+        return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing"])
 
     # Calculate results from the query
-    results = processor.process_query(query, 0.5, 0.5, False)
-    print(results)
+    results = processor.process_query(query, int(lyr_sim)/100, 10, False)
 
     return render_template(constants.RESULTS, name=constants.PROJECT_NAME, netids=constants.NETIDS, songs=songs, query=query, results=results)
