@@ -7,6 +7,7 @@ NETIDS = ["Jared Hirsch (jsh328), " "Ronnie Dumesh (rad338), ",
 INPUT_QUERY = 'input_query'
 LYRICAL_SIMILARITY = 'lyrical_sim'
 AUDIO_SIMILARITY = 'aud_sim'
+NUM_RESULTS = 10
 
 # Templates
 INDEX = 'index.html'

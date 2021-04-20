@@ -3,11 +3,16 @@ import os
 import app.irsystem.constants as constants
 from app.irsystem.process_query import QueryProcessor
 from config import Config
+# import math
 
-vars_dict_path = os.getcwd() + os.path.sep + 'sample_data' + os.path.sep + 'top_annotations_sim_vars.pkl'
-stopwords_path = os.getcwd() + os.path.sep + 'app' + os.path.sep + 'irsystem' + os.path.sep + 'stopwords.pkl'
-processor = QueryProcessor(stopwords_path, vars_dict_path, sp_username=Config.SP_USERNAME, sp_client_id=Config.SP_CLIENT_ID, sp_client_secret=Config.SP_CLIENT_SECRET, gn_token=Config.GENUIS_TOKEN)
-songs = map(lambda s: s['track_name'], processor.vars_dict['uri_to_song'].values())
+vars_dict_path = os.getcwd() + os.path.sep + 'sample_data' + \
+    os.path.sep + 'top_annotations_sim_vars.pkl'
+stopwords_path = os.getcwd() + os.path.sep + 'app' + os.path.sep + \
+    'irsystem' + os.path.sep + 'stopwords.pkl'
+processor = QueryProcessor(stopwords_path, vars_dict_path, sp_username=Config.SP_USERNAME,
+                           sp_client_id=Config.SP_CLIENT_ID, sp_client_secret=Config.SP_CLIENT_SECRET, gn_token=Config.GENUIS_TOKEN)
+songs = map(lambda s: s['track_name'],
+            processor.vars_dict['uri_to_song'].values())
 
 
 @irsystem.route('/', methods=['GET'])
@@ -25,7 +30,11 @@ def search():
 
     # Calculate results from the query
     try:
-        results = processor.process_query(query, int(lyr_sim)/100, 10, False)
+        query_af, output, lyr = processor.process_query(
+            query, int(lyr_sim)/100, 10, False)
+        output = [(round(sim, 3), af)
+                  for (sim, af) in output[:(constants.NUM_RESULTS)]]
+        results = query_af, output, lyr
     except ValueError as err:
         return index([str(err)])
 
