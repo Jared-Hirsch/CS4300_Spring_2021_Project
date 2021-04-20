@@ -31,11 +31,12 @@
       </tr>
 
       {% for res in results[1] %}
-      <tr>
+      <tr class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot(this.id);" style="cursor:hand">
         <td> {{ res[1]['track_name'] }} </td>
         <td> {{ res[1]['artist_name'] }} </td>
         <td> {{ res[0] }} </td>
       </tr>
+      <!-- </a> -->
       {% endfor %}
     </table>
   </div>
@@ -48,5 +49,12 @@
   </footer>
 
 </body>
+
+<script>
+  function open_spot(uri) {
+    window.open("https://open.spotify.com/track/" + uri, '_blank');
+  }
+</script>
+
 
 </html>

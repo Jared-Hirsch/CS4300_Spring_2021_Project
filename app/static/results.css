@@ -46,3 +46,8 @@ th {
   text-align: left;
   padding: 16 0 16 0;
 }
+
+.song_row:hover {
+  transition-duration: 150ms;
+  color: #0075FF;
+}
