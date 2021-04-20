@@ -1,5 +1,4 @@
 <!-- Todo: 
-      - put css in style sheets
       - change input color
       - fix footer spacing
       - error messages (song not found, no empty inputs)
@@ -8,95 +7,9 @@
 <html>
 
 <head>
-  <!-- <link rel="stylesheet" href="/static/main.css"> -->
+  <link rel="stylesheet" href="/static/main.css">
+  <link rel="stylesheet" href="/static/index.css">
 </head>
-
-<style>
-  .flex-container {
-    display: flex;
-    min-height: 90vh;
-    flex-direction: column;
-  }
-
-  .flex-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    margin: auto;
-    width: 50%;
-  }
-
-  .form {
-    text-align: center;
-  }
-
-  .slider,
-  .title,
-  .query {
-    margin-bottom: 48;
-  }
-
-  footer {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: smaller;
-    padding: 15px;
-    background-color: rgb(240, 240, 240);
-    color: #a0a0a0;
-  }
-
-  .query {
-    padding: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-    border-style: hidden;
-    border-radius: 100px;
-  }
-
-  .query:focus {
-    outline: none;
-  }
-
-  .flex-form label {
-    letter-spacing: 0.03em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    color: #888888;
-    font-variant-caps: all-small-caps;
-  }
-
-  .slider {
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  h1 {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .btn {
-    background-color: #f2f2f2;
-    color: #4d4d4d;
-    border: none;
-    border-radius: 5px;
-    padding: 12;
-    margin: auto;
-    width: fit-content;
-    font-size: 16;
-  }
-
-  .btn:hover {
-    background-color: #d3d3d3;
-    color: #4d4d4d;
-    transition-duration: 300ms;
-    cursor: pointer;
-  }
-
-  .btn:focus {
-    outline: none;
-  }
-</style>
 
 <body>
 
@@ -107,10 +20,10 @@
         <h1 class="title"> simplay </h1>
         <input type="text" class="query" id="query" name="input_query" placeholder="Artist Name | Song Name">
 
-        <label for="lyr"> Audio Similarity <--> Lyrical Similarity </label>
+        <label for="lyr" class="label"> Audio Similarity <--> Lyrical Similarity </label>
         <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
 
-        <button type="submit" class="btn"> Create my Playlist </button>
+        <button type="submit" class="btn" id="btn_sec"> Create my Playlist </button>
       </div>
     </form>
 

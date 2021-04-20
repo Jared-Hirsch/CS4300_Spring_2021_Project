@@ -1,109 +1,9 @@
 <html>
 
 <head>
-  <!-- <link rel="stylesheet" href="/static/main.css"> -->
+  <link rel="stylesheet" href="/static/main.css">
+  <link rel="stylesheet" href="/static/results.css">
 </head>
-
-<style>
-  .flex-container {
-    margin: 80 100 0 100;
-    display: flex;
-    min-height: 90vh;
-    flex-direction: column;
-  }
-
-  footer {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: smaller;
-    padding: 15px;
-    background-color: rgb(240, 240, 240);
-    color: #a0a0a0;
-  }
-
-  h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 32;
-    margin: 12 0 12 0;
-  }
-
-  h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16;
-    font-weight: normal;
-    margin: 12 0 12 0;
-    color: #696969
-  }
-
-  .label {
-    letter-spacing: 0.03em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    color: #888888;
-    font-variant-caps: all-small-caps;
-  }
-
-  table {
-    margin: 32 0 64 0;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  td,
-  th {
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 16 0 16 0;
-  }
-
-  .btn {
-    background-color: #0075FF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 12;
-    margin: auto;
-    width: fit-content;
-    font-size: 16;
-  }
-
-  .btn:hover {
-    background-color: #0053b3;
-    color: #fff;
-    transition-duration: 300ms;
-    cursor: pointer;
-  }
-
-  .btn:focus {
-    outline: none;
-  }
-
-  nav {
-    padding: 14 0 14 0;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  nav span {
-    margin: 0 110 0 110;
-  }
-
-  .logo a {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18;
-    color: #4f4f4f;
-  }
-</style>
 
 <body>
 
@@ -111,7 +11,7 @@
     <span class="logo"><a href="/">simplay</a></span>
     <span>
       <a href="/">
-        <button class="btn"> New Search </button>
+        <button class="btn" id="btn_prim"> New Search </button>
       </a>
     </span>
   </nav>

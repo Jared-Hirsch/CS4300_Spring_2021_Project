@@ -1,0 +1,32 @@
+/* Overall */
+.flex-container {
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;
+}
+
+/* Form */
+.flex-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+.form {
+  text-align: center;
+}
+
+.slider,
+.title,
+.query {
+  margin-bottom: 48;
+}
+
+.slider {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
