@@ -1,6 +1,6 @@
 /* Overall */
 .flex-container {
-  margin: 80 100 0 100;
+  margin: 90 100 0 100;
   display: flex;
   min-height: 90vh;
   flex-direction: column;
@@ -8,28 +8,61 @@
 
 /* Nav */
 nav {
-  padding: 14 0 14 0;
+  padding: 14 0 0 0;
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  text-align: center;
+  z-index:6;
+  height: 72px;
+  transition: height 200ms;
+}
+
+.nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-}
-
-nav span {
   margin: 0 110 0 110;
 }
 
-.logo a {
+.nav-sides {
+  padding-top: 14px;
+}
+
+
+#nav-logo {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18;
-  color: #4f4f4f;
+  font-size: 22;
+  color: rgb(83, 83, 83);
+}
+
+#query {
+  width: 400px;
+}
+
+.input-container, .query {
+  cursor: pointer;
+}
+
+#search-icon {
+  visibility: visible;
+  margin: 14 0 0 -50;
+  padding: 8 9 8 9;
+  background-color: #0075FF;
+  color: white;
+  border-radius: 100px;
+  text-align: center;
+  position: absolute;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
 }
 
 /* Table */
@@ -48,6 +81,32 @@ th {
 }
 
 .song_row:hover {
-  transition-duration: 150ms;
+  transition-duration: 80ms;
   color: #0075FF;
+}
+
+/* Form */
+.form {
+  text-align: center;
+  width: fit-content;
+}
+
+.slider,
+.btn {
+  margin-top: 24;
+}
+
+#slider, #btn-prim {
+  display: none;
+}
+
+#tint{
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba(0, 0, 0, 0.2);
+  z-index:3;
+  width:100%;
+  height:100%;
+  display:none;
 }

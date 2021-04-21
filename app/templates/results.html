@@ -1,20 +1,39 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/results.css">
 </head>
 
 <body>
 
-  <nav>
-    <span class="logo"><a href="/">simplay</a></span>
-    <span>
-      <a href="/">
-        <button class="btn" id="btn_prim"> New Search </button>
-      </a>
-    </span>
+  <nav id="nav">
+    <div class="nav-container">
+      <span class="nav-sides"><a href="/" id="nav-logo">simplay</a></span>
+      <span>
+        <form action="results">
+          <div class="input-container">
+            <input type="text" class="query" id="query" name="input_query"
+              value="{{ results[0]['artist_name'] }} | {{ results[0]['track_name'] }}"
+              placeholder="Artist Name | Song Name">
+            <i class="fa fa-search" id="search-icon"></i>
+          </div>
+
+          <div id="slider">
+            <label for="lyr" class="label"> Audio Similarity </label>
+            <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
+            <label for="lyr" class="label"> Lyrical Similarity </label>
+          </div>
+
+          <button type="submit" class="btn" id="btn-prim"> Create my Playlist </button>
+        </form>
+      </span>
+      <span class="nav-sides" id="nav-logo"> </span>
+    </div>
   </nav>
+
+  <div id="tint"></div>
 
   <div class="flex-container">
     <div>
@@ -54,6 +73,26 @@
   function open_spot(uri) {
     window.open("https://open.spotify.com/track/" + uri, '_blank');
   }
+
+  document.getElementById('query').onclick = function () {
+    document.getElementById('query').style.width = '500';
+    document.getElementById('nav').style.height = '180px';
+    document.getElementById('search-icon').style.visibility = 'hidden';
+    document.getElementById('slider').style.display = 'block';
+    document.getElementById('btn-prim').style.display = 'block';
+    document.getElementById('tint').style.display = 'block';
+    document.getElementById('query').style.cursor = 'text';
+  };
+
+  document.getElementById('tint').onclick = function () {
+    document.getElementById('query').style.width = '400';
+    document.getElementById('nav').style.height = '70px';
+    document.getElementById('search-icon').style.visibility = 'visible';
+    document.getElementById('slider').style.display = 'none';
+    document.getElementById('btn-prim').style.display = 'none';
+    document.getElementById('tint').style.display = 'none';
+    document.getElementById('query').style.cursor = 'pointer';
+  };
 </script>
 
 
