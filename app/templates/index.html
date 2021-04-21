@@ -1,7 +1,9 @@
 <!-- Todo: 
+      - error messages (song not found, no empty inputs)
+      - specify playlist duration
+      - input dropdown menu
       - change input color
       - fix footer spacing
-      - error messages (song not found, no empty inputs)
 -->
 
 <html>
@@ -13,8 +15,8 @@
 
 <body>
 
+  <!-- Search form -->
   <div class="flex-container">
-
     <form action="results">
       <div class="flex-form">
         <h1 class="title"> simplay </h1>
@@ -26,9 +28,9 @@
         <button type="submit" class="btn" id="btn-sec"> Create my Playlist </button>
       </div>
     </form>
-
   </div>
 
+  <!-- Footer -->
   <footer>
     <span>Student Names:</span>
     {% for netid in netids %}

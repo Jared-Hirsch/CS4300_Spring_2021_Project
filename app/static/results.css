@@ -6,6 +6,7 @@
   flex-direction: column;
 }
 
+
 /* Nav */
 nav {
   padding: 14 0 0 0;
@@ -65,6 +66,7 @@ nav {
   text-align: center;
 }
 
+
 /* Table */
 table {
   margin: 32 0 64 0;
@@ -84,6 +86,7 @@ th {
   transition-duration: 80ms;
   color: #0075FF;
 }
+
 
 /* Form */
 .form {
