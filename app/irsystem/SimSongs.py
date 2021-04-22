@@ -25,6 +25,9 @@ tokenizer = TreebankWordTokenizer()
 AF_COLS = ['acousticness', 'danceability',
        'energy', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode',
        'speechiness', 'tempo', 'time_signature', 'valence']
+# AF_COLS = ['acousticness', 'danceability',
+#        'energy', 'instrumentalness', 'liveness', 'loudness',
+#        'speechiness', 'tempo', 'valence']
 
 class SimilarSongs:
     def __init__(self, stopwords, vars_dict, sp_path=None, gn_path=None, sp_username=None, sp_client_id=None, sp_client_secret=None, gn_token=None):
@@ -161,7 +164,8 @@ class SimilarSongs:
         af['uri'] = data['uri']
         return af
 
-    def af_sim(self, query_af, af_matrix, af_song_norms, ix_to_uri, scaler, indices = []):
+    # def af_sim(self, query_af, af_matrix, af_song_norms, ix_to_uri, scaler, indices = []):
+    def af_sim(self, query_af, weights, af_matrix, af_song_norms, ix_to_uri, scaler, indices = []):
         """
         @params: 
             query_af: dict of queried song's audio features
@@ -175,9 +179,12 @@ class SimilarSongs:
         
         - vectorized cosine similarity function
         """
-        query_vec = scaler.transform(np.array([query_af[x] for x in AF_COLS]).reshape(1, -1)) #normalize features
+        # query_vec = scaler.transform(np.array([query_af[x] for x in AF_COLS]).reshape(1, -1)) #normalize features
+        query_vec = weights * scaler.transform(np.array([query_af[x] for x in AF_COLS]).reshape(1, -1)) #normalize features        
         query_norm = np.linalg.norm(query_vec)
         
+        af_matrix = af_matrix @ np.diag(weights)
+        af_song_norms = np.linalg.norm(af_matrix, axis = 1)
 
         scores = af_matrix.dot(query_vec.squeeze())/(query_norm * af_song_norms) #vectorized cosine similarity computation
         if indices: # only computing for a subset of the dataset
@@ -190,7 +197,8 @@ class SimilarSongs:
         return scores_dict #dict of uri : cosine sim
 
 
-    def main(self, query, lyrics_weight, n_results, is_uri = False):
+    # def main(self, query, lyrics_weight, n_results, is_uri = False):
+    def main(self, query, lyrics_weight, af_weights, n_results, is_uri = False):
         """
         @params: 
             query: String; either a song's URI or its artist and name (should be in the form of "artist | name")
@@ -242,7 +250,12 @@ class SimilarSongs:
                 raise ValueError("Song lyrics not found on Genius for " + query)
 
             lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt, self.vars_dict['inv_idx'], self.vars_dict['idf_dict'], self.vars_dict['song_norms_dict'])
-        af_sim_scores = self.af_sim(query_af, self.vars_dict['af_matrix'], self.vars_dict['af_song_norms'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
+        af_weights = np.array(af_weights)
+        if af_weights.sum() == 0:
+            raise ValueError("At least one audio feature weight must be nonzero.")
+        normalized_af_weights = af_weights/af_weights.sum()
+        af_sim_scores = self.af_sim(query_af, normalized_af_weights, self.vars_dict['af_matrix'], self.vars_dict['af_song_norms'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
+        # af_sim_scores = self.af_sim(query_af, self.vars_dict['af_matrix'], self.vars_dict['af_song_norms'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
 
             
             
