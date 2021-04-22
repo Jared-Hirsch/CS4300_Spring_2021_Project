@@ -32,7 +32,7 @@ def search():
     try:
         query_af, output, lyr = processor.process_query(
             query, int(lyr_sim)/100, 10, False)
-        output = [(round(sim, 3), af)
+        output = [(str(round(sim, 3)).ljust(5, '0'), af)
                   for (sim, af) in output[:(constants.NUM_RESULTS)]]
         results = query_af, output, lyr
     except ValueError as err:
