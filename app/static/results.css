@@ -8,6 +8,7 @@
 
 
 /* Nav */
+
 nav {
   padding: 14 0 0 0;
   background: #FFFFFF;
@@ -33,10 +34,10 @@ nav {
   padding-top: 14px;
 }
 
-
 #nav-logo {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+  color: #4f4f4f;
   font-size: 22;
   color: rgb(83, 83, 83);
 }
