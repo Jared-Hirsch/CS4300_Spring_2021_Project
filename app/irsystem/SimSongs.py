@@ -14,20 +14,20 @@ from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 import spotipy.util as util
 from sp_client import Spotify_Client
 import string
-# from app.irsystem.utils import *
-from utils import *
+from app.irsystem.utils import *
+# from utils import *
 import os
 
 
 punct = set(string.punctuation)
 punct.update({"''", "``", ""})
 tokenizer = TreebankWordTokenizer()
-AF_COLS = ['acousticness', 'danceability',
-       'energy', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode',
-       'speechiness', 'tempo', 'time_signature', 'valence']
 # AF_COLS = ['acousticness', 'danceability',
-#        'energy', 'instrumentalness', 'liveness', 'loudness',
-#        'speechiness', 'tempo', 'valence']
+#        'energy', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode',
+#        'speechiness', 'tempo', 'time_signature', 'valence']
+AF_COLS = ['acousticness', 'danceability',
+       'energy', 'instrumentalness', 'liveness', 'loudness',
+       'speechiness', 'tempo', 'valence']
 
 class SimilarSongs:
     def __init__(self, stopwords, vars_dict, sp_path=None, gn_path=None, sp_username=None, sp_client_id=None, sp_client_secret=None, gn_token=None):
@@ -164,33 +164,35 @@ class SimilarSongs:
         af['uri'] = data['uri']
         return af
 
-    def af_sim(self, query_af, weights, af_matrix, ix_to_uri, scaler, indices = []):
+    def af_sim(self, query_af, weights, af_matrix, ix_to_uri, scaler, uris = []):
         """
         @params: 
             query_af: dict of queried song's audio features
             af_matrix: Numpy array of audio features (n_songs x n_audio_features)
             ix_to_uri: dict of integer index to song URI
             scaler: fitted StandardScaler object
-            indices: list of ints; indices of subset of songs that could be considered
+            uris: list of uris; subset of songs that should be considered
         @returns:
             dict of cosine similarity scores
         
         - vectorized cosine similarity function
         """
+
         query_vec = weights * scaler.transform(np.array([query_af[x] for x in AF_COLS]).reshape(1, -1)) #normalize features        
         query_norm = np.linalg.norm(query_vec)
-        
+
+        if uris:
+            indices = [self.vars_dict['uri_to_ix'][uri] for uri in uris]
+            af_matrix = af_matrix[indices, :]
+        else:
+            uris = self.vars_dict['ix_to_uri']
+
         af_matrix = af_matrix @ np.diag(weights)
         af_song_norms = np.linalg.norm(af_matrix, axis = 1)
 
         scores = af_matrix.dot(query_vec.squeeze())/(query_norm * af_song_norms) #vectorized cosine similarity computation
-        if indices: # only computing for a subset of the dataset
-            #TODO: problem: scores has length = len(indices), but indices has values between [0, len(dataset)]
-            #need to convert indices to score indices
-            scores_dict = {ix_to_uri[i]:scores[i] for i in indices}
-        else: 
-            scores_dict = {ix_to_uri[i]:scores[i] for i in range(len(scores))} 
-        
+        scores_dict = dict(zip(uris, scores))
+
         return scores_dict #dict of uri : cosine sim
 
 
@@ -243,7 +245,9 @@ class SimilarSongs:
             query_artist = query_af['artist_name'].split(",")[0].strip().lower()
             query_name = strip_name(query_af['track_name']).lower()
 
-        if lyrics_weight == 0: #don't consider lyrics at all; compute audio feature similarity across all songs in dataset
+        ##### LYRICAL SIMILARITY #####
+        if lyrics_weight == 0: 
+            #don't consider lyrics at all; compute audio feature similarity across all songs in dataset
             sorted_lyric_sims = np.zeros(n_results)
         else:
             temp_start = time.time()
@@ -256,27 +260,31 @@ class SimilarSongs:
             lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt, self.vars_dict['inv_idx'], self.vars_dict['idf_dict'], self.vars_dict['song_norms_dict'])
             print(f"lyrics_sim: {round(time.time() - temp_start, 4)}")
 
-        af_weights = np.array(af_weights)
-        if af_weights.sum() == 0:
-            raise ValueError("At least one audio feature weight must be nonzero.")
-        normalized_af_weights = af_weights/af_weights.sum()
-        temp_start = time.time()
-        af_sim_scores = self.af_sim(query_af, normalized_af_weights, self.vars_dict['af_matrix'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
-        print(f"af_sim: {round(time.time() - temp_start, 4)}")
-        
 
-            
-            
-            #TODO: only compute audio feature similarity on songs with nonzero lyrical similarity
+        ##### AUDIO FEATURE SIMILARITY #####
+        if lyrics_weight != 1:
+            #no weight given to audio features, so don't compute cosine sim
+            af_weights = np.array(af_weights)
+            if af_weights.sum() == 0:
+                raise ValueError("At least one audio feature weight must be nonzero.")
+            normalized_af_weights = af_weights/af_weights.sum()
+            temp_start = time.time()
 
-            # uri_subset = lyric_sim_scores.keys() #if consider lyrics, then only compute audio feature similarity for songs with nonzero lyric similarity
-            # subset_indices = [vars_dict['uri_to_ix'][uri] for uri in uri_subset]
-            # subset_af_matrix = vars_dict['af_matrix'][subset_indices, :]
-            # subset_af_song_norms = vars_dict['af_song_norms'][subset_indices]
-            # af_sim_scores = af_sim(query_af, subset_af_matrix, subset_af_song_norms, vars_dict['ix_to_uri'], vars_dict['scaler'], subset_indices)
+            if lyrics_weight == 0:
+                #don't consider lyrics at all, so should compute audio feature similarity for all songs
+                uri_subset = []
+            else:
+                #if consider lyrics, then only compute audio feature similarity for songs with nonzero lyric similarity
+                uri_subset = list(lyric_sim_scores.keys()) 
+            af_sim_scores = self.af_sim(query_af, normalized_af_weights, self.vars_dict['af_matrix'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler'], uri_subset)
+            print(f"af_sim: {round(time.time() - temp_start, 4)}")
+  
         
+        ##### OVERALL SIMILARITY #####
         if lyrics_weight == 0: 
             averaged_scores = af_sim_scores
+        elif lyrics_weight == 1:
+            averaged_scores = lyric_sim_scores
         else: #if considering lyrics, then take weighted average of audio feature and lyrical similarity scores
             af_weight = 1 - lyrics_weight
             averaged_scores = {k:(af_sim_scores[k] * af_weight) + (lyric_sim_scores[k] * lyrics_weight) for k in lyric_sim_scores}
@@ -321,12 +329,12 @@ if __name__ == "__main__":
     gn_path = path + 'genius_token.txt'
 
     vars_path = os.getcwd() + os.path.sep + '..' + os.path.sep + '..' + os.path.sep + 'sample_data' + os.path.sep
-    vars_dict = pickle.load(open(vars_path + 'top_annotations_sim_vars.pkl', 'rb'))
+    vars_dict = pickle.load(open(vars_path + 'updated_top_annotations_sim_vars.pkl', 'rb'))
 
     SimSongs = SimilarSongs(stopwords, vars_dict, sp_path, gn_path)
 
-    query = 'The Chainsmokers | Closer'
-    lyrics_weight = 0.5
+    query = 'Post Malone | rockstar'
+    lyrics_weight = 0
     n_results = 10
     is_uri = False
     af_weights = np.ones(len(AF_COLS))

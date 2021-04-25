@@ -9,7 +9,7 @@ import os
 # from nltk.corpus import stopwords # pylint: disable=import-error
 
 # stopwords = set(stopwords.words('english')) #can add additional words to ignore
-# stopwords = pickle.load(open('stopwords.pkl', 'rb'))
+stopwords = pickle.load(open('stopwords.pkl', 'rb'))
 
 
 # def set_stopwords(path):
@@ -99,8 +99,7 @@ def get_af_matrix_data(df, uri_colname):
     """
     scaler = StandardScaler()
     af_matrix = scaler.fit_transform(df.loc[:, AF_COLS].to_numpy()) #need to scale data, otherwise all scores are .99
-    af_song_norms = np.linalg.norm(af_matrix, axis = 1)
-    return af_matrix, af_song_norms, scaler
+    return af_matrix, scaler
 
 def precompute_lyric_sim(inv_idx, idf_dict, uri_to_ix, word_to_ix):
     n_songs = len(uri_to_ix)
@@ -132,7 +131,7 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
     n_docs = len(lyrics_dict)
     df = df.loc[df.track_id.isin(lyrics_dict)].reset_index(drop = True) #only use songs with retrieved lyrics
 
-    ix_to_uri = dict()
+    ix_to_uri = [0 for _ in range(len(df))]
     uri_to_ix = dict()
     uri_to_song = dict()
     for i,row in df.iterrows():
@@ -145,10 +144,10 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
     idf_dict, word_to_ix, ix_to_word = compute_idf(inv_idx, n_docs, min_df_ratio, max_df_ratio)
     song_norms_dict = compute_song_norms(inv_idx, idf_dict)
 
-    af_matrix, af_song_norms, scaler = get_af_matrix_data(df, uri_colname)
+    af_matrix, scaler = get_af_matrix_data(df, uri_colname)
 
-    objs = dict(zip(['uri_to_song', 'inv_idx', 'idf_dict', 'word_to_ix', 'ix_to_word', 'song_norms_dict', 'ix_to_uri', 'uri_to_ix', 'af_matrix', 'af_song_norms', 'scaler'], \
-        [uri_to_song, inv_idx, idf_dict, word_to_ix, ix_to_word, song_norms_dict, ix_to_uri, uri_to_ix, af_matrix, af_song_norms, scaler]))
+    objs = dict(zip(['uri_to_song', 'inv_idx', 'idf_dict', 'word_to_ix', 'ix_to_word', 'song_norms_dict', 'ix_to_uri', 'uri_to_ix', 'af_matrix', 'scaler'], \
+        [uri_to_song, inv_idx, idf_dict, word_to_ix, ix_to_word, song_norms_dict, ix_to_uri, uri_to_ix, af_matrix, scaler]))
     
     if precompute:
         cossim_lyrics = precompute_lyric_sim(inv_idx, idf_dict, uri_to_ix, word_to_ix)
@@ -172,6 +171,6 @@ if __name__ == "__main__":
     path = os.getcwd() + os.path.sep + '..' + os.path.sep + '..' + os.path.sep + 'sample_data' + os.path.sep
     df = "SpotifyAudioFeaturesApril2019.csv"
     lyrics = "top_lyrics_annotations.pkl"
-    preprocess(path, df, lyrics, 'top_annotations_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
+    preprocess(path, df, lyrics, 'updated_top_annotations_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
 
 
