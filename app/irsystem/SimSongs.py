@@ -14,8 +14,8 @@ from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 import spotipy.util as util
 from sp_client import Spotify_Client
 import string
-from app.irsystem.utils import *
-# from utils import *
+# from app.irsystem.utils import *
+from utils import *
 import os
 
 
@@ -164,13 +164,11 @@ class SimilarSongs:
         af['uri'] = data['uri']
         return af
 
-    # def af_sim(self, query_af, af_matrix, af_song_norms, ix_to_uri, scaler, indices = []):
-    def af_sim(self, query_af, weights, af_matrix, af_song_norms, ix_to_uri, scaler, indices = []):
+    def af_sim(self, query_af, weights, af_matrix, ix_to_uri, scaler, indices = []):
         """
         @params: 
             query_af: dict of queried song's audio features
             af_matrix: Numpy array of audio features (n_songs x n_audio_features)
-            af_song_norms: Numpy array of audio feature norms (1 x n_songs)
             ix_to_uri: dict of integer index to song URI
             scaler: fitted StandardScaler object
             indices: list of ints; indices of subset of songs that could be considered
@@ -179,7 +177,6 @@ class SimilarSongs:
         
         - vectorized cosine similarity function
         """
-        # query_vec = scaler.transform(np.array([query_af[x] for x in AF_COLS]).reshape(1, -1)) #normalize features
         query_vec = weights * scaler.transform(np.array([query_af[x] for x in AF_COLS]).reshape(1, -1)) #normalize features        
         query_norm = np.linalg.norm(query_vec)
         
@@ -223,18 +220,22 @@ class SimilarSongs:
         genius = Genius(self.gn_token, verbose = False, retries = 5)
 
 
-
-
         if not is_uri: #query is artist and name 
             query_artist, query_name = [x.strip().lower() for x in query.split("|")]
             query_name = strip_name(query_name)
+            temp_start = time.time()
             query_uri = self.get_song_uri(query_artist, query_name, sp)
+            print(f"get_song_uri: {round(time.time() - temp_start, 4)}")
             if not query_uri: #song not found on Spotify
                 raise ValueError("Invalid search: " + query)
         else: #query is uri
             query_uri = query
 
+        temp_start = time.time()
+
         query_af = self.get_audio_features(query_uri, sp) #get queried song's audio features
+        print(f"get_audio_features: {round(time.time() - temp_start, 4)}")
+        
         if not query_af: #audio features missing
             raise ValueError("Song audio features not found on Spotify for " + query)
 
@@ -245,17 +246,24 @@ class SimilarSongs:
         if lyrics_weight == 0: #don't consider lyrics at all; compute audio feature similarity across all songs in dataset
             sorted_lyric_sims = np.zeros(n_results)
         else:
+            temp_start = time.time()
             query_lyrics_cnt = self.retrieve_lyrics(query_artist, query_name, genius)
+            print(f"retrieve_lyrics: {round(time.time() - temp_start, 4)}")
             if not query_lyrics_cnt:
                 raise ValueError("Song lyrics not found on Genius for " + query)
 
+            temp_start = time.time()
             lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt, self.vars_dict['inv_idx'], self.vars_dict['idf_dict'], self.vars_dict['song_norms_dict'])
+            print(f"lyrics_sim: {round(time.time() - temp_start, 4)}")
+
         af_weights = np.array(af_weights)
         if af_weights.sum() == 0:
             raise ValueError("At least one audio feature weight must be nonzero.")
         normalized_af_weights = af_weights/af_weights.sum()
-        af_sim_scores = self.af_sim(query_af, normalized_af_weights, self.vars_dict['af_matrix'], self.vars_dict['af_song_norms'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
-        # af_sim_scores = self.af_sim(query_af, self.vars_dict['af_matrix'], self.vars_dict['af_song_norms'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
+        temp_start = time.time()
+        af_sim_scores = self.af_sim(query_af, normalized_af_weights, self.vars_dict['af_matrix'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler']) 
+        print(f"af_sim: {round(time.time() - temp_start, 4)}")
+        
 
             
             
@@ -318,10 +326,11 @@ if __name__ == "__main__":
     SimSongs = SimilarSongs(stopwords, vars_dict, sp_path, gn_path)
 
     query = 'The Chainsmokers | Closer'
-    lyrics_weight = 0
+    lyrics_weight = 0.5
     n_results = 10
     is_uri = False
-    query_af, output, _ = SimSongs.main(query, lyrics_weight, n_results, is_uri)
+    af_weights = np.ones(len(AF_COLS))
+    query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     print_results(output)
 

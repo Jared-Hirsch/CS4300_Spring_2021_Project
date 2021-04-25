@@ -12,13 +12,18 @@ import os
 # stopwords = pickle.load(open('stopwords.pkl', 'rb'))
 
 
-def set_stopwords(path):
-    global stopwords
-    stopwords = pickle.load(open(path, 'rb'))
+# def set_stopwords(path):
+#     global stopwords
+#     stopwords = pickle.load(open(path, 'rb'))
+
+# AF_COLS = ['acousticness', 'danceability',
+#        'energy', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode',
+#        'speechiness', 'tempo', 'time_signature', 'valence'] #features used in similarity computations
 
 AF_COLS = ['acousticness', 'danceability',
-       'energy', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode',
-       'speechiness', 'tempo', 'time_signature', 'valence'] #features used in similarity computations
+       'energy', 'instrumentalness', 'liveness', 'loudness',
+       'speechiness', 'tempo', 'valence']
+
 
 def make_inv_idx(lyrics_dict, remove_stopwords):
     """
@@ -167,7 +172,6 @@ if __name__ == "__main__":
     path = os.getcwd() + os.path.sep + '..' + os.path.sep + '..' + os.path.sep + 'sample_data' + os.path.sep
     df = "SpotifyAudioFeaturesApril2019.csv"
     lyrics = "top_lyrics_annotations.pkl"
-    set_stopwords('stopwords.pkl')
     preprocess(path, df, lyrics, 'top_annotations_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
 
 
