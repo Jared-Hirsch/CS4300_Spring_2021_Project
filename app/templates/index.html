@@ -15,18 +15,88 @@
 
 <body>
 
-  <!-- Search form -->
   <div class="flex-container">
-    <form action="results">
-      <div class="flex-form">
-        <h1 class="title"> simplay </h1>
-        <input type="text" class="query" id="query" name="input_query" placeholder="Artist Name | Song Name">
+    <div class="flex-form">
 
-        <label for="lyr" class="label"> Audio Similarity <--> Lyrical Similarity </label>
-        <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
+      <!-- Logo -->
+      <h1 class="title"> simplay </h1>
 
-        <button type="submit" class="btn" id="btn-sec"> Create my Playlist </button>
+      <!-- Tab links -->
+      <div class="tab">
+        <button class="tablinks active" onclick="openCity(event, 'basic')">Basic</button>
+        <button class="tablinks" onclick="openCity(event, 'advanced')">Advanced</button>
       </div>
+
+      <!-- Search form -->
+      <form action="results">
+
+        <!-- Query -->
+        <input type="text" class="query" name="input_query" placeholder="Artist Name | Song Name">
+
+        <!-- Basic tab content -->
+        <div id="basic" class="tabcontent">
+        </div>
+
+        <!-- Advanced tab content -->
+        <div id="advanced" class="tabcontent">
+
+          <div class="adv-section">
+            <h3>Weigh audio features or lyrics more...</h3>
+            <label for="lyr" class="label" id="lyr-label"> Audio Similarity </label>
+            <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
+            <label for="lyr" class="label" id="lyr-label"> Lyrical Similarity </label>
+          </div>
+
+          <div class="adv-section">
+            <h3>Weigh specific audio features...</h3>
+
+            <table class="af">
+              <tr>
+                <td> <label for="auc" class="label"> Aucousticness </label> </td>
+                <td> <input type="range" name="auc" min="0" max="100" value="50" class="af-slider" id="auc"> </td>
+              </tr>
+              <tr>
+                <td> <label for="dnc" class="label"> Danceability </label> </td>
+                <td> <input type="range" name="dnc" min="0" max="100" value="50" class="af-slider" id="dnc"> </td>
+              </tr>
+              <tr>
+                <td> <label for="enr" class="label"> Energy </label> </td>
+                <td> <input type="range" name="enr" min="0" max="100" value="50" class="af-slider" id="enr"> </td>
+              </tr>
+              <tr>
+                <td> <label for="ins" class="label"> Instrumentalness </label> </td>
+                <td> <input type="range" name="ins" min="0" max="100" value="50" class="af-slider" id="ins"> </td>
+              </tr>
+              <tr>
+                <td> <label for="liv" class="label"> Liveness </label> </td>
+                <td> <input type="range" name="liv" min="0" max="100" value="50" class="af-slider" id="liv"> </td>
+              </tr>
+              <tr>
+                <td> <label for="loud" class="label"> Loudness </label> </td>
+                <td> <input type="range" name="loud" min="0" max="100" value="50" class="af-slider" id="loud"> </td>
+              </tr>
+              <tr>
+                <td> <label for="spch" class="label"> Speechiness </label> </td>
+                <td> <input type="range" name="spch" min="0" max="100" value="50" class="af-slider" id="spch"> </td>
+              </tr>
+              <tr>
+                <td> <label for="temp" class="label"> Tempo </label> </td>
+                <td> <input type="range" name="temp" min="0" max="100" value="50" class="af-slider" id="temp"> </td>
+              </tr>
+              <tr>
+                <td> <label for="val" class="label"> Valence </label> </td>
+                <td> <input type="range" name="val" min="0" max="100" value="50" class="af-slider" id="val"> </td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn" id="btn-sec"> Create my Playlist </button>
+
+
+    </div>
     </form>
   </div>
 
@@ -39,6 +109,29 @@
   </footer>
 
 </body>
+
+<script>
+  function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
 
 </html>
 
