@@ -14,8 +14,8 @@ from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 import spotipy.util as util
 from sp_client import Spotify_Client
 import string
-from app.irsystem.utils import *
-# from utils import *
+# from app.irsystem.utils import *
+from utils import *
 import os
 
 
@@ -153,7 +153,10 @@ class SimilarSongs:
         - helper function for af_sim;
         - queries Spotify API for audio features of specified song. If not found, returns None
         """
-        data = sp.audio_features(uri)[0]
+        if uri in self.vars_dict['uri_to_song']:
+            data = self.vars_dict['uri_to_song'][uri]
+        else:
+            data = sp.audio_features(uri)[0]
         if not data:
             return
         af = {k:data[k] for k in AF_COLS} #only get relevant fields
@@ -329,7 +332,7 @@ if __name__ == "__main__":
     gn_path = path + 'genius_token.txt'
 
     vars_path = os.getcwd() + os.path.sep + '..' + os.path.sep + '..' + os.path.sep + 'sample_data' + os.path.sep
-    vars_dict = pickle.load(open(vars_path + 'updated_top_annotations_sim_vars.pkl', 'rb'))
+    vars_dict = pickle.load(open(vars_path + '12000_sim_vars.pkl', 'rb'))
 
     SimSongs = SimilarSongs(stopwords, vars_dict, sp_path, gn_path)
 
@@ -341,6 +344,28 @@ if __name__ == "__main__":
     query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     print_results(output)
+
+
+    query = 'Post Malone | rockstar'
+    lyrics_weight = 0.5
+    n_results = 10
+    is_uri = False
+    af_weights = np.ones(len(AF_COLS))
+    query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    print_results(output)
+
+
+    query = 'Post Malone | rockstar'
+    lyrics_weight = 1
+    n_results = 10
+    is_uri = False
+    af_weights = np.ones(len(AF_COLS))
+    query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    print_results(output)
+
+
 
 #     query = 'spotify:track:0rKtyWc8bvkriBthvHKY8d'
 #     lyrics_weight = 0

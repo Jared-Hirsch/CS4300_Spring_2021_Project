@@ -116,7 +116,7 @@ def precompute_lyric_sim(inv_idx, idf_dict, uri_to_ix, word_to_ix):
 def precompute_af_sim(af_matrix):
     return cosine_similarity(af_matrix, dense_output = False)
 
-def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'uri', artist_colname = 'artist', name_colname = 'name', remove_stopwords = True, min_df_ratio = 1, max_df_ratio = 1.0, precompute = True, save = True):
+def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'uri', artist_colname = 'artist', name_colname = 'name', remove_stopwords = True, min_df_ratio = 1, max_df_ratio = 1.0, precompute = False, save = True):
     """
     @params: 
         dataset_path: String; directory in which dataset is stored 
@@ -169,8 +169,11 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
 
 if __name__ == "__main__":
     path = os.getcwd() + os.path.sep + '..' + os.path.sep + '..' + os.path.sep + 'sample_data' + os.path.sep
-    df = "SpotifyAudioFeaturesApril2019.csv"
-    lyrics = "top_lyrics_annotations.pkl"
-    preprocess(path, df, lyrics, 'updated_top_annotations_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
+    # df = "SpotifyAudioFeaturesApril2019.csv"
+    # lyrics = "top_lyrics_annotations.pkl"
+    df = "full_dataset.csv"
+    lyrics = "lyrics_12000.pkl"
+    
+    preprocess(path, df, lyrics, '12000_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
 
 
