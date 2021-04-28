@@ -15,7 +15,7 @@
 
 <body>
 
-  <div class="flex-container">
+  <div class="container">
     <div class="flex-form">
 
       <!-- Logo -->
@@ -34,21 +34,32 @@
         <input type="text" class="query" name="input_query" placeholder="Artist Name | Song Name">
 
         <!-- Basic tab content -->
-        <div id="basic" class="tabcontent">
+        <div id="basic" class="tabcontent-default">
+          <button type="submit" class="btn" id="btn-prim"> Create my Playlist </button>
         </div>
 
         <!-- Advanced tab content -->
         <div id="advanced" class="tabcontent">
 
           <div class="adv-section">
-            <h3>Weigh audio features or lyrics more...</h3>
+            <label for="dur" class="label">Playlist duration:</label>
+            <select name="duration" id="dur">
+              <option value="one">15 min</option>
+              <option value="two">30 min</option>
+              <option value="three">1 hr</option>
+              <option value="four">2 hr</option>
+            </select>
+          </div>
+
+          <div class="adv-section">
+            <h4>Weigh audio features or lyrics more...</h4>
             <label for="lyr" class="label" id="lyr-label"> Audio Similarity </label>
             <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
             <label for="lyr" class="label" id="lyr-label"> Lyrical Similarity </label>
           </div>
 
           <div class="adv-section">
-            <h3>Weigh specific audio features...</h3>
+            <h4>Weigh specific audio features...</h4>
 
             <table class="af">
               <tr>
@@ -90,11 +101,13 @@
             </table>
 
           </div>
+
+          <!-- Submit button -->
+          <div class="cta">
+            <button type="submit" class="btn" id="btn-prim"> Create my Playlist </button>
+          </div>
+
         </div>
-
-        <!-- Submit button -->
-        <button type="submit" class="btn" id="btn-sec"> Create my Playlist </button>
-
 
     </div>
     </form>
@@ -119,6 +132,10 @@
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
+    }
+    tabcontentdefault = document.getElementsByClassName("tabcontent-default");
+    for (i = 0; i < tabcontentdefault.length; i++) {
+      tabcontentdefault[i].style.display = "none";
     }
 
     // Get all elements with class="tablinks" and remove the class "active"

@@ -75,6 +75,14 @@ h3 {
   color: #696969
 }
 
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16;
+  font-weight: bolder;
+  margin: 12 0 12 0;
+  color: #4d4d4d
+}
+
 .label {
   letter-spacing: 0.03em;
   font-family: Arial, Helvetica, sans-serif;

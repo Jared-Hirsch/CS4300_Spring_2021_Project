@@ -1,10 +1,8 @@
 /* Overall */
-.flex-container {
-  /* display: flex;
-  min-height: 90vh;
-  flex-direction: column; */
+.container {
   min-height: calc(100vh - 95px);
 }
+
 
 /* Tabs */
 .tab {
@@ -13,6 +11,7 @@
 
 .tab button {
   font-weight: bold;
+  font-size: 14;
   color: #4d4d4d;
   background-color: inherit;
   border: none;
@@ -54,11 +53,31 @@
 .tab,
 .query,
 .adv-section {
-  margin-bottom: 32;
+  margin-bottom: 42;
 }
 
-#lyr-label {
-  width: 10px;
+
+/* Advanced search */
+select {
+  padding: 10 20 10 10;
+  border-radius: 5;
+  background-color: #f2f2f2;
+  color: #4d4d4d;
+  border: none;
+  font-size: 16;
+}
+
+select:focus {
+  outline: none;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td {
+  text-align: end;
 }
 
 .slider {
@@ -73,10 +92,13 @@
   margin-right: auto;
 }
 
-.table {
+.cta {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0px;
   text-align: center;
-}
-
-table td {
-  text-align: end;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
 }
