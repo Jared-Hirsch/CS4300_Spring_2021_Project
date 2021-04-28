@@ -8,7 +8,6 @@
 
 
 /* Nav */
-
 nav {
   padding: 14 0 0 0;
   background: #FFFFFF;
@@ -86,6 +85,7 @@ th {
 .song_row:hover {
   transition-duration: 80ms;
   color: #0075FF;
+  cursor: pointer;
 }
 
 
@@ -113,4 +113,17 @@ th {
   width:100%;
   height:100%;
   display:none;
+}
+
+/* Modes */
+.heading {
+  display: inline-block;
+}
+
+.resultsshow {
+  display: block;
+}
+
+.resultshide {
+  display: none;
 }

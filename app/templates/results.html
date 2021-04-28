@@ -38,28 +38,60 @@
 
   <!-- Playlist heading -->
   <div class="flex-container">
-    <div>
-      <h3>Playlist similar to...</h3>
-      <h2>{{ results[0]['track_name'] }}</h2>
-      <h3>by {{ results[0]['artist_name'] }} </h3>
+    <div class="heading">
+      <span>
+        <h3>Playlist similar to...</h3>
+        <h2>{{ results[0]['track_name'] }}</h2>
+        <h3>by {{ results[0]['artist_name'] }} </h3>
+      </span>
+      <span>
+        <button type="submit" onclick="changeMode()" class="btn" id="btn-sec"> Change Detail Mode
+        </button>
+      </span>
     </div>
 
-    <!-- Results -->
-    <table id="songs">
-      <tr>
-        <th class="label">Song Title</th>
-        <th class="label">Artist</th>
-        <th class="label">Similarity Score</th>
-      </tr>
+    <!-- Results Overview -->
+    <div class="resultsshow" id="overviewcontent">
+      <table>
+        <tr>
+          <th class="label">Song Title</th>
+          <th class="label">Artist</th>
+        </tr>
 
-      {% for res in results[1] %}
-      <tr class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot(this.id);" style="cursor:hand">
-        <td> {{ res[1]['track_name'] }} </td>
-        <td> {{ res[1]['artist_name'] }} </td>
-        <td> {{ res[0] }} </td>
-      </tr>
-      {% endfor %}
-    </table>
+        {% for res in results[1] %}
+        <tr class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot(this.id);" style="cursor:hand">
+          <td> {{ res[1]['track_name'] }} </td>
+          <td> {{ res[1]['artist_name'] }} </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <!-- Results Detail -->
+    <!-- todo: get correct lyrical score -->
+    <div class="resultshide" id="detailcontent">
+      <table>
+        <tr>
+          <th class="label">Song</th>
+          <th class="label">Audio Similarity</th>
+          <th class="label">Lyrical Similarity Score</th>
+        </tr>
+
+        {% for res in results[1] %}
+        <tr>
+          <td class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot(this.id);">
+            {{ res[1]['track_name'] }}
+            {{ res[1]['artist_name'] }}
+          </td>
+          <td>
+            {{ res[0] }} <br>
+            [placeholder bar graph]
+          </td>
+          <td> {{ results[2][0] }} </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -76,6 +108,21 @@
   // Open spotify links
   function open_spot(uri) {
     window.open("https://open.spotify.com/track/" + uri, '_blank');
+  }
+
+  // Toggle detail mode
+  function changeMode() {
+    var overview_el = document.getElementById("overviewcontent");
+    var detail_el = document.getElementById("detailcontent");
+
+    if (overview_el.getAttribute("class") == "resultsshow") {
+      overview_el.setAttribute("class", "resultshide")
+      detail_el.setAttribute("class", "resultsshow")
+    }
+    else {
+      overview_el.setAttribute("class", "resultsshow");
+      detail_el.setAttribute("class", "resultshide");
+    }
   }
 
   // New search interaction
