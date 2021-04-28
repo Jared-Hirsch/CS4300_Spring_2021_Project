@@ -14,9 +14,12 @@ from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 import spotipy.util as util
 from sp_client import Spotify_Client
 import string
-# from app.irsystem.utils import *
-from utils import *
 import os
+
+try:
+    from utils import *
+except ModuleNotFoundError:
+    from app.irsystem.utils import *
 
 
 punct = set(string.punctuation)
@@ -87,38 +90,62 @@ class SimilarSongs:
                 cnt = Counter(tokens)
                 return cnt
 
-    def lyrics_sim(self, query_lyrics_cnt, inv_idx, idf_dict, song_norms_dict):
-        """
-        @params: 
-            query_lyrics_cnt: Counter of queried song's tokenized lyrics
-            inv_idx: dict, {token:[(uri1, # of occurrences of token in song1), ...]}
-            idf_dict: dict, {token:inverse document frequency value}
-            song_norms_dict: dict, {uri:norm}
-        @returns:
-            dict of cosine similarity scores
-        
-        - Fast cosine implementation
-        """
-        
-        query_tf_dict = query_lyrics_cnt 
+    def lyrics_sim(self, query_lyrics_cnt):
+        idf_dict = self.vars_dict['idf_dict']
+        word_to_ix = self.vars_dict['word_to_ix']
+        pca = self.vars_dict['pca']
+        pca_tfidf_matrix = self.vars_dict['pca_tfidf_matrix']
+        ix_to_uri = self.vars_dict['ix_to_uri']
 
-        query_tfidf = dict()
-        query_norm = 0
-        for t in query_tf_dict: #creates tfidf dict for queried song's lyrics and computes its norm
+        query_tfidf_vec = np.zeros(len(idf_dict))
+
+        for t in query_lyrics_cnt: #creates tfidf dict for queried song's lyrics and computes its norm
             if t in idf_dict:
-                tfidf = query_tf_dict[t] * idf_dict[t]
-                query_tfidf[t] = tfidf
-                query_norm += tfidf**2
-        query_norm = np.sqrt(query_norm)
+                i = word_to_ix[t]
+                query_tfidf_vec[i] = query_lyrics_cnt[t] * idf_dict[t]
+
+        query_vec = pca.transform(query_tfidf_vec.reshape(1,-1))
+        query_norm = np.linalg.norm(query_vec)
+
+        tfidf_norms = np.linalg.norm(pca_tfidf_matrix, axis = 1)
+        scores = pca_tfidf_matrix.dot(query_vec.squeeze())/(query_norm * tfidf_norms)
+        scores_dict = {ix_to_uri[i]:score for i,score in enumerate(scores) if score > 0} 
+
+        return scores_dict #dict of uri : cosine sim
+
+    # def lyrics_sim(self, query_lyrics_cnt):
+    #     """
+    #     @params: 
+    #         query_lyrics_cnt: Counter of queried song's tokenized lyrics
+    #         inv_idx: dict, {token:[(uri1, # of occurrences of token in song1), ...]}
+    #         idf_dict: dict, {token:inverse document frequency value}
+    #         song_norms_dict: dict, {uri:norm}
+    #     @returns:
+    #         dict of cosine similarity scores
         
-        doc_scores = dict() # uri :  cosine similarity
-        for t in query_tfidf:
-            for doc_id, tf in inv_idx[t]:
-                doc_scores[doc_id] = doc_scores.get(doc_id, 0) + (tf*idf_dict[t] * query_tfidf[t]) #doc_tfidf * query_tfidf
-        for doc_id in doc_scores:
-            doc_scores[doc_id] /= (song_norms_dict[doc_id] * query_norm) #normalize by doc_norm * query_norm
+    #     - Fast cosine implementation
+    #     """
+    #     idf_dict = self.vars_dict['idf_dict']
+    #     inv_idx = self.vars_dict['inv_idx']
+    #     song_norms_dict = self.vars_dict['song_norms_dict']
+
+    #     query_tfidf = dict()
+    #     query_norm = 0
+    #     for t in query_lyrics_cnt: #creates tfidf dict for queried song's lyrics and computes its norm
+    #         if t in idf_dict:
+    #             tfidf = query_lyrics_cnt[t] * idf_dict[t]
+    #             query_tfidf[t] = tfidf
+    #             query_norm += tfidf**2
+    #     query_norm = np.sqrt(query_norm)
         
-        return doc_scores
+    #     doc_scores = dict() # uri :  cosine similarity
+    #     for t in query_tfidf:
+    #         for doc_id, tf in inv_idx[t]:
+    #             doc_scores[doc_id] = doc_scores.get(doc_id, 0) + (tf*idf_dict[t] * query_tfidf[t]) #doc_tfidf * query_tfidf
+    #     for doc_id in doc_scores:
+    #         doc_scores[doc_id] /= (song_norms_dict[doc_id] * query_norm) #normalize by doc_norm * query_norm
+        
+    #     return doc_scores
 
     def get_song_uri(self, query_artist, query_name, sp):
         """
@@ -155,6 +182,7 @@ class SimilarSongs:
         """
         if uri in self.vars_dict['uri_to_song']:
             data = self.vars_dict['uri_to_song'][uri]
+            data['uri'] = data['track_id']
         else:
             data = sp.audio_features(uri)[0]
         if not data:
@@ -167,7 +195,7 @@ class SimilarSongs:
         af['uri'] = data['uri']
         return af
 
-    def af_sim(self, query_af, weights, af_matrix, ix_to_uri, scaler, uris = []):
+    def af_sim(self, query_af, weights, uris = []):
         """
         @params: 
             query_af: dict of queried song's audio features
@@ -180,15 +208,19 @@ class SimilarSongs:
         
         - vectorized cosine similarity function
         """
+        scaler = self.vars_dict['scaler']
+        af_matrix = self.vars_dict['af_matrix'].copy()
+        uri_to_ix = self.vars_dict['uri_to_ix']
+        ix_to_uri = self.vars_dict['ix_to_uri']
 
         query_vec = weights * scaler.transform(np.array([query_af[x] for x in AF_COLS]).reshape(1, -1)) #normalize features        
         query_norm = np.linalg.norm(query_vec)
 
         if uris:
-            indices = [self.vars_dict['uri_to_ix'][uri] for uri in uris]
-            af_matrix = af_matrix[indices, :]
+            indices = [uri_to_ix[uri] for uri in uris]
+            af_matrix = af_matrix[indices, :].copy()
         else:
-            uris = self.vars_dict['ix_to_uri']
+            uris = ix_to_uri
 
         af_matrix = af_matrix @ np.diag(weights)
         af_song_norms = np.linalg.norm(af_matrix, axis = 1)
@@ -260,7 +292,8 @@ class SimilarSongs:
                 raise ValueError("Song lyrics not found on Genius for " + query)
 
             temp_start = time.time()
-            lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt, self.vars_dict['inv_idx'], self.vars_dict['idf_dict'], self.vars_dict['song_norms_dict'])
+            # lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt)
+            lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt)
             print(f"lyrics_sim: {round(time.time() - temp_start, 4)}")
 
 
@@ -279,7 +312,7 @@ class SimilarSongs:
             else:
                 #if consider lyrics, then only compute audio feature similarity for songs with nonzero lyric similarity
                 uri_subset = list(lyric_sim_scores.keys()) 
-            af_sim_scores = self.af_sim(query_af, normalized_af_weights, self.vars_dict['af_matrix'], self.vars_dict['ix_to_uri'], self.vars_dict['scaler'], uri_subset)
+            af_sim_scores = self.af_sim(query_af, normalized_af_weights, uri_subset)
             print(f"af_sim: {round(time.time() - temp_start, 4)}")
   
         
@@ -315,11 +348,11 @@ class SimilarSongs:
         print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
         return query_af, output, sorted_lyric_sims
 
-def print_results(output, indent = True):
+def print_results(output, lyric_sims, indent = True):
     out = []
-    for score, data in output:
+    for (score, data), lyric_score in zip(output, lyric_sims):
         song_info = f"{data['artist_name']} | {data['track_name']}"
-        out.append(f"({round(score, 4)}) {song_info}")
+        out.append(f"({round(score, 4)} | {round(lyric_score, 4)}) {song_info}")
     if indent:
         print("\t" + "\n\t".join(out))
     else:
@@ -336,34 +369,44 @@ if __name__ == "__main__":
 
     SimSongs = SimilarSongs(stopwords, vars_dict, sp_path, gn_path)
 
-    query = 'Post Malone | rockstar'
-    lyrics_weight = 0
-    n_results = 10
-    is_uri = False
-    af_weights = np.ones(len(AF_COLS))
-    query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
-    print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
-    print_results(output)
-
-
-    query = 'Post Malone | rockstar'
+    query = 'The Chainsmokers | Closer'
     lyrics_weight = 0.5
     n_results = 10
     is_uri = False
     af_weights = np.ones(len(AF_COLS))
-    query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    query_af, output, lyric_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
-    print_results(output)
-
-
-    query = 'Post Malone | rockstar'
-    lyrics_weight = 1
+    print_results(output, lyric_scores)
+    
+    query = 'Illenium | good things fall apart'
+    lyrics_weight = 0.5
     n_results = 10
     is_uri = False
     af_weights = np.ones(len(AF_COLS))
-    query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    query_af, output, lyric_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
-    print_results(output)
+    print_results(output, lyric_scores)
+
+
+
+    # query = 'Post Malone | rockstar'
+    # lyrics_weight = 0.5
+    # n_results = 10
+    # is_uri = False
+    # af_weights = np.ones(len(AF_COLS))
+    # query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    # print_results(output)
+
+
+    # query = 'Post Malone | rockstar'
+    # lyrics_weight = 1
+    # n_results = 10
+    # is_uri = False
+    # af_weights = np.ones(len(AF_COLS))
+    # query_af, output, _ = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    # print_results(output)
 
 
 

@@ -6,6 +6,8 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics.pairwise import cosine_similarity
 import os
+from sklearn.decomposition import PCA
+
 # from nltk.corpus import stopwords # pylint: disable=import-error
 
 # stopwords = set(stopwords.words('english')) #can add additional words to ignore
@@ -47,6 +49,7 @@ def make_inv_idx(lyrics_dict, remove_stopwords):
                     
     return inv_idx
 
+#TODO: also compute tfidf matrix here
 def compute_idf(inv_idx, n_docs, min_df_ratio = 0.0, max_df_ratio=1.0):
     """
     @params: 
@@ -73,6 +76,19 @@ def compute_idf(inv_idx, n_docs, min_df_ratio = 0.0, max_df_ratio=1.0):
             ix_to_word[ix] = word
             ix += 1
     return idf_dict, word_to_ix, ix_to_word
+
+def compute_tfidf_matrix(inv_idx, idf_dict, uri_to_ix, word_to_ix):
+    n_songs = len(uri_to_ix)
+    n_tokens = len(idf_dict)
+    tfidf_matrix = np.zeros((n_songs, n_tokens))
+    for token, idf in idf_dict.items():
+        j = word_to_ix[token]
+        for uri, tf in inv_idx[token]:
+            i = uri_to_ix[uri]
+            tfidf_matrix[i,j] = tf*idf
+    pca = PCA(n_components=40, random_state = 1)
+    pca_tfidf_matrix = pca.fit_transform(tfidf_matrix)
+    return pca_tfidf_matrix, pca
 
 def compute_song_norms(inv_idx, idf_dict):
     """
@@ -142,12 +158,13 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
 
     inv_idx = make_inv_idx(lyrics_dict, remove_stopwords)
     idf_dict, word_to_ix, ix_to_word = compute_idf(inv_idx, n_docs, min_df_ratio, max_df_ratio)
+    pca_tfidf_matrix, pca = compute_tfidf_matrix(inv_idx, idf_dict, uri_to_ix, word_to_ix)
     song_norms_dict = compute_song_norms(inv_idx, idf_dict)
 
     af_matrix, scaler = get_af_matrix_data(df, uri_colname)
 
-    objs = dict(zip(['uri_to_song', 'inv_idx', 'idf_dict', 'word_to_ix', 'ix_to_word', 'song_norms_dict', 'ix_to_uri', 'uri_to_ix', 'af_matrix', 'scaler'], \
-        [uri_to_song, inv_idx, idf_dict, word_to_ix, ix_to_word, song_norms_dict, ix_to_uri, uri_to_ix, af_matrix, scaler]))
+    objs = dict(zip(['uri_to_song', 'inv_idx', 'idf_dict', 'word_to_ix', 'ix_to_word', 'pca_tfidf_matrix', 'pca', 'song_norms_dict', 'ix_to_uri', 'uri_to_ix', 'af_matrix', 'scaler'], \
+        [uri_to_song, inv_idx, idf_dict, word_to_ix, ix_to_word, pca_tfidf_matrix, pca, song_norms_dict, ix_to_uri, uri_to_ix, af_matrix, scaler]))
     
     if precompute:
         cossim_lyrics = precompute_lyric_sim(inv_idx, idf_dict, uri_to_ix, word_to_ix)
@@ -174,6 +191,6 @@ if __name__ == "__main__":
     df = "full_dataset.csv"
     lyrics = "lyrics_12000.pkl"
     
-    preprocess(path, df, lyrics, '12000_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.01, max_df_ratio = 0.4)
+    preprocess(path, df, lyrics, '12000_', 'track_id', 'artist_name', 'track_name', min_df_ratio = 0.001, max_df_ratio = 0.4)
 
 
