@@ -17,7 +17,7 @@ songs = map(lambda s: s['track_name'],
 
 @irsystem.route('/', methods=['GET'])
 def index(errors=[]):
-    return render_template(constants.INDEX, name=constants.PROJECT_NAME, netids=constants.NETIDS, songs=songs, errors=errors)
+    return render_template(constants.INDEX, name=constants.PROJECT_NAME, netids=constants.NETIDS, audiofeatures=constants.AUDIO_FEATURES, songs=songs, errors=errors)
 
 
 @irsystem.route('/results', methods=['GET'])
@@ -37,5 +37,12 @@ def search():
         results = query_af, output, lyr
     except ValueError as err:
         return index([str(err)])
+
+    # Dummy results value
+    # results = {'track_name': 'Celebration', 'artist_name': 'Kanye West'}, \
+    #     [(10, {'track_name': 'Celebration', 'artist_name': 'Kanye West'}),
+    #      (20, {'track_name': 'Late', 'artist_name': 'Kanye West'}),
+    #      ((30, {'track_name': 'Addiction', 'artist_name': 'Kanye West'}))], \
+    #     [1, 2, 3]
 
     return render_template(constants.RESULTS, name=constants.PROJECT_NAME, netids=constants.NETIDS, songs=songs, query=query, results=results)
