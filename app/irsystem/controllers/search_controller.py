@@ -3,7 +3,6 @@ import os
 import app.irsystem.constants as constants
 from app.irsystem.process_query import QueryProcessor
 from config import Config
-# import math
 
 vars_dict_path = os.getcwd() + os.path.sep + 'sample_data' + \
     os.path.sep + 'top_annotations_sim_vars.pkl'
@@ -29,20 +28,20 @@ def search():
         return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing"])
 
     # Calculate results from the query
-    # try:
-    #     query_af, output, lyr = processor.process_query(
-    #         query, int(lyr_sim)/100, 10, False)
-    #     output = [(str(round(sim, 3)).ljust(5, '0'), af)
-    #               for (sim, af) in output[:(constants.NUM_RESULTS)]]
-    #     results = query_af, output, lyr
-    # except ValueError as err:
-    #     return index([str(err)])
+    try:
+        query_af, output, lyr = processor.process_query(
+            query, int(lyr_sim)/100, 10, False)
+        output = [(str(round(sim, 3)).ljust(5, '0'), af)
+                  for (sim, af) in output[:(constants.NUM_RESULTS)]]
+        results = query_af, output, lyr
+    except ValueError as err:
+        return index([str(err)])
 
     # Dummy results value
-    results = {'track_name': 'Celebration', 'artist_name': 'Kanye West'}, \
-        [(10, {'track_name': 'Celebration', 'artist_name': 'Kanye West'}),
-         (20, {'track_name': 'Late', 'artist_name': 'Kanye West'}),
-         ((30, {'track_name': 'Addiction', 'artist_name': 'Kanye West'}))], \
-        [1, 2, 3]
+    # results = {'track_name': 'Celebration', 'artist_name': 'Kanye West'}, \
+    #     [(10, {'track_name': 'Celebration', 'artist_name': 'Kanye West'}),
+    #      (20, {'track_name': 'Late', 'artist_name': 'Kanye West'}),
+    #      ((30, {'track_name': 'Addiction', 'artist_name': 'Kanye West'}))], \
+    #     [1, 2, 3]
 
     return render_template(constants.RESULTS, name=constants.PROJECT_NAME, students=constants.NAMES, songs=songs, query=query, results=results)
