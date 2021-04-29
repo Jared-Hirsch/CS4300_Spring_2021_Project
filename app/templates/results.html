@@ -10,9 +10,15 @@
   <!-- Nav -->
   <nav id="nav">
     <div class="nav-container">
-      <span class="nav-sides"><a href="/" id="nav-logo">simplay</a></span>
+      <a href="/">
+        <span class="nav-sides">
+          <img src="/static/logo.png" id="nav-logo">
+          <p id="nav-name">simplay</p>
+        </span>
+      </a>
       <span>
         <form action="results">
+
           <div class="input-container">
             <input type="text" class="query" id="query" name="input_query"
               value="{{ results[0]['artist_name'] }} | {{ results[0]['track_name'] }}"
@@ -20,11 +26,11 @@
             <i class="fa fa-search" id="search-icon"></i>
           </div>
 
-          <div id="slider">
+          <!-- <div id="slider">
             <label for="lyr" class="label"> Audio Similarity </label>
             <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
             <label for="lyr" class="label"> Lyrical Similarity </label>
-          </div>
+          </div> -->
 
           <button type="submit" class="btn" id="btn-prim"> Create my Playlist </button>
         </form>
@@ -45,8 +51,14 @@
         <h3>by {{ results[0]['artist_name'] }} </h3>
       </span>
       <span>
-        <button type="submit" onclick="changeMode()" class="btn" id="btn-sec"> Change Detail Mode
-        </button>
+        <label class="toggle">
+          <p class="label">Detail Mode</p>
+          <div class="switch">
+            <input type="checkbox" onclick="changeMode()">
+            <span class=" slider">
+            </span>
+          </div>
+        </label>
       </span>
     </div>
 
@@ -81,15 +93,20 @@
         <tr>
           <td class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot(this.id);">
             {{ res[1]['track_name'] }}
-            {{ res[1]['artist_name'] }}
+            <p style="color: #696969; font-size: 14; margin-top: 5;">
+              {{ res[1]['artist_name'] }}
+            </p>
           </td>
+
           <td>
             {{ res[0] }} <br>
             [placeholder bar graph]
           </td>
+
           <td> {{ results[2][0] }} </td>
         </tr>
         {% endfor %}
+
       </table>
     </div>
   </div>
@@ -125,21 +142,22 @@
     }
   }
 
-  // New search interaction
+  // Open new search
   document.getElementById('query').onclick = function () {
     document.getElementById('query').style.width = '500';
-    document.getElementById('nav').style.height = '180px';
+    document.getElementById('nav').style.height = '150px';
     document.getElementById('search-icon').style.visibility = 'hidden';
-    document.getElementById('slider').style.display = 'block';
+    // document.getElementById('slider').style.display = 'block';
     document.getElementById('btn-prim').style.display = 'block';
     document.getElementById('tint').style.display = 'block';
     document.getElementById('query').style.cursor = 'text';
   };
+  // Close new search
   document.getElementById('tint').onclick = function () {
     document.getElementById('query').style.width = '400';
     document.getElementById('nav').style.height = '70px';
     document.getElementById('search-icon').style.visibility = 'visible';
-    document.getElementById('slider').style.display = 'none';
+    // document.getElementById('slider').style.display = 'none';
     document.getElementById('btn-prim').style.display = 'none';
     document.getElementById('tint').style.display = 'none';
     document.getElementById('query').style.cursor = 'pointer';
