@@ -58,9 +58,12 @@ footer {
 }
 
 .tab,
-.query,
-.adv-section {
+.query {
   margin-bottom: 42;
+}
+
+.adv-section {
+  margin-bottom: 24;
 }
 
 
@@ -117,10 +120,16 @@ input[type=text] {
 
 
 /* Advanced search */
+#lyr-label {
+  display: inline-block;
+  text-align: center;
+  width: 80;
+}
+
 select {
   padding: 10 20 10 10;
   border-radius: 5;
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
   color: #4d4d4d;
   border: none;
   font-size: 16;
@@ -128,6 +137,20 @@ select {
 
 select:focus {
   outline: none;
+}
+
+.adv-section h4 {
+  text-align: left;
+  display: block;
+}
+
+.slider-container, .af-table {
+  text-align: center;
+}
+
+#sliders1, #sliders2 {
+  background-color: #f4f4f4;
+  padding: 10px 20px;
 }
 
 table {

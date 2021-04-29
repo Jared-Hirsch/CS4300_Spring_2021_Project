@@ -57,16 +57,18 @@
             </select>
           </div>
 
-          <div class="adv-section">
+          <div class="adv-section" id="sliders1">
             <h4>Weigh audio features or lyrics more...</h4>
-            <label for="lyr" class="label" id="lyr-label"> Audio Similarity </label>
-            <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
-            <label for="lyr" class="label" id="lyr-label"> Lyrical Similarity </label>
+            <div class="slider-container">
+              <label for="lyr" class="label" id="lyr-label"> Audio Similarity </label>
+              <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
+              <label for="lyr" class="label" id="lyr-label"> Lyrical Similarity </label>
+            </div>
           </div>
 
-          <div class="adv-section">
+          <div class="adv-section" id="sliders2">
             <h4>Weigh specific audio features...</h4>
-            <table class="af">
+            <table class="af-table">
               {% for af in audiofeatures %}
               <tr>
                 <td> <label for="{{ af[1] }}" class="label"> {{ af[0] }} </label> </td>
