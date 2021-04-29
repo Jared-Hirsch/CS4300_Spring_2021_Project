@@ -163,13 +163,13 @@ table td {
 }
 
 .slider {
-  width: 400px;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .af-slider {
-  width: 200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
