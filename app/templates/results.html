@@ -4,6 +4,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/results.css">
+  <link rel="icon" href="/static/logo.png">
+  <title>simplay</title>
 </head>
 
 <body>
@@ -25,12 +27,6 @@
               placeholder="Artist Name | Song Name">
             <i class="fa fa-search" id="search-icon"></i>
           </div>
-
-          <!-- <div id="slider">
-            <label for="lyr" class="label"> Audio Similarity </label>
-            <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
-            <label for="lyr" class="label"> Lyrical Similarity </label>
-          </div> -->
 
           <button type="submit" class="btn" id="btn-prim"> Create my Playlist </button>
         </form>
@@ -80,7 +76,6 @@
     </div>
 
     <!-- Results Detail -->
-    <!-- todo: get correct lyrical score -->
     <div class="resultshide" id="detailcontent">
       <table>
         <tr>
@@ -103,7 +98,7 @@
             [placeholder bar graph]
           </td>
 
-          <td> {{ results[2][0] }} </td>
+          <td> {{ results[2][loop.index0] }} </td>
         </tr>
         {% endfor %}
 
@@ -113,9 +108,15 @@
 
   <!-- Footer -->
   <footer>
-    <span>Student Names:</span>
-    {% for netid in netids %}
-    <span>{{ netid }} </span>
+    <span>Created by:</span>
+    {% for student in students %}
+    {% if loop.index == 4 %}
+    <span>{{ student[0] }}</span>
+    {% elif loop.index == 3 %}
+    <span>{{ student[0] }}, and </span>
+    {% else %}
+    <span>{{ student[0] }}, </span>
+    {% endif %}
     {% endfor %}
   </footer>
 
@@ -147,7 +148,6 @@
     document.getElementById('query').style.width = '500';
     document.getElementById('nav').style.height = '150px';
     document.getElementById('search-icon').style.visibility = 'hidden';
-    // document.getElementById('slider').style.display = 'block';
     document.getElementById('btn-prim').style.display = 'block';
     document.getElementById('tint').style.display = 'block';
     document.getElementById('query').style.cursor = 'text';
@@ -157,7 +157,6 @@
     document.getElementById('query').style.width = '400';
     document.getElementById('nav').style.height = '70px';
     document.getElementById('search-icon').style.visibility = 'visible';
-    // document.getElementById('slider').style.display = 'none';
     document.getElementById('btn-prim').style.display = 'none';
     document.getElementById('tint').style.display = 'none';
     document.getElementById('query').style.cursor = 'pointer';

@@ -1,6 +1,7 @@
 <!-- Todo: 
       - error messages (song not found, no empty inputs)
       - fix footer spacing
+      - update results new search input with dropdown and advanced settings
 -->
 
 <html>
@@ -9,6 +10,8 @@
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/index.css">
   <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link rel="icon" href="/static/logo.png">
+  <title>simplay</title>
 </head>
 
 <body>
@@ -86,9 +89,15 @@
 
   <!-- Footer -->
   <footer>
-    <span>Student Names:</span>
-    {% for netid in netids %}
-    <span>{{ netid }} </span>
+    <span>Created by:</span>
+    {% for student in students %}
+    {% if loop.index == 4 %}
+    <span>{{ student[0] }}</span>
+    {% elif loop.index == 3 %}
+    <span>{{ student[0] }}, and </span>
+    {% else %}
+    <span>{{ student[0] }}, </span>
+    {% endif %}
     {% endfor %}
   </footer>
 </body>
