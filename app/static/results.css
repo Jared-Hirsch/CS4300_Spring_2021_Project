@@ -83,12 +83,67 @@ nav {
 }
 
 
+/* Modal */
+.modal {
+  padding: 14px 22px;
+  background: #FFFFFF;
+  border-radius: 18px 18px 0px 0px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 42;
+  bottom: 0;
+  z-index:2;
+  /* display: none; */
+}
+
+.modal form p {
+  margin-bottom: 5px;
+}
+
+.modal form input[type=text] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-color: #ececec;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.modal form input[type=text]:focus {
+  outline: none;
+}
+
+.modal form label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding-left: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.modal form input[type=radio] {
+  margin: 10px 0 10px 0;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.spotify-cta {
+  text-align: center;
+}
+
+.spotify-cta #btn-prim {
+  display: block;
+}
+
+
 /* Table */
 table {
   margin: 32 0 64 0;
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  /* width: 80%; */
+  width: calc(100% - 200px);
 }
 
 td,

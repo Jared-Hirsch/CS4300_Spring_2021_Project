@@ -35,6 +35,25 @@
     </div>
   </nav>
 
+  <!-- Spotify modal -->
+  <div class="modal">
+    <form>
+      <p class="label">Playlist Name</p>
+      <input type="text" class="playlistname" id="playlistname" name="playlist_name" value="my simPlaylist"
+        placeholder="my simPlaylist">
+
+      <p class="label">Privacy</p>
+      <input type="radio" id="private" name="privacy" value="private" checked>
+      <label for="private">Private</label><br>
+      <input type="radio" id="public" name="privacy" value="public">
+      <label for="public">Public</label><br>
+
+      <div class="spotify-cta">
+        <button type="submit" class="btn" id="btn-prim"> Save on Spotify </button>
+      </div>
+    </form>
+  </div>
+
   <!-- Tint -->
   <div id="tint"></div>
 
