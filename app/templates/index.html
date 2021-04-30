@@ -1,5 +1,5 @@
 <!-- Todo: 
-      - update results new search input with dropdown and advanced settings
+      - update results new search input with advanced settings
       - add spotify cover images
       - add spotify playlist saving
       - error messages (song not found, no empty inputs)
@@ -63,7 +63,10 @@
           </div>
 
           <div class="adv-section" id="sliders1">
-            <h4>Importance of Audio Features vs Lyrics</h4>
+            <h4>Audio Feature vs Lyrical Importance</h4>
+            <h3>Controls the weight given to each aspect when generating recommendations.
+              When the slider is all the way left, only audio features will be considered. When the slider
+              is all the way right, only lyrics will be considered.</h3>
             <div class="slider-container">
               <label for="lyr" class="label" id="lyr-label"> Audio Similarity </label>
               <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
@@ -72,9 +75,8 @@
           </div>
 
           <div class="adv-section" id="sliders2">
-            <h4>Importance of Audio Features</h4>
-            <h3>Giving an audio feature a higher relative weight means that it will be more important
-              for the generated playlist to be similar to the query in this dimension. </h3>
+            <h4>Individual Audio Feature Importance</h4>
+            <h3>A higher relative weight means that recommended songs will be more similar to the queried song in that dimension.</h3>
             <table class="af-table">
               {% for af in audiofeatures %}
               <tr>
@@ -154,7 +156,6 @@
     data.forEach((d, i) => {
       songs.push(d['artist_name'] + " | " + d['track_name'])
     });
-    console.log(songs)
 
     // takes in text field el and an array of possible songs
     function autocomplete(inp, arr) {
