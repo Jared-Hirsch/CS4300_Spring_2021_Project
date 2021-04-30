@@ -331,6 +331,8 @@ class SimilarSongs:
         output = []
         cnt = 0
         i = 0
+        print('cnt', type(cnt), cnt)
+        print('n_results', type(n_results), n_results)
         while i < len(ranked) and cnt < n_results:
             uri, score = ranked[i][0], ranked[i][1]
             song_data = self.vars_dict['uri_to_song'][uri]

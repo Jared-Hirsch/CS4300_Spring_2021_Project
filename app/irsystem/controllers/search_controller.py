@@ -23,7 +23,7 @@ def index(errors=[]):
 def search():
     query = request.args.get(constants.INPUT_QUERY)
     lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY)
-    num_songs = request.args.get(constants.NUM_SONGS)
+    num_songs = int(request.args.get(constants.NUM_SONGS))
     features_weights = []
     for af in constants.AUDIO_FEATURES:
         arg = request.args.get(af[1])
@@ -40,7 +40,7 @@ def search():
         query_af, output, lyr = processor.process_query(
             query, int(lyr_sim)/100, features_weights, num_songs, False)
         output = [(str(round(sim, 3)).ljust(5, '0'), af)
-                  for (sim, af) in output[:(constants.NUM_RESULTS)]]
+                  for (sim, af) in output[:num_songs]]
         results = query_af, output, lyr
     except ValueError as err:
         print(str(err))
