@@ -351,11 +351,11 @@ class SimilarSongs:
 
 
         if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
-            sorted_lyric_sims = [lyric_sim_scores[d['track_id']] for _,d in output] #TODO: change track_id to uri
-
+            sorted_lyric_sims = [lyric_sim_scores[d['track_id']] for _,d in output]
+        sorted_af_sims = [af_sim_scores[d['track_id']] for _,d in output]
         end = time.time()
         print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
-        return query_af, output, sorted_lyric_sims
+        return query_af, output, sorted_lyric_sims, sorted_af_sims
 
 def print_results(output, lyric_sims, indent = True):
     out = []

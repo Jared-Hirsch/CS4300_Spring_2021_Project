@@ -37,11 +37,13 @@ def search():
 
     # Calculate results from the query
     try:
-        query_af, output, lyr = processor.process_query(
+        query_af, output, lyr, af_scores = processor.process_query(
             query, int(lyr_sim)/100, features_weights, num_songs, False)
         output = [(str(round(sim, 3)).ljust(5, '0'), af)
                   for (sim, af) in output[:num_songs]]
         lyr = [str(round(sim, 3)).ljust(5, '0') for sim in lyr]
+        af_scores = [str(round(sim, 3)).ljust(5, '0') for sim in af_scores]
+
         results = query_af, output, lyr
     except ValueError as err:
         print(str(err))
