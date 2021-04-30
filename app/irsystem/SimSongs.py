@@ -337,6 +337,11 @@ class SimilarSongs:
                 uri = uri.split(":")[-1].strip()
             result_song = f"{song_data['artist_name'].lower().strip()} | {song_data['track_name'].lower().strip()}"
             if uri not in seen_uris and result_song not in seen_songs:
+                # Calculate difference scores to be displayed on a graph
+                differences = {}
+                for key in ('acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence'):
+                    differences[key] = min(max(0, 1 - abs(query_af[key] - song_data[key])), 1) # min and max done to clamp
+                song_data['differences'] = differences
                 #don't want to return inputted/different versions of inputted song
                 output.append((score, song_data))
                 seen_uris.add(uri)
