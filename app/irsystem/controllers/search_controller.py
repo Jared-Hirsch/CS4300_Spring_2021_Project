@@ -5,7 +5,7 @@ from app.irsystem.process_query import QueryProcessor
 from config import Config
 
 vars_dict_path = os.getcwd() + os.path.sep + 'sample_data' + \
-    os.path.sep + 'top_annotations_sim_vars.pkl'
+    os.path.sep + '12000_sim_vars.pkl'
 stopwords_path = os.getcwd() + os.path.sep + 'app' + os.path.sep + \
     'irsystem' + os.path.sep + 'stopwords.pkl'
 processor = QueryProcessor(stopwords_path, vars_dict_path, sp_username=Config.SP_USERNAME,
