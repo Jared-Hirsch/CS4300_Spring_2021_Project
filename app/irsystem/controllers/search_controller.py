@@ -54,4 +54,4 @@ def search():
     #      ((30, {'track_name': 'Addiction', 'artist_name': 'Kanye West'}))], \
     #     [1, 2, 3]
 
-    return render_template(constants.RESULTS, name=constants.PROJECT_NAME, students=constants.NAMES, songs=songs, query=query, results=results)
+    return render_template(constants.RESULTS, name=constants.PROJECT_NAME, students=constants.NAMES, audiofeatures=constants.AUDIO_FEATURES, songs=songs, query=query, results=results)

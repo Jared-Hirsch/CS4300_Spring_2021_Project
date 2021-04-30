@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/results.css">
   <link rel="icon" href="/static/logo.png">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
   <title>simplay</title>
 </head>
 
@@ -19,15 +20,20 @@
         </span>
       </a>
       <span>
-        <form action="results">
-
+        <form action="results" onsubmit="modifyParameters()" name='results'>
           <div class="input-container">
             <input type="text" class="query" id="query" name="input_query"
               value="{{ results[0]['artist_name'] }} | {{ results[0]['track_name'] }}"
               placeholder="Artist Name | Song Name">
             <i class="fa fa-search" id="search-icon"></i>
           </div>
-
+          <input type="hidden" name="lyrical_sim" min="0" max="100" value="50" id="lyr">
+          <input type="hidden" name="duration" min="1" max="20" value="2">
+          {% for af in audiofeatures %}
+          <tr>
+            <td> <input type="hidden" name="{{ af[1] }}" min="0" max="100" value="100" id="{{ af[1] }}"> </td>
+          </tr>
+          {% endfor %}
           <button type="submit" class="btn" id="btn-prim"> Create my Playlist </button>
         </form>
       </span>
@@ -49,7 +55,8 @@
       <label for="public">Public</label><br>
 
       <div class="spotify-cta">
-        <button type="submit" class="btn" id="btn-prim"> Save on Spotify </button>
+        <!-- TODO: fix id properties as currently there is conflict  -->
+        <button type="submit" class="btn" id="btn-prim2"> Save on Spotify </button>
       </div>
     </form>
   </div>
@@ -182,5 +189,21 @@
   };
 </script>
 
+<script>
+  // Modify parameters passed to query using current values and Rocchio update rule
+  function modifyParameters(){
+    const urlParams = new URLSearchParams(window.location.search);
+    document.results.duration.value = urlParams.get('duration')
+    document.results.auc.value = urlParams.get('auc')
+    document.results.dnc.value = urlParams.get('duration')
+    document.results.enr.value = urlParams.get('enr')
+    document.results.ins.value = urlParams.get('ins')
+    document.results.liv.value = urlParams.get('liv')
+    document.results.loud.value = urlParams.get('loud')
+    document.results.spch.value = urlParams.get('spch')
+    document.results.temp.value = urlParams.get('temp')
+    document.results.val.value = urlParams.get('val')
+  }
+</script>
 
 </html>
