@@ -120,7 +120,58 @@
           </td>
 
           <td>
-            <svg width="300" height="300" id="{{ res[0] }} bar graph"></svg> <br>
+            <!-- TODO: add id's maybe?  -->
+            <!-- <svg width="300" height="300" id="{{ res[1]['trackid'] }} bar graph"></svg> <br> -->
+            <svg width="300" height="150"></svg> <br>
+            <script>
+              var sanitized_data =  JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g,'"'))['differences'];
+              var formatted_data = []
+              var feature_color_array = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence']
+              var color_map = {
+                'acousticness': '#DAF7A6', 'danceability': '#FFC300', 'energy': '#FF5733', 'instrumentalness': '#C70039', 'liveness': '#900C3F', 'speechiness': '#581845', 'valence': '#080808'
+              }
+              for (const [key, value] of Object.entries(sanitized_data)) {
+                formatted_data.unshift({'attribute': key, 'value': value * value, 'color': color_map[key]})
+              }
+            
+              var svg = d3.selectAll("svg"),
+                margin = { top: 10, right: 0, bottom: 60, left: 40 },
+                width = svg.attr("width") - margin.left - margin.right,
+                height = svg.attr("height") - margin.top - margin.bottom;
+              
+              svg.append("g")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")")
+
+              var x = d3.scaleBand().range([0, width]).padding(0.2).domain(formatted_data.map(function (d) { return d.attribute }));
+
+              svg.append("g")
+                // .attr("transform", "translate(" + margin.left + "," + height + ")")
+                .attr("transform", "translate(" + 0 + "," + height + ")")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .attr("transform", "translate(0,0)rotate(-45)")
+                .style("text-anchor", "end");
+
+              var y = d3.scaleLinear().range([height, 0]).domain([0, 1]);
+
+              // svg.append("g").call(d3.axisLeft(y));
+
+              svg.selectAll("mybar")
+                .data(formatted_data)
+                .enter()
+                .append("rect")
+                .attr("x", function (d) { return x(d.attribute); })
+                .attr("y", function (d) { return y(d.value); })
+                // .attr("transform", "translate(" + margin.left + ",0)")
+                .attr("width", x.bandwidth())
+                .attr("height", function (d) { return height - y(d.value); })
+                .attr("fill", function (d) { return d.color; })
+
+              </script>
             <h3 style="display: inline-block; padding-right: 10;">Averaged Similarity Score: </h3>{{ res[0] }}
           </td>
 
@@ -206,7 +257,7 @@
   }
 </script>
 
-<script>
+<!-- <script>
   // Bar Graphs
   var svg = d3.selectAll("svg"),
     margin = { top: 10, right: 10, bottom: 50, left: 20 },
@@ -249,6 +300,6 @@
     .attr("height", function (d) { return height - y(d.value); })
     .attr("fill", "#b3ccec")
 
-</script>
+</script> -->
 
 </html>
