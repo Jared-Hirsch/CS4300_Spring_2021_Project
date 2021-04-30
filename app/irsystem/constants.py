@@ -17,7 +17,7 @@ AUDIO_FEATURES = [("Acousticness", "auc", "A confidence measure of whether the t
                   ("Loudness", "loud", "The overall loudness of a track in decibels (dB)."),
                   ("Speechiness", "spch", "Detects the presence of spoken words in a track. Tracks with high values sound more speech-like."),
                   ("Tempo", "temp", "The overall estimated tempo of a track in beats per minute (BPM)."),
-                  ("Valence", "val", "Describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive, while tracks with low valence sound more negative."), ]
+                  ("Valence", "val", "Describes how positive the track is. Tracks with high valence sound more happy or euphoric, while tracks with low valence sound more negative."), ]
 
 # Templates
 INDEX = 'index.html'
