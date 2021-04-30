@@ -62,10 +62,6 @@ footer {
   margin-bottom: 42;
 }
 
-.adv-section {
-  margin-bottom: 24;
-}
-
 
 /* Autocomplete query */
 * {
@@ -139,7 +135,12 @@ select:focus {
   outline: none;
 }
 
-.adv-section h4 {
+.adv-section {
+  margin-bottom: 24;
+  padding-left: 20;
+}
+
+.adv-section h4, .adv-section h3 {
   text-align: left;
   display: block;
 }
@@ -172,6 +173,44 @@ table td {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.info-icon {
+  width: 12px;
+  height: 12px;
+  font-size: 10px;
+  border-radius: 100px;
+  border: 1px solid rgb(83, 83, 83);
+  padding-left: -10px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(83, 83, 83);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 12;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: -20px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .cta {

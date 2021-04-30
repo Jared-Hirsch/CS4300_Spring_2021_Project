@@ -10,6 +10,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/index.css">
   <script src="https://d3js.org/d3.v6.min.js"></script>
@@ -62,7 +63,7 @@
           </div>
 
           <div class="adv-section" id="sliders1">
-            <h4>Importance of Audio Feature vs Lyrics</h4>
+            <h4>Importance of Audio Features vs Lyrics</h4>
             <div class="slider-container">
               <label for="lyr" class="label" id="lyr-label"> Audio Similarity </label>
               <input type="range" name="lyrical_sim" min="0" max="100" value="50" class="slider" id="lyr">
@@ -72,10 +73,19 @@
 
           <div class="adv-section" id="sliders2">
             <h4>Importance of Audio Features</h4>
+            <h3>Giving an audio feature a higher relative weight means that it will be more important
+              for the generated playlist to be similar to the query in this dimension. </h3>
             <table class="af-table">
               {% for af in audiofeatures %}
               <tr>
-                <td> <label for="{{ af[1] }}" class="label"> {{ af[0] }} </label> </td>
+                <!-- <td> <label for="{{ af[1] }}" class="label"> {{ af[0] }} </label> </td> -->
+                <td style="cursor:default">
+                  <div class="tooltip">
+                    <div class="info-icon">i</div>
+                    <label for="{{ af[1] }}" class="label"> {{ af[0] }} </label>
+                    <span class="tooltiptext">{{ af[2] }}</span>
+                  </div>
+                </td>
                 <td> <input type="range" name="{{ af[1] }}" min="0" max="100" value="100" class="af-slider"
                     id="{{ af[1] }}"> </td>
               </tr>
