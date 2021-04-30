@@ -22,7 +22,7 @@ def index(errors=[]):
 @irsystem.route('/results', methods=['GET'])
 def search():
     query = request.args.get(constants.INPUT_QUERY)
-    lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY)
+    lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY) 
     num_songs = int(request.args.get(constants.NUM_SONGS))
     features_weights = []
     for af in constants.AUDIO_FEATURES:
@@ -41,6 +41,7 @@ def search():
             query, int(lyr_sim)/100, features_weights, num_songs, False)
         output = [(str(round(sim, 3)).ljust(5, '0'), af)
                   for (sim, af) in output[:num_songs]]
+        lyr = [str(round(sim, 3)).ljust(5, '0') for sim in lyr]
         results = query_af, output, lyr
     except ValueError as err:
         print(str(err))

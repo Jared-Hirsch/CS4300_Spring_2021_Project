@@ -327,14 +327,20 @@ class SimilarSongs:
         output = []
         cnt = 0
         i = 0
-        print('cnt', type(cnt), cnt)
-        print('n_results', type(n_results), n_results)
+        seen_uris = {query_uri}
+        seen_songs = {f"{query_artist.lower().strip()} | {query_name.lower().strip()}"}
+
         while i < len(ranked) and cnt < n_results:
             uri, score = ranked[i][0], ranked[i][1]
             song_data = self.vars_dict['uri_to_song'][uri]
-            if uri != query_uri and not match(song_data['artist_name'], query_artist) and not match(song_data['track_name'], query_name): 
+            if ":" in uri:
+                uri = uri.split(":")[-1].strip()
+            result_song = f"{song_data['artist_name'].lower().strip()} | {song_data['track_name'].lower().strip()}"
+            if uri not in seen_uris and result_song not in seen_songs:
                 #don't want to return inputted/different versions of inputted song
                 output.append((score, song_data))
+                seen_uris.add(uri)
+                seen_songs.add(result_song)
                 cnt += 1
             i += 1
 
