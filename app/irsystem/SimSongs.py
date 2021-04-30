@@ -16,7 +16,7 @@ from sp_client import Spotify_Client
 import string
 import os
 # from app.irsystem.utils import strip_name, match
-from utils import *
+from app.irsystem.utils import *
 
 
 punct = set(string.punctuation)
