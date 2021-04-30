@@ -369,20 +369,21 @@ if __name__ == "__main__":
 
     SimSongs = SimilarSongs(stopwords, vars_dict, sp_path, gn_path)
 
-    query = 'The Chainsmokers | Closer'
-    lyrics_weight = 0.5
-    n_results = 10
-    is_uri = False
-    af_weights = np.ones(len(AF_COLS))
-    query_af, output, lyric_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
-    print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
-    print_results(output, lyric_scores)
+    # query = 'The Chainsmokers | Closer'
+    # lyrics_weight = 0.5
+    # n_results = 10
+    # is_uri = False
+    # af_weights = np.ones(len(AF_COLS))
+    # query_af, output, lyric_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    # print_results(output, lyric_scores)
     
-    query = 'Illenium | good things fall apart'
+    query = ' Death Cab for Cutie | When We Drive' 
     lyrics_weight = 0.5
     n_results = 10
     is_uri = False
     af_weights = np.ones(len(AF_COLS))
+    af_weights[0] = 10
     query_af, output, lyric_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     print_results(output, lyric_scores)
