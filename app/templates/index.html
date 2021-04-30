@@ -1,5 +1,5 @@
 <!-- Todo: 
-      - update results new search input with dropdown and advanced settings
+      - update results new search input with advanced settings
       - add spotify cover images
       - add spotify playlist saving
       - error messages (song not found, no empty inputs)
@@ -154,7 +154,6 @@
     data.forEach((d, i) => {
       songs.push(d['artist_name'] + " | " + d['track_name'])
     });
-    console.log(songs)
 
     // takes in text field el and an array of possible songs
     function autocomplete(inp, arr) {
