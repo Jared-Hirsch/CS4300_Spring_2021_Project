@@ -23,18 +23,27 @@ def index(errors=[]):
 def search():
     query = request.args.get(constants.INPUT_QUERY)
     lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY)
+    num_songs = request.args.get(constants.NUM_SONGS)
+    features_weights = []
+    for af in constants.AUDIO_FEATURES:
+        arg = request.args.get(af[1])
+        if arg is None:
+            return index([af[0]+" is missing"])
+        features_weights.append(int(request.args.get(af[1]))/100)
+
     print(query)
-    if query == "" or query is None or lyr_sim is None:
-        return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing"])
+    if query == "" or query is None or lyr_sim is None or num_songs is None:
+        return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing, num songs cannot be missing"])
 
     # Calculate results from the query
     try:
         query_af, output, lyr = processor.process_query(
-            query, int(lyr_sim)/100, 10, False)
+            query, int(lyr_sim)/100, features_weights, num_songs, False)
         output = [(str(round(sim, 3)).ljust(5, '0'), af)
                   for (sim, af) in output[:(constants.NUM_RESULTS)]]
         results = query_af, output, lyr
     except ValueError as err:
+        print(str(err))
         return index([str(err)])
 
     # Dummy results value

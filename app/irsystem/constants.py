@@ -7,6 +7,7 @@ NAMES = [("Jared Hirsch", "jsh328"), ("Ronnie Dumesh", "rad338"),
 INPUT_QUERY = 'input_query'
 LYRICAL_SIMILARITY = 'lyrical_sim'
 AUDIO_SIMILARITY = 'aud_sim'
+NUM_SONGS = 'duration'
 NUM_RESULTS = 10
 AUDIO_FEATURES = [("Acousticness", "auc"), ("Danceability", "dnc"), ("Energy", "enr"), ("Instrumentalness", "ins"),
                   ("Liveness", "liv"), ("Loudness", "loud"), ("Speechiness", "spch"), ("Tempo", "temp"), ("Valence", "val"), ]

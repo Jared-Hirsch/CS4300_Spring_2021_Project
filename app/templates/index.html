@@ -53,10 +53,10 @@
           <div class="adv-section">
             <label for="dur" class="label">Playlist Length:</label>
             <select name="duration" id="dur">
-              <option value="opt1">10 songs</option>
-              <option value="opt2">15 songs</option>
-              <option value="opt3">20 songs</option>
-              <option value="opt4">30 songs</option>
+              <option value="10">10 songs</option>
+              <option value="15">15 songs</option>
+              <option value="20">20 songs</option>
+              <option value="30">30 songs</option>
             </select>
           </div>
 
@@ -75,7 +75,7 @@
               {% for af in audiofeatures %}
               <tr>
                 <td> <label for="{{ af[1] }}" class="label"> {{ af[0] }} </label> </td>
-                <td> <input type="range" name="{{ af[1] }}" min="0" max="100" value="50" class="af-slider"
+                <td> <input type="range" name="{{ af[1] }}" min="0" max="100" value="100" class="af-slider"
                     id="{{ af[1] }}"> </td>
               </tr>
               {% endfor %}
