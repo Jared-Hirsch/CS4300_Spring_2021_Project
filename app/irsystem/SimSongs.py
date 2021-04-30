@@ -16,7 +16,8 @@ from sp_client import Spotify_Client
 import string
 import os
 # from app.irsystem.utils import strip_name, match
-from app.irsystem.utils import *
+# from app.irsystem.utils import *
+from utils import *
 
 
 punct = set(string.punctuation)
@@ -353,7 +354,10 @@ class SimilarSongs:
 
         if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
             sorted_lyric_sims = [lyric_sim_scores[d['track_id']] for _,d in output]
-        sorted_af_sims = [af_sim_scores[d['track_id']] for _,d in output]
+        if lyrics_weight != 1:
+            sorted_af_sims = [af_sim_scores[d['track_id']] for _,d in output]
+        else:
+            sorted_af_sims = np.zeros(len(output))
         end = time.time()
         print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
         return query_af, output, sorted_lyric_sims, sorted_af_sims
@@ -388,8 +392,18 @@ if __name__ == "__main__":
     # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     # print_results(output, lyric_scores)
     
-    query = ' Death Cab for Cutie | When We Drive' 
-    lyrics_weight = 0.5
+    # query = ' Death Cab for Cutie | When We Drive' 
+    # lyrics_weight = 0.5
+    # n_results = 10
+    # is_uri = False
+    # af_weights = np.ones(len(AF_COLS))
+    # af_weights[0] = 10
+    # query_af, output, lyric_scores, af_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    # print_results(output, lyric_scores)
+
+    query = 'Frank Sinatra | Fly Me To the Moon' 
+    lyrics_weight = 1
     n_results = 10
     is_uri = False
     af_weights = np.ones(len(AF_COLS))
@@ -397,7 +411,6 @@ if __name__ == "__main__":
     query_af, output, lyric_scores, af_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     print_results(output, lyric_scores)
-
 
 
     # query = 'Post Malone | rockstar'
