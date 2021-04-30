@@ -15,7 +15,8 @@ import spotipy.util as util
 from sp_client import Spotify_Client
 import string
 import os
-from app.irsystem.utils import strip_name, match
+# from app.irsystem.utils import strip_name, match
+from utils import *
 
 
 punct = set(string.punctuation)
@@ -393,7 +394,7 @@ if __name__ == "__main__":
     is_uri = False
     af_weights = np.ones(len(AF_COLS))
     af_weights[0] = 10
-    query_af, output, lyric_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    query_af, output, lyric_scores, af_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     print_results(output, lyric_scores)
 

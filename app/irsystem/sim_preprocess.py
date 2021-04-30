@@ -66,14 +66,14 @@ def compute_idf(inv_idx, n_docs, min_df_ratio = 0.0, max_df_ratio=1.0):
     """
     idf_dict = dict()
     word_to_ix = dict()
-    ix_to_word = dict()
+    ix_to_word = list()
     ix = 0
     for word, posting in inv_idx.items():
         df = len(posting)
         if (df/n_docs >= min_df_ratio) and (df/n_docs <= max_df_ratio):
             idf_dict[word] = np.log2(n_docs/(1+df))
             word_to_ix[word] = ix
-            ix_to_word[ix] = word
+            ix_to_word.append(word)
             ix += 1
     return idf_dict, word_to_ix, ix_to_word
 
@@ -90,19 +90,19 @@ def compute_tfidf_matrix(inv_idx, idf_dict, uri_to_ix, word_to_ix):
     pca_tfidf_matrix = pca.fit_transform(tfidf_matrix)
     return pca_tfidf_matrix, pca
 
-def compute_song_norms(inv_idx, idf_dict):
-    """
-    @params: 
-        inv_idx: dict; inverted index 
-        idf_dict: dict; inverse document frequency
-    @returns:
-        dict; {uri:norm of song's tfidf vector}
-    """
-    song_norms_dict = dict()
-    for word, postings in inv_idx.items():
-        for uri, tf in postings: 
-            song_norms_dict[uri] = song_norms_dict.get(uri,0) + (tf*idf_dict.get(word, 0))**2
-    return {k:np.sqrt(v) for k,v in song_norms_dict.items()}
+# def compute_song_norms(inv_idx, idf_dict):
+#     """
+#     @params: 
+#         inv_idx: dict; inverted index 
+#         idf_dict: dict; inverse document frequency
+#     @returns:
+#         dict; {uri:norm of song's tfidf vector}
+#     """
+#     song_norms_dict = dict()
+#     for word, postings in inv_idx.items():
+#         for uri, tf in postings: 
+#             song_norms_dict[uri] = song_norms_dict.get(uri,0) + (tf*idf_dict.get(word, 0))**2
+#     return {k:np.sqrt(v) for k,v in song_norms_dict.items()}
 
 def get_af_matrix_data(df, uri_colname):
     """
@@ -159,12 +159,18 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
     inv_idx = make_inv_idx(lyrics_dict, remove_stopwords)
     idf_dict, word_to_ix, ix_to_word = compute_idf(inv_idx, n_docs, min_df_ratio, max_df_ratio)
     pca_tfidf_matrix, pca = compute_tfidf_matrix(inv_idx, idf_dict, uri_to_ix, word_to_ix)
-    song_norms_dict = compute_song_norms(inv_idx, idf_dict)
+    # song_norms_dict = compute_song_norms(inv_idx, idf_dict)
 
     af_matrix, scaler = get_af_matrix_data(df, uri_colname)
 
-    objs = dict(zip(['uri_to_song', 'inv_idx', 'idf_dict', 'word_to_ix', 'ix_to_word', 'pca_tfidf_matrix', 'pca', 'song_norms_dict', 'ix_to_uri', 'uri_to_ix', 'af_matrix', 'scaler'], \
-        [uri_to_song, inv_idx, idf_dict, word_to_ix, ix_to_word, pca_tfidf_matrix, pca, song_norms_dict, ix_to_uri, uri_to_ix, af_matrix, scaler]))
+    #TODO: delete inv_idx, song_norms_dict
+    objs = dict(zip(['uri_to_song', 'idf_dict', 'word_to_ix', 'ix_to_word', 'pca_tfidf_matrix', 'pca', 'ix_to_uri', 'uri_to_ix', 'af_matrix', 'scaler'], \
+        [uri_to_song, idf_dict, word_to_ix, ix_to_word, pca_tfidf_matrix, pca, ix_to_uri, uri_to_ix, af_matrix, scaler]))
+
+
+
+    # objs = dict(zip(['uri_to_song', 'inv_idx', 'idf_dict', 'word_to_ix', 'ix_to_word', 'pca_tfidf_matrix', 'pca', 'song_norms_dict', 'ix_to_uri', 'uri_to_ix', 'af_matrix', 'scaler'], \
+        # [uri_to_song, inv_idx, idf_dict, word_to_ix, ix_to_word, pca_tfidf_matrix, pca, song_norms_dict, ix_to_uri, uri_to_ix, af_matrix, scaler]))
     
     if precompute:
         cossim_lyrics = precompute_lyric_sim(inv_idx, idf_dict, uri_to_ix, word_to_ix)
