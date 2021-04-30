@@ -120,8 +120,8 @@
           </td>
 
           <td>
-            {{  res[0] }} <br>
-            <svg width="300" height="300" id="{{ res[0] }} bar graph"></svg>
+            <svg width="300" height="300" id="{{ res[0] }} bar graph"></svg> <br>
+            <h3 style="display: inline-block; padding-right: 10;">Similarity Score: </h3>{{ res[0] }}
           </td>
 
           <td> {{ results[2][loop.index0] }} </td>
@@ -191,7 +191,7 @@
 
 <script>
   // Modify parameters passed to query using current values and Rocchio update rule
-  function modifyParameters(){
+  function modifyParameters() {
     const urlParams = new URLSearchParams(window.location.search);
     document.results.duration.value = urlParams.get('duration')
     document.results.auc.value = urlParams.get('auc')
@@ -209,24 +209,24 @@
 <script>
   // Bar Graphs
   var svg = d3.selectAll("svg"),
-      margin = {top: 10, right: 10, bottom: 50, left: 20},
-      width = svg.attr("width") - margin.left - margin.right,
-      height = svg.attr("height") - margin.top - margin.bottom;
+    margin = { top: 10, right: 10, bottom: 50, left: 20 },
+    width = svg.attr("width") - margin.left - margin.right,
+    height = svg.attr("height") - margin.top - margin.bottom;
 
   svg.append("g")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")")
+      "translate(" + margin.left + "," + margin.top + ")")
 
   // TODO: figure out how to transpose data from html tags to here
   // TODO: re-format data to be in this format
-  fafa = [{'attribute': 'acousticness','value':  0.8824,},{'attribute': 'danceability','value': 0.952},{'attribute': 'energy', 'value':0.885,},
-  {'attribute': 'instrumentalness', 'value':1.0,}, {'attribute': 'liveness', 'value':0.992,}, {'attribute': 'speechiness', 'value':0.999,},
-  {'attribute': 'valence', 'value': 0.833}]
+  fafa = [{ 'attribute': 'acousticness', 'value': 0.8824, }, { 'attribute': 'danceability', 'value': 0.952 }, { 'attribute': 'energy', 'value': 0.885, },
+  { 'attribute': 'instrumentalness', 'value': 1.0, }, { 'attribute': 'liveness', 'value': 0.992, }, { 'attribute': 'speechiness', 'value': 0.999, },
+  { 'attribute': 'valence', 'value': 0.833 }]
 
-  var x = d3.scaleBand().range([0, width]).padding(0.2).domain(fafa.map(function(d) { return d.attribute }));
+  var x = d3.scaleBand().range([0, width]).padding(0.2).domain(fafa.map(function (d) { return d.attribute }));
 
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -240,14 +240,14 @@
   svg.append("g").call(d3.axisLeft(y));
 
   svg.selectAll("mybar")
-  .data(fafa)
-  .enter()
-  .append("rect")
-    .attr("x", function(d) { return x(d.attribute); })
-    .attr("y", function(d) { return y(d.value); })
+    .data(fafa)
+    .enter()
+    .append("rect")
+    .attr("x", function (d) { return x(d.attribute); })
+    .attr("y", function (d) { return y(d.value); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.value); })
-    .attr("fill", "#69b3a2")
+    .attr("height", function (d) { return height - y(d.value); })
+    .attr("fill", "#b3ccec")
 
 </script>
 
