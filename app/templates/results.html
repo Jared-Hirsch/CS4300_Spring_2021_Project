@@ -382,9 +382,9 @@
 
   function requerySong() {
     const urlParams = new URLSearchParams(window.location.search);
-    const alpha = 0.5;
-    const beta = 0.4;
-    const gamma = 0.1;
+    const alpha = 0.3;
+    const beta = 0.5;
+    const gamma = 0.2;
 
     let likedVector = computeVector(liked, audiofeatures);
     let dislikedVector = computeVector(disliked, audiofeatures);
@@ -397,6 +397,7 @@
     document.results.loudrq.value = currentQuery['loudness'] * alpha + likedVector['loud'] * beta - dislikedVector['loud'] * gamma;
     document.results.spchrq.value = currentQuery['speechiness'] * alpha + likedVector['spch'] * beta - dislikedVector['spch'] * gamma;
     document.results.temprq.value = currentQuery['tempo'] * alpha + likedVector['temp'] * beta - dislikedVector['temp'] * gamma;
+    document.results.valrq.value = currentQuery['valence'] * alpha + likedVector['val'] * beta - dislikedVector['val'] * gamma;
  
     document.getElementById('results').submit()
   }

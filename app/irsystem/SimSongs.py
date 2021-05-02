@@ -235,8 +235,8 @@ class SimilarSongs:
             query: String; either a song's URI or its artist and name (should be in the form of "artist | name")
             lyrics_weight: float, between [0.0, 1.0] representing weight given to lyrics when computing similarity
             n_results: int, number of results to be returned
-            is_uri: Boolean, True if inputted query is a URI, False otherwise
             requery_params: Optional[List]; a list of audio features to replace the audio features of the query if specified
+            is_uri: Boolean, True if inputted query is a URI, False otherwise
 
         @returns:
             dict of queried song's audio features
@@ -266,13 +266,10 @@ class SimilarSongs:
             query_uri = query
 
         temp_start = time.time()
-
-        if requery_params is None:
-            print('if')
-            query_af = self.get_audio_features(query_uri, sp) # get queried song's audio features
-        else:
-            print('else')
-            query_af = requery_params
+        query_af = self.get_audio_features(query_uri, sp) # get queried song's audio features
+        if requery_params is not None:
+            for k, v in requery_params.items():
+                query_af[k] = v
         print(query_af)
         # print(f"get_audio_features: {round(time.time() - temp_start, 4)}")
         
