@@ -87,12 +87,17 @@ class SimilarSongs:
                 cnt = Counter(tokens)
                 return cnt
 
-    def lyrics_sim(self, query_lyrics_cnt):
+    def lyrics_sim(self, query_lyrics_cnt, uris = []):
         idf_dict = self.vars_dict['idf_dict']
         word_to_ix = self.vars_dict['word_to_ix']
         pca = self.vars_dict['pca']
         pca_tfidf_matrix = self.vars_dict['pca_tfidf_matrix']
         ix_to_uri = self.vars_dict['ix_to_uri']
+        uri_to_ix = self.vars_dict['uri_to_ix']
+
+        if uris:
+            indices = [uri_to_ix[uri] for uri in uris]
+            pca_tfidf_matrix = pca_tfidf_matrix[indices, :].copy()
 
         query_tfidf_vec = np.zeros(len(idf_dict))
 
@@ -106,7 +111,10 @@ class SimilarSongs:
 
         tfidf_norms = np.linalg.norm(pca_tfidf_matrix, axis = 1)
         scores = pca_tfidf_matrix.dot(query_vec.squeeze())/(query_norm * tfidf_norms)
-        scores_dict = {ix_to_uri[i]:score for i,score in enumerate(scores) if score > 0} 
+        if uris:
+            scores_dict = dict(zip(uris, scores))
+        else:
+            scores_dict = {ix_to_uri[i]:score for i,score in enumerate(scores) if score > 0} 
 
         return scores_dict #dict of uri : cosine sim
 
@@ -228,8 +236,19 @@ class SimilarSongs:
         return scores_dict #dict of uri : cosine sim
 
 
+    def compute_diffs(self, query_af, result_data):
+        d = dict()
+        for key in ('acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence'):
+            d[key] = min(max(0, 1 - abs(query_af[key] - result_data[key])), 1) # min and max done to clamp
+        return d
+
+    def convert_to_output_format(self, artist_name, track_name):
+        artist_name = artist_name.lower().strip().replace("'", "")
+        track_name = track_name.lower().strip().replace("'", "")
+        return f"{artist_name} | {track_name}"
+
     # def main(self, query, lyrics_weight, n_results, is_uri = False):
-    def main(self, query, lyrics_weight, af_weights, n_results, requery_params, liked, disliked, is_uri = False):
+    def main(self, query, lyrics_weight, af_weights, n_results, requery_params = None, liked = [], disliked = [], is_uri = False):
         """
         @params: 
             query: String; either a song's URI or its artist and name (should be in the form of "artist | name")
@@ -248,6 +267,8 @@ class SimilarSongs:
         - main function user will interact with
         """
         start = time.time()
+        print(liked)
+        print(disliked)
 
         #re-initialize both API clients each time function is run to avoid timeout errors
         if self.sp_path is None:
@@ -269,9 +290,12 @@ class SimilarSongs:
 
         temp_start = time.time()
         query_af = self.get_audio_features(query_uri, sp) # get queried song's audio features
-        if requery_params is not None:
+        
+        # overwrite with rocchio-updated audio feature vector
+        if requery_params:
             for k, v in requery_params.items():
                 query_af[k] = v
+
         # print(query_af)
         # print(f"get_audio_features: {round(time.time() - temp_start, 4)}")
         
@@ -283,10 +307,7 @@ class SimilarSongs:
             query_name = strip_name(query_af['track_name']).lower()
 
         ##### LYRICAL SIMILARITY #####
-        if lyrics_weight == 0: 
-            #don't consider lyrics at all; compute audio feature similarity across all songs in dataset
-            sorted_lyric_sims = np.zeros(n_results)
-        else:
+        if lyrics_weight != 0: 
             temp_start = time.time()
             query_lyrics_cnt = self.retrieve_lyrics(query_artist, query_name, genius)
             # print(f"retrieve_lyrics: {round(time.time() - temp_start, 4)}")
@@ -296,6 +317,8 @@ class SimilarSongs:
             temp_start = time.time()
             # lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt)
             lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt)
+            if liked:
+                liked_lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt, liked)
             # print(f"lyrics_sim: {round(time.time() - temp_start, 4)}")
 
 
@@ -315,40 +338,53 @@ class SimilarSongs:
                 #if consider lyrics, then only compute audio feature similarity for songs with nonzero lyric similarity
                 uri_subset = list(lyric_sim_scores.keys()) 
             af_sim_scores = self.af_sim(query_af, normalized_af_weights, uri_subset)
+            if liked:
+                liked_af_sim_scores = self.af_sim(query_af, normalized_af_weights, liked)
             # print(f"af_sim: {round(time.time() - temp_start, 4)}")
   
         
         ##### OVERALL SIMILARITY #####
         if lyrics_weight == 0: 
             averaged_scores = af_sim_scores
+            if liked:
+                liked_averaged_scores = liked_af_sim_scores
         elif lyrics_weight == 1:
             averaged_scores = lyric_sim_scores
+            if liked:
+                liked_averaged_scores = liked_lyric_sim_scores
         else: #if considering lyrics, then take weighted average of audio feature and lyrical similarity scores
             af_weight = 1 - lyrics_weight
             averaged_scores = {k:(af_sim_scores[k] * af_weight) + (lyric_sim_scores[k] * lyrics_weight) for k in lyric_sim_scores}
-        
+            if liked:
+                liked_averaged_scores = {k:(liked_af_sim_scores[k] * af_weight) + (liked_lyric_sim_scores[k] * lyrics_weight) for k in liked_lyric_sim_scores}
 
         #TODO: handle different versions of same song in output (ex: "I'll Never Love Again - Film Version", "I'll Never Love Again - Extended Version")
-        ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0])) #sort songs in descending order of similarity scores
+        ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0])) #sort songs in descending order of similarity scores            
         output = []
-        cnt = 0
+        cnt = 0 if not liked else len(liked)
         i = 0
-        seen_uris = {query_uri}
-        seen_songs = {f"{query_artist} | {query_name}"}
+        seen_uris = {query_uri}    
+        seen_songs = {self.convert_to_output_format(query_artist, query_name)}
+
+        for u in liked + disliked:
+            seen_uris.add(u)
+            artist = self.vars_dict['uri_to_song'][u]['artist_name']
+            name = self.vars_dict['uri_to_song'][u]['track_name']
+            seen_songs.add(self.convert_to_output_format(artist, name))
+
 
         while i < len(ranked) and cnt < n_results:
             uri, score = ranked[i][0], ranked[i][1]
             song_data = self.vars_dict['uri_to_song'][uri]
-            artist = song_data['artist_name'].lower().strip().replace("'", "")
-            name = song_data['track_name'].lower().strip().replace("'", "")
             if ":" in uri:
                 uri = uri.split(":")[-1].strip()
-            result_song = f"{artist} | {name}"
+            result_song = self.convert_to_output_format(song_data['artist_name'], song_data['track_name'])
+            
             if uri not in seen_uris and result_song not in seen_songs:
                 # Calculate difference scores to be displayed on a graph
-                differences = {}
-                for key in ('acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence'):
-                    differences[key] = min(max(0, 1 - abs(query_af[key] - song_data[key])), 1) # min and max done to clamp
+                differences = self.compute_diffs(query_af, song_data)
+                # for key in ('acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence'):
+                #     differences[key] = min(max(0, 1 - abs(query_af[key] - song_data[key])), 1) # min and max done to clamp
                 song_data['differences'] = differences
                 #don't want to return inputted/different versions of inputted song
                 output.append((score, song_data))
@@ -357,9 +393,16 @@ class SimilarSongs:
                 cnt += 1
             i += 1
 
+        if liked:
+            for liked_uri, liked_score in liked_averaged_scores.items():
+                output.append((liked_score, self.vars_dict['uri_to_song'][liked_uri]))
+
+        output = sorted(output, key = lambda x: (-x[0], x[1]))
 
         if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
             sorted_lyric_sims = [lyric_sim_scores[d['track_id']] for _,d in output]
+        else:
+            sorted_lyric_sims = np.zeros(len(output))
         if lyrics_weight != 1:
             sorted_af_sims = [af_sim_scores[d['track_id']] for _,d in output]
         else:

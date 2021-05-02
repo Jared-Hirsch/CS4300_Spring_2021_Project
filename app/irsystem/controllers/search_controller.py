@@ -37,8 +37,14 @@ def search():
             requery_params = None
             break
         requery_params[af[0].lower()] = (float(arg))
-    liked = [l for l in request.args.get(constants.LIKED).split(',') if l != '']
-    disliked = [d for d in request.args.get(constants.DISLIKED).split(',') if d != '']
+    if request.args.get(constants.LIKED):
+        liked = [l for l in request.args.get(constants.LIKED).split(',') if l]
+    else:
+        liked = []
+    if request.args.get(constants.DISLIKED):
+        disliked = [d for d in request.args.get(constants.DISLIKED).split(',') if d]
+    else:
+        disliked = []
     if query == "" or query is None or lyr_sim is None or num_songs is None:
         return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing, num songs cannot be missing"])
 
