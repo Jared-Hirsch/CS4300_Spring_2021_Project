@@ -37,13 +37,15 @@ def search():
             requery_params = None
             break
         requery_params[af[0].lower()] = (float(arg))
+    liked = [l for l in request.args.get(constants.LIKED).split(',') if l != '']
+    disliked = [d for d in request.args.get(constants.DISLIKED).split(',') if d != '']
     if query == "" or query is None or lyr_sim is None or num_songs is None:
         return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing, num songs cannot be missing"])
 
     # Calculate results from the query
     try:
         query_af, output, lyr, af_scores = processor.process_query(
-            query, int(lyr_sim)/100, features_weights, num_songs, requery_params, False)
+            query, int(lyr_sim)/100, features_weights, num_songs, requery_params, liked, disliked, False)
         output = [(str(round(sim, 3)).ljust(5, '0'), af)
                   for (sim, af) in output[:num_songs]]
         lyr = [str(round(sim, 3)).ljust(5, '0') for sim in lyr]
@@ -61,4 +63,6 @@ def search():
     #      ((30, {'track_name': 'Addiction', 'artist_name': 'Kanye West'}))], \
     #     [1, 2, 3]
 
-    return render_template(constants.RESULTS, name=constants.PROJECT_NAME, students=constants.NAMES, audiofeatures=constants.AUDIO_FEATURES, songs=songs, query=query, results=results)
+    return render_template(
+        constants.RESULTS, name=constants.PROJECT_NAME, students=constants.NAMES, audiofeatures=constants.AUDIO_FEATURES,
+         songs=songs, query=query, results=results, liked=liked, disliked=disliked)

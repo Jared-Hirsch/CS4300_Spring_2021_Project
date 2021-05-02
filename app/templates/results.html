@@ -33,6 +33,8 @@
           </div>
           <input type="hidden" name="lyrical_sim" min="0" max="100" id="lyr">
           <input type="hidden" name="duration" min="1" max="20">
+          <input type='hidden' name='liked' type='text'>
+          <input type='hidden' name='disliked' type='text'>
           {% for af in audiofeatures %}
           <tr>
             <td> <input type="hidden" name="{{ af[1] }}" min="0" max="100" id="{{ af[1] }}"> </td>
@@ -382,12 +384,22 @@
 
   function requerySong() {
     const urlParams = new URLSearchParams(window.location.search);
-    const alpha = 0.3;
-    const beta = 0.5;
-    const gamma = 0.2;
+    const beta = liked.length ? 0.5 : 0;
+    const gamma = disliked.length ? 0.2 : 0;
+    const alpha = 1 - beta - gamma; 
 
     let likedVector = computeVector(liked, audiofeatures);
     let dislikedVector = computeVector(disliked, audiofeatures);
+
+    document.results.liked.value = ''
+    liked.forEach(function (song, i){
+      document.results.liked.value = document.results.liked.value + song + ','
+    }); 
+
+    document.results.disliked.value = ''
+    disliked.forEach(function (song, i){
+      document.results.disliked.value = document.results.disliked.value + song + ','
+    });
 
     document.results.aucrq.value = currentQuery['acousticness'] * alpha + likedVector['auc'] * beta - dislikedVector['auc'] * gamma;
     document.results.dncrq.value = currentQuery['danceability'] * alpha + likedVector['dnc'] * beta - dislikedVector['dnc'] * gamma;
@@ -398,7 +410,8 @@
     document.results.spchrq.value = currentQuery['speechiness'] * alpha + likedVector['spch'] * beta - dislikedVector['spch'] * gamma;
     document.results.temprq.value = currentQuery['tempo'] * alpha + likedVector['temp'] * beta - dislikedVector['temp'] * gamma;
     document.results.valrq.value = currentQuery['valence'] * alpha + likedVector['val'] * beta - dislikedVector['val'] * gamma;
- 
+    
+    // console.log(document.results)
     document.getElementById('results').submit()
   }
 </script>
@@ -433,10 +446,12 @@
   }
   defaultParameters();
 
-  let liked = [];
-  let disliked = [];
+  let liked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ liked }}').textContent.replace(/'/g,'"') + '}')['features'];
+  let disliked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ disliked }}').textContent.replace(/'/g,'"') + '}')['features'];
   let currentQuery = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g,'"'));
   const audiofeatures = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ audiofeatures }}').textContent.replace(/'/g,'"') + '}')['features'];
+  console.log(liked);
+  console.log(disliked);
 </script>
 
 <script>

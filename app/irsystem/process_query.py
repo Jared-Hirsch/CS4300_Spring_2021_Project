@@ -10,11 +10,11 @@ class QueryProcessor:
         self.sim = SimilarSongs(self.stopwords, self.vars_dict, sp_path, gn_path, sp_username, sp_client_id, sp_client_secret, gn_token)
     
 
-    def process_query(self, query, lyrics_weight, features_weights, n_results, requery_params, is_uri):
+    def process_query(self, query, lyrics_weight, features_weights, n_results, requery_params, liked, disliked, is_uri):
         """
         @returns:
             dict of queried song's audio features
             List of tuples [(ith song's averaged similarity score, ith song's audio features) ...]
             List of ints [ith song's lyric similarity, ...]
         """
-        return self.sim.main(query, lyrics_weight, features_weights, n_results, requery_params, is_uri)
+        return self.sim.main(query, lyrics_weight, features_weights, n_results, requery_params, liked, disliked, is_uri)
