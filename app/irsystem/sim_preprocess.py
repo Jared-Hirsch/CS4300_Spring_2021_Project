@@ -155,6 +155,7 @@ def preprocess(dataset_path, df_name, lyrics_name, output_name, uri_colname = 'u
         ix_to_uri[i] = uri
         uri_to_ix[uri] = i
         uri_to_song[uri] = row.to_dict()
+        uri_to_song[uri]['artist_ids'] = uri_to_song[uri]['artist_ids'].split(",")
 
     inv_idx = make_inv_idx(lyrics_dict, remove_stopwords)
     idf_dict, word_to_ix, ix_to_word = compute_idf(inv_idx, n_docs, min_df_ratio, max_df_ratio)
