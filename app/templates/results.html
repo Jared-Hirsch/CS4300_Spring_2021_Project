@@ -20,7 +20,7 @@
         </span>
       </a>
       <span>
-        <form action="results" onsubmit="modifyParameters()" name='results'>
+        <form action="results" onsubmit="defaultParameters()" name='results' id='results'>
           <div class="input-container">
 
             <div class="autocomplete" style="display: inline-block;">
@@ -31,11 +31,12 @@
 
             <i class="fa fa-search" id="search-icon"></i>
           </div>
-          <input type="hidden" name="lyrical_sim" min="0" max="100" value="50" id="lyr">
-          <input type="hidden" name="duration" min="1" max="20" value="2">
+          <input type="hidden" name="lyrical_sim" min="0" max="100" id="lyr">
+          <input type="hidden" name="duration" min="1" max="20">
           {% for af in audiofeatures %}
           <tr>
-            <td> <input type="hidden" name="{{ af[1] }}" min="0" max="100" value="100" id="{{ af[1] }}"> </td>
+            <td> <input type="hidden" name="{{ af[1] }}" min="0" max="100" id="{{ af[1] }}"> </td>
+            <td> <input type="hidden" name="{{ af[1] }}rq" id="{{ af[1] }}rq"> </td>
           </tr>
           {% endfor %}
           <button type="submit" class="btn" id="btn-prim"> Create my Playlist </button>
@@ -62,7 +63,7 @@
 
       <div class="spotify-cta">
         <!-- TODO: fix id properties as currently there is conflict  -->
-        <button type="button" class="btn" id="btn-prim2"> Save on Spotify </button>
+        <button type="button" class="btn" id="btn-prim3"> Save on Spotify </button>
       </div>
     </form>
   </div>
@@ -96,12 +97,19 @@
         <tr>
           <th class="label">Song Title</th>
           <th class="label">Artist</th>
+          <th class="label">
+            <button onclick="requerySong()"> Requery Song </button>
+          </th>
         </tr>
 
         {% for res in results[1] %}
-        <tr class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot(this.id);" style="cursor:hand">
-          <td> {{ res[1]['track_name'] }} </td>
-          <td> {{ res[1]['artist_name'] }} </td>
+        <tr id="{{ res[1]['track_id'] }}">
+          <td class="song_row" id="{{ res[1]['track_id'] }} song title" onclick="open_spot(this.id.slice(0, -11));" style="cursor:hand"> {{ res[1]['track_name'] }} </td>
+          <td class="song_row" id="{{ res[1]['track_id'] }} artist" onclick="open_spot(this.id.slice(0, -7));" style="cursor:hand"> {{ res[1]['artist_name'] }} </td>
+          <td>
+            <button class="song_row" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}" data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand"> Like </button>
+            <button class="song_row" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}" data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand"> Dislike </button>
+          </td>
         </tr>
         {% endfor %}
       </table>
@@ -130,6 +138,9 @@
             <!-- <svg width="300" height="300" id="{{ res[1]['trackid'] }} bar graph"></svg> <br> -->
             <svg width="300" height="150"></svg> <br>
             <script>
+              // console.log(document.createRange().createContextualFragment('{{ res[1] }}').textContent)
+              // console.log(document.createRange().createContextualFragment('{{ res[1] }}').textContent.slice(20, 30))
+              // TODO: edge case of \' in words
               var sanitized_data =  JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g,'"'))['differences'];
               var formatted_data = []
               var feature_color_array = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence']
@@ -349,65 +360,139 @@
 </script>
 
 <script>
-  // Modify parameters passed to query using current values and Rocchio update rule
-  function modifyParameters() {
+  // Modify parameters passed to query using current values
+  function computeVector(feelingArray, attributeKeys) {
+    let feelingVector = {}; 
+    attributeKeys.forEach(function (vectorItem) {
+      feelingVector[vectorItem[1]] = 0
+    });
+    let feelingLength = feelingArray.length; 
+    if(feelingLength > 0) {
+      feelingArray.forEach(function (item, i) {
+        song_data = JSON.parse(document.getElementById(item + ' like').getAttribute('data-song').replace(/'/g,'"'));
+
+        attributeKeys.forEach(function (vectorItem) {
+          feelingVector[vectorItem[1]] = feelingVector[vectorItem[1]] + (song_data[vectorItem[0].toLowerCase()] / feelingLength);
+        })
+        console.log(feelingVector['dnc']); 
+      });
+    }
+    return feelingVector; 
+  }
+
+  function requerySong() {
     const urlParams = new URLSearchParams(window.location.search);
-    document.results.duration.value = urlParams.get('duration')
-    document.results.auc.value = urlParams.get('auc')
-    document.results.dnc.value = urlParams.get('duration')
-    document.results.enr.value = urlParams.get('enr')
-    document.results.ins.value = urlParams.get('ins')
-    document.results.liv.value = urlParams.get('liv')
-    document.results.loud.value = urlParams.get('loud')
-    document.results.spch.value = urlParams.get('spch')
-    document.results.temp.value = urlParams.get('temp')
-    document.results.val.value = urlParams.get('val')
+    const alpha = 0.5;
+    const beta = 0.4;
+    const gamma = 0.1;
+
+    let likedVector = computeVector(liked, audiofeatures);
+    let dislikedVector = computeVector(disliked, audiofeatures);
+
+    document.results.aucrq.value = currentQuery['acousticness'] * alpha + likedVector['auc'] * beta - dislikedVector['auc'] * gamma;
+    document.results.dncrq.value = currentQuery['danceability'] * alpha + likedVector['dnc'] * beta - dislikedVector['dnc'] * gamma;
+    document.results.enrrq.value = currentQuery['energy'] * alpha + likedVector['enr'] * beta - dislikedVector['enr'] * gamma;
+    document.results.insrq.value = currentQuery['instrumentalness'] * alpha + likedVector['ins'] * beta - dislikedVector['ins'] * gamma;
+    document.results.livrq.value = currentQuery['liveness'] * alpha + likedVector['liv'] * beta - dislikedVector['liv'] * gamma;
+    document.results.loudrq.value = currentQuery['loudness'] * alpha + likedVector['loud'] * beta - dislikedVector['loud'] * gamma;
+    document.results.spchrq.value = currentQuery['speechiness'] * alpha + likedVector['spch'] * beta - dislikedVector['spch'] * gamma;
+    document.results.temprq.value = currentQuery['tempo'] * alpha + likedVector['temp'] * beta - dislikedVector['temp'] * gamma;
+ 
+    document.getElementById('results').submit()
   }
 </script>
 
-<!-- <script>
-  // Bar Graphs
-  var svg = d3.selectAll("svg"),
-    margin = { top: 10, right: 10, bottom: 50, left: 20 },
-    width = svg.attr("width") - margin.left - margin.right,
-    height = svg.attr("height") - margin.top - margin.bottom;
+<script>
+  //reinitialize these values to allow requerying
+  function defaultParameters() {
+    const urlParams = new URLSearchParams(window.location.search);
 
-  svg.append("g")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-      "translate(" + margin.left + "," + margin.top + ")")
+    document.results.lyrical_sim.value = urlParams.get('lyrical_sim');
+    document.results.duration.value = urlParams.get('duration');
+    document.results.input_query.value = urlParams.get('input_query');
 
-  // TODO: figure out how to transpose data from html tags to here
-  // TODO: re-format data to be in this format
-  fafa = [{ 'attribute': 'acousticness', 'value': 0.8824, }, { 'attribute': 'danceability', 'value': 0.952 }, { 'attribute': 'energy', 'value': 0.885, },
-  { 'attribute': 'instrumentalness', 'value': 1.0, }, { 'attribute': 'liveness', 'value': 0.992, }, { 'attribute': 'speechiness', 'value': 0.999, },
-  { 'attribute': 'valence', 'value': 0.833 }]
+    document.results.auc.value = urlParams.get('auc');
+    document.results.aucrq.value = '';
+    document.results.dnc.value = urlParams.get('dnc');
+    document.results.dncrq.value = '';
+    document.results.enr.value = urlParams.get('enr');
+    document.results.enrrq.value = '';
+    document.results.ins.value = urlParams.get('ins');
+    document.results.insrq.value = '';
+    document.results.liv.value = urlParams.get('liv');
+    document.results.livrq.value = '';
+    document.results.loud.value = urlParams.get('loud');
+    document.results.loudrq.value = '';
+    document.results.spch.value = urlParams.get('spch');
+    document.results.spchrq.value = '';
+    document.results.temp.value = urlParams.get('temp');
+    document.results.temprq.value = '';
+    document.results.val.value = urlParams.get('val');
+    document.results.valrq.value = '';
+  }
+  defaultParameters();
 
-  var x = d3.scaleBand().range([0, width]).padding(0.2).domain(fafa.map(function (d) { return d.attribute }));
+  let liked = [];
+  let disliked = [];
+  let currentQuery = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g,'"'));
+  const audiofeatures = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ audiofeatures }}').textContent.replace(/'/g,'"') + '}')['features'];
+</script>
 
-  svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x))
-    .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end");
+<script>
+  // Modify feeling button to add to rocchio values 
+  function feelingButton(id) {
+    let track_id = id.split(" ")[0];
+    let feeling = id.split(" ")[1];
+    let likeButton = document.getElementById(track_id + ' like'); 
+    let dislikeButton = document.getElementById(track_id + ' dislike');
+    let enabled = (document.getElementById(id).getAttribute('data-enabled') === 'true'); 
+    if(feeling === 'like' && enabled){
+      dislikeButton.setAttribute('data-enabled', 'false');
+      let dislikeIndex = disliked.indexOf(track_id);
+      if (dislikeIndex >- 1){
+        disliked.splice(dislikeIndex, 1); 
+      }
 
-  var y = d3.scaleLinear().range([height, 0]).domain([0, 1])
+      likeButton.setAttribute('data-enabled', 'false');
+      let likedIndex = liked.indexOf(track_id); 
+      if (likedIndex > -1){
+        liked.splice(likedIndex, 1);
+      }
 
-  svg.append("g").call(d3.axisLeft(y));
+    } else if (feeling === 'like' && !enabled){
+      dislikeButton.setAttribute('data-enabled', 'false');
+      let dislikeIndex = disliked.indexOf(track_id);
+      if (dislikeIndex >- 1){
+        disliked.splice(dislikeIndex, 1); 
+      }
 
-  svg.selectAll("mybar")
-    .data(fafa)
-    .enter()
-    .append("rect")
-    .attr("x", function (d) { return x(d.attribute); })
-    .attr("y", function (d) { return y(d.value); })
-    .attr("width", x.bandwidth())
-    .attr("height", function (d) { return height - y(d.value); })
-    .attr("fill", "#b3ccec")
+      likeButton.setAttribute('data-enabled', 'true');
+      liked.push(track_id);
 
-</script> -->
+   } else if (feeling === 'dislike' && enabled){
+      likeButton.setAttribute('data-enabled', 'false');
+      let likedIndex = liked.indexOf(track_id); 
+      if (likedIndex > -1){
+        liked.splice(likedIndex, 1);
+      }
+
+      dislikeButton.setAttribute('data-enabled', 'false');
+      let dislikeIndex = disliked.indexOf(track_id);
+      if (dislikeIndex >- 1){
+        disliked.splice(dislikeIndex, 1); 
+      }
+
+    } else if (feeling === 'dislike' && !enabled){
+      likeButton.setAttribute('data-enabled', 'false');
+      let likedIndex = liked.indexOf(track_id); 
+      if (likedIndex > -1){
+        liked.splice(likedIndex, 1);
+      }
+
+      dislikeButton.setAttribute('data-enabled', 'true');
+      disliked.push(track_id);
+    }
+  }
+  </script>
 
 </html>

@@ -30,15 +30,20 @@ def search():
         if arg is None:
             return index([af[0]+" is missing"])
         features_weights.append(int(request.args.get(af[1]))/100)
-
-    print(query)
+    requery_params = []
+    for afrq in [af[1] + 'rq' for af in constants.AUDIO_FEATURES]:
+        arg = request.args.get(afrq, '')
+        if arg == '':
+            requery_params = None
+            break
+        requery_params.append(float(arg))
     if query == "" or query is None or lyr_sim is None or num_songs is None:
         return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing, num songs cannot be missing"])
 
     # Calculate results from the query
     try:
         query_af, output, lyr, af_scores = processor.process_query(
-            query, int(lyr_sim)/100, features_weights, num_songs, False)
+            query, int(lyr_sim)/100, features_weights, num_songs, False, requery_params)
         output = [(str(round(sim, 3)).ljust(5, '0'), af)
                   for (sim, af) in output[:num_songs]]
         lyr = [str(round(sim, 3)).ljust(5, '0') for sim in lyr]

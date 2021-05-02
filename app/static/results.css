@@ -158,6 +158,17 @@ th {
   cursor: pointer;
 }
 
+.song_item:hover {
+  transition-duration: 80ms;
+  color: #0075FF;
+  cursor: pointer;
+}
+
+.see_more:hover {
+  transition-duration: 80ms;
+  color: rgb(162, 0, 255);
+  cursor: pointer;
+}
 
 /* Form */
 .form {

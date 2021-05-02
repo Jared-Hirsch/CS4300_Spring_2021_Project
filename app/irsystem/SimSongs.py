@@ -229,13 +229,14 @@ class SimilarSongs:
 
 
     # def main(self, query, lyrics_weight, n_results, is_uri = False):
-    def main(self, query, lyrics_weight, af_weights, n_results, is_uri = False):
+    def main(self, query, lyrics_weight, af_weights, n_results, requery_params, is_uri = False):
         """
         @params: 
             query: String; either a song's URI or its artist and name (should be in the form of "artist | name")
             lyrics_weight: float, between [0.0, 1.0] representing weight given to lyrics when computing similarity
             n_results: int, number of results to be returned
             is_uri: Boolean, True if inputted query is a URI, False otherwise
+            requery_params: Optional[List]; a list of audio features to replace the audio features of the query if specified
 
         @returns:
             dict of queried song's audio features
@@ -253,13 +254,12 @@ class SimilarSongs:
             sp = Spotify_Client(self.sp_path)
         genius = Genius(self.gn_token, verbose = False, retries = 5)
 
-
         if not is_uri: #query is artist and name 
             query_artist, query_name = [x.strip().lower() for x in query.split("|")]
             query_name = strip_name(query_name)
             temp_start = time.time()
             query_uri = self.get_song_uri(query_artist, query_name, sp)
-            print(f"get_song_uri: {round(time.time() - temp_start, 4)}")
+            # print(f"get_song_uri: {round(time.time() - temp_start, 4)}")
             if not query_uri: #song not found on Spotify
                 raise ValueError("Invalid search: " + query)
         else: #query is uri
@@ -267,8 +267,14 @@ class SimilarSongs:
 
         temp_start = time.time()
 
-        query_af = self.get_audio_features(query_uri, sp) #get queried song's audio features
-        print(f"get_audio_features: {round(time.time() - temp_start, 4)}")
+        if requery_params is None:
+            print('if')
+            query_af = self.get_audio_features(query_uri, sp) # get queried song's audio features
+        else:
+            print('else')
+            query_af = requery_params
+        print(query_af)
+        # print(f"get_audio_features: {round(time.time() - temp_start, 4)}")
         
         if not query_af: #audio features missing
             raise ValueError("Song audio features not found on Spotify for " + query)
@@ -284,14 +290,14 @@ class SimilarSongs:
         else:
             temp_start = time.time()
             query_lyrics_cnt = self.retrieve_lyrics(query_artist, query_name, genius)
-            print(f"retrieve_lyrics: {round(time.time() - temp_start, 4)}")
+            # print(f"retrieve_lyrics: {round(time.time() - temp_start, 4)}")
             if not query_lyrics_cnt:
                 raise ValueError("Song lyrics not found on Genius for " + query)
 
             temp_start = time.time()
             # lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt)
             lyric_sim_scores = self.lyrics_sim(query_lyrics_cnt)
-            print(f"lyrics_sim: {round(time.time() - temp_start, 4)}")
+            # print(f"lyrics_sim: {round(time.time() - temp_start, 4)}")
 
 
         ##### AUDIO FEATURE SIMILARITY #####
@@ -310,7 +316,7 @@ class SimilarSongs:
                 #if consider lyrics, then only compute audio feature similarity for songs with nonzero lyric similarity
                 uri_subset = list(lyric_sim_scores.keys()) 
             af_sim_scores = self.af_sim(query_af, normalized_af_weights, uri_subset)
-            print(f"af_sim: {round(time.time() - temp_start, 4)}")
+            # print(f"af_sim: {round(time.time() - temp_start, 4)}")
   
         
         ##### OVERALL SIMILARITY #####
@@ -358,7 +364,7 @@ class SimilarSongs:
         else:
             sorted_af_sims = np.zeros(len(output))
         end = time.time()
-        print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
+        # print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
         return query_af, output, sorted_lyric_sims, sorted_af_sims
 
 def print_results(output, lyric_sims, indent = True):
@@ -401,15 +407,15 @@ if __name__ == "__main__":
     # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     # print_results(output, lyric_scores)
 
-    query = 'Frank Sinatra | Fly Me To the Moon' 
-    lyrics_weight = 1
-    n_results = 10
-    is_uri = False
-    af_weights = np.ones(len(AF_COLS))
-    af_weights[0] = 10
-    query_af, output, lyric_scores, af_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
-    print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
-    print_results(output, lyric_scores)
+    # query = 'Frank Sinatra | Fly Me To the Moon' 
+    # lyrics_weight = 1
+    # n_results = 10
+    # is_uri = False
+    # af_weights = np.ones(len(AF_COLS))
+    # af_weights[0] = 10
+    # query_af, output, lyric_scores, af_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
+    # print_results(output, lyric_scores)
 
 
     # query = 'Post Malone | rockstar'
