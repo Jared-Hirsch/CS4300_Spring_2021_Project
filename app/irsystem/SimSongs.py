@@ -332,14 +332,16 @@ class SimilarSongs:
         cnt = 0
         i = 0
         seen_uris = {query_uri}
-        seen_songs = {f"{query_artist.lower().strip()} | {query_name.lower().strip()}"}
+        seen_songs = {f"{query_artist} | {query_name}"}
 
         while i < len(ranked) and cnt < n_results:
             uri, score = ranked[i][0], ranked[i][1]
             song_data = self.vars_dict['uri_to_song'][uri]
+            artist = song_data['artist_name'].lower().strip().replace("'", "")
+            name = song_data['track_name'].lower().strip().replace("'", "")
             if ":" in uri:
                 uri = uri.split(":")[-1].strip()
-            result_song = f"{song_data['artist_name'].lower().strip()} | {song_data['track_name'].lower().strip()}"
+            result_song = f"{artist} | {name}"
             if uri not in seen_uris and result_song not in seen_songs:
                 # Calculate difference scores to be displayed on a graph
                 differences = {}
