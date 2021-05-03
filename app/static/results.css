@@ -191,6 +191,10 @@ th .tooltip .tooltiptext {
   right: 100%;
 }
 
+#thumbs {
+  padding-left: 6px;
+}
+
 #thumbs[data-enabled="false"] {
   background-color: #dddddd;
   border: none;
@@ -269,7 +273,7 @@ th .tooltip .tooltiptext {
   display: inline-block;
   width: 48px;
   height: 26px;
-  margin-bottom: -47px;
+  margin-bottom: -47px; /* no idea why i need this :/ */
 }
 
 .switch input { 
