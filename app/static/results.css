@@ -261,9 +261,6 @@ th .tooltip .tooltiptext {
 }
 .toggle .label {
   padding-right: 20;
-}
-
-.toggle .label, .toggle .switch {
   display: inline-block;
 }
 
@@ -272,6 +269,7 @@ th .tooltip .tooltiptext {
   display: inline-block;
   width: 48px;
   height: 26px;
+  margin-bottom: -47px;
 }
 
 .switch input { 
@@ -283,7 +281,7 @@ th .tooltip .tooltiptext {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: -23;
+  top: -22;
   left: 0;
   right: 0;
   bottom: 0;
