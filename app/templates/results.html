@@ -20,7 +20,7 @@
         </span>
       </a>
       <span>
-        <form action="results" onsubmit="defaultParameters()" name='results' id='results'>
+        <form action="results" name='results' id='results'>
           <div class="input-container">
 
             <div class="autocomplete" style="display: inline-block;">
@@ -122,7 +122,8 @@
       <table>
         <tr>
           <th class="label">Song</th>
-          <th class="label">Audio Similarity</th>
+          <th class='label'>Audio Feature Comparison</th>
+          <th class="label">Averaged Audio Similarity Score</th>
           <th class="label">Lyrical Similarity Score</th>
         </tr>
 
@@ -143,14 +144,26 @@
               // console.log(document.createRange().createContextualFragment('{{ res[1] }}').textContent)
               // console.log(document.createRange().createContextualFragment('{{ res[1] }}').textContent.slice(20, 30))
               // TODO: edge case of \' in words
-              var sanitized_data =  JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g,'"'))['differences'];
+              var sanitized_data =  JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g,'"'));
+              var sanitized_data_current_query = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g,'"'));
+
+              console.log(sanitized_data_current_query);
+              console.log(sanitized_data)
               var formatted_data = []
+              var current_query_data = []
               var feature_color_array = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence']
-              var color_map = {
-                'acousticness': '#DAF7A6', 'danceability': '#FFC300', 'energy': '#FF5733', 'instrumentalness': '#C70039', 'liveness': '#900C3F', 'speechiness': '#581845', 'valence': '#080808'
-              }
+              // var valid_keys = {
+              //   'acousticness': '#DAF7A6', 'danceability': '#FFC300', 'energy': '#FF5733', 'instrumentalness': '#C70039', 'liveness': '#900C3F', 'speechiness': '#581845', 'valence': '#080808'
+              // }
               for (const [key, value] of Object.entries(sanitized_data)) {
-                formatted_data.unshift({'attribute': key, 'value': value * value, 'color': color_map[key]})
+                if (key in feature_color_array) {
+                  formatted_data.unshift({'attribute': key, 'value': value * value, 'color': '#DAF7A6'});
+                }
+              }
+              for (const [key, value] of Object.entries(sanitized_data_current_query)) {
+                if (key in feature_color_array) {
+                  current_query_data.unshift({'attribute': key, 'value': value * value, 'color': '#581845'});
+                }
               }
             
               var svg = d3.selectAll("svg"),
@@ -190,9 +203,20 @@
                 .attr("height", function (d) { return height - y(d.value); })
                 .attr("fill", function (d) { return d.color; })
 
+              svg.selectAll("mybar2")
+                .data(current_query_data)
+                .enter()
+                .append("rect")
+                .attr("x", function (d) { return x(d.attribute); })
+                .attr("y", function (d) { return y(d.value); })
+                // .attr("transform", "translate(" + margin.left + ",0)")
+                .attr("width", x.bandwidth())
+                .attr("height", function (d) { return height - y(d.value); })
+                // .attr("fill", function (d) { return d.color; })
+
               </script>
-            <h3 style="display: inline-block; padding-right: 10;">Averaged Similarity Score: </h3>{{ res[0] }}
           </td>
+          <td> {{ res[0] }} </td>
 
           <td> {{ results[2][loop.index0] }} </td>
         </tr>
@@ -376,7 +400,6 @@
         attributeKeys.forEach(function (vectorItem) {
           feelingVector[vectorItem[1]] = feelingVector[vectorItem[1]] + (song_data[vectorItem[0].toLowerCase()] / feelingLength);
         })
-        console.log(feelingVector['dnc']); 
       });
     }
     return feelingVector; 
@@ -395,9 +418,15 @@
     liked.forEach(function (song, i){
       document.results.liked.value = document.results.liked.value + song + ','
     }); 
+    oldLiked.forEach(function (song, i){
+      document.results.liked.value = document.results.liked.value + song + ','
+    }); 
 
     document.results.disliked.value = ''
     disliked.forEach(function (song, i){
+      document.results.disliked.value = document.results.disliked.value + song + ','
+    });
+    oldDisliked.forEach(function (song, i){
       document.results.disliked.value = document.results.disliked.value + song + ','
     });
 
@@ -411,7 +440,6 @@
     document.results.temprq.value = currentQuery['tempo'] * alpha + likedVector['temp'] * beta - dislikedVector['temp'] * gamma;
     document.results.valrq.value = currentQuery['valence'] * alpha + likedVector['val'] * beta - dislikedVector['val'] * gamma;
     
-    // console.log(document.results)
     document.getElementById('results').submit()
   }
 </script>
@@ -462,6 +490,17 @@
     let likeButton = document.getElementById(track_id + ' like'); 
     let dislikeButton = document.getElementById(track_id + ' dislike');
     let enabled = (document.getElementById(id).getAttribute('data-enabled') === 'true'); 
+
+    let oldLikedIndex = oldLiked.indexOf(track_id);
+    if (oldLikedIndex > -1){
+      oldLiked.splice(oldLikedIndex, 1);
+    }
+
+    let oldDislikedIndex = oldDisliked.indexOf(track_id);
+    if (oldDislikedIndex > -1){
+      oldDisliked.splice(oldDislikedIndex, 1);
+    }
+
     if(feeling === 'like' && enabled){
       dislikeButton.setAttribute('data-enabled', 'false');
       let dislikeIndex = disliked.indexOf(track_id);

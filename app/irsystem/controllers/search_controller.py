@@ -50,6 +50,10 @@ def search():
 
     # Calculate results from the query
     try:
+        print('liked' + str(liked))
+        print('disliked' + str(disliked))
+        print('query' + str(query))
+        print('requery_params' + str(requery_params))
         query_af, output, lyr, af_scores = processor.process_query(
             query, int(lyr_sim)/100, features_weights, num_songs, requery_params, liked, disliked, False)
         output = [(str(round(sim, 3)).ljust(5, '0'), af)
