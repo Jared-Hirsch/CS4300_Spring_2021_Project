@@ -83,6 +83,10 @@ nav {
   text-align: center;
 }
 
+#requery-info {
+  margin-left: 10;
+}
+
 
 /* Modal */
 .modal {
@@ -168,6 +172,23 @@ th {
   transition-duration: 80ms;
   color: rgb(162, 0, 255);
   cursor: pointer;
+}
+
+th .tooltip .tooltiptext {  
+  /* Style in main.css */
+  /* Position the tooltip: */
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: 0%;
+}
+.nav-sides .tooltip .tooltiptext {  
+  /* Style in main.css */
+  /* Position the tooltip: */
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  right: 100%;
 }
 
 /* Form */

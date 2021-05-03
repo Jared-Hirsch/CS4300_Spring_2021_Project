@@ -46,7 +46,14 @@
 
         </form>
       </span>
-      <span class="nav-sides" id="nav-logo"> </span>
+      <span class="nav-sides">
+        <button type="button" class="btn" id="btn-sec"> Requery Song </button>
+        <div class="tooltip" style="cursor:default">
+          <div class="info-icon" id="requery-info">i</div>
+          <span class="tooltiptext">This is a blurb. This is a blurb. This is a blurb. This is a blurb. This is a
+            blurb. This is a blurb. </span>
+        </div>
+      </span>
     </div>
   </nav>
 
@@ -106,11 +113,15 @@
 
         {% for res in results[1] %}
         <tr id="{{ res[1]['track_id'] }}">
-          <td class="song_row" id="{{ res[1]['track_id'] }} song title" onclick="open_spot(this.id.slice(0, -11));" style="cursor:hand"> {{ res[1]['track_name'] }} </td>
-          <td class="song_row" id="{{ res[1]['track_id'] }} artist" onclick="open_spot(this.id.slice(0, -7));" style="cursor:hand"> {{ res[1]['artist_name'] }} </td>
+          <td class="song_row" id="{{ res[1]['track_id'] }} song title" onclick="open_spot(this.id.slice(0, -11));"
+            style="cursor:hand"> {{ res[1]['track_name'] }} </td>
+          <td class="song_row" id="{{ res[1]['track_id'] }} artist" onclick="open_spot(this.id.slice(0, -7));"
+            style="cursor:hand"> {{ res[1]['artist_name'] }} </td>
           <td>
-            <button class="song_row" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}" data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand"> Like </button>
-            <button class="song_row" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}" data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand"> Dislike </button>
+            <button class="song_row" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}" data-enabled="false"
+              onclick="feelingButton(this.id);" style="cursor:hand"> Like </button>
+            <button class="song_row" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}" data-enabled="false"
+              onclick="feelingButton(this.id);" style="cursor:hand"> Dislike </button>
           </td>
         </tr>
         {% endfor %}
@@ -122,7 +133,14 @@
       <table>
         <tr>
           <th class="label">Song</th>
-          <th class='label'>Audio Feature Comparison</th>
+          <th style="cursor:default">
+            <div class="tooltip">
+              <label class="label"> Audio Feature Comparison </label>
+              <div class="info-icon"> i </div>
+              <span class="tooltiptext"> This is a blurb. This is a blurb. This is a blurb. This is a blurb. This is a
+                blurb. This is a blurb. </span>
+            </div>
+          </th>
           <th class="label">Averaged Audio Similarity Score</th>
           <th class="label">Lyrical Similarity Score</th>
         </tr>
@@ -144,8 +162,8 @@
               // console.log(document.createRange().createContextualFragment('{{ res[1] }}').textContent)
               // console.log(document.createRange().createContextualFragment('{{ res[1] }}').textContent.slice(20, 30))
               // TODO: edge case of \' in words
-              var sanitized_data =  JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g,'"'));
-              var sanitized_data_current_query = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g,'"'));
+              var sanitized_data = JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g, '"'));
+              var sanitized_data_current_query = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g, '"'));
 
               console.log(sanitized_data_current_query);
               console.log(sanitized_data)
@@ -157,20 +175,20 @@
               // }
               for (const [key, value] of Object.entries(sanitized_data)) {
                 if (key in feature_color_array) {
-                  formatted_data.unshift({'attribute': key, 'value': value * value, 'color': '#DAF7A6'});
+                  formatted_data.unshift({ 'attribute': key, 'value': value * value, 'color': '#DAF7A6' });
                 }
               }
               for (const [key, value] of Object.entries(sanitized_data_current_query)) {
                 if (key in feature_color_array) {
-                  current_query_data.unshift({'attribute': key, 'value': value * value, 'color': '#581845'});
+                  current_query_data.unshift({ 'attribute': key, 'value': value * value, 'color': '#581845' });
                 }
               }
-            
+
               var svg = d3.selectAll("svg"),
                 margin = { top: 10, right: 0, bottom: 60, left: 40 },
                 width = svg.attr("width") - margin.left - margin.right,
                 height = svg.attr("height") - margin.top - margin.bottom;
-              
+
               svg.append("g")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
@@ -214,7 +232,7 @@
                 .attr("height", function (d) { return height - y(d.value); })
                 // .attr("fill", function (d) { return d.color; })
 
-              </script>
+            </script>
           </td>
           <td> {{ res[0] }} </td>
 
@@ -388,45 +406,45 @@
 <script>
   // Modify parameters passed to query using current values
   function computeVector(feelingArray, attributeKeys) {
-    let feelingVector = {}; 
+    let feelingVector = {};
     attributeKeys.forEach(function (vectorItem) {
       feelingVector[vectorItem[1]] = 0
     });
-    let feelingLength = feelingArray.length; 
-    if(feelingLength > 0) {
+    let feelingLength = feelingArray.length;
+    if (feelingLength > 0) {
       feelingArray.forEach(function (item, i) {
-        song_data = JSON.parse(document.getElementById(item + ' like').getAttribute('data-song').replace(/'/g,'"'));
+        song_data = JSON.parse(document.getElementById(item + ' like').getAttribute('data-song').replace(/'/g, '"'));
 
         attributeKeys.forEach(function (vectorItem) {
           feelingVector[vectorItem[1]] = feelingVector[vectorItem[1]] + (song_data[vectorItem[0].toLowerCase()] / feelingLength);
         })
       });
     }
-    return feelingVector; 
+    return feelingVector;
   }
 
   function requerySong() {
     const urlParams = new URLSearchParams(window.location.search);
     const beta = liked.length ? 0.5 : 0;
     const gamma = disliked.length ? 0.2 : 0;
-    const alpha = 1 - beta - gamma; 
+    const alpha = 1 - beta - gamma;
 
     let likedVector = computeVector(liked, audiofeatures);
     let dislikedVector = computeVector(disliked, audiofeatures);
 
     document.results.liked.value = ''
-    liked.forEach(function (song, i){
+    liked.forEach(function (song, i) {
       document.results.liked.value = document.results.liked.value + song + ','
-    }); 
-    oldLiked.forEach(function (song, i){
+    });
+    oldLiked.forEach(function (song, i) {
       document.results.liked.value = document.results.liked.value + song + ','
-    }); 
+    });
 
     document.results.disliked.value = ''
-    disliked.forEach(function (song, i){
+    disliked.forEach(function (song, i) {
       document.results.disliked.value = document.results.disliked.value + song + ','
     });
-    oldDisliked.forEach(function (song, i){
+    oldDisliked.forEach(function (song, i) {
       document.results.disliked.value = document.results.disliked.value + song + ','
     });
 
@@ -439,7 +457,7 @@
     document.results.spchrq.value = currentQuery['speechiness'] * alpha + likedVector['spch'] * beta - dislikedVector['spch'] * gamma;
     document.results.temprq.value = currentQuery['tempo'] * alpha + likedVector['temp'] * beta - dislikedVector['temp'] * gamma;
     document.results.valrq.value = currentQuery['valence'] * alpha + likedVector['val'] * beta - dislikedVector['val'] * gamma;
-    
+
     document.getElementById('results').submit()
   }
 </script>
@@ -474,10 +492,10 @@
   }
   defaultParameters();
 
-  let liked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ liked }}').textContent.replace(/'/g,'"') + '}')['features'];
-  let disliked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ disliked }}').textContent.replace(/'/g,'"') + '}')['features'];
-  let currentQuery = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g,'"'));
-  const audiofeatures = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ audiofeatures }}').textContent.replace(/'/g,'"') + '}')['features'];
+  let liked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ liked }}').textContent.replace(/'/g, '"') + '}')['features'];
+  let disliked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ disliked }}').textContent.replace(/'/g, '"') + '}')['features'];
+  let currentQuery = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g, '"'));
+  const audiofeatures = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ audiofeatures }}').textContent.replace(/'/g, '"') + '}')['features'];
   console.log(liked);
   console.log(disliked);
 </script>
@@ -487,60 +505,60 @@
   function feelingButton(id) {
     let track_id = id.split(" ")[0];
     let feeling = id.split(" ")[1];
-    let likeButton = document.getElementById(track_id + ' like'); 
+    let likeButton = document.getElementById(track_id + ' like');
     let dislikeButton = document.getElementById(track_id + ' dislike');
-    let enabled = (document.getElementById(id).getAttribute('data-enabled') === 'true'); 
+    let enabled = (document.getElementById(id).getAttribute('data-enabled') === 'true');
 
     let oldLikedIndex = oldLiked.indexOf(track_id);
-    if (oldLikedIndex > -1){
+    if (oldLikedIndex > -1) {
       oldLiked.splice(oldLikedIndex, 1);
     }
 
     let oldDislikedIndex = oldDisliked.indexOf(track_id);
-    if (oldDislikedIndex > -1){
+    if (oldDislikedIndex > -1) {
       oldDisliked.splice(oldDislikedIndex, 1);
     }
 
-    if(feeling === 'like' && enabled){
+    if (feeling === 'like' && enabled) {
       dislikeButton.setAttribute('data-enabled', 'false');
       let dislikeIndex = disliked.indexOf(track_id);
-      if (dislikeIndex >- 1){
-        disliked.splice(dislikeIndex, 1); 
+      if (dislikeIndex > - 1) {
+        disliked.splice(dislikeIndex, 1);
       }
 
       likeButton.setAttribute('data-enabled', 'false');
-      let likedIndex = liked.indexOf(track_id); 
-      if (likedIndex > -1){
+      let likedIndex = liked.indexOf(track_id);
+      if (likedIndex > -1) {
         liked.splice(likedIndex, 1);
       }
 
-    } else if (feeling === 'like' && !enabled){
+    } else if (feeling === 'like' && !enabled) {
       dislikeButton.setAttribute('data-enabled', 'false');
       let dislikeIndex = disliked.indexOf(track_id);
-      if (dislikeIndex >- 1){
-        disliked.splice(dislikeIndex, 1); 
+      if (dislikeIndex > - 1) {
+        disliked.splice(dislikeIndex, 1);
       }
 
       likeButton.setAttribute('data-enabled', 'true');
       liked.push(track_id);
 
-   } else if (feeling === 'dislike' && enabled){
+    } else if (feeling === 'dislike' && enabled) {
       likeButton.setAttribute('data-enabled', 'false');
-      let likedIndex = liked.indexOf(track_id); 
-      if (likedIndex > -1){
+      let likedIndex = liked.indexOf(track_id);
+      if (likedIndex > -1) {
         liked.splice(likedIndex, 1);
       }
 
       dislikeButton.setAttribute('data-enabled', 'false');
       let dislikeIndex = disliked.indexOf(track_id);
-      if (dislikeIndex >- 1){
-        disliked.splice(dislikeIndex, 1); 
+      if (dislikeIndex > - 1) {
+        disliked.splice(dislikeIndex, 1);
       }
 
-    } else if (feeling === 'dislike' && !enabled){
+    } else if (feeling === 'dislike' && !enabled) {
       likeButton.setAttribute('data-enabled', 'false');
-      let likedIndex = liked.indexOf(track_id); 
-      if (likedIndex > -1){
+      let likedIndex = liked.indexOf(track_id);
+      if (likedIndex > -1) {
         liked.splice(likedIndex, 1);
       }
 
@@ -548,6 +566,6 @@
       disliked.push(track_id);
     }
   }
-  </script>
+</script>
 
 </html>
