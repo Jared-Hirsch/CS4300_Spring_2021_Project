@@ -400,10 +400,14 @@ class SimilarSongs:
         output = sorted(output, key = lambda x: (-x[0], x[1]))
 
         if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
+            if liked:
+                lyric_sim_scores.update(liked_lyric_sim_scores)
             sorted_lyric_sims = [lyric_sim_scores[d['track_id']] for _,d in output]
         else:
             sorted_lyric_sims = np.zeros(len(output))
         if lyrics_weight != 1:
+            if liked:
+                af_sim_scores.update(liked_af_sim_scores)
             sorted_af_sims = [af_sim_scores[d['track_id']] for _,d in output]
         else:
             sorted_af_sims = np.zeros(len(output))
