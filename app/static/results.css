@@ -191,6 +191,17 @@ th .tooltip .tooltiptext {
   right: 100%;
 }
 
+#thumbs[data-enabled="false"] {
+  background-color: #dddddd;
+  border: none;
+}
+
+#thumbs[data-enabled="true"] {
+  background-color: #e46868;
+  border: 1px solid #2c2c2c;
+}
+
+
 /* Form */
 .form {
   text-align: center;
