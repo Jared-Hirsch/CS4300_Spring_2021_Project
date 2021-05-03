@@ -70,17 +70,28 @@ footer {
   width: 80;
 }
 
-select {
-  padding: 10 20 10 10;
-  border-radius: 5;
-  background-color: #f4f4f4;
-  color: #4d4d4d;
-  border: none;
-  font-size: 16;
+.adv-section input[type=number] {
+  padding: 10px;
+  margin-left: 5px;
+  border-color: #ececec;
+  border-style: solid;
+  border-radius: 5px;
 }
 
-select:focus {
+.adv-section input[type=number]:focus {
   outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .adv-section {

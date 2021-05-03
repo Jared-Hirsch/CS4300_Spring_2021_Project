@@ -197,12 +197,10 @@ th .tooltip .tooltiptext {
 
 #thumbs[data-enabled="false"] {
   background-color: #dddddd;
-  border: none;
 }
 
 #thumbs[data-enabled="true"] {
-  background-color: #e46868;
-  border: 1px solid #2c2c2c;
+  background-color: #f71d53;
 }
 
 
