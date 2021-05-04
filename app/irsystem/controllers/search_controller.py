@@ -21,15 +21,20 @@ def index(errors=[]):
 
 @irsystem.route('/results', methods=['GET'])
 def search():
+    # Get required inputs
     query = request.args.get(constants.INPUT_QUERY)
     lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY) 
     num_songs = int(request.args.get(constants.NUM_SONGS))
+
+    # Get weights for each audio feature
     features_weights = []
     for af in constants.AUDIO_FEATURES:
         arg = request.args.get(af[1])
         if arg is None:
             return index([af[0]+" is missing"])
         features_weights.append(int(request.args.get(af[1]))/100)
+
+    # Get requery parameters if available
     requery_params = {}
     for af in constants.AUDIO_FEATURES:
         arg = request.args.get(af[1] + 'rq', '')
@@ -45,8 +50,14 @@ def search():
         disliked = [d for d in request.args.get(constants.DISLIKED).split(',') if d]
     else:
         disliked = []
-    if query == "" or query is None or lyr_sim is None or num_songs is None:
-        return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing, num songs cannot be missing"])
+
+    # Check for Errors in input
+    if query == "" or query is None:
+        return index(["Select a song to search on"])
+    if lyr_sim is None:
+        return index(["Must include audio and lyrical similarity value"])
+    if num_songs is None or num_songs > 20 or num_songs < 1:
+        return index(["Choose a number of songs to be returned between 1 and 20"])
 
     # Calculate results from the query
     try:

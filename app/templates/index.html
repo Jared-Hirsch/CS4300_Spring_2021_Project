@@ -30,6 +30,15 @@
         <h1 class="heading"> simplay </h1>
       </div>
 
+      <!--Display Errors if any -->
+      {% if errors != [] %}
+      <div class="error-container">
+        {% for err in errors %}
+        <h4 class="error"> {{ err }} </h4>
+        {% endfor %}
+      </div>
+      {% endif %}
+
       <!-- Tab links -->
       <div class="tab">
         <button class="tablinks active" onclick="openCity(event, 'basic')">Basic</button>
