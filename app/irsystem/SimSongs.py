@@ -45,6 +45,9 @@ class SimilarSongs:
             self.sp_client_id = sp_client_id
             self.sp_client_secret = sp_client_secret
             self.gn_token = gn_token
+        
+        self.last_uri = None
+        self.last_lyrics = None
     
     def extract_annotations(self, song_id, genius):
         ants = genius.song_annotations(song_id)
@@ -57,7 +60,7 @@ class SimilarSongs:
                 out.append(a[0])
         return " ".join(out).lower()
 
-    def retrieve_lyrics(self, query_artist, query_name, genius):
+    def retrieve_lyrics(self, query_artist, query_name, query_uri, genius):
         """
         @params: 
             query_artist: String
@@ -70,6 +73,8 @@ class SimilarSongs:
         - queries Genius API for lyrics to specified song. If found, lyrics are tokenized and put into Counter;
         otherwise, None is returned
         """
+        if query_uri == self.last_uri:
+            return self.last_lyrics
         artist_obj = genius.search_artist(query_artist, max_songs=0)
         if artist_obj is None:
             return
@@ -269,7 +274,8 @@ class SimilarSongs:
         start = time.time()
         print(liked)
         print(disliked)
-
+        print(self.last_lyrics)
+        print(self.last_uri)
         #re-initialize both API clients each time function is run to avoid timeout errors
         if self.sp_path is None:
             sp = Spotify_Client(self.sp_username, self.sp_client_id, self.sp_client_secret)
@@ -309,7 +315,7 @@ class SimilarSongs:
         ##### LYRICAL SIMILARITY #####
         if lyrics_weight != 0: 
             temp_start = time.time()
-            query_lyrics_cnt = self.retrieve_lyrics(query_artist, query_name, genius)
+            query_lyrics_cnt = self.retrieve_lyrics(query_artist, query_name, query_uri, genius)
             # print(f"retrieve_lyrics: {round(time.time() - temp_start, 4)}")
             if not query_lyrics_cnt:
                 raise ValueError("Song lyrics not found on Genius for " + query)
@@ -361,7 +367,7 @@ class SimilarSongs:
         #TODO: handle different versions of same song in output (ex: "I'll Never Love Again - Film Version", "I'll Never Love Again - Extended Version")
         ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0])) #sort songs in descending order of similarity scores            
         output = []
-        cnt = 0 if not liked else len(liked)
+        cnt = len(liked)
         i = 0
         seen_uris = {query_uri}    
         seen_songs = {self.convert_to_output_format(query_artist, query_name)}
@@ -411,6 +417,11 @@ class SimilarSongs:
             sorted_af_sims = [af_sim_scores[d['track_id']] for _,d in output]
         else:
             sorted_af_sims = np.zeros(len(output))
+        
+        if query_uri != self.last_uri:
+            self.last_uri = query_uri
+            self.last_lyrics = None if lyrics_weight == 0 else query_lyrics_cnt
+
         end = time.time()
         # print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
         return query_af, output, sorted_lyric_sims, sorted_af_sims
