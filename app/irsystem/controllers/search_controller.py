@@ -71,7 +71,7 @@ def search():
         lyr = [str(round(sim, 3)).ljust(5, '0') for sim in lyr]
         af_scores = [str(round(sim, 3)).ljust(5, '0') for sim in af_scores]
 
-        results = query_af, output, lyr
+        results = query_af, output, lyr, af_scores
     except ValueError as err:
         print(str(err))
         return index([str(err)])
