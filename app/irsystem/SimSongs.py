@@ -73,7 +73,7 @@ class SimilarSongs:
         - queries Genius API for lyrics to specified song. If found, lyrics are tokenized and put into Counter;
         otherwise, None is returned
         """
-        if query_uri == self.last_uri:
+        if query_uri == self.last_uri and self.last_lyrics:
             return self.last_lyrics
         artist_obj = genius.search_artist(query_artist, max_songs=0)
         if artist_obj is None:
@@ -365,7 +365,7 @@ class SimilarSongs:
                 liked_averaged_scores = {k:(liked_af_sim_scores[k] * af_weight) + (liked_lyric_sim_scores[k] * lyrics_weight) for k in liked_lyric_sim_scores}
 
         #TODO: handle different versions of same song in output (ex: "I'll Never Love Again - Film Version", "I'll Never Love Again - Extended Version")
-        ranked = sorted(averaged_scores.items(), key = lambda x: (-x[1], x[0])) #sort songs in descending order of similarity scores            
+        ranked = sorted(averaged_scores.items(), key = lambda x: -x[1]) #sort songs in descending order of similarity scores            
         output = []
         cnt = len(liked)
         i = 0
@@ -403,7 +403,8 @@ class SimilarSongs:
             for liked_uri, liked_score in liked_averaged_scores.items():
                 output.append((liked_score, self.vars_dict['uri_to_song'][liked_uri]))
 
-        output = sorted(output, key = lambda x: (-x[0], x[1]))
+        print(output)
+        output = sorted(output, key = lambda x: -x[0])
 
         if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
             if liked:
@@ -418,9 +419,8 @@ class SimilarSongs:
         else:
             sorted_af_sims = np.zeros(len(output))
         
-        if query_uri != self.last_uri:
-            self.last_uri = query_uri
-            self.last_lyrics = None if lyrics_weight == 0 else query_lyrics_cnt
+        self.last_uri = query_uri
+        self.last_lyrics = None if lyrics_weight == 0 else query_lyrics_cnt
 
         end = time.time()
         # print(f"{n_results} results retrieved in {round(end-start, 2)} seconds")
