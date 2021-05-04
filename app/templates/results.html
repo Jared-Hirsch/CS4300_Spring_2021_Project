@@ -116,11 +116,11 @@
           <td class="song_row" id="{{ res[1]['track_id'] }} artist" onclick="open_spot(this.id.slice(0, -7));"
             style="cursor:hand"> {{ res[1]['artist_name'] }} </td>
           <td>
-            <span class="song_row" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}" data-enabled="false"
+            <span class="song_row, thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}" data-enabled="false"
               onclick="feelingButton(this.id);" style="cursor:hand; color: #ddd">
-              <i class="fa fa-thumbs-up" id="thumbs"></i>
+              <i class="fa fa-thumbs-up"></i>
             </span>
-            <span class="song_row" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}" data-enabled="false"
+            <span class="song_row, thumbs" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}" data-enabled="false"
               onclick="feelingButton(this.id);" style="cursor:hand; color: #ddd">
               <i class="fa fa-thumbs-down"></i>
             </span>
@@ -139,8 +139,7 @@
             <div class="tooltip">
               <label class="label"> Audio Feature Comparison </label>
               <div class="info-icon"> i </div>
-              <span class="tooltiptext"> This is a blurb. This is a blurb. This is a blurb. This is a blurb. This is a
-                blurb. This is a blurb. </span>
+              <span class="tooltiptext"> Your query is presented on the right in purple, and the according result on the left </span>
             </div>
           </th>
           <th class="label">Averaged Audio Similarity Score</th>
@@ -150,7 +149,7 @@
           var track_id_data_color_array = [
             '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#46f0f0', '#f032e6', '#bcf60c',
             '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000',
-            '#ffd8b1', '#000075', '#808080', '#ffffff'
+            '#ffd8b1', '#000075', '#808080'
           ]
           var feature_array = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence']
           var sanitized_data_current_query = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g, '"'));
@@ -165,7 +164,7 @@
             </p>
           </td>
 
-          <td>
+          <td id="svgcontainer{{ res[1]['track_id'] }}">
             <svg width="300" height="150" id="svg{{ res[1]['track_id'] }}"></svg> <br>
             <script>
               var sanitized_data = JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g, '"'));
@@ -183,7 +182,7 @@
               var current_query_data = []
               for (const [key, value] of Object.entries(sanitized_data_current_query)) {
                     if (feature_array.includes(key)) {
-                      current_query_data.unshift({ 'attribute': key, 'value': value * value, 'color': '#911eb4' });
+                      current_query_data.unshift({ 'attribute': key, 'value': value, 'color': '#911eb4' });
                     }
                   }
 
@@ -199,10 +198,16 @@
                 .attr("transform",
                   "translate(" + margin.left + "," + margin.top + ")")
 
+              // tooltip = svg.append('div')
+              //   .attr('class', 'tooltiptext')
+              //   .attr('id', 'tooltip' + track_id)
+              //   .attr("width", width + margin.left + margin.right + 50)
+              //   .attr("height", height + margin.top + margin.bottom + 50)
+
               var x = d3.scaleBand().range([0, width]).padding(0.2).domain(track_id_data.map(function (d) { return d.attribute }));
 
               var y = d3.scaleLinear().range([height, 0]).domain([0, 1]);
-
+              
               svg.selectAll("mybar2")
                 .data(current_query_data)
                 .enter()
@@ -212,6 +217,14 @@
                 .attr("width", x.bandwidth() / 2)
                 .attr("height", function (d) { return height - y(d.value); })
                 .attr("fill", function (d) { return d.color; })
+                // .on("mouseover", function(d) {
+                //     d3.select('#tooltip' + track_id).append("text")
+                //             .text(d.value)
+                // })
+                // .on("mouseout", function(d) {
+                //         svg.select('#tooltip' + track_id).remove();
+                // });
+
 
               svg.selectAll("mybar")
                 .data(track_id_data)
@@ -222,6 +235,14 @@
                 .attr("width", x.bandwidth() / 2)
                 .attr("height", function (d) { return height - y(d.value); })
                 .attr("fill", function (d) { return d.color; })
+                // .on("mouseover", function(d) {
+                //     d3.select('#tooltip' + track_id).append("text")
+                //             .text(d.value)
+                // })
+                // .on("mouseout", function(d) {
+                //         svg.select('#tooltip' + track_id).remove();
+                // });
+
 
               svg.append("g")
                 .attr("transform", "translate(" + 0 + "," + height + ")")
