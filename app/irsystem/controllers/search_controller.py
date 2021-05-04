@@ -24,29 +24,38 @@ def search():
     query = request.args.get(constants.INPUT_QUERY)
     lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY) 
     num_songs = int(request.args.get(constants.NUM_SONGS))
+
     features_weights = []
+    requery_params = {}
     for af in constants.AUDIO_FEATURES:
+        # Get audio features from request
         arg = request.args.get(af[1])
         if arg is None:
             return index([af[0]+" is missing"])
         features_weights.append(int(request.args.get(af[1]))/100)
-    requery_params = {}
-    for af in constants.AUDIO_FEATURES:
+
+        # Get requerying parameters from request if they exist
         arg = request.args.get(af[1] + 'rq', '')
         if arg == '':
-            requery_params = None
             break
         requery_params[af[0].lower()] = (float(arg))
+
     if request.args.get(constants.LIKED):
         liked = [l for l in request.args.get(constants.LIKED).split(',') if l]
     else:
         liked = []
+
     if request.args.get(constants.DISLIKED):
         disliked = [d for d in request.args.get(constants.DISLIKED).split(',') if d]
     else:
         disliked = []
-    if query == "" or query is None or lyr_sim is None or num_songs is None:
-        return index(["Query cannot be empty empty, audio similarity cannot be missing, lyrical similarity cannot be missing, num songs cannot be missing"])
+
+    if query == "" or query is None:
+        return index(["Select a song to search on"])
+    if lyr_sim is None:
+        return index(["Must include audio and lyrical similarity value"])
+    if num_songs is None or num_songs > 20 or num_songs < 1:
+        return index(["Choose a number of songs to be returned between 1 and 20"])
 
     # Calculate results from the query
     try:
