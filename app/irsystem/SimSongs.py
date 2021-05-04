@@ -272,10 +272,10 @@ class SimilarSongs:
         - main function user will interact with
         """
         start = time.time()
-        print(liked)
-        print(disliked)
-        print(self.last_lyrics)
-        print(self.last_uri)
+        # print(liked)
+        # print(disliked)
+        # print(self.last_lyrics)
+        # print(self.last_uri)
         #re-initialize both API clients each time function is run to avoid timeout errors
         if self.sp_path is None:
             sp = Spotify_Client(self.sp_username, self.sp_client_id, self.sp_client_secret)
@@ -403,7 +403,6 @@ class SimilarSongs:
             for liked_uri, liked_score in liked_averaged_scores.items():
                 output.append((liked_score, self.vars_dict['uri_to_song'][liked_uri]))
 
-        print(output)
         output = sorted(output, key = lambda x: -x[0])
 
         if lyrics_weight != 0: #if considering lyrics, then sort lyrical similarity scores in same order as output
