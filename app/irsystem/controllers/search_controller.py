@@ -26,14 +26,15 @@ def search():
     num_songs = int(request.args.get(constants.NUM_SONGS))
 
     features_weights = []
-    requery_params = {}
     for af in constants.AUDIO_FEATURES:
         # Get audio features from request
         arg = request.args.get(af[1])
         if arg is None:
             return index([af[0]+" is missing"])
         features_weights.append(int(request.args.get(af[1]))/100)
-
+    
+    requery_params = {}
+    for af in constants.AUDIO_FEATURES:
         # Get requerying parameters from request if they exist
         arg = request.args.get(af[1] + 'rq', '')
         if arg == '':
