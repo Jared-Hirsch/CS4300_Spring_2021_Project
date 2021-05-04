@@ -154,7 +154,22 @@ table td {
   backdrop-filter: blur(30px);
 }
 
-.error {
+/* .error {
   font-style: italic;
   color: red;
+} */
+
+.error-container {
+  text-align: center;
+  width: 100%;
+}
+
+.error {
+
+  font-weight: normal;
+  /* width: fit-content; */
+  background-color: rgba(163, 0, 0, 0.1);
+  border: 1px solid rgb(163, 0, 0);
+  color: rgb(163, 0, 0);
+  padding: 10px;
 }
