@@ -156,19 +156,18 @@ th {
   padding: 12 0 12 0;
 }
 
-.song_row:hover {
-  transition-duration: 80ms;
-  color: #0075FF;
-  cursor: pointer;
-}
 
-.song_artist {
+.song-artist {
   color: #696969; 
   font-size: 14; 
   margin-top: 5;
 }
 
-.song_artist:hover {
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
   transition-duration: 80ms;
   color: #0075FF;
   cursor: pointer;

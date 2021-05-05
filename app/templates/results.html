@@ -90,8 +90,14 @@
           <span style="padding-right: 10px;">
             <img src="{{ results[0]['img'] }}" style="width: 80px;"></span>
           <span>
-            <h2>{{ results[0]['track_name'] }}</h2>
-            <h3>by {{ results[0]['artist_name'] }} </h3>
+            <h2 class="link" id="{{ results[0]['track_id'] }} song title"
+              onclick="open_spot_track(this.id.slice(0, -11));">
+              {{ results[0]['track_name'] }}
+            </h2>
+            <h3 class="link" id="{{ results[0]['artist_id'] }} artist"
+              onclick="open_spot_artist(this.id.slice(0, -7));">
+              by {{ results[0]['artist_name'] }}
+            </h3>
           </span>
         </div>
 
@@ -126,22 +132,22 @@
 
         {% for res in results[1] %}
         <tr id="{{ res[1]['track_id'] }}">
-          <td class="song_row" id="{{ res[1]['track_id'] }} song title"
-            onclick="open_spot_track(this.id.slice(0, -11));" style="cursor:hand; align-items: center; display: flex;">
+          <td class="link" id="{{ res[1]['track_id'] }} song title" onclick="open_spot_track(this.id.slice(0, -11));"
+            style="align-items: center; display: flex;">
             <img src="{{ res[1]['img'] }}" style="width: 40px; padding-right: 10px;">
             <span>{{ res[1]['track_name'] }}</span>
           </td>
 
-          <td class="song_row" id="{{ res[1]['artist_ids'][0] }} artist"
-            onclick="open_spot_artist(this.id.slice(0, -7));" style="cursor:hand;"> {{ res[1]['artist_name'] }} </td>
+          <td class="link" id="{{ res[1]['artist_ids'][0] }} artist" onclick="open_spot_artist(this.id.slice(0, -7));">
+            {{ res[1]['artist_name'] }} </td>
           <td>
 
-            <span class="so ng_row thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}"
-              data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand;">
+            <span class="thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}" data-enabled="false"
+              onclick="feelingButton(this.id);" style="cursor:hand;">
               <i class="fa fa-thumbs-up fa-lg"></i>
             </span>
-            <span class="song_row thumbs" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}"
-              data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand;">
+            <span class="thumbs" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}" data-enabled="false"
+              onclick="feelingButton(this.id);" style="cursor:hand;">
               <i class="fa fa-thumbs-down fa-lg"></i>
             </span>
           </td>
@@ -181,9 +187,9 @@
         <tr>
           <td onclick="open_spot_track(this.id);" id="{{ res[1]['track_id'] }}" style="cursor:pointer">
             <img src="{{ res[1]['img'] }}" style="width:80px; padding-bottom:10px;">
-            <div class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot_track(this.id);">{{
+            <div class="link" id="{{ res[1]['track_id'] }}" onclick="open_spot_track(this.id);">{{
               res[1]['track_name'] }}</div>
-            <p class="song_artist" id="{{ res[1]['artist_ids'][0] }}" onclick="open_spot_artist(this.id);">
+            <p class="link song-artist" id="{{ res[1]['artist_ids'][0] }}" onclick="open_spot_artist(this.id);">
               {{ res[1]['artist_name'] }}
             </p>
           </td>
