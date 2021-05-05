@@ -593,15 +593,15 @@
 
   let oldLiked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ liked }}').textContent.replace(/'/g, '"') + '}')['features'];
   let oldDisliked = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ disliked }}').textContent.replace(/'/g, '"') + '}')['features'];
-  let liked = []
-  let disliked = []
-  oldLiked.forEach(function (song, i) {
+  let liked = [];
+  let disliked = [];
+  [...oldLiked].forEach(function (song, i) {
     var o = document.getElementById(song + " like");
     if (o) {
       feelingButton(o.id);
     }
   });
-  oldDisliked.forEach(function (song, i) {
+  [...oldDisliked].forEach(function (song, i) {
     var o = document.getElementById(song + " dislike");
     if (o) {
       feelingButton(o.id);
@@ -609,7 +609,6 @@
   })
   let currentQuery = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g, '"'));
   const audiofeatures = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ audiofeatures }}').textContent.replace(/'/g, '"') + '}')['features'];
-
 </script>
 
 </html>
