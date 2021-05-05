@@ -16,8 +16,8 @@ from sp_client import Spotify_Client
 import string
 import os
 # from app.irsystem.utils import strip_name, match
-from app.irsystem.utils import *
-# from utils import *
+# from app.irsystem.utils import *
+from utils import *
 
 
 punct = set(string.punctuation)
@@ -208,7 +208,7 @@ class SimilarSongs:
             if img['height'] == 300:
                 af['img'] = img['url']
                 break
-        af['artist_id'] = track_data['artists'][0]['id']
+        af['artist_id'] = track_info['artists'][0]['id']
         return af
 
     def af_sim(self, query_af, weights, uris = []):
