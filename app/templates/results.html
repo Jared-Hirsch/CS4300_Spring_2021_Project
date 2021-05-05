@@ -86,8 +86,15 @@
     <div class="heading">
       <span>
         <h3>Playlist similar to...</h3>
-        <h2>{{ results[0]['track_name'] }}</h2>
-        <h3>by {{ results[0]['artist_name'] }} </h3>
+        <div style="display: flex; align-items: center;">
+          <span style="padding-right: 10px;">
+            <img src="{{ results[0]['img'] }}" style="width: 80px;"></span>
+          <span>
+            <h2>{{ results[0]['track_name'] }}</h2>
+            <h3>by {{ results[0]['artist_name'] }} </h3>
+          </span>
+        </div>
+
       </span>
       <span>
         <label class="toggle">
@@ -119,12 +126,17 @@
 
         {% for res in results[1] %}
         <tr id="{{ res[1]['track_id'] }}">
-          <td class="song_row" id="{{ res[1]['track_id'] }} song title" onclick="open_spot(this.id.slice(0, -11));"
-            style="cursor:hand"> {{ res[1]['track_name'] }} </td>
-          <td class="song_row" id="{{ res[1]['track_id'] }} artist" onclick="open_spot(this.id.slice(0, -7));"
-            style="cursor:hand"> {{ res[1]['artist_name'] }} </td>
+          <td class="song_row" id="{{ res[1]['track_id'] }} song title"
+            onclick="open_spot_track(this.id.slice(0, -11));" style="cursor:hand; align-items: center; display: flex;">
+            <img src="{{ res[1]['img'] }}" style="width: 40px; padding-right: 10px;">
+            <span>{{ res[1]['track_name'] }}</span>
+          </td>
+
+          <td class="song_row" id="{{ res[1]['artist_ids'][0] }} artist"
+            onclick="open_spot_artist(this.id.slice(0, -7));" style="cursor:hand;"> {{ res[1]['artist_name'] }} </td>
           <td>
-            <span class="song_row thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}"
+
+            <span class="so ng_row thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}"
               data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand;">
               <i class="fa fa-thumbs-up fa-lg"></i>
             </span>
@@ -167,9 +179,11 @@
         </script>
         {% for res in results[1] %}
         <tr>
-          <td class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot(this.id);">
-            {{ res[1]['track_name'] }}
-            <p style="color: #696969; font-size: 14; margin-top: 5;">
+          <td onclick="open_spot_track(this.id);" id="{{ res[1]['track_id'] }}" style="cursor:pointer">
+            <img src="{{ res[1]['img'] }}" style="width:80px; padding-bottom:10px;">
+            <div class="song_row" id="{{ res[1]['track_id'] }}" onclick="open_spot_track(this.id);">{{
+              res[1]['track_name'] }}</div>
+            <p class="song_artist" id="{{ res[1]['artist_ids'][0] }}" onclick="open_spot_artist(this.id);">
               {{ res[1]['artist_name'] }}
             </p>
           </td>
@@ -269,8 +283,11 @@
 
 <script>
   // Open spotify links
-  function open_spot(uri) {
+  function open_spot_track(uri) {
     window.open("https://open.spotify.com/track/" + uri, '_blank');
+  }
+  function open_spot_artist(uri) {
+    window.open("https://open.spotify.com/artist/" + uri, '_blank');
   }
 
   // Toggle detail mode

@@ -153,7 +153,7 @@ td,
 th {
   border-bottom: 1px solid #dddddd;
   text-align: left;
-  padding: 16 0 16 0;
+  padding: 12 0 12 0;
 }
 
 .song_row:hover {
@@ -162,15 +162,15 @@ th {
   cursor: pointer;
 }
 
-.song_item:hover {
-  transition-duration: 80ms;
-  color: #0075FF;
-  cursor: pointer;
+.song_artist {
+  color: #696969; 
+  font-size: 14; 
+  margin-top: 5;
 }
 
-.see_more:hover {
+.song_artist:hover {
   transition-duration: 80ms;
-  color: rgb(162, 0, 255);
+  color: #0075FF;
   cursor: pointer;
 }
 
