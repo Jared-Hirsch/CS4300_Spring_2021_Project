@@ -195,11 +195,11 @@ th .tooltip .tooltiptext {
   padding-left: 6px;
 }
 
-#thumbs[data-enabled="false"] {
+.thumbs[data-enabled="false"] {
   background-color: #dddddd;
 }
 
-#thumbs[data-enabled="true"] {
+.thumbs[data-enabled="true"] {
   background-color: #f71d53;
 }
 
