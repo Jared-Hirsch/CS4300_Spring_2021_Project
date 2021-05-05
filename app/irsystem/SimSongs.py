@@ -193,7 +193,6 @@ class SimilarSongs:
         """
         if uri in self.vars_dict['uri_to_song']:
             data = self.vars_dict['uri_to_song'][uri]
-            data['uri'] = data['track_id']
         else:
             data = sp.audio_features(uri)[0]
         if not data:
@@ -203,12 +202,13 @@ class SimilarSongs:
         track_info = sp.track(uri) #get artist and name of song
         af['artist_name'] = ", ".join([x['name'] for x in track_info['artists']])
         af['track_name'] = track_info['name']
-        af['uri'] = data['uri']
+        af['track_id'] = data['uri']
         af['img'] = None
         for img in track_info['album']['images']:
             if img['height'] == 300:
                 af['img'] = img['url']
                 break
+        af['artist_id'] = track_data['artists'][0]['id']
         return af
 
     def af_sim(self, query_af, weights, uris = []):
