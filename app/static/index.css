@@ -57,7 +57,7 @@ footer {
   width: 100%;
 }
 
-.query, .btn {
+.query, .basic-cta {
   margin-top: 42;
 }
 
@@ -94,7 +94,7 @@ input[type=number] {
 }
 
 .adv-section {
-  margin-bottom: 24;
+  margin-top: 24;
   padding-left: 20;
 }
 

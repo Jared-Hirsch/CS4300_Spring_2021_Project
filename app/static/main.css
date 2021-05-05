@@ -37,7 +37,6 @@ footer {
 .btn:focus {
   outline: none;
 }
-
 #btn-prim {
   color: #fff;
   background-color: #0075FF;
@@ -102,7 +101,6 @@ footer {
   text-align: center;
   display: inline-block;
 }
-
 
 
 /* Autocomplete query */

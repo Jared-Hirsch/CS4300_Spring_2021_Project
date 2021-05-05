@@ -57,7 +57,7 @@
           </div>
           {% endif %}
 
-          <button type="submit" class="btn" id="btn-prim"> Create My Playlist </button>
+          <button type="submit" class="btn basic-cta" id="btn-prim"> Create My Playlist </button>
         </div>
 
         <!-- Advanced tab content -->
@@ -96,7 +96,6 @@
             <table class="af-table">
               {% for af in audiofeatures %}
               <tr>
-                <!-- <td> <label for="{{ af[1] }}" class="label"> {{ af[0] }} </label> </td> -->
                 <td style="cursor:default">
                   <div class="tooltip">
                     <div class="info-icon">i</div>
@@ -104,8 +103,10 @@
                     <span class="tooltiptext">{{ af[2] }}</span>
                   </div>
                 </td>
-                <td> <input type="range" name="{{ af[1] }}" min="0" max="100" value="100" class="af-slider"
-                    id="{{ af[1] }}"> </td>
+                <td>
+                  <input type="range" name="{{ af[1] }}" min="0" max="100" value="100" class="af-slider"
+                    id="{{ af[1] }}">
+                </td>
               </tr>
               {% endfor %}
             </table>

@@ -107,13 +107,12 @@
         <tr>
           <th class="label">Song Title</th>
           <th class="label">Artist</th>
-          <!-- <th class="label"> Like or Dislike and then requery to see better results</th> -->
-          <th class="label">
+          <th style="cursor:default">
             <div class="tooltip">
-              Feedback
+              <label class="label"> Feedback </label>
               <div class="info-icon"> i </div>
-              <p class="tooltiptext"> Like or Dislike songs and then click requery on the top-right to see better
-                results </p>
+              <span class="tooltiptext"> Like or Dislike songs and then click requery on the top-right to see better
+                results </span>
             </div>
           </th>
         </tr>
@@ -125,19 +124,14 @@
           <td class="song_row" id="{{ res[1]['track_id'] }} artist" onclick="open_spot(this.id.slice(0, -7));"
             style="cursor:hand"> {{ res[1]['artist_name'] }} </td>
           <td>
-            <<<<<<< HEAD <span class="song_row thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}"
+            <span class="song_row thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}"
               data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand;">
               <i class="fa fa-thumbs-up fa-lg"></i>
-              =======
-              <span class="song_row thumbs" id="{{ res[1]['track_id'] }} like" data-song="{{ res[1] }}"
-                data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand; color: #ddd">
-                <i class="fa fa-thumbs-up"></i>
-                >>>>>>> 1500b9e770664ba9980d298e6a53c382b74352d2
-              </span>
-              <span class="song_row thumbs" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}"
-                data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand;">
-                <i class="fa fa-thumbs-down fa-lg"></i>
-              </span>
+            </span>
+            <span class="song_row thumbs" id="{{ res[1]['track_id'] }} dislike" data-song="{{ res[1] }}"
+              data-enabled="false" onclick="feelingButton(this.id);" style="cursor:hand;">
+              <i class="fa fa-thumbs-down fa-lg"></i>
+            </span>
           </td>
         </tr>
         {% endfor %}
