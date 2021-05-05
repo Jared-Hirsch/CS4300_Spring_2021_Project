@@ -4,6 +4,10 @@
   min-height: calc(100vh - 200px);
 }
 
+footer {
+  padding-bottom: 20;
+}
+
 /* Nav */
 nav {
   padding: 14 0 0 0;
@@ -146,15 +150,23 @@ nav {
 table {
   margin: 32 0 64 0;
   font-family: arial, sans-serif;
-  border-collapse: collapse;
+  border-collapse: separate;
   width: calc(100% - 200px);
+}
+
+th{
+  position: sticky;
+  top: 92;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(40px);
+  border-bottom: 1px solid #dddddd;
 }
 
 td,
 th {
   border-bottom: 1px solid #dddddd;
   text-align: left;
-  padding: 12 0 12 0;
+  padding: 12;
 }
 
 
@@ -176,17 +188,17 @@ th {
 
 th .tooltip .tooltiptext {  
   /* Style in main.css */
-  /* Position the tooltip: */
+  /* Position here */
   position: absolute;
-  z-index: 1;
-  bottom: 25px;
+  z-index: 10;
+  top: 30px;
   left: 0%;
 }
 .nav-sides .tooltip .tooltiptext {  
   /* Style in main.css */
-  /* Position the tooltip: */
+  /* Position here */
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   top: 40px;
   right: 100%;
 }
@@ -255,6 +267,12 @@ th .tooltip .tooltiptext {
 
 
 /* Toggle */
+.toggle-container {
+  position: fixed;
+  top: 92;
+  right: 110;
+}
+
 .toggle {
   position: relative;
   display: flex;

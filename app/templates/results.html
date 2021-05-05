@@ -80,6 +80,18 @@
   <!-- Tint -->
   <div class="show-on-search" id="tint"></div>
 
+  <!-- Toggle -->
+  <div class="toggle-container">
+    <label class="toggle">
+      <p class="label">Detail Mode</p>
+      <div class="switch">
+        <input type="checkbox" onclick="changeMode()">
+        <span class=" slider">
+        </span>
+      </div>
+    </label>
+  </div>
+
   <!-- Playlist heading -->
   <div class="container">
     <div class="heading">
@@ -100,16 +112,6 @@
           </span>
         </div>
 
-      </span>
-      <span>
-        <label class="toggle">
-          <p class="label">Detail Mode</p>
-          <div class="switch">
-            <input type="checkbox" onclick="changeMode()">
-            <span class=" slider">
-            </span>
-          </div>
-        </label>
       </span>
     </div>
 
@@ -164,8 +166,8 @@
             <div class="tooltip">
               <label class="label"> Audio Feature Comparison </label>
               <div class="info-icon"> i </div>
-              <span class="tooltiptext"> Your query is presented on the right in purple, and the according result on the
-                left </span>
+              <span class="tooltiptext"> Your query is presented on the right in blue, and the according result on the
+                left in pink. </span>
             </div>
           </th>
           <th class="label">Audio Similarity Score</th>
@@ -173,10 +175,15 @@
           <th class="label">Combined Weighted Similarity Score</th>
         </tr>
         <script>
+          // var track_id_data_color_array = [
+          //   '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#46f0f0', '#f032e6', '#bcf60c',
+          //   '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000',
+          //   '#ffd8b1', '#000075', '#808080'
+          // ]
           var track_id_data_color_array = [
-            '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#46f0f0', '#f032e6', '#bcf60c',
-            '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000',
-            '#ffd8b1', '#000075', '#808080'
+            '#9B72B3', '#9A3C72', '#5D88BC', '#A2ACBD', '#3E4756', '#F2A5BC', '#B87086', '#BDA5AB',
+            '#9B72B3', '#9A3C72', '#5D88BC', '#A2ACBD', '#3E4756', '#F2A5BC', '#B87086', '#BDA5AB',
+            '#004FB6', '#BB6BD9', '#E85C9D'
           ]
           var feature_array = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'speechiness', 'valence']
           var sanitized_data_current_query = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g, '"'));
@@ -194,7 +201,7 @@
           </td>
 
           <td id="svgcontainer{{ res[1]['track_id'] }}">
-            <svg width="450" height="175" id="svg{{ res[1]['track_id'] }}"></svg> <br>
+            <svg width="350" height="175" id="svg{{ res[1]['track_id'] }}"></svg> <br>
             <script>
               var sanitized_data = JSON.parse(document.createRange().createContextualFragment('{{ res[1] }}').textContent.replace(/'/g, '"'));
               var track_id = sanitized_data['track_id'];
@@ -210,13 +217,14 @@
 
               var current_query_data = []
               for (const [key, value] of Object.entries(sanitized_data_current_query)) {
+                // Constant bar color
                 if (feature_array.includes(key)) {
-                  current_query_data.unshift({ 'attribute': key, 'value': value, 'color': '#911eb4' });
+                  current_query_data.unshift({ 'attribute': key, 'value': value, 'color': '#94BDF4' });
                 }
               }
 
               var svg = d3.select('#svg' + track_id),
-                margin = { top: 10, right: 0, bottom: 60, left: 40 },
+                margin = { top: 10, right: 0, bottom: 70, left: 40 },
                 width = svg.attr("width") - margin.left - margin.right,
                 height = svg.attr("height") - margin.top - margin.bottom;
 
@@ -256,7 +264,8 @@
                 .call(d3.axisBottom(x))
                 .selectAll("text")
                 .attr("transform", "translate(0,0)rotate(-45)")
-                .style("text-anchor", "end");
+                .style("text-anchor", "end")
+                .style("font-size", "12");
 
             </script>
           </td>
