@@ -192,15 +192,15 @@ th .tooltip .tooltiptext {
 }
 
 .thumbs {
-  padding-left: 6px;
+  padding-left: 10px;
 }
 
-#thumbs[data-enabled="false"] {
-  background-color: #dddddd;
+.thumbs[data-enabled="false"] {
+  color: #dddddd;
 }
 
-#thumbs[data-enabled="true"] {
-  background-color: #f71d53;
+.thumbs[data-enabled="true"] {
+  color: #db498d;
 }
 
 

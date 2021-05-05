@@ -57,9 +57,8 @@ footer {
   width: 100%;
 }
 
-.tab,
-.query {
-  margin-bottom: 42;
+.query, .btn {
+  margin-top: 42;
 }
 
 
@@ -154,13 +153,12 @@ table td {
   backdrop-filter: blur(30px);
 }
 
-.error-container {
-  text-align: center;
-  width: 100%;
-}
-
 .error {
   font-weight: normal;
+  width: fit-content;
+  margin: auto;
+  margin-top: 20;
+  margin-bottom: 20;
   background-color: rgba(163, 0, 0, 0.1);
   border: 1px solid rgb(163, 0, 0);
   color: rgb(163, 0, 0);

@@ -30,14 +30,6 @@
         <h1 class="heading"> simplay </h1>
       </div>
 
-      <!--Display Errors if any -->
-      {% if errors != [] %}
-      <div class="error-container">
-        {% for err in errors %}
-        <h4 class="error"> {{ err }} </h4>
-        {% endfor %}
-      </div>
-      {% endif %}
 
       <!-- Tab links -->
       <div class="tab">
@@ -55,11 +47,30 @@
 
         <!-- Basic tab content -->
         <div id="basic" class="tabcontent-default">
+
+          <!--Display Errors if any -->
+          {% if errors != [] %}
+          <div class="error-container">
+            {% for err in errors %}
+            <h4 class="error"> {{ err }} </h4>
+            {% endfor %}
+          </div>
+          {% endif %}
+
           <button type="submit" class="btn" id="btn-prim"> Create My Playlist </button>
         </div>
 
         <!-- Advanced tab content -->
         <div id="advanced" class="tabcontent">
+
+          <!--Display Errors if any -->
+          {% if errors != [] %}
+          <div class="error-container">
+            {% for err in errors %}
+            <h4 class="error"> {{ err }} </h4>
+            {% endfor %}
+          </div>
+          {% endif %}
 
           <div class="adv-section">
             <label for="dur" class="label">Playlist Length (1-20 songs):</label>
