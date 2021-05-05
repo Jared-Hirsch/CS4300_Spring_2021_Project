@@ -21,7 +21,7 @@
         </span>
       </a>
       <span>
-        <form action="results" name='results' id='results'>
+        <form action="results" name='results' id='results' class="new-search">
           <div class="input-container">
 
             <div class="autocomplete" style="display: inline-block;">
@@ -42,8 +42,8 @@
             <td> <input type="hidden" name="{{ af[1] }}rq" id="{{ af[1] }}rq"> </td>
           </tr>
           {% endfor %}
-          <button type="submit" class="btn" id="btn-prim"> Create My Playlist </button>
-          <a href="/" class="btn" id="btn-tert">Advanced Search</a>
+          <button type="submit" class="btn btn-prim" id="search-btn"> Create My Playlist </button>
+          <a href="/" class="btn btn-tert" id="adv-btn">Advanced Search</a>
 
         </form>
       </span>
@@ -72,14 +72,13 @@
       <label for="public">Public</label><br>
 
       <div class="spotify-cta">
-        <!-- TODO: fix id properties as currently there is conflict  -->
-        <button type="button" class="btn" id="btn-prim3"> Save on Spotify </button>
+        <button type="button" class="btn btn-prim"> Save on Spotify </button>
       </div>
     </form>
   </div>
 
   <!-- Tint -->
-  <div id="tint"></div>
+  <div class="show-on-search" id="tint"></div>
 
   <!-- Playlist heading -->
   <div class="container">
@@ -317,8 +316,8 @@
     document.getElementById('myInput').style.padding = '20 20 20 20 ';
     document.getElementById('nav').style.height = '200px';
     document.getElementById('search-icon').style.visibility = 'hidden';
-    document.getElementById('btn-prim').style.display = 'block';
-    document.getElementById('btn-tert').style.display = 'block';
+    document.getElementById('search-btn').style.display = 'block';
+    document.getElementById('adv-btn').style.display = 'block';
     document.getElementById('tint').style.display = 'block';
     document.getElementById('myInput').style.cursor = 'text';
   };
@@ -328,8 +327,8 @@
     document.getElementById('myInput').style.padding = '20 60 20 20 ';
     document.getElementById('nav').style.height = '92px';
     document.getElementById('search-icon').style.visibility = 'visible';
-    document.getElementById('btn-prim').style.display = 'none';
-    document.getElementById('btn-tert').style.display = 'none';
+    document.getElementById('search-btn').style.display = 'none';
+    document.getElementById('adv-btn').style.display = 'none';
     document.getElementById('tint').style.display = 'none';
     document.getElementById('myInput').style.cursor = 'pointer';
   };

@@ -37,23 +37,23 @@ footer {
 .btn:focus {
   outline: none;
 }
-#btn-prim {
+.btn-prim {
   color: #fff;
   background-color: #0075FF;
 }
-#btn_prim:hover {
+.btn_prim:hover {
   color: #fff;
   background-color: #0053b3;
 }
-#btn-sec {
+.btn-sec {
   color: #4d4d4d;
   background-color: #f2f2f2;
 }
-#btn-sec:hover {
+.btn-sec:hover {
   color: #4d4d4d;
   background-color: #d3d3d3;
 }
-#btn-tert {
+.btn-tert {
   padding: 8;
   color: #0075FF;
   background-color: #fff;
@@ -61,7 +61,7 @@ footer {
   font-weight: bolder;
   border-radius: 4px;
 }
-#btn-tert:hover {
+.btn-tert:hover {
   padding: 8;
   color: #0075FF;
   background-color: #0077ff1f;
