@@ -17,6 +17,7 @@ import string
 import os
 # from app.irsystem.utils import strip_name, match
 from app.irsystem.utils import *
+# from utils import *
 
 
 punct = set(string.punctuation)
@@ -203,6 +204,11 @@ class SimilarSongs:
         af['artist_name'] = ", ".join([x['name'] for x in track_info['artists']])
         af['track_name'] = track_info['name']
         af['uri'] = data['uri']
+        af['img'] = None
+        for img in track_info['album']['images']:
+            if img['height'] == 300:
+                af['img'] = img['url']
+                break
         return af
 
     def af_sim(self, query_af, weights, uris = []):
@@ -446,12 +452,12 @@ if __name__ == "__main__":
 
     SimSongs = SimilarSongs(stopwords, vars_dict, sp_path, gn_path)
 
-    # query = 'The Chainsmokers | Closer'
-    # lyrics_weight = 0.5
-    # n_results = 10
-    # is_uri = False
-    # af_weights = np.ones(len(AF_COLS))
-    # query_af, output, lyric_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
+    query = 'The Chainsmokers | Closer'
+    lyrics_weight = 0.5
+    n_results = 10
+    is_uri = False
+    af_weights = np.ones(len(AF_COLS))
+    query_af, output, lyric_scores, af_scores = SimSongs.main(query, lyrics_weight, af_weights, n_results, is_uri)
     # print(f"Results for: {query_af['artist_name']} | {query_af['track_name']}")
     # print_results(output, lyric_scores)
     
