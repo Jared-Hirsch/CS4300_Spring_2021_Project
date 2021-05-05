@@ -210,15 +210,15 @@ th .tooltip .tooltiptext {
   width: fit-content;
 } */
 
-.new-search .btn-tert {
+#adv-btn {
   margin-top: 6px;
 }
 
-.new-search .btn-prim {
+#search-btn {
   margin-top: 30px;
 }
 
-.new-search .btn-prim, .new-search .btn-tert {
+#adv-btn, #search-btn {
   display: none;
 }
 
