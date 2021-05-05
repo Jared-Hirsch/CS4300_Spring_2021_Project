@@ -7,6 +7,26 @@ footer {
   padding-bottom: 30;
 }
 
+.wave-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: -20;
+  margin-bottom: 20;
+}
+
+.wave-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 14px;
+  letter-spacing: 0.3;
+
+}
+
 
 /* Tabs */
 .tab {
@@ -149,8 +169,10 @@ table td {
   width: 100%;
   padding: 15px 0px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(30px);
+  /* background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px); */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(40px);
 }
 
 .error {
