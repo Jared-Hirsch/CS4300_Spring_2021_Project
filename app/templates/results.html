@@ -335,12 +335,16 @@
   }
 
   function logout() {
-    alert("You will lose any unsaved playlists.")
-    window.location.href = '/logout';
+    var r = confirm("You will lose any unsaved playlists.");
+    if (r == true) {
+      window.location.href = '/logout';
+    }
   }
   function login() {
-    alert("You will lose any unsaved playlists.")
-    window.location.href = '/auth_sp';
+    var r = confirm("You will lose any unsaved playlists.");
+    if (r == true) {
+      window.location.href = '/auth_sp';
+    }
   }
 
   // Toggle detail mode
@@ -663,22 +667,22 @@
   // <!-- Create Playlist -->
   async function createPlayList() {
     const songs = Array.from({{ results | tojson}}[1]).map(r => r[1]['track_id']);
-    const playlistName = document.getElementById("playlistname").value;
-    const isPrivate = document.getElementById("private").checked;
-    let body = { 'songs': songs, 'name': playlistName, 'isprivate': isPrivate };
+  const playlistName = document.getElementById("playlistname").value;
+  const isPrivate = document.getElementById("private").checked;
+  let body = { 'songs': songs, 'name': playlistName, 'isprivate': isPrivate };
 
-    const response = await fetch("/create_playlist", {
-      method: "POST",
-      body: JSON.stringify(body),
-      headers: new Headers({ 'content-type': 'application/json' })
-    })
+  const response = await fetch("/create_playlist", {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: new Headers({ 'content-type': 'application/json' })
+  })
 
-    if (response.ok) {
-      document.getElementById('success').style.visibility = 'visible';
-    } else {
-      document.getElementById('failure').style.visibility = 'visible';
-    }
-    return false
+  if (response.ok) {
+    document.getElementById('success').style.visibility = 'visible';
+  } else {
+    document.getElementById('failure').style.visibility = 'visible';
+  }
+  return false
   }
 
 </script>
