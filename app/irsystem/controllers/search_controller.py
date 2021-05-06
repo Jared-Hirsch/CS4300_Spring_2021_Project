@@ -29,7 +29,7 @@ def search():
     query = request.args.get(constants.INPUT_QUERY)
     lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY) 
     num_songs = int(request.args.get(constants.NUM_SONGS))
-    logged_in = session.get(['sp_token']) == None
+    logged_in = session.get('sp_token') is not None
 
     # Get weights for each audio feature
     features_weights = []
