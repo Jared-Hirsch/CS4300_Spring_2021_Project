@@ -192,6 +192,15 @@ h4 {
   font-variant-caps: all-small-caps;
 }
 
+.label2 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14;
+  font-weight: normal;
+  color: #888888;
+
+}
+
 .link {
   cursor: pointer;
 }

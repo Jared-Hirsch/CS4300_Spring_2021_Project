@@ -23,24 +23,6 @@
           <img src="/static/waves.png" class="heading" id="nav-logo" style="width: 80%;">
           <div class="wave-text">create a playlist based on songs you love</div>
         </div>
-
-        <!-- Login -->
-        {% if logged_in %}
-        <div class="login-text" style="margin-bottom: 40;">
-          <p>You are logged into Spotify.</p>
-          <a href="/logout" class="btn btn-tert">Logout</a>
-        </div>
-
-        {% else %}
-        <div class="login-text" style="margin-bottom: 40;">
-          <p>
-            You are {% if not logged_in %} not {% endif %} logged into Spotify. {% if not logged_in
-            %} Please login to allow playlist export functionality. {% endif %}
-          </p>
-          <a href="/auth_sp" class="btn btn-sec">Connect to Spotify</a>
-        </div>
-        {% endif %}
-
       </div>
 
 
@@ -69,6 +51,24 @@
             {% endfor %}
           </div>
           {% endif %}
+
+          <!-- Login -->
+          {% if logged_in %}
+          <div class="login-text" style="margin-bottom: 10;">
+            <!-- <p>You are logged into Spotify.</p> -->
+            <a href="/logout" class="btn btn-tert">Logout of Spotify</a>
+          </div>
+
+          {% else %}
+          <div class="login-text" style="margin-bottom: 10;">
+            <!-- <p>
+              You are {% if not logged_in %} not {% endif %} logged into Spotify. {% if not logged_in
+              %} Please login to allow playlist export functionality. {% endif %}
+            </p> -->
+            <a href="/auth_sp" class="btn btn-sec">Connect to Spotify</a>
+          </div>
+          {% endif %}
+
 
           <button type="submit" class="btn basic-cta btn-prim"> Create My Playlist </button>
         </div>
@@ -124,6 +124,18 @@
               {% endfor %}
             </table>
           </div>
+
+          <!-- Login -->
+          {% if logged_in %}
+          <div class="login-text" style="margin-bottom: 10;">
+            <a href="/logout" class="btn btn-tert">Logout of Spotify</a>
+          </div>
+
+          {% else %}
+          <div class="login-text" style="margin-bottom: 10;">
+            <a href="/auth_sp" class="btn btn-sec">Connect to Spotify</a>
+          </div>
+          {% endif %}
 
           <!-- Submit button -->
           <div class="cta">
