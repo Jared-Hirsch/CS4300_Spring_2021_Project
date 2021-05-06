@@ -339,13 +339,13 @@
   }
 
   function logout() {
-    var r = confirm("You will lose any unsaved playlists.");
+    var r = confirm("Careful! If you continue, you will lose any unsaved playlists.");
     if (r == true) {
       window.location.href = '/logout';
     }
   }
   function login() {
-    var r = confirm("You will lose any unsaved playlists.");
+    var r = confirm("Careful! If you continue, you will lose any unsaved playlists.");
     if (r == true) {
       window.location.href = '/auth_sp';
     }
