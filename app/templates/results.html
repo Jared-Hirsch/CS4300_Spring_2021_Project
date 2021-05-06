@@ -58,9 +58,10 @@
     </div>
   </nav>
 
+  {% if logged_in %}
   <!-- Spotify modal -->
   <div class="modal">
-    <form>
+    <form id="create_playlist" onsubmit="return false;">
       <p class="label">Playlist Name</p>
       <input type="text" class="playlistname" id="playlistname" name="playlist_name" value="my simPlaylist"
         placeholder="my simPlaylist">
@@ -72,10 +73,11 @@
       <label for="public">Public</label><br>
 
       <div class="spotify-cta">
-        <button type="button" class="btn btn-prim"> Save on Spotify </button>
+        <button type="button" class="btn btn-prim" onclick="createPlayList();"> Save on Spotify </button>
       </div>
     </form>
   </div>
+  {% endif %}
 
   <!-- Tint -->
   <div class="show-on-search" id="tint"></div>
@@ -609,6 +611,28 @@
   })
   let currentQuery = JSON.parse(document.createRange().createContextualFragment('{{ results[0] }}').textContent.replace(/'/g, '"'));
   const audiofeatures = JSON.parse('{ "features": ' + document.createRange().createContextualFragment('{{ audiofeatures }}').textContent.replace(/'/g, '"') + '}')['features'];
+
+  <!-- Create Playlist -->
+  async function createPlayList() {
+    const songs = liked.concat(oldLiked);
+    const playlistName  = document.getElementById("playlistname").value;
+    const isPrivate = document.getElementById("private").checked;
+    let body = {'songs': songs, 'name':playlistName, 'isprivate': isPrivate};
+
+    const response = await fetch("/create_playlist",{
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: new Headers({'content-type': 'application/json'})
+    })
+
+    if(response.ok) {
+      alert("Playlist has been successfully created")
+    } else {
+      alert("An Error has occured: ")
+    }
+    return false
+  }
+
 </script>
 
 </html>

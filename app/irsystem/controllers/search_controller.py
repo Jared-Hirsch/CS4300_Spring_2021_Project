@@ -125,15 +125,15 @@ def create_playlist():
 
     sp = spotipy.Spotify(auth=token_info.get('access_token'))
 
-    # if not request.json:
-    #     return {'Error': 'JSON not provided'}, 422, {'Conent-Type': 'application/json'}
-    # jdata = request.get_json()
-    # playlist_name = jdata['name']
-    # songs = []
-    # for url in jdata['songs'].items():
-    #     songs.append(url)
+    if not request.json:
+        return {'Error': 'JSON not provided'}, 422, {'Conent-Type': 'application/json'}
+    jdata = request.get_json()
+    print(jdata)
+    playlist_name = jdata['name']
+    is_private = jdata['isprivate']
+    songs = jdata['songs']
 
-    return token_info
+    return "", 200
 
 @irsystem.route('/logout', methods=['GET'])
 def logout():
