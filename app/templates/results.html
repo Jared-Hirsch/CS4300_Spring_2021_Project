@@ -642,7 +642,7 @@
 
   // <!-- Create Playlist -->
   async function createPlayList() {
-    const songs = liked.concat(oldLiked);
+    const songs = Array.from({{ results | tojson}}[1]).map(r => r[1]['track_id']);
     const playlistName = document.getElementById("playlistname").value;
     const isPrivate = document.getElementById("private").checked;
     let body = { 'songs': songs, 'name': playlistName, 'isprivate': isPrivate };
