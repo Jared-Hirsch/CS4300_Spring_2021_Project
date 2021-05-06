@@ -290,6 +290,8 @@ class SimilarSongs:
         genius = Genius(self.gn_token, verbose = False, retries = 5)
 
         if not is_uri: #query is artist and name 
+            if "|" not in query:
+                raise ValueError("Incorrect query format. The query should have the form 'artist name | song name'")
             query_artist, query_name = [x.strip().lower() for x in query.split("|")]
             query_name = strip_name(query_name)
             temp_start = time.time()
