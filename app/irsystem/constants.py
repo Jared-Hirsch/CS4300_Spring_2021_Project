@@ -28,4 +28,4 @@ RESULTS = 'results.html'
 ERROR_404 = '404.html'
 
 #Spotify Scope
-SPOTIFY_SCOPE = 'playlist-modify-private playlist-modify-public'
+SPOTIFY_SCOPE = 'playlist-modify-private playlist-modify-public user-top-read'
