@@ -77,7 +77,15 @@ footer {
   width: 100%;
 }
 
-.query, .basic-cta {
+.query {
+  margin-top: 42;
+}
+
+.basic-cta {
+  margin-top: 18;
+}
+
+.login-text {
   margin-top: 42;
 }
 

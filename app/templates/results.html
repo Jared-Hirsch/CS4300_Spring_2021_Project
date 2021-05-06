@@ -79,9 +79,9 @@
     <span id="close-failure" style="display:inline-block; cursor: pointer;"><i class="fa fa-times fa-lg"></i></span>
   </div>
 
-  {% if logged_in %}
   <!-- Spotify modal -->
   <div class="modal">
+    {% if logged_in %}
     <form id="create_playlist" onsubmit="return false;">
       <p class="label">Playlist Name</p>
       <input type="text" class="playlistname" id="playlistname" name="playlist_name" value="my simPlaylist"
@@ -95,10 +95,21 @@
 
       <div class="spotify-cta">
         <button type="button" class="btn btn-prim" onclick="createPlayList();"> Save on Spotify </button>
+        <div onClick="logout();" class="btn btn-tert">Logout</div>
       </div>
     </form>
+
+    {% else %}
+    <form>
+      <div class="spotify-cta">
+        <p>
+          Log in to save your playlist on Spotify!
+        </p>
+        <div onClick="login();" class="btn btn-prim">Connect to Spotify</div>
+      </div>
+    </form>
+    {% endif %}
   </div>
-  {% endif %}
 
   <!-- Tint -->
   <div class="show-on-search" id="tint"></div>
@@ -321,6 +332,15 @@
   }
   function open_spot_artist(uri) {
     window.open("https://open.spotify.com/artist/" + uri, '_blank');
+  }
+
+  function logout() {
+    alert("You will lose any unsaved playlists.")
+    window.location.href = '/logout';
+  }
+  function login() {
+    alert("You will lose any unsaved playlists.")
+    window.location.href = '/auth_sp';
   }
 
   // Toggle detail mode
