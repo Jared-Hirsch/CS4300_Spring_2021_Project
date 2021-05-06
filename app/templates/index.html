@@ -54,13 +54,13 @@
 
           <!-- Login -->
           {% if logged_in %}
-          <div class="login-text" style="margin-bottom: 10;">
+          <div class="login-text" style="margin-bottom: 10; margin-top: 42;">
             <!-- <p>You are logged into Spotify.</p> -->
             <a href="/logout" class="btn btn-tert">Logout of Spotify</a>
           </div>
 
           {% else %}
-          <div class="login-text" style="margin-bottom: 10;">
+          <div class="login-text" style="margin-bottom: 10; margin-top: 42;">
             <!-- <p>
               You are {% if not logged_in %} not {% endif %} logged into Spotify. {% if not logged_in
               %} Please login to allow playlist export functionality. {% endif %}
@@ -126,7 +126,7 @@
           </div>
 
           <!-- Login -->
-          {% if logged_in %}
+          <!-- {% if logged_in %}
           <div class="login-text" style="margin-bottom: 10;">
             <a href="/logout" class="btn btn-tert">Logout of Spotify</a>
           </div>
@@ -135,10 +135,23 @@
           <div class="login-text" style="margin-bottom: 10;">
             <a href="/auth_sp" class="btn btn-sec">Connect to Spotify</a>
           </div>
-          {% endif %}
+          {% endif %} -->
 
           <!-- Submit button -->
           <div class="cta">
+            {% if logged_in %}
+            <div class="login-text" style="margin-bottom: 14; margin-top: 8;">
+              <a href="/logout" class="btn btn-tert" style="background: rgba(255, 255, 255, 0);">
+                Logout of Spotify
+              </a>
+            </div>
+
+            {% else %}
+            <div class="login-text" style="margin-bottom: 22; margin-top: 8;">
+              <a href="/auth_sp" class="btn btn-sec">Connect to Spotify</a>
+            </div>
+            {% endif %}
+
             <button type="submit" class="btn btn-prim"> Create My Playlist </button>
           </div>
         </div>

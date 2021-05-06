@@ -85,11 +85,6 @@ footer {
   margin-top: 18;
 }
 
-.login-text {
-  margin-top: 42;
-}
-
-
 /* Advanced search */
 #lyr-label {
   display: inline-block;
@@ -177,8 +172,6 @@ table td {
   width: 100%;
   padding: 15px 0px;
   text-align: center;
-  /* background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(30px); */
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(40px);
 }
