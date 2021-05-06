@@ -128,12 +128,17 @@ def create_playlist():
     if not request.json:
         return {'Error': 'JSON not provided'}, 422, {'Conent-Type': 'application/json'}
     jdata = request.get_json()
-    print(jdata)
     playlist_name = jdata['name']
     is_private = jdata['isprivate']
-    songs = jdata['songs']
+    songs = set(jdata['songs'])
+    try:
+        username = sp.me()['id']
+        playlist_uri = sp.user_playlist_create(username, name=playlist_name, public=not is_private)['uri']
+        sp.user_playlist_add_tracks(username, playlist_uri, songs)
+    except :
+        return "An error Occurred while trying to create the playlist", 400
 
-    return "", 200
+    return "Playlist called "+ playlist_name + " successfully created", 200
 
 @irsystem.route('/logout', methods=['GET'])
 def logout():
