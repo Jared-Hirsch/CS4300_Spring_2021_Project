@@ -27,14 +27,14 @@
         <!-- Login -->
         {% if logged_in %}
         <div class="login-text" style="margin-bottom: 40;">
-          <p>You are logged into spotify.</p>
+          <p>You are logged into Spotify.</p>
           <a href="/logout" class="btn btn-tert">Logout</a>
         </div>
 
         {% else %}
         <div class="login-text" style="margin-bottom: 40;">
           <p>
-            You are {% if not logged_in %} not {% endif %} logged into spotify. {% if not logged_in
+            You are {% if not logged_in %} not {% endif %} logged into Spotify. {% if not logged_in
             %} Please login to allow playlist export functionality. {% endif %}
           </p>
           <a href="/auth_sp" class="btn btn-sec">Connect to Spotify</a>
