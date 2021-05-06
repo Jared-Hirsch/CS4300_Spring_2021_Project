@@ -60,8 +60,6 @@
 
   <!-- Spotify modal -->
   <div class="modal">
-
-    {% if logged_in %}
     <form>
       <p class="label">Playlist Name</p>
       <input type="text" class="playlistname" id="playlistname" name="playlist_name" value="my simPlaylist"
@@ -75,22 +73,8 @@
 
       <div class="spotify-cta">
         <button type="button" class="btn btn-prim"> Save on Spotify </button>
-        <a href="/logout" class="btn btn-tert">Logout</a>
       </div>
     </form>
-
-    {% else %}
-    <form>
-      <div class="spotify-cta" style="width: 170px;">
-        <p>
-          You are {% if not logged_in %} not {% endif %} logged into spotify. {%
-          if not logged_in %}
-          Please login to allow playlist export functionality. {% endif %}
-        </p>
-        <a href="/auth_sp" class="btn btn-prim">Connect to Spotify</a>
-      </div>
-    </form>
-    {% endif %}
   </div>
 
   <!-- Tint -->
