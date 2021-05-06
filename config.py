@@ -15,6 +15,7 @@ class Config(object):
   SP_CLIENT_ID = os.environ.get('SP_CLIENT_ID')
   SP_CLIENT_SECRET = os.environ.get('SP_CLIENT_SECRET')
   GENUIS_TOKEN = os.environ.get('GENUIS_TOKEN')
+  REDIRECT_URI = os.environ.get('REDIRECT_URI')
 
 class ProductionConfig(Config):
   DEBUG = False

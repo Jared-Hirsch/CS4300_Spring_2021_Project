@@ -1,5 +1,8 @@
+import time
+
 from . import *
 import os
+import spotipy
 import app.irsystem.constants as constants
 from app.irsystem.process_query import QueryProcessor
 from config import Config
@@ -16,7 +19,8 @@ songs = map(lambda s: s['track_name'],
 
 @irsystem.route('/', methods=['GET'])
 def index(errors=[]):
-    return render_template(constants.INDEX, name=constants.PROJECT_NAME, students=constants.NAMES, audiofeatures=constants.AUDIO_FEATURES, songs=songs, errors=errors)
+    logged_in = session.get('sp_token') is not None
+    return render_template(constants.INDEX, name=constants.PROJECT_NAME, students=constants.NAMES, audiofeatures=constants.AUDIO_FEATURES, songs=songs, errors=errors, logged_in = logged_in)
 
 
 @irsystem.route('/results', methods=['GET'])
@@ -25,6 +29,7 @@ def search():
     query = request.args.get(constants.INPUT_QUERY)
     lyr_sim = request.args.get(constants.LYRICAL_SIMILARITY) 
     num_songs = int(request.args.get(constants.NUM_SONGS))
+    logged_in = session.get(['sp_token']) == None
 
     # Get weights for each audio feature
     features_weights = []
@@ -86,4 +91,72 @@ def search():
 
     return render_template(
         constants.RESULTS, name=constants.PROJECT_NAME, students=constants.NAMES, audiofeatures=constants.AUDIO_FEATURES,
-         songs=songs, query=query, results=results, liked=liked, disliked=disliked)
+         songs=songs, query=query, results=results, liked=liked, disliked=disliked, logged_in=logged_in)
+
+@irsystem.route("/auth_sp", methods=['GET'])
+def authorize_spotify():
+    sp_oauth = spotipy.oauth2.SpotifyOAuth(client_id=Config.SP_CLIENT_ID,
+                                           client_secret=Config.SP_CLIENT_SECRET,
+                                           redirect_uri=Config.REDIRECT_URI,
+                                           scope=constants.SPOTIFY_SCOPE)
+    sp_auth_url = sp_oauth.get_authorize_url()
+
+    return redirect(sp_auth_url)
+
+@irsystem.route("/callback", methods=['GET', 'POST'])
+def spotify_callback():
+    sp_oauth = spotipy.oauth2.SpotifyOAuth(client_id=Config.SP_CLIENT_ID,
+                                           client_secret=Config.SP_CLIENT_SECRET,
+                                           redirect_uri=Config.REDIRECT_URI,
+                                           scope=constants.SPOTIFY_SCOPE)
+
+    session.clear()
+
+    token_info = sp_oauth.get_access_token(request.args.get('code'))
+    session['sp_token'] = token_info
+
+    return redirect('/')
+
+@irsystem.route('/create_playlist', methods=['POST'])
+def create_playlist():
+    token_info = validate_token(session)
+    if token_info is None:
+        return index(["Spotify Not logged in"])
+
+    sp = spotipy.Spotify(auth=token_info.get('access_token'))
+
+    # if not request.json:
+    #     return {'Error': 'JSON not provided'}, 422, {'Conent-Type': 'application/json'}
+    # jdata = request.get_json()
+    # playlist_name = jdata['name']
+    # songs = []
+    # for url in jdata['songs'].items():
+    #     songs.append(url)
+
+    return token_info
+
+@irsystem.route('/logout', methods=['GET'])
+def logout():
+    session.clear()
+
+    return redirect('/')
+
+
+# Validates and returns spotify authentication token or refreshes an existing one
+def validate_token(session):
+    token_info = session.get('sp_token', {})
+
+    if token_info is None:
+        return None
+
+    now = int(time.time())
+    is_token_expired = token_info['expires_at'] - now < 10
+
+    if is_token_expired:
+        sp_oauth = spotipy.oauth2.SpotifyOAuth(client_id=Config.SP_CLIENT_ID,
+                                               client_secret=Config.SP_CLIENT_SECRET,
+                                               redirect_uri=Config.REDIRECT_URI,
+                                               scope=constants.SPOTIFY_SCOPE)
+        token_info = sp_oauth.refresh_access_token(session['sp_token']['refresh_token'])
+
+    return token_info

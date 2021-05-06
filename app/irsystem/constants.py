@@ -26,3 +26,6 @@ AUDIO_FEATURES = [["Acousticness", "auc", "A confidence measure of whether the t
 INDEX = 'index.html'
 RESULTS = 'results.html'
 ERROR_404 = '404.html'
+
+#Spotify Scope
+SPOTIFY_SCOPE = 'playlist-modify-private playlist-modify-public'
