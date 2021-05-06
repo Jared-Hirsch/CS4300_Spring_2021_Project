@@ -103,6 +103,7 @@ nav {
   right: 42;
   bottom: 0;
   z-index:2;
+  /* width: 150px; */
 }
 
 .modal form p {
@@ -144,6 +145,7 @@ nav {
 .spotify-cta .btn-prim {
   display: block;
   margin-top: 10;
+  margin-bottom: 12;
 }
 
 
@@ -213,6 +215,14 @@ th .tooltip .tooltiptext {
 
 .thumbs[data-enabled="true"] {
   color: #db498d;
+}
+
+.thumbs[data-enabled="false"]:hover {
+  color: #b9b9b9;
+}
+
+.thumbs[data-enabled="true"]:hover {
+  color: #a53268;
 }
 
 

@@ -29,6 +29,7 @@ footer {
   margin: auto;
   width: fit-content;
   font-size: 16;
+  text-decoration: none;
 }
 .btn:hover {
   transition-duration: 300ms;
